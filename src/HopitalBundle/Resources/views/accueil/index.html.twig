@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Accueils list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for accueil in accueils %}
+            <tr>
+                <td><a href="{{ path('accueil_show', { 'id': accueil.id }) }}">{{ accueil.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('accueil_show', { 'id': accueil.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('accueil_edit', { 'id': accueil.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('accueil_new') }}">Create a new accueil</a>
+        </li>
+    </ul>
+{% endblock %}
