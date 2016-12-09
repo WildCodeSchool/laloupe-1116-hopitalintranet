@@ -1,6 +1,6 @@
 hopital_accueil:
     resource: "@HopitalBundle/Resources/config/routing/accueil.yml"
-    prefix:   /accueil
+    prefix:   /
 
 hopital_homepage:
     path:     /
