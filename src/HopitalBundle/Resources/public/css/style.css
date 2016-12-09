@@ -1,11 +1,12 @@
 body{
     background-image: url("../img/montagne2.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 
 
-/*******************************DEBUT NAVBAR ************************/
+/**************************** DEBUT NAVBAR ****************************/
 
 .navbar{
     background-color: #FFFFFF;
@@ -39,25 +40,29 @@ body{
     margin-top:5px;
 }
 
-/*******************************FIN NAVBAR ***********************/
+/**************************** FIN NAVBAR ****************************/
 
-/*******************************PAGE ACCUEIL ***********************/
+/**************************** DEBUT ACCUEIL ****************************/
 
 main {
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: 15%;
     margin-right: auto;
 
 }
 
 .jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
+    padding-top: 0px;
     background-color: #ffffff;
 }
 
+/**************************** FIN ACCUEIL ****************************/
 
-/****************************BARRE DE RECHERCHE********************/
+
+
+/**************************** DEBUT BARRE DE RECHERCHE ****************************/
+
 .dropdown.dropdown-lg .dropdown-menu {
     margin-top: -1px;
     padding: 6px 20px;
@@ -86,19 +91,22 @@ main {
     border-bottom-left-radius: 4px;
 }
 
-@media screen and (min-width: 768px) {
-    #adv-search {
-        width: 500px;
-        padding-bottom: 30px;
-    }
-    .dropdown.dropdown-lg {
-        position: static !important;
-    }
-    .dropdown.dropdown-lg .dropdown-menu {
-        min-width: 500px;
-    }
+#adv-search {
+    width: 500px;
+    padding-bottom: 30px;
 }
-/**************************************BANDEAU NOUVEAUTES********************/
+.dropdown.dropdown-lg {
+    position: static !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    min-width: 500px;
+}
+
+/**************************** FIN BARRE DE RECHERCHE ********************/
+
+
+/**************************** DEBUT BANDEAU NOUVEAUTES ****************************/
+
 .newsticker {
     list-style-type: none;
     background: #ffffff;
@@ -110,6 +118,22 @@ main {
 }
 
 #nouveautes {
-    width: 400px;
+    background-color: #FFFFFF;
     height: 40px;
+    padding:10px;
+    padding-top: 0px;
 }
+
+/**************************** FIN BANDEAU NOUVEAUTES ****************************/
+
+
+/**************************** DEBUT ACTUS ****************************/
+
+.actu{
+    background-color: #FFFFFF;
+    padding:10px;
+}
+
+
+
+
