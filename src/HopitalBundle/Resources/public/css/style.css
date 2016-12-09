@@ -90,6 +90,15 @@ main {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
+#search {
+    padding-left: 0;
+}
+.form-control {
+    height:40px;
+}
+.input-group-btn {
+    height: 50px;
+}
 
 #adv-search {
     width: 500px;
@@ -107,6 +116,21 @@ main {
 
 /**************************** DEBUT BANDEAU NOUVEAUTES ****************************/
 
+@media screen and (min-width: 768px) {
+    #adv-search {
+        width: 410px;
+        padding-bottom: 20px;
+    }
+    .dropdown.dropdown-lg {
+        position: static !important;
+    }
+    .dropdown.dropdown-lg .dropdown-menu {
+        min-width: 410px;
+    }
+}
+
+
+    /**************************************BANDEAU NOUVEAUTES********************/
 .newsticker {
     list-style-type: none;
     background: #ffffff;
@@ -121,7 +145,12 @@ main {
     background-color: #FFFFFF;
     height: 40px;
     padding:10px;
-    padding-top: 0px;
+    padding-top: 0;
+}
+
+.actu {
+    background-color: #FFFFFF;
+    padding: 10px;
 }
 
 /**************************** FIN BANDEAU NOUVEAUTES ****************************/
