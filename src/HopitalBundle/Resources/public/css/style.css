@@ -1,15 +1,18 @@
 body{
-    background-image: url("../img/montagne1.jpg");
+    background-image: url("../img/montagne2.jpg");
     background-size: 100%;
 }
 
+
+
+/* DEBUT NAVBAR */
 
 .navbar{
     background-color: #FFFFFF;
     color: #000000;
     width: 100%;
     padding-top: 70px;
-    padding-left: 7%;
+    padding-left: 10%;
     border: 0px;
     text-align: center;
     font-size: 1.2em;
@@ -30,3 +33,10 @@ body{
 .logo{
     height: 40px;
 }
+
+.pictoMonCompte{
+    height: 30px;
+    margin-top:5px;
+}
+
+/*FIN NAVBAR */
