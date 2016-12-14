@@ -101,36 +101,24 @@ main {
 }
 
 #adv-search {
-    width: 500px;
-    padding-bottom: 30px;
+    width: 410px;
+    padding-bottom: 20px;
 }
 .dropdown.dropdown-lg {
     position: static !important;
 }
 .dropdown.dropdown-lg .dropdown-menu {
-    min-width: 500px;
+    min-width: 410px;
 }
+
+
+
 
 /**************************** FIN BARRE DE RECHERCHE ********************/
 
 
 /**************************** DEBUT BANDEAU NOUVEAUTES ****************************/
 
-@media screen and (min-width: 768px) {
-    #adv-search {
-        width: 410px;
-        padding-bottom: 20px;
-    }
-    .dropdown.dropdown-lg {
-        position: static !important;
-    }
-    .dropdown.dropdown-lg .dropdown-menu {
-        min-width: 410px;
-    }
-}
-
-
-    /**************************************BANDEAU NOUVEAUTES********************/
 .newsticker {
     list-style-type: none;
     background: #ffffff;
@@ -148,15 +136,11 @@ main {
     padding-top: 0;
 }
 
-.actu {
-    background-color: #FFFFFF;
-    padding: 10px;
-}
 
 /**************************** FIN BANDEAU NOUVEAUTES ****************************/
 
 
-/**************************** DEBUT ACTUS ****************************/
+/**************************** DEBUT ACTUALITES ****************************/
 
 .actu{
     background-color: #FFFFFF;
