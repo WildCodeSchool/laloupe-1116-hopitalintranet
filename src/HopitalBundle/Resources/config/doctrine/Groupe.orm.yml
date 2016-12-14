@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Groupe:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\GroupeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

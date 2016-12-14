@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Lettreinfo:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\LettreinfoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

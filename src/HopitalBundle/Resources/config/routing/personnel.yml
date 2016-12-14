@@ -1,0 +1,49 @@
+personnel_index:
+    path:     /
+    defaults: { _controller: "HopitalBundle:Personnel:index" }
+    methods:  GET
+
+personnel_show:
+    path:     /{id}/show
+    defaults: { _controller: "HopitalBundle:Personnel:show" }
+    methods:  GET
+
+personnel_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Personnel:new" }
+    methods:  [GET, POST]
+
+personnel_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Personnel:edit" }
+    methods:  [GET, POST]
+
+personnel_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Personnel:delete" }
+    methods:  DELETE
+
+personnel_menu:
+    path:     /menu
+    defaults: { _controller: "HopitalBundle:Personnel:menu" }
+    methods:  GET
+
+personnel_postvacant:
+    path:     /postvacant
+    defaults: { _controller: "HopitalBundle:Personnel:postvacant" }
+    methods:  GET
+
+personnel_covoiturage:
+    path:     /covoiturage
+    defaults: { _controller: "HopitalBundle:Personnel:covoiturage" }
+    methods:  GET
+
+personnel_planniciel:
+    path:     /planniciel
+    defaults: { _controller: "HopitalBundle:Personnel:planniciel" }
+    methods:  GET
+
+personnel_idees:
+    path:     /idees
+    defaults: { _controller: "HopitalBundle:Personnel:idees" }
+    methods:  GET

@@ -1,0 +1,41 @@
+presentation_index:
+    path:     /
+    defaults: { _controller: "HopitalBundle:Presentation:index" }
+    methods:  GET
+
+presentation_show:
+    path:     /{id}/show
+    defaults: { _controller: "HopitalBundle:Presentation:show" }
+    methods:  GET
+
+presentation_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Presentation:new" }
+    methods:  [GET, POST]
+
+presentation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Presentation:edit" }
+    methods:  [GET, POST]
+
+presentation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Presentation:delete" }
+    methods:  DELETE
+
+presentation_livret:
+    path:     /livret
+    defaults: { _controller: "HopitalBundle:Presentation:livret" }
+    methods:  GET
+
+presentation_organigrammes:
+    path:     /organigrammes
+    defaults: { _controller: "HopitalBundle:Presentation:organigrammes" }
+    methods:  GET
+
+presentation_plans:
+    path:     /plans
+    defaults: { _controller: "HopitalBundle:Presentation:plans" }
+    methods:  GET
+
+

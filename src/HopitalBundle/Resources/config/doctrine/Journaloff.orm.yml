@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Journaloff:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\JournaloffRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

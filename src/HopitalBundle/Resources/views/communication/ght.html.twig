@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>GHT</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for communication in communications %}
+            <tr>
+                <td><a href="{{ path('communication_show', { 'id': communication.id }) }}">{{ communication.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('communication_show', { 'id': communication.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('communication_edit', { 'id': communication.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('communication_new') }}">Create a new communication</a>
+        </li>
+    </ul>
+{% endblock %}

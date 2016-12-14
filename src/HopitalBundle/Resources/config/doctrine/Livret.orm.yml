@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Livret:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\LivretRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

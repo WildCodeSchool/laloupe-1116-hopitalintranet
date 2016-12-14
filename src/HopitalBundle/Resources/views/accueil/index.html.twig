@@ -4,18 +4,18 @@
     <body>
     <main>
         <div class="row">
-            <div class="col-md-6" id="nouveautes">
+                <div class="col-md-6" id="nouveautes">
                 <ul id="news">
-                    <li>Visitez <a href="">SPIP</a> pour découvrir le meilleur CMS du monde</li>
-                    <li>Visitez <a href="">Doc.spip.org</a>pour un voyage dans les arcanes des fonctions du code de spip</li>
-                    <li>Visitez <a href="">Spip-contrib</a> pour apprendre à personnaliser votre spip</li>
-                    <li>Visitez the <a href="">jQuery.info</a> pour comprendre ce que jQuery apporte à votre site</li>
+                    <li>Consulter la nouvelle <a href="">lettre d'information</a> de Chartres.</li>
+                    <li>Reservez vos places à <a href="">DisneyLand Paris</a>.</li>
+                    <li>Organisez votre <a href="">groupe de travail</a>.</li>
+                    <li>Consultez les <a href="">postes vacants</a> pour de nouvelles opportunités.</li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <div class="container" id="search">
                     <div class="input-group" id="adv-search">
-                        <input type="text" class="form-control" placeholder="Search for snippets" />
+                        <input type="text" class="form-control" placeholder="Rechercher" />
                         <div class="input-group-btn">
                             <div class="btn-group" role="group">
                                 <div class="dropdown dropdown-lg">
@@ -23,7 +23,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" role="menu">
                                         <form class="form-horizontal" role="form">
                                             <div class="form-group">
-                                                <label for="filter">Filter by</label>
+                                                <label for="filter">Filtrer par</label>
                                                 <select class="form-control">
                                                     <option value="0" selected>All Snippets</option>
                                                     <option value="1">Featured</option>
@@ -55,8 +55,8 @@
             <div class="col-md-6 actu">
                 <div class="jumbotron">
                     <div class="container">
-                        <h2>Actualités :</h2>
-                        <p><script language="Javascript">
+                        <h3>ACTUALITÉS</h3>
+                        <p class="actuliens"><script language="Javascript">
                                 var member=""; //optionnel si vous etes inscrit sur la plateforme actifpub  le parametrage se fait dans votre espace membre
                                 var fichier="http://www.le-perche.fr/feed/";
                                 var limite="1";  //  sujets compris entre 1
@@ -64,9 +64,9 @@
                                 var aspect="1";    //  0 ou 1 (1 permet d'afficher lien + description, 0 que les liens)
                                 var minute="1";      //  0 ou 1 (1 permet d'afficher date et heure, 0 pas de date et heure)
                                 var sujet="1"; //  0 ou 1 (1 permet d'afficher le titre des sujets traités, 0 pas de titre )
-                                var te="Geneva, Arial, sans-serif";  // Police de caractères (Verdana, arial etc...)
-                                var fil_textsize="11";     // taille des liens et description
-                                var title_textcolor="072EF7";    // couleur des liens (000000 donne noir)
+                                var te="Arial, sans-serif";  // Police de caractères (Verdana, arial etc...)
+                                var fil_textsize="14";     // taille des liens et description
+                                var title_textcolor="337AB7";    // couleur des liens (000000 donne noir)
                                 var tlien="none";  // style du lien none ou underline
                                 var text_textcolor="000000";  // couleur description (000000 donne noir)
                                 var frame_color=""; // couleur arrière plan (FFFFFF donne blanc)
@@ -78,34 +78,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 liensUtiles">
                 <div class="jumbotron">
-                    <div class="container">
-                        <h2>Liens utiles :</h2><br>
-                        <a href="#">Alertes DGS</a><br>
-                        <a href="#">Anesm</a><br>
-                        <a href="#">Blue Médi</a><br>
-                        <a href="#">Via Trajectoire</a><br>
-                        <a href="#">Vidal Hoptimal</a><br>
+                    <div class="container utiles">
+                        <h3>LIENS UTILES</h3>
+                        <a href="#">- Calendrier des réservations</a><br>
+                        <a href="#">- Alertes DGS</a><br>
+                        <a href="#">- Blue Médi</a><br>
+                        <a href="#">- Via Trajectoire</a><br>
+                        <a href="#">- Vidal Hoptimal</a><br>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 meteo">
                 <div class="jumbotron">
                     <div class="container">
-                        <p><iframe src="http://vigilance.meteofrance.com/vignette_vigi_dep.html?a=28&b="  width="400" height="91" frameborder="0">
-                        <p>Votre navigateur est incompatible avec les iframes.</p>
-                        </iframe></p><br>
-                        <div id="cont_MjgyMTR8NXwxfDF8NHxGRkZGRjB8M3xGRkZGRkZ8Y3wx">
-                            <div id="spa_MjgyMTR8NXwxfDF8NHxGRkZGRjB8M3xGRkZGRkZ8Y3wx">
-                                <a id="a_MjgyMTR8NXwxfDF8NHxGRkZGRjB8M3xGRkZGRkZ8Y3wx" href="http://www.meteocity.com/france/la-loupe_v28214/" target="_blank" style="color:#333;text-decoration:none;">Météo La Loupe</a>
-
-                            </div>
-                            <script type="text/javascript" src="http://widget.meteocity.com/js/MjgyMTR8NXwxfDF8NHxGRkZGRjB8M3xGRkZGRkZ8Y3wx"></script>
-                        </div>
+                        <p class="alerte"><iframe src="http://vigilance.meteofrance.com/vignette_vigi_dep_mini.html?a=28&b="  width="380" height="111" frameborder="0">
+                        </iframe></p>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
     </body>
