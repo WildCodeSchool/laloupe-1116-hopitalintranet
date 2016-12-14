@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Presentations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for presentation in presentations %}
+            <tr>
+                <td><a href="{{ path('presentation_show', { 'id': presentation.id }) }}">{{ presentation.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('presentation_show', { 'id': presentation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('presentation_edit', { 'id': presentation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('presentation_new') }}">Create a new presentation</a>
+        </li>
+    </ul>
+{% endblock %}

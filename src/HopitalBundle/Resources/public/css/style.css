@@ -151,6 +151,10 @@ main {
     border:1px solid #FFFFFF;
 }
 
+#nouveautes ul li {
+    padding-left:18px;
+}
+
 /**************************** FIN NOUVEAUTES DU SITE ****************************/
 
 
@@ -158,6 +162,7 @@ main {
 .actu {
     background-color: #FFFFFF;
     padding: 10px;
+    padding-bottom: 30px;
 }
 
 

@@ -1,0 +1,49 @@
+recommandation_index:
+    path:     /
+    defaults: { _controller: "HopitalBundle:Recommandation:index" }
+    methods:  GET
+
+recommandation_show:
+    path:     /{id}/show
+    defaults: { _controller: "HopitalBundle:Recommandation:show" }
+    methods:  GET
+
+recommandation_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Recommandation:new" }
+    methods:  [GET, POST]
+
+recommandation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Recommandation:edit" }
+    methods:  [GET, POST]
+
+recommandation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Recommandation:delete" }
+    methods:  DELETE
+
+
+recommandation_has:
+    path:     /has
+    defaults: { _controller: "HopitalBundle:Recommandation:has" }
+    methods:  GET
+
+recommandation_anesm:
+    path:     /anesm
+    defaults: { _controller: "HopitalBundle:Recommandation:anesm" }
+    methods:  GET
+
+recommandation_journaloff:
+    path:     /journaloff
+    defaults: { _controller: "HopitalBundle:Recommandation:journaloff" }
+    methods:  GET
+
+recommandation_bulletinoff:
+    path:     /bulletinoff
+    defaults: { _controller: "HopitalBundle:Recommandation:bulletinoff" }
+    methods:  GET
+recommandation_pagesjaunes:
+    path:     /pagesjaunes
+    defaults: { _controller: "HopitalBundle:Recommandation:pagesjaunes" }
+    methods:  GET

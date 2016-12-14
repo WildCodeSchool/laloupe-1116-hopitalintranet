@@ -1,0 +1,69 @@
+documentation_index:
+    path:     /
+    defaults: { _controller: "HopitalBundle:Documentation:index" }
+    methods:  GET
+
+documentation_show:
+    path:     /{id}/show
+    defaults: { _controller: "HopitalBundle:Documentation:show" }
+    methods:  GET
+
+documentation_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Documentation:new" }
+    methods:  [GET, POST]
+
+documentation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Documentation:edit" }
+    methods:  [GET, POST]
+
+documentation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Documentation:delete" }
+    methods:  DELETE
+
+documentation_note:
+    path:     /note
+    defaults: { _controller: "HopitalBundle:Documentation:note" }
+    methods:  GET
+
+documentation_contacts:
+    path:     /contacts
+    defaults: { _controller: "HopitalBundle:Documentation:contacts" }
+    methods:  GET
+
+documentation_astreintes:
+    path:     /astreintes
+    defaults: { _controller: "HopitalBundle:Documentation:astreintes" }
+    methods:  GET
+
+documentation_journaux:
+    path:     /journaux
+    defaults: { _controller: "HopitalBundle:Documentation:journaux" }
+    methods:  GET
+
+documentation_basedoc:
+    path:     /basedoc
+    defaults: { _controller: "HopitalBundle:Documentation:basedoc" }
+    methods:  GET
+
+documentation_instances:
+    path:     /instances
+    defaults: { _controller: "HopitalBundle:Documentation:instances" }
+    methods:  GET
+
+documentation_groupe:
+    path:     /groupe
+    defaults: { _controller: "HopitalBundle:Documentation:groupe" }
+    methods:  GET
+
+documentation_fournisseurs:
+    path:     /fournisseurs
+    defaults: { _controller: "HopitalBundle:Documentation:fournisseurs" }
+    methods:  GET
+
+documentation_galerie:
+    path:     /galerie
+    defaults: { _controller: "HopitalBundle:Documentation:galerie" }
+    methods:  GET
