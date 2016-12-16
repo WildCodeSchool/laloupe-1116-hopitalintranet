@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Moncompte:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\MoncompteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

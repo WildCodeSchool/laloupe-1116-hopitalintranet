@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Journaux interne</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for documentation in documentations %}
+            <tr>
+                <td><a href="{{ path('documentation_show', { 'id': documentation.id }) }}">{{ documentation.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('documentation_show', { 'id': documentation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('documentation_edit', { 'id': documentation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_new') }}">Create a new documentation</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Lienssites:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\LienssitesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

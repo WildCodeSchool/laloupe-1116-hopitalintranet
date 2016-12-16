@@ -1,0 +1,49 @@
+communication_index:
+    path:     /
+    defaults: { _controller: "HopitalBundle:Communication:index" }
+    methods:  GET
+
+communication_show:
+    path:     /{id}/show
+    defaults: { _controller: "HopitalBundle:Communication:show" }
+    methods:  GET
+
+communication_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Communication:new" }
+    methods:  [GET, POST]
+
+communication_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Communication:edit" }
+    methods:  [GET, POST]
+
+communication_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Communication:delete" }
+    methods:  DELETE
+
+communication_lienssites:
+    path:     /lienssites
+    defaults: { _controller: "HopitalBundle:Communication:lienssites" }
+    methods:  GET
+
+communication_direction:
+    path:     /direction
+    defaults: { _controller: "HopitalBundle:Communication:direction" }
+    methods:  GET
+
+communication_ght:
+    path:     /ght
+    defaults: { _controller: "HopitalBundle:Communication:ght" }
+    methods:  GET
+
+communication_lettreinfo:
+    path:     /lettreinfo
+    defaults: { _controller: "HopitalBundle:Communication:lettreinfo" }
+    methods:  GET
+
+communication_articles:
+    path:     /articles
+    defaults: { _controller: "HopitalBundle:Communication:articles" }
+    methods:  GET

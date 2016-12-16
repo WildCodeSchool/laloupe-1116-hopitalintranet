@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Sacha:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\SachaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

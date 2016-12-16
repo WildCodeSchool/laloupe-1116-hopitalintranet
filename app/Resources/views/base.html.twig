@@ -20,18 +20,18 @@
             <ul class="nav navbar-nav navbar-left">
 
                 <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src={{ asset('bundles/hopital/img/LogoNew.png') }} alt="Logo" class="logo"/><span></span></a>
+                    <a href="{{ path('accueil_index') }}" role="button"><img src={{ asset('bundles/hopital/img/LogoNew.png') }} alt="Logo" class="logo"/><span></span></a>
                 </li>
 
 
                 <li class="navbarDropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Présentation</br>de l'établissement<span></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Livret d'accueil</a></li>
+                        <li><a href="{{ path('presentation_livret') }}">Livret d'accueil</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Organigrammes</a></li>
+                        <li><a href="{{ path('presentation_organigrammes') }}">Organigrammes</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Plans des locaux</a></li>
+                        <li><a href="{{ path('presentation_plans') }}">Plans des locaux</a></li>
                     </ul>
                 </li>
 
@@ -39,55 +39,53 @@
                 <li class="navbarDropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation</br>interne <span></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Notes d'information</a></li>
+                        <li><a href="{{ path('documentation_note') }}">Notes d'information</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li><a href="{{ path('documentation_contacts') }}">Contacts</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Astreinte</a></li>
+                        <li><a href="{{ path('documentation_astreintes') }}">Astreintes</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Journaux interne</a></li>
+                        <li><a href="{{ path('documentation_journaux') }}">Journaux interne</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Base documentaire</a></li>
+                        <li><a href="{{ path('documentation_basedoc') }}">Base documentaire</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Instances</a></li>
+                        <li><a href="{{ path('documentation_instances') }}">Instances</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Groupes de travail</a></li>
+                        <li><a href="{{ path('documentation_groupe') }}">Groupes de travail</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Liste de fournisseurs</a></li>
+                        <li><a href="{{ path('documentation_fournisseurs') }}">Liste de fournisseurs</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Galeries photos</a></li>
+                        <li><a href="{{ path('documentation_galerie') }}">Galeries photos</a></li>
                     </ul>
                 </li>
 
                 <li class="navbarDropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Communication</br>externe <span></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Liens sites établissements</a></li>
+                        <li><a href="{{ path('communication_lienssites') }}">Liens sites établissements</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Direction commune</a></li>
+                        <li><a href="{{ path('communication_direction') }}">Direction commune</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">GHT</a></li>
+                        <li><a href="{{ path('communication_ght') }}">GHT</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Lettre d'information Chartres</a></li>
+                        <li><a href="{{ path('communication_lettreinfo') }}">Lettre d'information Chartres</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Articles de presse</a></li>
+                        <li><a href="{{ path('communication_articles') }}">Articles de presse</a></li>
                     </ul>
                 </li>
 
                 <li class="navbarDropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liens vers les recommandations</br>Réglementation et sites utiles<span></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">HAS</a></li>
+                        <li><a href="{{ path('recommandation_has') }}">HAS</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">ANESM</a></li>
+                        <li><a href="{{ path('recommandation_anesm') }}">ANESM</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Journal officiel</a></li>
+                        <li><a href="{{ path('recommandation_journaloff') }}">Journal officiel</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Bulletin officiel (santé)</a></li>
+                        <li><a href="{{ path('recommandation_bulletinoff') }}">Bulletin officiel (santé)</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Alerte vigilance</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Page jaune</a></li>
+                        <li><a href="{{ path('recommandation_pagesjaunes') }}">Page jaune</a></li>
                     </ul>
                 </li>
 
@@ -95,15 +93,15 @@
                 <li class="navbarDropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Espace</br>du personnel<span></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Menus</a></li>
+                        <li><a href="{{ path('personnel_menu') }}">Menus</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Annonces postes vacants</a></li>
+                        <li><a href="{{ path('personnel_postvacant') }}">Annonces postes vacants</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Co-voiturage</a></li>
+                        <li><a href="{{ path('personnel_covoiturage') }}">Co-voiturage</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Planniciel</a></li>
+                        <li><a href="{{ path('personnel_planniciel') }}">Planniciel</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Boîte à idées</a></li>
+                        <li><a href="{{ path('personnel_idees') }}">Boîte à idées</a></li>
                     </ul>
                 </li>
 
@@ -111,13 +109,13 @@
                 <li class="navbarDropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Démarche qualité</br>Gestion des risques<span></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Certifications</a></li>
+                        <li><a href="{{ path('demarches_certification') }}">Certifications</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">EPP</a></li>
+                        <li><a href="{{ path('demarches_epp') }}">EPP</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Processus</a></li>
+                        <li><a href="{{ path('demarches_processus') }}">Processus</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">PAQSS</a></li>
+                        <li><a href="{{ path('demarches_paqss') }}">PAQSS</a></li>
                     </ul>
                 </li>
 
@@ -125,15 +123,15 @@
                 <li class="navbarDropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src={{ asset('bundles/hopital/img/pictoMonCompte.png') }} alt="Logo" class="pictoMonCompte"/><span></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">CGOS</a></li>
+                        <li><a href="{{ path('moncompte_cgos') }}">CGOS</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Amicale</a></li>
+                        <li><a href="{{ path('moncompte_amicale') }}">Amicale</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Lien vers SACH@</a></li>
+                        <li><a href="{{ path('moncompte_sacha') }}">Lien vers SACH@</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Petites annonces</a></li>
+                        <li><a href="{{ path('moncompte_petitesannonces') }}">Petites annonces</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Agenda des ressources</a></li>
+                        <li><a href="{{ path('moncompte_agenda') }}">Agenda des ressources</a></li>
                     </ul>
                 </li>
             </ul>

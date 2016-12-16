@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Galerie:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\GalerieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
