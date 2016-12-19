@@ -256,5 +256,24 @@ main {
 /**************************** FIN LIENS ****************************/
 
 /**************************** DEBUT GALERIE IMAGES ****************/
+div.c-wrapper{
+    width: 80%;
+    margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{
+    width: 100%;
+    margin: auto;
+}
+
+.carousel .item img {
+    left: -9999px;  /*important */
+    right: -9999px;  /*important */
+    margin: 0 auto;  /*important */
+    max-width: none;  /*important */
+    min-width: 100%;
+    position: absolute;
+}
 
 
