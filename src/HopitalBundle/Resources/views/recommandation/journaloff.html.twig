@@ -1,9 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Journal officiel</h1>
 
-    <table>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+
+            <h1 class="lienstitre">Journal officiel</h1>
+            <h4 class="lienssoustitre">LegiFrance</h4>
+            <a href="{{ asset('https://www.legifrance.gouv.fr/initRechJO.do') }}"><img src={{ asset('bundles/hopital/img/JournalOff.png') }} alt="Journaloff" class="lienimg"/></a>
+
+            <a  href="{{ asset('https://www.legifrance.gouv.fr/initRechJO.do') }}"><button type="button" class="btn btn-primary">Site du journal officiel</button></a>
+
+        </div>
+    </div>
+
+    {#<table>
         <thead>
         <tr>
             <th>Id</th>
@@ -33,5 +44,5 @@
         <li>
             <a href="{{ path('recommandation_new') }}">Create a new recommandation</a>
         </li>
-    </ul>
+    </ul>#}
 {% endblock %}
