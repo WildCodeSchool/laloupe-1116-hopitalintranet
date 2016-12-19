@@ -1,9 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>HAS</h1>
 
-    <table>
+
+    <div class="row">
+         <div class="col-md-offset-2  col-md-8 fondblanc">
+
+             <h1 class="lienstitre">HAS</h1>
+             <h4 class="lienssoustitre">Haute autorité de santé</h4>
+             <a href="{{ asset('http://www.has-sante.fr/portail/') }}"><img src={{ asset('bundles/hopital/img/HAS.png') }} alt="has" class="lienimg"/></a>
+
+             <a  href="{{ asset('http://www.has-sante.fr/portail/') }}"><button type="button" class="btn btn-primary">Site du HAS</button></a>
+
+        </div>
+    </div>
+
+    {#<table>
         <thead>
         <tr>
             <th>Id</th>
@@ -33,5 +45,5 @@
         <li>
             <a href="{{ path('recommandation_new') }}">Create a new recommandation</a>
         </li>
-    </ul>
+    </ul>#}
 {% endblock %}
