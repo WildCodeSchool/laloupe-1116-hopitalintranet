@@ -256,8 +256,10 @@ main {
 /**************************** FIN LIENS ****************************/
 
 /**************************** DEBUT GALERIE IMAGES ****************/
+
 div.c-wrapper{
     width: 80%;
+    height: 80%;
     margin: auto;
 }
 
@@ -273,7 +275,6 @@ div.c-wrapper{
     margin: 0 auto;  /*important */
     max-width: none;  /*important */
     min-width: 100%;
-    position: absolute;
+    height: 550px;
 }
-
 
