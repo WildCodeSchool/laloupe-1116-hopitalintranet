@@ -1,37 +1,105 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Contacts</h1>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanccontact">
 
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for documentation in documentations %}
-            <tr>
-                <td><a href="{{ path('documentation_show', { 'id': documentation.id }) }}">{{ documentation.id }}</a></td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('documentation_show', { 'id': documentation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('documentation_edit', { 'id': documentation.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            <h1 class="lienstitre">Contacts</h1>
+            <br>
+            <h4 class="lienssoustitre">Services Administratifs </h4>
+            <div class="doc-pdf">
+                <object type="application/pdf" width="80%" height="10%">
+                    <param name="src" value="{{ asset('bundles/hopital/doc/contact/numerotation telephonique mai 2015  ADM.pdf') }}" />
+                </object>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#admModal">
+                    Adm
+                </button>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('documentation_new') }}">Create a new documentation</a>
-        </li>
-    </ul>
+            <!-- Modal -->
+            <div class="modal fade bs-exemple-modal-lg" id="admModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog-modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">ADM</h4>
+                        </div>
+                        <div class="modal-body">
+                            <object type="application/pdf" width="100%" height="600px">
+                                <param name="src" value="{{ asset('bundles/hopital/doc/contact/numerotation telephonique mai 2015  ADM.pdf') }}" />
+                            </object>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <h4 class="lienssoustitre">Services de Soins</h4>
+            <div class="doc-pdf">
+                <object type="application/pdf" width="80%" height="10%">
+                    <param name="src" value="{{ asset('bundles/hopital/doc/contact/numerotation telephonique mai 2015  SOINS.pdf') }}" />
+                </object>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#soinModal">
+                    Soins
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade bs-exemple-modal-lg" id="soinModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog-modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">SOINS</h4>
+                        </div>
+                        <div class="modal-body">
+                            <object type="application/pdf" width="100%" height="600px">
+                                <param name="src" value="{{ asset('bundles/hopital/doc/contact/numerotation telephonique mai 2015  SOINS.pdf') }}" />
+                            </object>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <h4 class="lienssoustitre">Note d'indormations Mails </h4>
+            <div class="doc-pdf">
+                <object type="application/pdf" width="80%" height="10%">
+                    <param name="src" value="{{ asset('bundles/hopital/doc/contact/16_01_22_note_information_adresses_mail_ch_la_loupe.pdf') }}" />
+                </object>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mailModal">
+                    Mails
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade bs-exemple-modal-lg" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog-modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">MAILS</h4>
+                        </div>
+                        <div class="modal-body">
+                            <object type="application/pdf" width="100%" height="600px">
+                                <param name="src" value="{{ asset('bundles/hopital/doc/contact/16_01_22_note_information_adresses_mail_ch_la_loupe.pdf') }}" />
+                            </object>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
