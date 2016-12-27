@@ -296,3 +296,28 @@ div.c-wrapper{
     height: 740px;
     padding: 10px 20px 20px 20px;
 }
+
+/******************************************/
+/****************** PDF ***************/
+/******************************************/
+/* Basic sample */
+
+.flipbook-viewport .container{
+    position: static;
+    margin-right: 18%;
+    margin-left: 18%;
+
+}
+
+.flipbook {
+    height: 200px;
+    width: 200px;
+}
+
+/******************************************/
+/****************** ORGANIGRAMME ***************/
+/******************************************/
+
+.orga_pdf {
+    margin-bottom: 20px;
+}

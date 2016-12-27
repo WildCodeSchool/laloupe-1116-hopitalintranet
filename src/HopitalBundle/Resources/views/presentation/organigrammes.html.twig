@@ -1,16 +1,27 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Organigrammes</h1>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8">
 
-    <table>
+            <h1 class="lienstitre">Organigramme</h1>
+            <br/>
+
+            <iframe class="orga_pdf" src="{{ asset('bundles/hopital/img/Organnigrame/Organigramme.pdf') }}" width="100%" height="500px"></iframe>
+
+        </div>
+            </div>
+
+    <!--<table>
         <thead>
         <tr>
             <th>Id</th>
             <th>Actions</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody>-->
+
+
         {% for presentation in presentations %}
             <tr>
                 <td><a href="{{ path('presentation_show', { 'id': presentation.id }) }}">{{ presentation.id }}</a></td>
@@ -29,9 +40,10 @@
         </tbody>
     </table>
 
-    <ul>
+    <!--<ul>
         <li>
             <a href="{{ path('presentation_new') }}">Create a new presentation</a>
         </li>
-    </ul>
+    </ul>-->
+
 {% endblock %}
