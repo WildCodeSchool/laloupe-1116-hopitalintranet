@@ -1,9 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Organigrammes</h1>
 
-    <table>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Organigrammes</h1>
+            <object data="{{ asset('bundles/hopital/img/Organigramme.pdf') }}" type="application/pdf" class="notedinformation">
+            </object>
+        </div>
+    </div>
+
+    {#<table>
         <thead>
         <tr>
             <th>Id</th>
@@ -33,5 +40,5 @@
         <li>
             <a href="{{ path('presentation_new') }}">Create a new presentation</a>
         </li>
-    </ul>
+    </ul>#}
 {% endblock %}

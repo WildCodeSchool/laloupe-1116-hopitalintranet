@@ -5,17 +5,18 @@
 
     <div class="row">
         <div class="col-md-offset-2  col-md-8 fondblanc">
-            <div class="noteboutons">
-                <a class="btn btn-default notebtn" href="{{ path('documentation_note') }}" role="button">Note d'information</a>
-                <a class="btn btn-default notebtn" href="{{ path('documentation_noteservice') }}" role="button">Note de service</a>
-            </div>
-            <object data="{{ asset('bundles/hopital/img/notes/NoteInformation.pdf') }}" type="application/pdf" class="notedinformation">
+            <a class="btn btn-default" href="note.html.twig" role="button">Note d'information</a>
+            <a class="btn btn-default" href="noteservice.html.twig" role="button">Note de service</a>
+            <object data={{ asset('bundles/hopital/img/notes/NoteDeService2016.01.pdf') }} type="application/pdf" class="notedinformation">
             </object>
         </div>
     </div>
 
 
-    {#<table>
+
+
+
+   {#<table>
         <thead>
         <tr>
             <th>Id</th>
