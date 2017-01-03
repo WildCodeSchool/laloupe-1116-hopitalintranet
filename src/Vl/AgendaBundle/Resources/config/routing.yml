@@ -1,0 +1,7 @@
+vl_agenda_events:
+    resource: "@VlAgendaBundle/Resources/config/routing/events.yml"
+    prefix:   /events
+
+vl_agenda_homepage:
+    path:     /agenda
+    defaults: { _controller: VlAgendaBundle:Default:index }

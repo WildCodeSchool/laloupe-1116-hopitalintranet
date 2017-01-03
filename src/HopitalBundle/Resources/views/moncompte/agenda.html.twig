@@ -3,7 +3,12 @@
 {% block body %}
     <h1>Agenda des ressources</h1>
 
-    <table>
+
+    <a href="{{ path('vl_agenda_homepage') }}">agenda</a>
+
+
+
+    {#<table>
         <thead>
         <tr>
             <th>Id</th>
@@ -33,5 +38,6 @@
         <li>
             <a href="{{ path('moncompte_new') }}">Create a new moncompte</a>
         </li>
-    </ul>
+    </ul>#}
+
 {% endblock %}
