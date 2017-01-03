@@ -131,6 +131,8 @@ main {
 
 /**************************** FIN BARRE DE RECHERCHE ********************/
 
+
+
 /**************************** DEBUT NOUVEAUTES DU SITE ****************************/
 
 .newsticker {
@@ -186,9 +188,6 @@ main {
 }
 
 
-
-
-
 /**************************** FIN LIENS UTILES ****************************/
 
 
@@ -216,6 +215,17 @@ main {
 
 
 
+/**************************** DEBUT BOOK ****************************/
+
+
+
+
+
+
+
+
+
+    /**************************** FIN BOOK ****************************/
 
 /**************************** DEBUT LIENS ****************************/
 
@@ -233,6 +243,7 @@ main {
 
 .btn{
     background-color: #0089D0;
+    color: #FFFFFF;
     border-radius: 0;
     border:0;
     font-size: 1.2em;
@@ -245,6 +256,12 @@ main {
 .fondblanc{
     background-color: #FFFFFF;
     height: 620px;
+    padding: 10px 20px 20px 20px;
+}
+
+.fondblanc1{
+    background-color: #FFFFFF;
+    height: 715px;
     padding: 10px 20px 20px 20px;
 }
 

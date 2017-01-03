@@ -1,37 +1,98 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Livret d'accueil</h1>
 
-    <table>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc1">
+        <h3 class="lienstitre">Livret d'accueil</h3>
+
+               <div class="flipbook-viewport">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-8 fondblanc1">
+                                <div class="flipbook">
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page1.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page2.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page3.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page4.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page5.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page6.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page7.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page8.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page9.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page10.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page11.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page12.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page13.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page14.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page15.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page16.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page17.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page18.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page19.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page20.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page21.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page22.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page23.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page24.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page25.jpg') }})"></div>
+                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page26.jpg') }})"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 fondblanc1">
+                                    <br/>
+                                        <button type="button" class="btn btn-primary"><a href="{{ asset('bundles/hopital/img/Livret/Livret_Accueil.pdf') }}">Download PDF</a></button>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+    </div>
+</div>
+
+
+
+<!--<table>
         <thead>
         <tr>
             <th>Id</th>
             <th>Actions</th>
         </tr>
         </thead>
-        <tbody>
-        {% for presentation in presentations %}
-            <tr>
-                <td><a href="{{ path('presentation_show', { 'id': presentation.id }) }}">{{ presentation.id }}</a></td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('presentation_show', { 'id': presentation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('presentation_edit', { 'id': presentation.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <tbody>-->
 
-    <ul>
-        <li>
-            <a href="{{ path('presentation_new') }}">Create a new presentation</a>
-        </li>
-    </ul>
+
+
 {% endblock %}
+
+
+    {% block javascripts %}
+
+        <script src="{{ asset('bundles/hopital/js/jquery.min.1.7.js') }}"></script>
+        <script src="{{ asset('bundles/hopital/js/modernizr.2.5.3.min.js') }}"></script>
+        <script src="{{ asset('bundles/hopital/js/turn.js') }}"></script>
+        <script src="{{ asset('bundles/hopital/js/basic.js') }}"></script>
+
+        <script>
+            // Create the flipbook
+
+            $('.flipbook').turn({
+                // Width
+                width:912,
+
+                // Height
+                height:645,
+
+                // Elevation
+                elevation: 60,
+
+                // Enable gradients
+                gradients: false,
+
+                // Auto center this flipbook
+                autoCenter: true
+
+            });
+
+        </script>
+
+    {% endblock %}

@@ -19,19 +19,7 @@
         </thead>
         <tbody>
         {% for presentation in presentations %}
-            <tr>
-                <td><a href="{{ path('presentation_show', { 'id': presentation.id }) }}">{{ presentation.id }}</a></td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('presentation_show', { 'id': presentation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('presentation_edit', { 'id': presentation.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+
         {% endfor %}
         </tbody>
     </table>
