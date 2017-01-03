@@ -28,6 +28,11 @@ documentation_note:
     defaults: { _controller: "HopitalBundle:Documentation:note" }
     methods:  GET
 
+documentation_noteservice:
+    path:     /noteservice
+    defaults: { _controller: "HopitalBundle:Documentation:noteservice" }
+    methods:  GET
+
 documentation_contacts:
     path:     /contacts
     defaults: { _controller: "HopitalBundle:Documentation:contacts" }

@@ -1,9 +1,98 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Journaux interne</h1>
 
-    <table>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Journaux interne</h1>
+
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <object data="{{ asset('bundles/hopital/img/journaux/16_07FlashInfo.pdf') }}" type="application/pdf" class="journalimg"></object>
+                    <button type="button" class="btn btn-primary boutonjournal" data-toggle="modal" data-target=".bs-example-modal1-lg">Lire Flash Info</button>
+                </div>
+                <div class="col-md-offset-1 col-md-4">
+                    <object data="{{ asset('bundles/hopital/img/journaux/16_08FlashInfo.pdf') }}" type="application/pdf" class="journalimg"></object>
+                    <button type="button" class="btn btn-primary boutonjournal" data-toggle="modal" data-target=".bs-example-modal2-lg">Lire Flash Info</button>
+                </div>
+            </div>
+
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <object data="{{ asset('bundles/hopital/img/journaux/16_09FlashInfo.pdf') }}" type="application/pdf" class="journalimg"></object>
+                    <button type="button" class="btn btn-primary boutonjournal" data-toggle="modal" data-target=".bs-example-modal3-lg">Lire Flash Info</button>
+                </div>
+                <div class="col-md-offset-1 col-md-4">
+                    <object data="{{ asset('bundles/hopital/img/journaux/16_10FlashInfo.pdf') }}" type="application/pdf" class="journalimg"></object>
+                    <button type="button" class="btn btn-primary boutonjournal" data-toggle="modal" data-target=".bs-example-modal4-lg">Lire Flash Info</button>
+                </div>
+            </div>
+
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <object data="{{ asset('bundles/hopital/img/journaux/16_11FlashInfo.pdf') }}" type="application/pdf" class="journalimg"></object>
+                    <button type="button" class="btn btn-primary boutonjournal" data-toggle="modal" data-target=".bs-example-modal5-lg">Lire Flash Info</button>
+                </div>
+                <div class="col-md-offset-1 col-md-4">
+                    {#<object data="{{ asset('bundles/hopital/img/journaux/') }}" type="application/pdf" class="journalimg"></object>
+                    <<button type="button" class="btn btn-primary boutonjournal" data-toggle="modal" data-target=".bs-example-modal6-lg">Lire Flash Info</button>#}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade bs-example-modal1-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <object data="{{ asset('bundles/hopital/img/journaux/16_07FlashInfo.pdf') }}" type="application/pdf" class="journalimgmodal"></object>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-example-modal2-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <object data="{{ asset('bundles/hopital/img/journaux/16_08FlashInfo.pdf') }}" type="application/pdf" class="journalimgmodal"></object>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-example-modal3-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <object data="{{ asset('bundles/hopital/img/journaux/16_09FlashInfo.pdf') }}" type="application/pdf" class="journalimgmodal"></object>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-example-modal4-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <object data="{{ asset('bundles/hopital/img/journaux/16_10FlashInfo.pdf') }}" type="application/pdf" class="journalimgmodal"></object>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-example-modal5-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <object data="{{ asset('bundles/hopital/img/journaux/16_11FlashInfo.pdf') }}" type="application/pdf" class="journalimgmodal"></object>
+            </div>
+        </div>
+    </div>
+
+
+
+    {#<table>
         <thead>
         <tr>
             <th>Id</th>
@@ -33,5 +122,5 @@
         <li>
             <a href="{{ path('documentation_new') }}">Create a new documentation</a>
         </li>
-    </ul>
+    </ul>#}
 {% endblock %}

@@ -17,6 +17,7 @@ class DocumentationType extends AbstractType
     {
         $builder
             ->add('note')
+            ->add('noteservice')
             ->add('contacts')
             ->add('astreintes')
             ->add('journaux')

@@ -131,6 +131,8 @@ main {
 
 /**************************** FIN BARRE DE RECHERCHE ********************/
 
+
+
 /**************************** DEBUT NOUVEAUTES DU SITE ****************************/
 
 .newsticker {
@@ -186,7 +188,6 @@ main {
 }
 
 
-
 /**************************** FIN LIENS UTILES ****************************/
 
 
@@ -214,6 +215,17 @@ main {
 
 
 
+/**************************** DEBUT BOOK ****************************/
+
+
+
+
+
+
+
+
+
+    /**************************** FIN BOOK ****************************/
 
 /**************************** DEBUT LIENS ****************************/
 
@@ -231,17 +243,25 @@ main {
 
 .btn{
     background-color: #0089D0;
+    color: #FFFFFF;
     border-radius: 0;
     border:0;
     font-size: 1.2em;
     text-align: center;
     margin-left: 5%;
     margin-top:10px;
+    margin-bottom: 10px;
 }
 
 .fondblanc{
     background-color: #FFFFFF;
     height: 620px;
+    padding: 10px 20px 20px 20px;
+}
+
+.fondblanc1{
+    background-color: #FFFFFF;
+    height: 715px;
     padding: 10px 20px 20px 20px;
 }
 
@@ -255,6 +275,12 @@ main {
     height: 100px;
     margin-left: 5%;
     border:4px solid #E7E7E7;
+}
+
+.has{
+    height: 450px;
+    width: 90%;
+    margin-left: 5%;
 }
 
 
@@ -297,27 +323,99 @@ div.c-wrapper{
     padding: 10px 20px 20px 20px;
 }
 
-/******************************************/
-/****************** PDF ***************/
-/******************************************/
-/* Basic sample */
 
-.flipbook-viewport .container{
-    position: static;
-    margin-right: 18%;
-    margin-left: 18%;
+/************************** FIN CONTACTS **********************/
+
+
+/**************************** DEBUT PLANS ***********************/
+
+.planglobal{
+    width: 700px;
+    margin-left: 15%;
+    border:4px solid #E7E7E7;
+}
+
+.slide{
+    margin-top: 50px;
+}
+
+
+/************************** FIN PLANS **********************/
+
+
+
+/**************************** DEBUT NOTES DE SERVICES ***********************/
+
+.noteservice{
+    height: 500px;
+    width: 70%;
+    margin-left: 15%;
 
 }
 
-.flipbook {
-    height: 200px;
-    width: 200px;
+
+.notedinformation{
+    height: 530px;
+    width: 70%;
+    margin-left: 15%;
 }
 
-/******************************************/
-/****************** ORGANIGRAMME ***************/
-/******************************************/
 
-.orga_pdf {
+.notebtn{
+    background-color: #0089D0;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-top:10px;
+    color: #FFFFFF;
+}
+
+.noteboutons{
     margin-bottom: 20px;
+    margin-left: 28%;
+}
+
+/**************************** FIN NOTES DE SERVICES **********************/
+
+
+
+
+/**************************** DEBUT JOURNAL ***********************/
+
+.journalimg{
+    width: 350px;
+    height: 120px;
+    border: 5px solid #E7E7E7;
+}
+
+.journaux{
+    margin-left: 120px;
+}
+
+.journalimgmodal{
+    width: 860px;
+    height: 600px;
+    margin: 0px 20px 20px 20px;
+}
+
+.close{
+    margin-top:5px;
+    margin:10px;
+}
+
+.boutonjournal{
+    margin-left: 0px;
+}
+
+
+/**************************** FIN NOTES DE SERVICES **********************/
+
+
+.directioncommune{
+    height: 530px;
+    width: 70%;
+    margin-left: 15%;
+    border: 5px solid #E7E7E7;
 }

@@ -144,6 +144,21 @@ class DocumentationController extends Controller
 
 
     /**
+     * Lists all documentations entities.
+     *
+     */
+    public function noteserviceAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $documentations = $em->getRepository('HopitalBundle:Documentation')->findAll();
+
+        return $this->render('HopitalBundle:documentation:noteservice.html.twig', array(
+            'documentations' => $documentations,
+        ));
+    }
+
+    /**
      * Lists all documentation entities.
      *
      */
@@ -258,9 +273,6 @@ class DocumentationController extends Controller
             'documentations' => $documentations,
         ));
     }
-
-
-
 
 
 }
