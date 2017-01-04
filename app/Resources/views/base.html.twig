@@ -142,8 +142,37 @@
 
 
 
+
         {% block body %}{% endblock %}
 
+
+    <!--DEBUT FOOTER-->
+    <footer>
+        <p>
+            <a data-toggle="modal" data-target="#eleves" class="ml">Site créé par les élèves de la Wild Code School</a>
+        </p>
+        <div id="eleves" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <img src="{{ asset('bundles/hopital/img/logoWCS.jpg') }}" alt="Logo Wild Code School" class="wcs" >
+                    </div>
+                    <div class="modal-body">
+                        <p class="alert alert-info">Site créé par les élèves de la Wild Code School</p>
+                        <p>Véronique LEJEUNE - <a href="https://www.linkedin.com/in/veronique-lejeune?authType=NAME_SEARCH&authToken=E-j6&locale=fr_FR&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A440029519%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1483518676398%2Ctas%3AV%C3%A9roni" class="lienLink">Lien Linkedin</a></p>
+                        <p>Lionel PICARD - <a href="https://www.linkedin.com/in/lionel-picard?authType=name&authToken=EYH2&trk=Skyline_click_NBM&sl=NBM%3B394750447%3A1483518678481%3B0%3B440029519%3B" class="lienLink">Lien Linkedin</a></p>
+                        <p>Sylvie RETAT - <a href="https://www.linkedin.com/in/sylvie-r%C3%A9tat-66724bb0" class="lienLink">Lien Linkedin</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+
+    <!--FIN FOOTER-->
 
         {% block javascripts %}
             <!-- Latest compiled and minified JavaScript -->
