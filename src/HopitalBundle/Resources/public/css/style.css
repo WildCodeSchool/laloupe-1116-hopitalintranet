@@ -54,6 +54,7 @@ footer{
     padding-top: 10px;
     position: fixed;
     bottom: 0;
+
 }
 
 .ml{
@@ -313,9 +314,26 @@ main {
 
 /**************************** DEBUT BOOK ****************************/
 
+.bouton_dl  {
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 45%;
+    font-size: 1.2em;
+    border: solid black 1px;
+    border-radius: 5px;
 
+}
 
+.bouton_dl:hover {
+    color: darkslategrey;
+    text-decoration: none;
+}
 
+.bouton_dl:visited {
+
+    color: black;
+
+}
 
 
 
@@ -357,7 +375,7 @@ main {
 
 .fondblanc1{
     background-color: #FFFFFF;
-    height: 715px;
+    height: 770px;
     padding: 10px 20px 20px 20px;
 }
 
@@ -578,3 +596,23 @@ div.c-wrapper{
 }
 
 /**************************** FIN MENU **********************/
+
+
+
+/**************************** DEBUT BOÎTE À IDÉES **********************/
+
+.objet{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.message{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.send{
+    margin-left: 800px;
+}
+
+/**************************** FIN BOÎTE À IDÉES **********************/

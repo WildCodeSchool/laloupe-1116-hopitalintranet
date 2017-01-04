@@ -46,4 +46,4 @@ personnel_planniciel:
 personnel_idees:
     path:     /idees
     defaults: { _controller: "HopitalBundle:Personnel:idees" }
-    methods:  GET
+    methods:  [POST]

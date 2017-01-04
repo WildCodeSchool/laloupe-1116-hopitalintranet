@@ -8,4 +8,5 @@ HopitalBundle\Entity\Idees:
             id: true
             generator:
                 strategy: AUTO
+
     lifecycleCallbacks: {  }
