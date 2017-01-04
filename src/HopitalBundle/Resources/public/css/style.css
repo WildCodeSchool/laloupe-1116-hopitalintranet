@@ -44,6 +44,102 @@ body{
 /**************************** FIN NAVBAR ****************************/
 
 
+/**************************** DEBUT FOOTER ****************************/
+
+footer{
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.ml{
+    color: #000000;
+}
+
+.ml:link {
+    color: white;
+    text-decoration: none;
+}
+
+.ml:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.ml:hover {
+    color: #626262;
+    text-decoration: none;
+}
+
+.ml:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/*modal Eleves*/
+
+.modal-body{
+    color: black;
+    font-size: 1.2em;
+}
+
+.modal-body h2{
+    color: #FE8801;
+}
+
+.alert{
+    background-color: #FE9B1A;
+    border: none;
+}
+
+.alert-info{
+    color: #fff;
+}
+
+.lienLink:link {
+    color: #FE9B1A;
+    text-decoration: none;
+}
+
+.lienLink:visited {
+    color: #FE9B1A;
+    text-decoration: none;
+}
+
+.lienLink:hover {
+    color: #FECC76;
+    text-decoration: none;
+}
+
+.lienLink:active {
+    color: #FECC76;
+    text-decoration: none;
+}
+
+#texteWCS{
+    margin-top: 60px;
+}
+
+.wcs{
+    height: 15em;
+    margin-top:20px;
+}
+
+
+
+/**************************** FIN FOOTER ****************************/
+
+
+
+
+
+
+
 /**************************** DEBUT ACCUEIL ****************************/
 
 main {
@@ -255,7 +351,7 @@ main {
 
 .fondblanc{
     background-color: #FFFFFF;
-    height: 620px;
+    height: 670px;
     padding: 10px 20px 20px 20px;
 }
 
@@ -266,7 +362,7 @@ main {
 }
 
 .lienimg{
-    height: 450px;
+    width: 1000px;
     margin-left: 5%;
     border:4px solid #E7E7E7;
 }
@@ -288,6 +384,12 @@ main {
 /**************************** FIN LIENS ****************************/
 
 /**************************** DEBUT GALERIE IMAGES ****************/
+
+.fondblanc2{
+    background-color: #FFFFFF;
+    height: 680px;
+    padding: 10px 20px 20px 20px;
+}
 
 div.c-wrapper{
     width: 80%;
@@ -412,6 +514,8 @@ div.c-wrapper{
 
 /**************************** FIN NOTES DE SERVICES **********************/
 
+/**************************** DEBUT DIRECTION COMMUNE **********************/
+
 
 .directioncommune{
     height: 530px;
@@ -419,3 +523,36 @@ div.c-wrapper{
     margin-left: 15%;
     border: 5px solid #E7E7E7;
 }
+
+/**************************** FIN DIRECTION COMMUNE **********************/
+
+/**************************** DEBUT MENU **********************/
+
+
+.menupdf{
+    height: 500px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.btn-lg{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 15%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+
+
+.menuremplacepdf{
+    width: 830px;
+    height: 570px;
+    margin: 0px 20px 20px 20px;
+}
+
+/**************************** FIN MENU **********************/
