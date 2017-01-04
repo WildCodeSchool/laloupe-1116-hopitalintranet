@@ -45,5 +45,5 @@ moncompte_petitesannonces:
 
 moncompte_agenda:
     path:     /agenda
-    defaults: { _controller: "HopitalBundle:Moncompte:agenda" }
+    defaults: { _controller: "VlAgendaBundle:Default:index" }
     methods:  GET
