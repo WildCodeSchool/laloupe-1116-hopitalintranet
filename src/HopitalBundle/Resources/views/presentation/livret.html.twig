@@ -5,11 +5,8 @@
 <div class="row">
     <div class="col-md-offset-2 col-md-8 fondblanc1">
         <h3 class="lienstitre">Livret d'accueil</h3>
-
                <div class="flipbook-viewport">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-8 fondblanc1">
+                    <div class="container" style="margin-left: 45px;">
                                 <div class="flipbook">
                                     <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page1.jpg') }})"></div>
                                     <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page2.jpg') }})"></div>
@@ -23,31 +20,29 @@
                                     <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page10.jpg') }})"></div>
                                     <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page11.jpg') }})"></div>
                                     <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page12.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page13.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page14.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page15.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page16.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page17.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page18.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page19.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page20.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page21.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page22.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page23.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page24.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page25.jpg') }})"></div>
-                                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page26.jpg') }})"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 fondblanc1">
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page13.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page14.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page15.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page16.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page17.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page18.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page19.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page20.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page21.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page22.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page23.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page24.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page25.jpg') }})"></div>
+                                    <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page26.jpg') }})"></div>
                                     <br/>
-                                        <button type="button" class="btn btn-primary"><a href="{{ asset('bundles/hopital/img/Livret/Livret_Accueil.pdf') }}">Download PDF</a></button>
+
                                 </div>
-                            </div>
-                         </div>
                     </div>
-    </div>
-</div>
+                   <button type="button" class="btn btn-default"><a href="{{ asset('bundles/hopital/img/Livret/Livret_Accueil.pdf') }}">Download PDF</a></button>
+
+               </div>
+            </div>
+        </div>
 
 
 
@@ -67,6 +62,8 @@
 
     {% block javascripts %}
 
+        {{ parent() }}
+
         <script src="{{ asset('bundles/hopital/js/jquery.min.1.7.js') }}"></script>
         <script src="{{ asset('bundles/hopital/js/modernizr.2.5.3.min.js') }}"></script>
         <script src="{{ asset('bundles/hopital/js/turn.js') }}"></script>
@@ -80,7 +77,7 @@
                 width:912,
 
                 // Height
-                height:645,
+                height:640,
 
                 // Elevation
                 elevation: 60,
