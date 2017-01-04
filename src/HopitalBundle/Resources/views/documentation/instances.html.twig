@@ -1,9 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Instances</h1>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
 
-    <table>
+            <h1 class="lienstitre">Instances</h1>
+            <br/>
+
+            <object type="application/vnd.ms-excel"
+                    data="data/test.xls" width="300" height="200">
+                <a href="{{ asset('bundles/hopital/img/Instances/liste des instances.xls') }}">test.xls</a>
+            </object>
+
+
+
+        </div>
+    </div>
+
+    {#<table>
         <thead>
         <tr>
             <th>Id</th>
@@ -33,5 +47,5 @@
         <li>
             <a href="{{ path('documentation_new') }}">Create a new documentation</a>
         </li>
-    </ul>
+    </ul>#}
 {% endblock %}
