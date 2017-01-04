@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b0f50d6-e1de-4ba7-8914-79f9ee88bc84" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/symfony2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/laloupe-1116-hopitalintranet.iml" afterPath="$PROJECT_DIR$/.idea/laloupe-1116-hopitalintranet.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/galerie.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/galerie.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/covoiturage.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/covoiturage.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/contacts.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/contacts.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/menu.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/anesm.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/anesm.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/bulletinoff.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/bulletinoff.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/has.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/has.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/journaloff.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/journaloff.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/pagesjaunes.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/pagesjaunes.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/plans.html.twig" afterPath="$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/plans.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,27 +27,27 @@
         <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="277" column="10" lean-forward="false" selection-start-line="277" selection-start-column="8" selection-end-line="277" selection-end-column="10" />
+              <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="anesm.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/anesm.html.twig">
+      <file leaf-file-name="contacts.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/contacts.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="559">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="covoiturage.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/covoiturage.html.twig">
+      <file leaf-file-name="menu.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/menu.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="30" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -72,20 +60,27 @@
       <find>c-wrapper</find>
       <find>lienstitre3</find>
       <find>fondblanc</find>
-      <find>footer</find>
       <find>blanc</find>
       <find>lienimg</find>
       <find>menu</find>
-      <find>btn</find>
       <find>mymo</find>
       <find>myM</find>
       <find>modal-dialog-modal-lg</find>
       <find>modal-content</find>
       <find>modal-body</find>
       <find>modal-title</find>
-      <find>modal</find>
       <find>journalimgmodal</find>
       <find>h3</find>
+      <find>planglobal</find>
+      <find>footer</find>
+      <find>doc-pdf</find>
+      <find>conta</find>
+      <find>btn</find>
+      <find>contactbtn</find>
+      <find>contact</find>
+      <find>modal</find>
+      <find>contac</find>
+      <find>text-deco</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,14 +91,17 @@
       <list>
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/galerie.html.twig" />
-        <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/public/css/style.css" />
-        <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/menu.html.twig" />
         <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/anesm.html.twig" />
         <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/pagesjaunes.html.twig" />
         <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/journaloff.html.twig" />
         <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/has.html.twig" />
         <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/bulletinoff.html.twig" />
         <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/covoiturage.html.twig" />
+        <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/plans.html.twig" />
+        <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/organigrammes.html.twig" />
+        <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/menu.html.twig" />
+        <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/contacts.html.twig" />
       </list>
     </option>
   </component>
@@ -205,36 +203,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recommandation" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laloupe-1116-hopitalintranet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laloupe-1116-hopitalintranet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HopitalBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -262,7 +230,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="personnel" />
+              <option name="myItemId" value="presentation" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,12 +330,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1483517270226</updated>
-      <workItem from="1483517271935" duration="5339000" />
+      <workItem from="1483517271935" duration="10271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5339000" />
+    <option name="totallyTimeSpent" value="10271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
@@ -427,37 +395,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/organigrammes.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/journaux.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="51" column="139" lean-forward="false" selection-start-line="51" selection-start-column="124" selection-end-line="51" selection-end-column="139" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/plans.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/menu.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -485,14 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="277" column="10" lean-forward="false" selection-start-line="277" selection-start-column="8" selection-end-line="277" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/bulletinoff.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -501,18 +435,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/anesm.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/covoiturage.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="300">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/covoiturage.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/plans.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/recommandation/anesm.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/presentation/organigrammes.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="127" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/personnel/menu.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HopitalBundle/Resources/views/documentation/contacts.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
