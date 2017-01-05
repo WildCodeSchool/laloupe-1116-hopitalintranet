@@ -8,4 +8,9 @@ HopitalBundle\Entity\Galerie:
             id: true
             generator:
                 strategy: AUTO
+    fields :
+        galerie1:
+            type: string
+            lenght: 255
+            nullable: TRUE
     lifecycleCallbacks: {  }
