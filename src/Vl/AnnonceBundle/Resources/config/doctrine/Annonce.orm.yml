@@ -1,0 +1,32 @@
+Vl\AnnonceBundle\Entity\Annonce:
+    type: entity
+    table: null
+    repositoryClass: Vl\AnnonceBundle\Repository\AnnonceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        auteur:
+            type: string
+            length: 255
+        image:
+            type: string
+            length: 255
+        prix:
+            type: integer
+
+    lifecycleCallbacks:
+        prePersist: [ preUpload ]
+        preUpdate: [ preUpload ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]
