@@ -1,0 +1,7 @@
+vl_annonce_annonce:
+    resource: "@VlAnnonceBundle/Resources/config/routing/annonce.yml"
+    prefix:   /annonce
+
+vl_annonce_homepage:
+    path:     /
+    defaults: { _controller: VlAnnonceBundle:Default:index }

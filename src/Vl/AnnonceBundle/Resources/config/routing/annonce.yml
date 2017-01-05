@@ -1,0 +1,29 @@
+annonce_index:
+    path:     /
+    defaults: { _controller: "VlAnnonceBundle:Annonce:index" }
+    methods:  GET
+
+annonce_show:
+    path:     /{id}/show
+    defaults: { _controller: "VlAnnonceBundle:Annonce:show" }
+    methods:  [GET, POST]
+
+annonce_new:
+    path:     /new
+    defaults: { _controller: "VlAnnonceBundle:Annonce:new" }
+    methods:  [GET, POST]
+
+annonce_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VlAnnonceBundle:Annonce:edit" }
+    methods:  [GET, POST]
+
+annonce_delete:
+    path:     /{id}/advert/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteAdvert" }
+    methods:  [GET, POST]
+
+commentaire_delete:
+    path:     /{id}/{id_advert}/commentaire/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteCommentaire" }
+    methods:  [GET, POST]
