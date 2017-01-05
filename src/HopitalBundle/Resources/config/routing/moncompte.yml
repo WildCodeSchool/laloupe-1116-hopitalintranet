@@ -25,7 +25,7 @@ moncompte_delete:
 
 moncompte_cgos:
     path:     /cgos
-    defaults: { _controller: "HopitalBundle:Moncompte:cgos" }
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexCgos" }
     methods:  GET
 
 moncompte_amicale:
