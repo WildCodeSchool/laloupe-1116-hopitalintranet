@@ -5,9 +5,9 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Articles
+ * Presentation
  */
-class Articles
+class Presentation
 {
     /**
      * @var int

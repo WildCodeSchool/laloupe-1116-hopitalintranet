@@ -1,9 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Astreintes</h1>
 
-    <table>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Astreinte</h1>
+            <br/>
+
+            <object data="{{ asset('bundles/hopital/img/Astreinte/administrative.pdf') }}" type="application/pdf" class="directioncommune">
+            </object>
+
+            <object data="{{ asset('bundles/hopital/img/Astreinte/techniques.pdf') }}" type="application/pdf" class="directioncommune">
+            </object>
+
+        </div>
+    </div>
+
+    {#<table>
         <thead>
         <tr>
             <th>Id</th>
@@ -33,5 +46,5 @@
         <li>
             <a href="{{ path('documentation_new') }}">Create a new documentation</a>
         </li>
-    </ul>
+    </ul>#}
 {% endblock %}

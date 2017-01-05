@@ -15,10 +15,18 @@ class PresentationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('livret')
-            ->add('organigrammes')
-            ->add('plans');
-
+            ->add('plansglobal')
+            ->add('file1', 'file', array('required' => false))
+            ->add('plansbatarc')
+            ->add('file2', 'file', array('required' => false))
+            ->add('plansbatae')
+            ->add('file3', 'file', array('required' => false))
+            ->add('plansbatbrj')
+            ->add('file4', 'file', array('required' => false))
+            ->add('plansbatbrc')
+            ->add('file5', 'file', array('required' => false))
+            ->add('plansbatbe')
+            ->add('file6', 'file', array('required' => false));
     }
 
     /**FIN CODE AJOUTÉ

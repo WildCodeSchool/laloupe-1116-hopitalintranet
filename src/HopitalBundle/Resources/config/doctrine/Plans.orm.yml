@@ -8,4 +8,35 @@ HopitalBundle\Entity\Plans:
             id: true
             generator:
                 strategy: AUTO
-    lifecycleCallbacks: {  }
+
+
+    fields:
+        plansglobal:
+            type: string
+            length: 25
+        plansbatarc:
+            type: string
+            length: 25
+        plansbatae:
+            type: string
+            length: 25
+        plansbatbrj:
+            type: string
+            length: 25
+        plansbatbrc:
+            type: string
+            length: 25
+        plansbatbe:
+            type: string
+            length: 25
+
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5, preUpload6 ]
+      preUpdate: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5, preUpload6 ]
+      postPersist: [ upload, upload1, upload2,upload3, upload4, upload5, upload6 ]
+      postUpdate: [ upload, upload1, upload2,upload3, upload4,upload5, upload6 ]
+      postRemove: [ removeUpload, removeUpload1, removeUpload2,removeUpload3, removeUpload4,removeUpload5, removeUpload6 ]
+

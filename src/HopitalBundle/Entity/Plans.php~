@@ -5,28 +5,10 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Presentation
+ * Plans
  */
-class Presentation
+class Plans
 {
-    /**
-     * @var int
-     */
-    private $id;
-
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-
-
     public $file1;
 
     protected function getUploadDir()
@@ -74,8 +56,8 @@ class Presentation
 
     public function removeUpload1()
     {
-        if ($file1 = $this->getAbsolutePath()) {
-            unlink($file1);
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
         }
     }
     public $file2;
@@ -104,8 +86,8 @@ class Presentation
 
     public function removeUpload2()
     {
-        if ($file2 = $this->getAbsolutePath()) {
-            unlink($file2);
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
         }
     }
     public $file3;
@@ -134,8 +116,8 @@ class Presentation
 
     public function removeUpload3()
     {
-        if ($file3 = $this->getAbsolutePath()) {
-            unlink($file3);
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
         }
     }
     public $file4;
@@ -164,8 +146,8 @@ class Presentation
 
     public function removeUpload4()
     {
-        if ($file4 = $this->getAbsolutePath()) {
-            unlink($file4);
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
         }
     }
     public $file5;
@@ -194,8 +176,8 @@ class Presentation
 
     public function removeUpload5()
     {
-        if ($file5 = $this->getAbsolutePath()) {
-            unlink($file5);
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
         }
     }
     public $file6;
@@ -224,11 +206,28 @@ class Presentation
 
     public function removeUpload6()
     {
-        if ($file6 = $this->getAbsolutePath()) {
-            unlink($file6);
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
         }
     }
 
+
+
+    /**
+     * @var int
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
 
     /**
@@ -288,7 +287,7 @@ class Presentation
     /**
      * @var string
      */
-    private $plansbatbe;
+    private $image6;
 
 
     /**
@@ -454,5 +453,7 @@ class Presentation
     {
         // Add your code here
     }
+
+
 
 }
