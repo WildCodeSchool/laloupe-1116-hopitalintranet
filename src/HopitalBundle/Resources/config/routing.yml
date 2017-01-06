@@ -2,6 +2,7 @@ hopital_homepage:
     path:     /
     defaults: { _controller: HopitalBundle:Default:index }
 
+
 hopital_accueil:
     resource: "@HopitalBundle/Resources/config/routing/accueil.yml"
     prefix:   /accueil

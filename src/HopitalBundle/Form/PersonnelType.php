@@ -21,7 +21,6 @@ class PersonnelType extends AbstractType
             ->add('covoiturage')
             ->add('planniciel')
             ->add('idees');
-
     }
 
     /**FIN CODE AJOUTÉ

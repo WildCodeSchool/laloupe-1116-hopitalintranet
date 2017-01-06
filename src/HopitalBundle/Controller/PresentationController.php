@@ -15,7 +15,7 @@ class PresentationController extends Controller
     /**
      * Lists all presentation entities.
      *
-     */
+
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -26,11 +26,11 @@ class PresentationController extends Controller
             'presentations' => $presentations,
         ));
     }
-
+     */
     /**
      * Creates a new presentation entity.
      *
-     */
+
     public function newAction(Request $request)
     {
         $presentation = new Presentation();
@@ -50,11 +50,11 @@ class PresentationController extends Controller
             'form' => $form->createView(),
         ));
     }
-
+     */
     /**
      * Finds and displays a presentation entity.
      *
-     */
+
     public function showAction(Presentation $presentation)
     {
         $deleteForm = $this->createDeleteForm($presentation);
@@ -64,11 +64,11 @@ class PresentationController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
-
+     */
     /**
      * Displays a form to edit an existing presentation entity.
      *
-     */
+
     public function editAction(Request $request, Presentation $presentation)
     {
         $deleteForm = $this->createDeleteForm($presentation);
@@ -81,17 +81,17 @@ class PresentationController extends Controller
             return $this->redirectToRoute('presentation_edit', array('id' => $presentation->getId()));
         }
 
-        return $this->render('HopitalBundle:presentation:edit.html.twig', array(
+        return $this->render('HopitalBundle:presentation:edit.hmtl.twig', array(
             'presentation' => $presentation,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
-
+     */
     /**
      * Deletes a presentation entity.
      *
-     */
+
     public function deleteAction(Request $request, Presentation $presentation)
     {
         $form = $this->createDeleteForm($presentation);
@@ -105,6 +105,7 @@ class PresentationController extends Controller
 
         return $this->redirectToRoute('presentation_index');
     }
+     */
 
     /**
      * Creates a form to delete a presentation entity.
@@ -112,7 +113,7 @@ class PresentationController extends Controller
      * @param Presentation $presentation The presentation entity
      *
      * @return \Symfony\Component\Form\Form The form
-     */
+
     private function createDeleteForm(Presentation $presentation)
     {
         return $this->createFormBuilder()
@@ -121,7 +122,7 @@ class PresentationController extends Controller
             ->getForm()
         ;
     }
-
+     */
 
     /**********************CODE AJOUTÉ ***********************************
 
@@ -160,7 +161,7 @@ class PresentationController extends Controller
 
 
 
-    /**
+     /**
      * Lists all presentation entities.
      *
      */
@@ -174,6 +175,7 @@ class PresentationController extends Controller
             'presentations' => $presentations,
         ));
     }
+
 }
 
 

@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Galerie
 {
+<<<<<<< HEAD
     public $galerie1;
 
     protected function getUploadDir()
@@ -72,11 +73,17 @@ class Galerie
     }
 
     /**code géréré
+=======
+>>>>>>> 3e8fb5929032053648b53fdea2ff166388df8508
     /**
      * @var int
      */
     private $id;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3e8fb5929032053648b53fdea2ff166388df8508
     /**
      * Get id
      *
@@ -86,6 +93,9 @@ class Galerie
     {
         return $this->id;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3e8fb5929032053648b53fdea2ff166388df8508
 }

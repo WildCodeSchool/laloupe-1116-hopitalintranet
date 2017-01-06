@@ -194,12 +194,23 @@ class PersonnelController extends Controller
      */
     public function ideesAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        $Request = $this->getRequest();
+        if ($Request->getMethod() == "POST") {
+            $subject = $Request->get("object");
 
-        $personnels = $em->getRepository('HopitalBundle:Personnel')->findAll();
+            $message = ""."\n\n".$Request->get("message");
 
-        return $this->render('HopitalBundle:personnel:idees.html.twig', array(
-            'personnels' => $personnels,
-        ));
+            $message = \Swift_Message::newInstance('Test')
+                ->setSubject($subject)
+                ->setFrom(array('boiteaidees28@gmail.com' =>'Site internet'))
+                ->setTo(array('retatsylvie@gmail.com'))
+                ->setBody($message);
+            $this->get('mailer')->send($message);
+
+        }
+        return $this->render('HopitalBundle:personnel:idees.html.twig');
     }
+
+
+
 }
