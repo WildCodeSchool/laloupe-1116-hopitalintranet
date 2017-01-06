@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Presentation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ plans.id }}</td>
+            </tr>
+            <tr>
+                <th>Plansglobal</th>
+                <td>{{ plans.plansglobal }}</td>
+            </tr>
+            <tr>
+                <th>Plansbatarc</th>
+                <td>{{ plans.plansbatarc }}</td>
+            </tr>
+            <tr>
+                <th>Plansbatae</th>
+                <td>{{ plans.plansbatae }}</td>
+            </tr>
+            <tr>
+                <th>Plansbatbrj</th>
+                <td>{{ plans.plansbatbrj }}</td>
+            </tr>
+            <tr>
+                <th>Plansbatbrc</th>
+                <td>{{ plans.plansbatbrc }}</td>
+            </tr>
+            <tr>
+                <th>Plansbatbe</th>
+                <td>{{ plans.Plansbatbe }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('presentation_plans_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('presentation_plans_edit', { 'id': plans.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

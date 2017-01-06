@@ -14,21 +14,27 @@ HopitalBundle\Entity\Plans:
         plansglobal:
             type: string
             length: 25
+            nullable: true
         plansbatarc:
             type: string
             length: 25
+            nullable: true
         plansbatae:
             type: string
             length: 25
+            nullable: true
         plansbatbrj:
             type: string
             length: 25
+            nullable: true
         plansbatbrc:
             type: string
             length: 25
+            nullable: true
         plansbatbe:
             type: string
             length: 25
+            nullable: true
 
 
 

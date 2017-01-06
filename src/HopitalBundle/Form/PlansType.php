@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PresentationType extends AbstractType
+class PlansType extends AbstractType
 {
     /**CODE AJOUTÉ
      /**
@@ -39,17 +39,19 @@ class PresentationType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Presentation'
+            'data_class' => 'HopitalBundle\Entity\Plans'
         ));
     }
+
 
     /**
      * {@inheritdoc}
      */
     public function getBlockPrefix()
     {
-        return 'hopitalbundle_presentation';
+        return 'psychobundle_psycho';
     }
+
 
 
 }

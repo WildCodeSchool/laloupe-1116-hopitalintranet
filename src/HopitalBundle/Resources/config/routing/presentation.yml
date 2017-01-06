@@ -1,26 +1,26 @@
-presentation_index:
-    path:     /
-    defaults: { _controller: "HopitalBundle:Presentation:index" }
+presentation_plans_index:
+    path:     /plans
+    defaults: { _controller: "HopitalBundle:Plans:index" }
     methods:  GET
 
-presentation_show:
-    path:     /{id}/show
-    defaults: { _controller: "HopitalBundle:Presentation:show" }
+presentation_plans_show:
+    path:     /plans/{id}/show
+    defaults: { _controller: "HopitalBundle:Plans:show" }
     methods:  GET
 
-presentation_new:
-    path:     /new
-    defaults: { _controller: "HopitalBundle:Presentation:new" }
+presentation_plans_new:
+    path:     /plans/new
+    defaults: { _controller: "HopitalBundle:Plans:new" }
     methods:  [GET, POST]
 
-presentation_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "HopitalBundle:Presentation:edit" }
+presentation_plans_edit:
+    path:     /plans/{id}/edit
+    defaults: { _controller: "HopitalBundle:Plans:edit" }
     methods:  [GET, POST]
 
 presentation_delete:
     path:     /{id}/delete
-    defaults: { _controller: "HopitalBundle:Presentation:delete" }
+    defaults: { _controller: "HopitalBundle:Plans:delete" }
     methods:  DELETE
 
 presentation_livret:
@@ -33,9 +33,6 @@ presentation_organigrammes:
     defaults: { _controller: "HopitalBundle:Presentation:organigrammes" }
     methods:  GET
 
-presentation_plans:
-    path:     /plans
-    defaults: { _controller: "HopitalBundle:Presentation:plans" }
-    methods:  GET
+
 
 
