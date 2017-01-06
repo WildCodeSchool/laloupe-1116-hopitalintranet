@@ -26,7 +26,7 @@ class DocumentationType extends AbstractType
             ->add('groupe')
             ->add('fournisseurs')
             ->add('galerie')
-            ->add('file', 'file', array('label' => 'galerie1', 'required' => false));
+            ->add('file', 'file', array('label' => 'Image', 'required' => false));
 
     }
 

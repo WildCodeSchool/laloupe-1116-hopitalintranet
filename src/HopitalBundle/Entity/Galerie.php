@@ -32,6 +32,44 @@ class Galerie
         return null === $this->galerie1 ? null : $this->getUploadRootDir() . '/' . $this->galerie1;
     }
 
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        if (null === $this->galerie1) {
+            return;
+        }
+
+        $this->galerie1->move($this->getUploadRootDir(), $this->galerie1);
+
+        unset($this->file);
+    }
+
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function preUpload()
+    {
+        if (null === $this->galerie1) {
+            return;
+    }
+
+        $this->galerie1->move($this->getUploadRootDir(), $this->galerie1);
+
+        unset($this->file);
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
+        }
+    }
 
     /**code géréré
     /**
@@ -48,4 +86,6 @@ class Galerie
     {
         return $this->id;
     }
+
+
 }

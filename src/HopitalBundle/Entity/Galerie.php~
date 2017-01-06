@@ -32,6 +32,30 @@ class Galerie
         return null === $this->galerie1 ? null : $this->getUploadRootDir() . '/' . $this->galerie1;
     }
 
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
+
+        $this->file->move($this->getUploadRootDir(), $this->url);
+
+        unset($this->file);
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
+        }
+    }
+
 
     /**code géréré
     /**

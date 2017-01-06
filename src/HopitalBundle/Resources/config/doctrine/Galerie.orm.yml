@@ -13,4 +13,9 @@ HopitalBundle\Entity\Galerie:
             type: string
             lenght: 255
             nullable: TRUE
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks:
+        prePersist: [ preUpload ]
+        preUpdate: [ preUpload ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]
