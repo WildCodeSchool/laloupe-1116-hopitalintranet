@@ -26,7 +26,6 @@ class DocumentationController extends Controller
             'documentations' => $documentations,
         ));
     }
-
     /**
      * Creates a new documentation entity.
      *
@@ -269,7 +268,7 @@ class DocumentationController extends Controller
 
         $documentations = $em->getRepository('HopitalBundle:Documentation')->findAll();
 
-        return $this->render('HopitalBundle:documentation:galerie.html.twig', array(
+        return $this->render('@Hopital/documentation/galerie.index.html.twig', array(
             'documentations' => $documentations,
         ));
     }

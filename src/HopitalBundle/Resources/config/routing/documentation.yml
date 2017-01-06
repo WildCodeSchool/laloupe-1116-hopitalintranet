@@ -68,7 +68,22 @@ documentation_fournisseurs:
     defaults: { _controller: "HopitalBundle:Documentation:fournisseurs" }
     methods:  GET
 
-documentation_galerie:
+documentation_galerie_index:
     path:     /galerie
     defaults: { _controller: "HopitalBundle:Documentation:galerie" }
+    methods:  GET
+
+documentation_galerie_new:
+    path:     /galerie
+    defaults: { _controller: "HopitalBundle:Documentation:galerie" }
+    methods:  GET
+
+documentation_galerie_show:
+    path:     /galerie
+    defaults: { _controller: "HopitalBundle:Documentation:galerie" }
+    methods:  GET
+
+documentation_galerie_edit:
+    path:     /galerie
+    defaults: { _controller: "HopitalBundle:Documentation:galerie:edit" }
     methods:  GET
