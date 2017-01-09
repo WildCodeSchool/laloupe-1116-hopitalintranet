@@ -6,9 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DocumentationType extends AbstractType
+class GalerieType extends AbstractType
 {
-
     /**CODE AJOUTÉ
     /**
      * {@inheritdoc}
@@ -16,39 +15,31 @@ class DocumentationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('note')
-            ->add('noteservice')
-            ->add('contacts')
-            ->add('astreintes')
-            ->add('journaux')
-            ->add('basedoc')
-            ->add('instances')
-            ->add('groupe')
-            ->add('fournisseurs')
-            ->add('galerie')
-            ->add('file', 'file', array('label' => 'Image', 'required' => false));
+            ->add('galerie1')
+            ->add('file1', 'file', array('required' => false));
 
     }
 
     /**FIN CODE AJOUTÉ
-
+     *
+     *
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Documentation'
+            'data_class' => 'HopitalBundle\Entity\Galerie'
         ));
     }
+
 
     /**
      * {@inheritdoc}
      */
     public function getBlockPrefix()
     {
-        return 'hopitalbundle_documentation';
+        return 'hopitalBundle_galerie';
     }
-
 
 }

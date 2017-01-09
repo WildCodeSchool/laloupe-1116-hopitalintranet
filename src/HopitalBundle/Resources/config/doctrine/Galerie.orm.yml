@@ -8,15 +8,17 @@ HopitalBundle\Entity\Galerie:
             id: true
             generator:
                 strategy: AUTO
-    fields :
+
+
+    fields:
         galerie1:
             type: string
-            lenght: 255
-            nullable: TRUE
+            length: 25
+            nullable: true
 
     lifecycleCallbacks:
-        prePersist: [ preUpload ]
-        preUpdate: [ preUpload ]
-        postPersist: [ upload ]
-        postUpdate: [ upload ]
-        postRemove: [ removeUpload ]
+        prePersist: [ preUpload, preUpload1 ]
+        preUpdate: [ preUpload, preUpload1 ]
+        postPersist: [ upload, upload1 ]
+        postUpdate: [ upload, upload1 ]
+        postRemove: [ removeUpload, removeUpload1, ]

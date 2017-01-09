@@ -1,28 +1,3 @@
-documentation_index:
-    path:     /
-    defaults: { _controller: "HopitalBundle:Documentation:index" }
-    methods:  GET
-
-documentation_show:
-    path:     /{id}/show
-    defaults: { _controller: "HopitalBundle:Documentation:show" }
-    methods:  GET
-
-documentation_new:
-    path:     /new
-    defaults: { _controller: "HopitalBundle:Documentation:new" }
-    methods:  [GET, POST]
-
-documentation_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "HopitalBundle:Documentation:edit" }
-    methods:  [GET, POST]
-
-documentation_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "HopitalBundle:Documentation:delete" }
-    methods:  DELETE
-
 documentation_note:
     path:     /note
     defaults: { _controller: "HopitalBundle:Documentation:note" }
@@ -70,20 +45,25 @@ documentation_fournisseurs:
 
 documentation_galerie_index:
     path:     /galerie
-    defaults: { _controller: "HopitalBundle:Documentation:galerie" }
-    methods:  GET
-
-documentation_galerie_new:
-    path:     /galerie
-    defaults: { _controller: "HopitalBundle:Documentation:galerie" }
+    defaults: { _controller: "HopitalBundle:Galerie:index" }
     methods:  GET
 
 documentation_galerie_show:
-    path:     /galerie
-    defaults: { _controller: "HopitalBundle:Documentation:galerie" }
+    path:     /galerie/{id}/show
+    defaults: { _controller: "HopitalBundle:Galerie:show" }
     methods:  GET
 
+documentation_galerie_new:
+    path:     /galerie/new
+    defaults: { _controller: "HopitalBundle:Galerie:new" }
+    methods:  [GET, POST]
+
 documentation_galerie_edit:
-    path:     /galerie
-    defaults: { _controller: "HopitalBundle:Documentation:galerie:edit" }
-    methods:  GET
+    path:     /galerie/{id}/edit
+    defaults: { _controller: "HopitalBundle:Galerie:edit" }
+    methods:  [GET, POST]
+
+documentation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Galerie:delete" }
+    methods:  DELETE

@@ -56,8 +56,8 @@ class Plans
 
     public function removeUpload1()
     {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
+        if ($file1 = $this->getAbsolutePath()) {
+            unlink($file1);
         }
     }
     public $file2;
@@ -86,8 +86,8 @@ class Plans
 
     public function removeUpload2()
     {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
+        if ($file2 = $this->getAbsolutePath()) {
+            unlink($file2);
         }
     }
     public $file3;
@@ -116,8 +116,8 @@ class Plans
 
     public function removeUpload3()
     {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
+        if ($file3 = $this->getAbsolutePath()) {
+            unlink($file3);
         }
     }
     public $file4;
@@ -146,8 +146,8 @@ class Plans
 
     public function removeUpload4()
     {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
+        if ($file4 = $this->getAbsolutePath()) {
+            unlink($file4);
         }
     }
     public $file5;
@@ -176,8 +176,8 @@ class Plans
 
     public function removeUpload5()
     {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
+        if ($file5 = $this->getAbsolutePath()) {
+            unlink($file5);
         }
     }
     public $file6;
@@ -206,8 +206,8 @@ class Plans
 
     public function removeUpload6()
     {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
+        if ($file6 = $this->getAbsolutePath()) {
+            unlink($file6);
         }
     }
 
@@ -287,7 +287,7 @@ class Plans
     /**
      * @var string
      */
-    private $image6;
+    private $plansbatbe;
 
 
     /**
@@ -453,6 +453,7 @@ class Plans
     {
         // Add your code here
     }
+
 
 
 

@@ -24,4 +24,435 @@ class Presentation
     {
         return $this->id;
     }
+
+
+
+    public $file1;
+
+    protected function getUploadDir()
+    {
+        return 'uploads';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../web/'.$this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+    }
+
+
+    public function preUpload1()
+    {
+        if (null !== $this->file1) {
+            // do whatever you want to generate a unique name
+            $this->plansglobal = uniqid().'.'.$this->file1->guessExtension();
+        }
+    }
+
+    public function upload1()
+    {
+        if (null === $this->file1) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file1->move($this->getUploadRootDir(), $this->plansglobal);
+
+        unset($this->file1);
+    }
+
+    public function removeUpload1()
+    {
+        if ($file1 = $this->getAbsolutePath()) {
+            unlink($file1);
+        }
+    }
+    public $file2;
+
+    public function preUpload2()
+    {
+        if (null !== $this->file2) {
+            // do whatever you want to generate a unique name
+            $this->plansbatarc = uniqid().'.'.$this->file2->guessExtension();
+        }
+    }
+
+    public function upload2()
+    {
+        if (null === $this->file2) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file2->move($this->getUploadRootDir(), $this->plansbatarc);
+
+        unset($this->file2);
+    }
+
+    public function removeUpload2()
+    {
+        if ($file2 = $this->getAbsolutePath()) {
+            unlink($file2);
+        }
+    }
+    public $file3;
+
+    public function preUpload3()
+    {
+        if (null !== $this->file3) {
+            // do whatever you want to generate a unique name
+            $this->plansbatae = uniqid().'.'.$this->file2->guessExtension();
+        }
+    }
+
+    public function upload3()
+    {
+        if (null === $this->file3) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file3->move($this->getUploadRootDir(), $this->plansbatae);
+
+        unset($this->file3);
+    }
+
+    public function removeUpload3()
+    {
+        if ($file3 = $this->getAbsolutePath()) {
+            unlink($file3);
+        }
+    }
+    public $file4;
+
+    public function preUpload4()
+    {
+        if (null !== $this->file4) {
+            // do whatever you want to generate a unique name
+            $this->plansbatbrj = uniqid().'.'.$this->file4->guessExtension();
+        }
+    }
+
+    public function upload4()
+    {
+        if (null === $this->file4) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file4->move($this->getUploadRootDir(), $this->plansbatbrj);
+
+        unset($this->file4);
+    }
+
+    public function removeUpload4()
+    {
+        if ($file4 = $this->getAbsolutePath()) {
+            unlink($file4);
+        }
+    }
+    public $file5;
+
+    public function preUpload5()
+    {
+        if (null !== $this->file5) {
+            // do whatever you want to generate a unique name
+            $this->plansbatbrc = uniqid().'.'.$this->file5->guessExtension();
+        }
+    }
+
+    public function upload5()
+    {
+        if (null === $this->file5) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file5->move($this->getUploadRootDir(), $this->plansbatbrc);
+
+        unset($this->file5);
+    }
+
+    public function removeUpload5()
+    {
+        if ($file5 = $this->getAbsolutePath()) {
+            unlink($file5);
+        }
+    }
+    public $file6;
+
+    public function preUpload6()
+    {
+        if (null !== $this->file6) {
+            // do whatever you want to generate a unique name
+            $this->plansbatbe = uniqid().'.'.$this->file6->guessExtension();
+        }
+    }
+
+    public function upload6()
+    {
+        if (null === $this->file6) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file6->move($this->getUploadRootDir(), $this->plansbatbe);
+
+        unset($this->file6);
+    }
+
+    public function removeUpload6()
+    {
+        if ($file6 = $this->getAbsolutePath()) {
+            unlink($file6);
+        }
+    }
+
+
+
+    /**
+     * @var string
+     */
+    private $image;
+
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     * @return Plans
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+    /**
+     * @var string
+     */
+    private $plansglobal;
+
+    /**
+     * @var string
+     */
+    private $plansbatarc;
+
+    /**
+     * @var string
+     */
+    private $plansbatae;
+
+    /**
+     * @var string
+     */
+    private $plansbatbrj;
+
+    /**
+     * @var string
+     */
+    private $plansbatbrc;
+
+
+    /**
+     * @var string
+     */
+    private $plansbatbe;
+
+
+    /**
+     * Set plansglobal
+     *
+     * @param string $plansglobal
+     * @return Plans
+     */
+    public function setPlansglobal($plansglobal)
+    {
+        $this->plansglobal = $plansglobal;
+
+        return $this;
+    }
+
+    /**
+     * Get plansglobal
+     *
+     * @return string
+     */
+    public function getPlansglobal()
+    {
+        return $this->plansglobal;
+    }
+
+    /**
+     * Set plansbatarc
+     *
+     * @param string $plansbatarc
+     * @return Plans
+     */
+    public function setPlansbatarc($plansbatarc)
+    {
+        $this->plansbatarc = $plansbatarc;
+
+        return $this;
+    }
+
+    /**
+     * Get plansbatarc
+     *
+     * @return string
+     */
+    public function getPlansbatarc()
+    {
+        return $this->plansbatarc;
+    }
+
+    /**
+     * Set plansbatae
+     *
+     * @param string $plansbatae
+     * @return Plans
+     */
+    public function setPlansbatae($plansbatae)
+    {
+        $this->plansbatae = $plansbatae;
+
+        return $this;
+    }
+
+    /**
+     * Get plansbatae
+     *
+     * @return string
+     */
+    public function getplansbatae()
+    {
+        return $this->plansbatae;
+    }
+
+    /**
+     * Set plansbatbrj
+     *
+     * @param string $plansbatbrj
+     * @return Plans
+     */
+    public function setPlansbatbrj($plansbatbrj)
+    {
+        $this->plansbatbrj = $plansbatbrj;
+
+        return $this;
+    }
+
+    /**
+     * Get plansbatbrj
+     *
+     * @return string
+     */
+    public function getplansbatbrj()
+    {
+        return $this->plansbatbrj;
+    }
+
+    /**
+     * Set plansbatbrc
+     *
+     * @param string $plansbatbrc
+     * @return Plans
+     */
+    public function setPlansbatbrc($plansbatbrc)
+    {
+        $this->plansbatbrc = $plansbatbrc;
+
+        return $this;
+    }
+
+    /**
+     * Get plansbatbrc
+     *
+     * @return string
+     */
+    public function getplansbatbrc()
+    {
+        return $this->plansbatbrc;
+    }
+
+
+    /**
+     * Set plansbatbe
+     *
+     * @param string $plansbatbe
+     * @return Plans
+     */
+    public function setPlansbatbe($plansbatbe)
+    {
+        $this->plansbatbe = $plansbatbe;
+
+        return $this;
+    }
+
+    /**
+     * Get plansbatbe
+     *
+     * @return string
+     */
+    public function getPlansbatbe()
+    {
+        return $this->plansbatbe;
+    }
+
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function preUpload()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        // Add your code here
+    }
+
 }
