@@ -19,7 +19,35 @@ class AppKernel extends Kernel
             new HopitalBundle\HopitalBundle(),
             new Vl\AgendaBundle\VlAgendaBundle(),
             new Vl\AnnonceBundle\VlAnnonceBundle(),
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle()
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            // Assetic Bundle
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            // FOSUser Bundle
+            new FOS\UserBundle\FOSUserBundle(),
+
+            // Sonata Admin Bundle
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+
+            // Sonata Admin Bundle Requirements
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+
+            // Sonata EasyExtends
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+
+            // Sonata User Bundle
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+
+            new Sacha\Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+            new Sacha\Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
+
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new Sacha\InfoMailBundle\InfoMailBundle(),
+            new Sacha\IuchBundle\IuchBundle()
+
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

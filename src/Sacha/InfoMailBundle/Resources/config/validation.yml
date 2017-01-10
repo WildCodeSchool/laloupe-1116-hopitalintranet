@@ -1,0 +1,3 @@
+Sacha\InfoMailBundle\Entity\InfoMail:
+    constraints:
+        - Callback: [validate]

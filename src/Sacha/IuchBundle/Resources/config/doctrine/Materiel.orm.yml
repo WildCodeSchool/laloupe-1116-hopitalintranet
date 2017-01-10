@@ -1,0 +1,43 @@
+Sacha\IuchBundle\Entity\Materiel:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date_remise:
+            type: date
+            column: date_remise
+        rendu:
+            type: boolean
+        date_rendu:
+            type: date
+            column: date_rendu
+            nullable: true
+        perdu_vol:
+            type: boolean
+        commentaire:
+            type: text
+            nullable: true
+
+    manyToOne:
+        intervenant:
+            targetEntity: Sacha\Application\Sonata\UserBundle\Entity\User
+            joinColumn:
+                name: intervenant_id
+                referencedColumnName: id
+        user:
+            targetEntity: Sacha\Application\Sonata\UserBundle\Entity\User
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+        type:
+            targetEntity: Sacha\IuchBundle\Entity\TypeMateriel
+            joinColumn:
+                name: type_id
+                referencedColumnName: id
+
+    lifecycleCallbacks: {  }

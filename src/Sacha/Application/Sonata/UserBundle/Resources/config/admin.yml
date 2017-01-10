@@ -1,0 +1,9 @@
+services:
+    sonata.reset_mdp:
+        class: Sacha\IuchBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm }
+        arguments:
+            - null
+            - Sacha\Application\Sonata\UserBundle\Entity\User
+            - Sacha\Application\Sonata\AdminBundle\Controller\CRUDController
