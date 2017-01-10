@@ -25,7 +25,7 @@ moncompte_delete:
 
 moncompte_cgos:
     path:     /cgos
-    defaults: { _controller: "HopitalBundle:Moncompte:cgos" }
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexCgos" }
     methods:  GET
 
 moncompte_amicale:
@@ -40,7 +40,7 @@ moncompte_sacha:
 
 moncompte_petitesannonces:
     path:     /petitesannonces
-    defaults: { _controller: "HopitalBundle:Moncompte:petitesannonces" }
+    defaults: { _controller: "VlAnnonceBundle:Annonce:index" }
     methods:  GET
 
 moncompte_agenda:

@@ -1,0 +1,25 @@
+Vl\AnnonceBundle\Entity\Commentaire:
+    type: entity
+    table: null
+    repositoryClass: Vl\AnnonceBundle\Repository\CommentaireRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        utilisateur:
+            type: string
+            length: 255
+        message:
+            type: text
+
+
+    manyToOne:
+        annonces:
+            targetEntity: Vl\AnnonceBundle\Entity\Annonce
+            joinColumn:
+                onDelete: CASCADE
+
+    lifecycleCallbacks: {  }

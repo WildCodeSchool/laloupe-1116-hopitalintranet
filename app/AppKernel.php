@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new HopitalBundle\HopitalBundle(),
             new AppBundle\AppBundle(),
             new Vl\AgendaBundle\VlAgendaBundle(),
+            new Vl\AnnonceBundle\VlAnnonceBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle()
         );
 
