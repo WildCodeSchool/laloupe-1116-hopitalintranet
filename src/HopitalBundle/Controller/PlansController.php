@@ -20,10 +20,10 @@ class PlansController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $plans = $em->getRepository('HopitalBundle:Plans')->findAll();
+        $planss = $em->getRepository('HopitalBundle:Plans')->findAll();
 
         return $this->render('HopitalBundle:presentation:plans_index.html.twig', array(
-            'plans' => $plans,
+            'planss' => $planss,
         ));
     }
 
