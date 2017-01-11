@@ -17,6 +17,25 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new HopitalBundle\HopitalBundle(),
+            // FOSUser Bundle
+            new FOS\UserBundle\FOSUserBundle(),
+            // Sonata Admin Bundle
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            // Sonata Admin Bundle Requirements
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            // Sonata EasyExtends
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            // Sonata User Bundle
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+            new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
+            new IuchBundle\IuchBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new InfoMailBundle\InfoMailBundle(),            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
