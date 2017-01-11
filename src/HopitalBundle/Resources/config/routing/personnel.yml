@@ -1,49 +1,124 @@
-personnel_index:
-    path:     /
-    defaults: { _controller: "HopitalBundle:Personnel:index" }
-    methods:  GET
-
-personnel_show:
-    path:     /{id}/show
-    defaults: { _controller: "HopitalBundle:Personnel:show" }
-    methods:  GET
-
-personnel_new:
-    path:     /new
-    defaults: { _controller: "HopitalBundle:Personnel:new" }
-    methods:  [GET, POST]
-
-personnel_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "HopitalBundle:Personnel:edit" }
-    methods:  [GET, POST]
-
-personnel_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "HopitalBundle:Personnel:delete" }
-    methods:  DELETE
-
-personnel_menu:
-    path:     /menu
-    defaults: { _controller: "HopitalBundle:Personnel:menu" }
-    methods:  GET
-
 personnel_postvacant:
     path:     /postvacant
     defaults: { _controller: "HopitalBundle:Personnel:postvacant" }
     methods:  GET
 
-personnel_covoiturage:
-    path:     /covoiturage
-    defaults: { _controller: "HopitalBundle:Personnel:covoiturage" }
-    methods:  GET
-
-personnel_planniciel:
-    path:     /planniciel
-    defaults: { _controller: "HopitalBundle:Personnel:planniciel" }
-    methods:  GET
-
 personnel_idees:
     path:     /idees
     defaults: { _controller: "HopitalBundle:Personnel:idees" }
+    methods:  [GET, POST]
+
+
+
+
+personnel_menu_index:
+    path:     /menu
+    defaults: { _controller: "HopitalBundle:Menu:index" }
     methods:  GET
+
+personnel_menu_show:
+    path:     /menu/{id}/show
+    defaults: { _controller: "HopitalBundle:Menu:show" }
+    methods:  GET
+
+personnel_menu_new:
+    path:     /menu/new
+    defaults: { _controller: "HopitalBundle:Menu:new" }
+    methods:  [GET, POST]
+
+personnel_menu_edit:
+    path:     /menu/{id}/edit
+    defaults: { _controller: "HopitalBundle:Menu:edit" }
+    methods:  [GET, POST]
+
+personnel_menu_delete:
+    path:     /menu/{id}/delete
+    defaults: { _controller: "HopitalBundle:Menu:delete" }
+    methods:  DELETE
+
+
+
+
+
+personnel_covoiturage_index:
+    path:     /covoiturage
+    defaults: { _controller: "HopitalBundle:Covoiturage:index" }
+    methods:  GET
+
+personnel_covoiturage_show:
+    path:     /covoiturage/{id}/show
+    defaults: { _controller: "HopitalBundle:Covoiturage:show" }
+    methods:  GET
+
+personnel_covoiturage_new:
+    path:     /covoiturage/new
+    defaults: { _controller: "HopitalBundle:Covoiturage:new" }
+    methods:  [GET, POST]
+
+personnel_covoiturage_edit:
+    path:     /covoiturage/{id}/edit
+    defaults: { _controller: "HopitalBundle:Covoiturage:edit" }
+    methods:  [GET, POST]
+
+personnel_covoiturage_delete:
+    path:     /covoiturage/{id}/delete
+    defaults: { _controller: "HopitalBundle:Covoiturage:delete" }
+    methods:  DELETE
+
+
+
+
+
+
+personnel_idees_index:
+    path:     /idees
+    defaults: { _controller: "HopitalBundle:Idees:index" }
+    methods:  GET
+
+personnel_idees_show:
+    path:     /idees/{id}/show
+    defaults: { _controller: "HopitalBundle:Idees:show" }
+    methods:  GET
+
+personnel_idees_new:
+    path:     /idees/new
+    defaults: { _controller: "HopitalBundle:Idees:new" }
+    methods:  [GET, POST]
+
+personnel_idees_edit:
+    path:     /idees/{id}/edit
+    defaults: { _controller: "HopitalBundle:Idees:edit" }
+    methods:  [GET, POST]
+
+personnel_idees_delete:
+    path:     /idees/{id}/delete
+    defaults: { _controller: "HopitalBundle:Idees:delete" }
+    methods:  DELETE
+
+
+
+
+personnel_planniciel_index:
+     path:     /planniciel
+     defaults: { _controller: "HopitalBundle:Planniciel:index" }
+     methods:  GET
+
+personnel_planniciel_show:
+     path:     /planniciel/{id}/show
+     defaults: { _controller: "HopitalBundle:Planniciel:show" }
+     methods:  GET
+
+personnel_planniciel_new:
+     path:     /planniciel/new
+     defaults: { _controller: "HopitalBundle:Planniciel:new" }
+     methods:  [GET, POST]
+
+personnel_planniciel_edit:
+     path:     /planniciel/{id}/edit
+     defaults: { _controller: "HopitalBundle:Planniciel:edit" }
+     methods:  [GET, POST]
+
+personnel_planniciel_delete:
+     path:     /planniciel/{id}/delete
+     defaults: { _controller: "HopitalBundle:Planniciel:delete" }
+     methods:  DELETE

@@ -1,41 +1,65 @@
-presentation_index:
-    path:     /
-    defaults: { _controller: "HopitalBundle:Presentation:index" }
-    methods:  GET
-
-presentation_show:
-    path:     /{id}/show
-    defaults: { _controller: "HopitalBundle:Presentation:show" }
-    methods:  GET
-
-presentation_new:
-    path:     /new
-    defaults: { _controller: "HopitalBundle:Presentation:new" }
-    methods:  [GET, POST]
-
-presentation_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "HopitalBundle:Presentation:edit" }
-    methods:  [GET, POST]
-
-presentation_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "HopitalBundle:Presentation:delete" }
-    methods:  DELETE
-
 presentation_livret:
     path:     /livret
     defaults: { _controller: "HopitalBundle:Presentation:livret" }
     methods:  GET
 
-presentation_organigrammes:
-    path:     /organigrammes
-    defaults: { _controller: "HopitalBundle:Presentation:organigrammes" }
+
+
+presentation_plans_index:
+    path:     /plans
+    defaults: { _controller: "HopitalBundle:Plans:index" }
     methods:  GET
 
-presentation_plans:
-    path:     /plans
-    defaults: { _controller: "HopitalBundle:Presentation:plans" }
+presentation_plans_show:
+    path:     /plans/{id}/show
+    defaults: { _controller: "HopitalBundle:Plans:show" }
     methods:  GET
+
+presentation_plans_new:
+    path:     /plans/new
+    defaults: { _controller: "HopitalBundle:Plans:new" }
+    methods:  [GET, POST]
+
+presentation_plans_edit:
+    path:     /plans/{id}/edit
+    defaults: { _controller: "HopitalBundle:Plans:edit" }
+    methods:  [GET, POST]
+
+presentation_plans_delete:
+    path:     /plans/{id}/delete
+    defaults: { _controller: "HopitalBundle:Plans:delete" }
+    methods:  DELETE
+
+
+
+
+
+
+presentation_organigramme_index:
+    path:     /organigramme
+    defaults: { _controller: "HopitalBundle:Organigramme:index" }
+    methods:  GET
+
+presentation_organigramme_show:
+    path:     /organigramme/{id}/show
+    defaults: { _controller: "HopitalBundle:Organigramme:show" }
+    methods:  GET
+
+presentation_organigramme_new:
+    path:     /organigramme/new
+    defaults: { _controller: "HopitalBundle:Organigramme:new" }
+    methods:  [GET, POST]
+
+presentation_organigramme_edit:
+    path:     /organigramme/{id}/edit
+    defaults: { _controller: "HopitalBundle:Organigramme:edit" }
+    methods:  [GET, POST]
+
+presentation_organigramme_delete:
+    path:     /organigramme/{id}/delete
+    defaults: { _controller: "HopitalBundle:Organigramme:delete" }
+    methods:  DELETE
+
+
 
 

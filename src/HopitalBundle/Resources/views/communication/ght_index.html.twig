@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <tbody>
+    {% for ght in ghts %}
+
+        <div class="row">
+            <div class="col-md-offset-2  col-md-8 fondblanc">
+                <h1 class="lienstitre">GHT</h1>
+                <object data="{{ app.request.basepath }}/uploads/{{ ght.ghtimg }}" type="application/pdf" class="directioncommune">
+                </object>
+            </div>
+        </div>
+
+    {% endfor %}
+    </tbody>
+
+
+{% endblock %}

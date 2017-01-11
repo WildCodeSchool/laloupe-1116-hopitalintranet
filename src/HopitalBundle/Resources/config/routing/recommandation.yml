@@ -1,49 +1,142 @@
-recommandation_index:
-    path:     /
-    defaults: { _controller: "HopitalBundle:Recommandation:index" }
+recommandation_anesm_index:
+    path:     /anesm
+    defaults: { _controller: "HopitalBundle:Anesm:index" }
     methods:  GET
 
-recommandation_show:
-    path:     /{id}/show
-    defaults: { _controller: "HopitalBundle:Recommandation:show" }
+recommandation_anesm_show:
+    path:     /anesm/{id}/show
+    defaults: { _controller: "HopitalBundle:Anesm:show" }
     methods:  GET
 
-recommandation_new:
-    path:     /new
-    defaults: { _controller: "HopitalBundle:Recommandation:new" }
+recommandation_anesm_new:
+    path:     /anesm/new
+    defaults: { _controller: "HopitalBundle:Anesm:new" }
     methods:  [GET, POST]
 
-recommandation_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "HopitalBundle:Recommandation:edit" }
+recommandation_anesm_edit:
+    path:     /anesm/{id}/edit
+    defaults: { _controller: "HopitalBundle:Anesm:edit" }
     methods:  [GET, POST]
 
-recommandation_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "HopitalBundle:Recommandation:delete" }
+recommandation_anesm_delete:
+    path:     /anesm/{id}/delete
+    defaults: { _controller: "HopitalBundle:Anesm:delete" }
     methods:  DELETE
 
 
-recommandation_has:
-    path:     /has
-    defaults: { _controller: "HopitalBundle:Recommandation:has" }
-    methods:  GET
 
-recommandation_anesm:
-    path:     /anesm
-    defaults: { _controller: "HopitalBundle:Recommandation:anesm" }
-    methods:  GET
 
-recommandation_journaloff:
-    path:     /journaloff
-    defaults: { _controller: "HopitalBundle:Recommandation:journaloff" }
-    methods:  GET
 
-recommandation_bulletinoff:
+recommandation_bulletinoff_index:
     path:     /bulletinoff
-    defaults: { _controller: "HopitalBundle:Recommandation:bulletinoff" }
+    defaults: { _controller: "HopitalBundle:Bulletinoff:index" }
     methods:  GET
-recommandation_pagesjaunes:
+
+recommandation_bulletinoff_show:
+    path:     /bulletinoff/{id}/show
+    defaults: { _controller: "HopitalBundle:Bulletinoff:show" }
+    methods:  GET
+
+recommandation_bulletinoff_new:
+    path:     /bulletinoff/new
+    defaults: { _controller: "HopitalBundle:Bulletinoff:new" }
+    methods:  [GET, POST]
+
+recommandation_bulletinoff_edit:
+    path:     /bulletinoff/{id}/edit
+    defaults: { _controller: "HopitalBundle:Bulletinoff:edit" }
+    methods:  [GET, POST]
+
+recommandation_bulletinoff_delete:
+    path:     /bulletinoff/{id}/delete
+    defaults: { _controller: "HopitalBundle:Bulletinoff:delete" }
+    methods:  DELETE
+
+
+
+
+
+recommandation_has_index:
+    path:     /has
+    defaults: { _controller: "HopitalBundle:Has:index" }
+    methods:  GET
+
+recommandation_has_show:
+    path:     /has/{id}/show
+    defaults: { _controller: "HopitalBundle:Has:show" }
+    methods:  GET
+
+recommandation_has_new:
+    path:     /has/new
+    defaults: { _controller: "HopitalBundle:Has:new" }
+    methods:  [GET, POST]
+
+recommandation_has_edit:
+    path:     /has/{id}/edit
+    defaults: { _controller: "HopitalBundle:Has:edit" }
+    methods:  [GET, POST]
+
+recommandation_has_delete:
+    path:     /has/{id}/delete
+    defaults: { _controller: "HopitalBundle:Has:delete" }
+    methods:  DELETE
+
+
+
+
+
+recommandation_journaloff_index:
+    path:     /journaloff
+    defaults: { _controller: "HopitalBundle:Journaloff:index" }
+    methods:  GET
+
+recommandation_journaloff_show:
+    path:     /journaloff/{id}/show
+    defaults: { _controller: "HopitalBundle:Journaloff:show" }
+    methods:  GET
+
+recommandation_journaloff_new:
+    path:     /journaloff/new
+    defaults: { _controller: "HopitalBundle:Journaloff:new" }
+    methods:  [GET, POST]
+
+recommandation_journaloff_edit:
+    path:     /journaloff/{id}/edit
+    defaults: { _controller: "HopitalBundle:Journaloff:edit" }
+    methods:  [GET, POST]
+
+recommandation_journaloff_delete:
+    path:     /journaloff/{id}/delete
+    defaults: { _controller: "HopitalBundle:Journaloff:delete" }
+    methods:  DELETE
+
+
+
+
+
+recommandation_pagesjaunes_index:
     path:     /pagesjaunes
-    defaults: { _controller: "HopitalBundle:Recommandation:pagesjaunes" }
+    defaults: { _controller: "HopitalBundle:Pagesjaunes:index" }
     methods:  GET
+
+recommandation_pagesjaunes_show:
+    path:     /pagesjaunes/{id}/show
+    defaults: { _controller: "HopitalBundle:Pagesjaunes:show" }
+    methods:  GET
+
+recommandation_pagesjaunes_new:
+    path:     /pagesjaunes/new
+    defaults: { _controller: "HopitalBundle:Pagesjaunes:new" }
+    methods:  [GET, POST]
+
+recommandation_pagesjaunes_edit:
+    path:     /pagesjaunes/{id}/edit
+    defaults: { _controller: "HopitalBundle:Pagesjaunes:edit" }
+    methods:  [GET, POST]
+
+recommandation_pagesjaunes_delete:
+    path:     /pagesjaunes/{id}/delete
+    defaults: { _controller: "HopitalBundle:Pagesjaunes:delete" }
+    methods:  DELETE
+
+

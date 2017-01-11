@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    {% for planniciel in planniciels %}
+
+
+        <div class="row">
+            <div class="col-md-offset-2  col-md-8 fondblanc">
+
+                <h1 class="lienstitre">Planniciel</h1>
+
+                {{ planniciel.titre }}
+
+                <br/>
+                <img src="{{ app.request.basepath }}/uploads/{{ planniciel.planniciel1 }}"/>
+            </div>
+        </div>
+
+
+    {% endfor %}
+
+
+{% endblock %}

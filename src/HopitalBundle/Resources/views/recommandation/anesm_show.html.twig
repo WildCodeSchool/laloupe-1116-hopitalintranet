@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>ANESM</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ anesm.id }}</td>
+        </tr>
+        <tr>
+            <th>anesmimg</th>
+            <td>{{ anesm.anesmimg }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('recommandation_anesm_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('recommandation_anesm_edit', { 'id': anesm.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(anesm_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(anesm_delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

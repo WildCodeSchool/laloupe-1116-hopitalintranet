@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <tbody>
+    {% for bulletinoff in bulletinoffs %}
+
+        <div class="row">
+            <div class="col-md-offset-2  col-md-8 fondblanc">
+                <h1 class="lienstitre">Bulletin Officiel</h1>
+                <h4 class="lienssoustitre">Ministère des affaires sociales et de la santé</h4>
+
+                <a href="{{ asset('http://social-sante.gouv.fr/ministere/documentation-et-publications-officielles/bulletins-officiels/article/bulletin-officiel-sante-protection-sociale-solidarites') }}">
+                    <object data="{{ app.request.basepath }}/uploads/{{ bulletinoff.bulletinoffimg }}" type="application/pdf" alt="bulettinoff" class="lienimg">
+                    </object>
+                </a>
+
+            </div>
+        </div>
+
+    {% endfor %}
+    </tbody>
+
+
+{% endblock %}

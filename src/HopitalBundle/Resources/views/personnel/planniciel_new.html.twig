@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Planniciel creation</h1>
+    {{ form_start(form) }}
+
+    <h3>{{ planniciel.titre }}</h3>
+
+    {{ form_widget(form.titre) }}
+
+
+
+    {{ form_widget(form) }}
+    <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('personnel_planniciel_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
