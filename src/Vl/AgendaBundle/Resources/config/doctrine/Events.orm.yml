@@ -1,0 +1,50 @@
+Vl\AgendaBundle\Entity\Events:
+    type: entity
+    table: null
+    repositoryClass: Vl\AgendaBundle\Repository\EventsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        start:
+            type: datetime
+        end:
+            type: datetime
+        titre:
+            type: string
+            length: 255
+        contenu:
+            type: string
+            length: 255
+        image:
+            type: string
+            length: 255
+            nullable: true
+        addHomeActu:
+            type: boolean
+            column: add_home_actu
+        salle:
+            type: string
+            length: 255
+            nullable: true
+        voiture:
+            type: string
+            length: 255
+            nullable: true
+        evenement:
+            type: string
+            length: 255
+            nullable: true
+        color:
+            type: string
+            nullable: true
+
+    manyToOne:
+        images:
+            targetEntity: Vl\AgendaBundle\Entity\Images
+            cascade: ["persist"]
+
+    lifecycleCallbacks: {  }

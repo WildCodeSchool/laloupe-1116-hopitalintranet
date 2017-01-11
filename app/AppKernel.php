@@ -15,7 +15,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
             new HopitalBundle\HopitalBundle(),
             // FOSUser Bundle
             new FOS\UserBundle\FOSUserBundle(),
@@ -36,6 +35,11 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new InfoMailBundle\InfoMailBundle(),            
+
+            new AppBundle\AppBundle(),
+            new Vl\AgendaBundle\VlAgendaBundle(),
+            new Vl\AnnonceBundle\VlAnnonceBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
@@ -52,4 +56,8 @@ class AppKernel extends Kernel
     {
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
+
+
+
+
 }

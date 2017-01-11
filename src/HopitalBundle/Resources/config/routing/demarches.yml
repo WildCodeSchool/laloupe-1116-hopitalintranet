@@ -1,0 +1,44 @@
+demarches_index:
+    path:     /
+    defaults: { _controller: "HopitalBundle:Demarches:index" }
+    methods:  GET
+
+demarches_show:
+    path:     /{id}/show
+    defaults: { _controller: "HopitalBundle:Demarches:show" }
+    methods:  GET
+
+demarches_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Demarches:new" }
+    methods:  [GET, POST]
+
+demarches_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Demarches:edit" }
+    methods:  [GET, POST]
+
+demarches_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Demarches:delete" }
+    methods:  DELETE
+
+demarches_certification:
+    path:     /certification
+    defaults: { _controller: "HopitalBundle:Demarches:certification" }
+    methods:  GET
+
+demarches_epp:
+    path:     /epp
+    defaults: { _controller: "HopitalBundle:Demarches:epp" }
+    methods:  GET
+
+demarches_processus:
+    path:     /processus
+    defaults: { _controller: "HopitalBundle:Demarches:processus" }
+    methods:  GET
+
+demarches_paqss:
+    path:     /paqss
+    defaults: { _controller: "HopitalBundle:Demarches:paqss" }
+    methods:  GET

@@ -1,0 +1,4 @@
+services:
+#    vl_annonce.example:
+#        class: Vl\AnnonceBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

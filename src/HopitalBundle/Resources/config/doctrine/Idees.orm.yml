@@ -1,0 +1,18 @@
+HopitalBundle\Entity\Idees:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\IdeesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+    fields:
+        ideestitle:
+            type: string
+            length: 50
+
+    lifecycleCallbacks: {  }

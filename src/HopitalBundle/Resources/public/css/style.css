@@ -1,0 +1,648 @@
+body{
+    background-image: url("../img/montagne2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+/**************************** DEBUT NAVBAR ****************************/
+
+.navbar{
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10%;
+    border: 0px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+.dropdown-menu{
+    box-shadow: none;
+    width: 235px;
+    border: 5px solid #E7E7E7;
+}
+
+.container-fluid{
+    padding: 0px;
+}
+
+
+.logo{
+    height: 70px;
+
+}
+
+.pictoMonCompte{
+    height: 30px;
+    margin-top:5px;
+}
+
+/**************************** FIN NAVBAR ****************************/
+
+
+/**************************** DEBUT FOOTER ****************************/
+
+footer{
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+.ml{
+    color: #000000;
+}
+
+.ml:link {
+    color: white;
+    text-decoration: none;
+}
+
+.ml:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.ml:hover {
+    color: #626262;
+    text-decoration: none;
+}
+
+.ml:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/*modal Eleves*/
+
+.modal-body{
+    color: black;
+    font-size: 1.2em;
+}
+
+.modal-body h2{
+    color: #FE8801;
+}
+
+.alert{
+    background-color: #FE9B1A;
+    border: none;
+}
+
+.alert-info{
+    color: #fff;
+}
+
+.lienLink:link {
+    color: #FE9B1A;
+    text-decoration: none;
+}
+
+.lienLink:visited {
+    color: #FE9B1A;
+    text-decoration: none;
+}
+
+.lienLink:hover {
+    color: #FECC76;
+    text-decoration: none;
+}
+
+.lienLink:active {
+    color: #FECC76;
+    text-decoration: none;
+}
+
+#texteWCS{
+    margin-top: 60px;
+}
+
+.wcs{
+    height: 15em;
+    margin-top:20px;
+}
+
+
+
+/**************************** FIN FOOTER ****************************/
+
+
+
+
+
+
+
+/**************************** DEBUT ACCUEIL ****************************/
+
+main {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: auto;
+
+}
+
+.jumbotron {
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: #ffffff;
+}
+
+/**************************** FIN ACCUEIL ****************************/
+
+
+
+/**************************** DEBUT BARRE DE RECHERCHE ****************************/
+
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-control{
+    border-radius: 0px;
+    border: 1px solid rgb(0,0,0,0);
+}
+
+.input-group-btn .btn{
+    height:43px;
+    margin-top: 1px;
+    border:0;
+}
+
+#search {
+    padding-left: 0;
+}
+.form-control {
+    height:45px;
+}
+.input-group-btn {
+    height: 20px;
+}
+
+#adv-search {
+    width: 410px;
+    padding-bottom: 20px;
+}
+.dropdown.dropdown-lg {
+    position: static !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    min-width: 410px;
+}
+
+.container{
+    width: auto;
+}
+
+/**************************** FIN BARRE DE RECHERCHE ********************/
+
+
+
+/**************************** DEBUT NOUVEAUTES DU SITE ****************************/
+
+.newsticker {
+    list-style-type: none;
+    background: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+#nouveautes {
+    background-color: #FFFFFF;
+    margin-top:1px;
+    height:42px;
+    padding:10px;
+    padding-top: 0px;
+    border:1px solid #FFFFFF;
+}
+
+#nouveautes ul li {
+    padding-left:18px;
+}
+
+/**************************** FIN NOUVEAUTES DU SITE ****************************/
+
+
+/**************************** DEBUT ACTUALITES ****************************/
+.actu {
+    background-color: #FFFFFF;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+
+
+/**************************** FIN ACTUALIES ****************************/
+
+
+/**************************** DEBUT LIENS UTILES ****************************/
+
+.utiles{
+    padding:6px 20px 20px 20px;
+}
+
+.utiles h3{
+    margin-bottom: 5px;
+}
+
+.liensUtiles {
+    margin-bottom: -4px;
+}
+
+
+/**************************** FIN LIENS UTILES ****************************/
+
+
+/**************************** DEBUT METEO ****************************/
+
+
+.meteo{
+    margin-top: -12px;
+}
+
+.alerte{
+    margin-bottom: 0px;
+    padding-top:10px;
+}
+
+.temps{
+    padding-left: 85px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+}
+
+
+
+/**************************** FIN METEO ****************************/
+
+
+
+/**************************** DEBUT BOOK ****************************/
+
+.bouton_dl  {
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 45%;
+    font-size: 1.2em;
+    border: solid black 1px;
+    border-radius: 5px;
+
+}
+
+.bouton_dl:hover {
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+.bouton_dl:visited {
+
+    color: black;
+
+}
+
+
+
+
+
+    /**************************** FIN BOOK ****************************/
+
+/**************************** DEBUT LIENS ****************************/
+
+
+.lienstitre{
+    text-align: center;
+    color: #0089D0;
+    margin-top: 10px;
+}
+
+.lienssoustitre{
+    text-align: center;
+    margin-top: -5px;
+}
+
+.btn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.fondblanc{
+    background-color: #FFFFFF;
+    height: 670px;
+    padding: 10px 20px 20px 20px;
+}
+
+.fondblanc1{
+    background-color: #FFFFFF;
+    height: 770px;
+    padding: 10px 20px 20px 20px;
+}
+
+.lienimg{
+    width: 1000px;
+    margin-left: 5%;
+    border:4px solid #E7E7E7;
+}
+
+.lienimgchartres{
+    height: 100px;
+    margin-left: 5%;
+    border:4px solid #E7E7E7;
+}
+
+.has{
+    height: 450px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+
+
+/**************************** FIN LIENS ****************************/
+
+/**************************** DEBUT GALERIE IMAGES ****************/
+
+.fondblanc2{
+    background-color: #FFFFFF;
+    height: 680px;
+    padding: 10px 20px 20px 20px;
+}
+
+div.c-wrapper{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{
+    width: 100%;
+    margin: auto;
+}
+
+.carousel .item img {
+    left: -9999px;  /*important */
+    right: -9999px;  /*important */
+    margin: 0 auto;  /*important */
+    max-width: none;  /*important */
+    min-width: 100%;
+    height: 550px;
+}
+/************************** FIN GALERIE IMAGES **********************/
+
+/**************************** DEBUT CONTACTS ***********************/
+
+/*.doc-pdf {
+    border: 4px solid #E7E7E7;
+}*/
+
+.fondblanccontact{
+    background-color: #FFFFFF;
+    height: 670px;
+    padding: 10px 20px 20px 20px;
+}
+
+
+.contactbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 300px;
+    height: 40px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 0;
+    border:0;
+    margin-left: 36%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.contactpdf{
+    width: 80%;
+    height: 117px;
+    margin-left: 10%;
+}
+
+
+
+/************************** FIN CONTACTS **********************/
+
+
+/**************************** DEBUT PLANS ***********************/
+
+.planglobal{
+    width: 800px;
+    margin-left: 15%;
+    border:4px solid #E7E7E7;
+}
+
+.slide{
+    margin-top: 50px;
+}
+
+
+/************************** FIN PLANS **********************/
+
+
+
+/**************************** DEBUT NOTES DE SERVICES ***********************/
+
+.noteservice{
+    height: 500px;
+    width: 70%;
+    margin-left: 15%;
+
+}
+
+
+.notedinformation{
+    height: 530px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+.notebtn{
+    background-color: #0089D0;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-top:10px;
+    color: #FFFFFF;
+}
+
+.noteboutons{
+    margin-bottom: 20px;
+    margin-left: 28%;
+}
+
+/**************************** FIN NOTES DE SERVICES **********************/
+
+
+
+
+/**************************** DEBUT JOURNAL ***********************/
+
+.journalimg{
+    width: 350px;
+    height: 120px;
+    border: 5px solid #E7E7E7;
+}
+
+.journaux{
+    margin-left: 120px;
+}
+
+.journalimgmodal{
+    width: 860px;
+    height: 600px;
+    margin: 0px 20px 20px 20px;
+}
+
+.close{
+    margin-top:5px;
+    margin:10px;
+}
+
+.boutonjournal{
+    margin-left: 0px;
+}
+
+
+/**************************** FIN NOTES DE SERVICES **********************/
+
+/**************************** DEBUT DIRECTION COMMUNE **********************/
+
+
+.directioncommune{
+    height: 530px;
+    width: 70%;
+    margin-left: 15%;
+    border: 5px solid #E7E7E7;
+}
+
+/**************************** FIN DIRECTION COMMUNE **********************/
+
+/**************************** DEBUT MENU **********************/
+
+
+.menupdf{
+    height: 500px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.btn-lg{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 15%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+
+
+.menuremplacepdf{
+    width: 830px;
+    height: 570px;
+    margin: 0px 20px 20px 20px;
+}
+
+/**************************** FIN MENU **********************/
+
+
+
+/**************************** DEBUT BOÎTE À IDÉES **********************/
+
+.objet{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.message{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.send{
+    margin-left: 800px;
+}
+
+/**************************** FIN BOÎTE À IDÉES **********************/
+
+
+
+
+
+/**************************** DEBUT ASTREINTES **********************/
+
+.astreintesbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 150px;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.astreintesimg{
+    width: 400px;
+    height: 230px;
+    margin-right: 50px;
+}
+
+
+
+
+/**************************** FIN ASTREINTES **********************/
+

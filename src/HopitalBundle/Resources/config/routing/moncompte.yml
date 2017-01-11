@@ -1,0 +1,50 @@
+moncompte_index:
+    path:     /
+    defaults: { _controller: "HopitalBundle:Moncompte:index" }
+    methods:  GET
+
+moncompte_show:
+    path:     /{id}/show
+    defaults: { _controller: "HopitalBundle:Moncompte:show" }
+    methods:  GET
+
+moncompte_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Moncompte:new" }
+    methods:  [GET, POST]
+
+moncompte_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Moncompte:edit" }
+    methods:  [GET, POST]
+
+moncompte_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Moncompte:delete" }
+    methods:  DELETE
+
+moncompte_cgos:
+    path:     /cgos
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexCgos" }
+    methods:  GET
+
+moncompte_amicale:
+    path:     /amicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexAmicale" }
+    methods:  GET
+
+
+moncompte_sacha:
+    path:     /sacha
+    defaults: { _controller: "HopitalBundle:Moncompte:sacha" }
+    methods:  GET
+
+moncompte_petitesannonces:
+    path:     /petitesannonces
+    defaults: { _controller: "VlAnnonceBundle:Annonce:index" }
+    methods:  GET
+
+moncompte_agenda:
+    path:     /agenda
+    defaults: { _controller: "VlAgendaBundle:Default:index" }
+    methods:  GET

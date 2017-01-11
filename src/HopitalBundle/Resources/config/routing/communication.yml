@@ -1,0 +1,99 @@
+communication_lettreinfo:
+    path:     /lettreinfo
+    defaults: { _controller: "HopitalBundle:Communication:lettreinfo" }
+    methods:  GET
+
+communication_articles:
+    path:     /articles
+    defaults: { _controller: "HopitalBundle:Communication:articles" }
+    methods:  GET
+
+
+
+
+
+
+communication_lienssites_index:
+    path:     /lienssites
+    defaults: { _controller: "HopitalBundle:Lienssites:index" }
+    methods:  GET
+
+communication_lienssites_show:
+    path:     /lienssites/{id}/show
+    defaults: { _controller: "HopitalBundle:Lienssites:show" }
+    methods:  GET
+
+communication_lienssites_new:
+    path:     /lienssites/new
+    defaults: { _controller: "HopitalBundle:Lienssites:new" }
+    methods:  [GET, POST]
+
+communication_lienssites_edit:
+    path:     /lienssites/{id}/edit
+    defaults: { _controller: "HopitalBundle:Lienssites:edit" }
+    methods:  [GET, POST]
+
+communication_lienssites_delete:
+    path:     /lienssites/{id}/delete
+    defaults: { _controller: "HopitalBundle:Lienssites:delete" }
+    methods:  DELETE
+
+
+
+
+
+
+communication_direction_index:
+    path:     /direction
+    defaults: { _controller: "HopitalBundle:Direction:index" }
+    methods:  GET
+
+communication_direction_show:
+    path:     /direction/{id}/show
+    defaults: { _controller: "HopitalBundle:Direction:show" }
+    methods:  GET
+
+communication_direction_new:
+    path:     /direction/new
+    defaults: { _controller: "HopitalBundle:Direction:new" }
+    methods:  [GET, POST]
+
+communication_direction_edit:
+    path:     /direction/{id}/edit
+    defaults: { _controller: "HopitalBundle:Direction:edit" }
+    methods:  [GET, POST]
+
+communication_direction_delete:
+    path:     /direction/{id}/delete
+    defaults: { _controller: "HopitalBundle:Direction:delete" }
+    methods:  DELETE
+
+
+
+
+
+
+communication_ght_index:
+    path:     /ght
+    defaults: { _controller: "HopitalBundle:Ght:index" }
+    methods:  GET
+
+communication_ght_show:
+    path:     /ght/{id}/show
+    defaults: { _controller: "HopitalBundle:Ght:show" }
+    methods:  GET
+
+communication_ght_new:
+    path:     /ght/new
+    defaults: { _controller: "HopitalBundle:Ght:new" }
+    methods:  [GET, POST]
+
+communication_ght_edit:
+    path:     /ght/{id}/edit
+    defaults: { _controller: "HopitalBundle:Ght:edit" }
+    methods:  [GET, POST]
+
+communication_ght_delete:
+    path:     /ght/{id}/delete
+    defaults: { _controller: "HopitalBundle:Ght:delete" }
+    methods:  DELETE

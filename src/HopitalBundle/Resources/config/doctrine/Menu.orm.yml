@@ -1,0 +1,32 @@
+HopitalBundle\Entity\Menu:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\MenuRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+
+    fields:
+        menuimg:
+            type: string
+            length: 25
+            nullable: true
+        menuimgrempl:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1, preUpload2 ]
+      preUpdate: [ preUpload, preUpload1, preUpload2 ]
+      postPersist: [ upload, upload1, upload2 ]
+      postUpdate: [ upload, upload1, upload2 ]
+      postRemove: [ removeUpload, removeUpload1, removeUpload2 ]
+

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <tbody>
+    {% for menu in menus %}
+
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Menu</h1>
+            <h4 class="lienssoustitre">Menus régime normal </h4>
+
+            <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimg }}" type="application/pdf" class="menupdf">
+            </object>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
+                Menus de remplacement
+            </button>
+            <!-- Modal -->
+
+
+
+
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body" style="height: 650px">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                            <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimgrempl }}" type="application/pdf" class="menuremplacepdf">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    {% endfor %}
+    </tbody>
+
+{% endblock %}

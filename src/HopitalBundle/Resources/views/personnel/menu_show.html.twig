@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Menu</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ menu.id }}</td>
+            </tr>
+            <tr>
+                <th>Menuimg</th>
+                <td>{{ menu.menuimg }}</td>
+            </tr>
+            <tr>
+                <th>Menuimgrempl</th>
+                <td>{{ menu.menuimgrempl }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('personnel_menu_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('personnel_menu_edit', { 'id': menu.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(menu_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(menu_delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

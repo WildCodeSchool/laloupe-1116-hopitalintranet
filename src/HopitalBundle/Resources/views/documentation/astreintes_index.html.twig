@@ -1,0 +1,214 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <tbody>
+
+
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="lienstitre">Astreintes</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+
+
+
+                    <!--Début archives astreintes-->
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle astreintesbtn" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Administratif
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            {% for astreintes in astreintess %}
+                                <div class="container-fluid">
+                                    {% set maxId = 0 %}
+                                    {% for astreintes in astreintes %}
+                                        {% set maxId = max(astreintes.id, maxId) %}
+                                    {% endfor %}
+                                    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+                                    <div class=" col-sm-6">
+                                        {% for astreintes in astreintes %}
+                                            {% if astreintes.id != maxId %}
+                                                {% if astreintes.titleadministratif != NULL %}
+                                                    <p> {{ astreintes.titleadministratif }} </p>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle astreintesbtn" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Médical
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            {% for astreintes in astreintess %}
+                                <div class="container-fluid">
+                                    {% set maxId = 0 %}
+                                    {% for astreintes in astreintes %}
+                                        {% set maxId = max(astreintes.id, maxId) %}
+                                    {% endfor %}
+                                    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+                                    <div class=" col-sm-6">
+                                        {% for astreintes in astreintes %}
+                                            {% if astreintes.id != maxId %}
+                                                {% if astreintes.titlemedical != NULL %}
+                                                    <p> {{ astreintes.titlemedical }} </p>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle astreintesbtn" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Commune
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            {% for astreintes in astreintess %}
+                                <div class="container-fluid">
+                                    {% set maxId = 0 %}
+                                    {% for astreintes in astreintes %}
+                                        {% set maxId = max(astreintes.id, maxId) %}
+                                    {% endfor %}
+                                    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+                                    <div class=" col-sm-6">
+                                        {% for astreintes in astreintes %}
+                                            {% if astreintes.id != maxId %}
+                                                {% if astreintes.titlecommune != NULL %}
+                                                    <p> {{ astreintes.titlecommune }} </p>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle astreintesbtn" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            Technique
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            {% for astreintes in astreintess %}
+                                <div class="container-fluid">
+                                    {% set maxId = 0 %}
+                                    {% for astreintes in astreintes %}
+                                        {% set maxId = max(astreintes.id, maxId) %}
+                                    {% endfor %}
+                                    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+                                    <div class=" col-sm-6">
+                                        {% for astreintes in astreintes %}
+                                            {% if astreintes.id != maxId %}
+                                                {% if astreintes.titletechnique != NULL %}
+                                                    <p> {{ astreintes.titletechnique }} </p>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!--Fin archives astreintes-->
+
+
+
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for astreintes in astreintes %}
+                        {% set maxId = max(astreintes.id, maxId) %}
+                    {% endfor %}
+                    {% for astreintes in astreintes %}
+                        {% if astreintes.id == maxId %}
+                            <p>{{ astreintes.titleadministratif }}</p>
+                        {% endif %}
+                        {% if astreintes.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ astreintes.administratifimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for astreintes in astreintes %}
+                        {% set maxId = max(astreintes.id, maxId) %}
+                    {% endfor %}
+                    {% for astreintes in astreintes %}
+                        {% if astreintes.id == maxId %}
+                            <p>{{ astreintes.titlemedical }}</p>
+                        {% endif %}
+                        {% if astreintes.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ astreintes.medicalimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-2 col-md-5">
+                    {% set maxId = 0 %}
+                    {% for astreintes in astreintes %}
+                        {% set maxId = max(astreintes.id, maxId) %}
+                    {% endfor %}
+                    {% for astreintes in astreintes %}
+                        {% if astreintes.id == maxId %}
+                            <p>{{ astreintes.titlecommune }}</p>
+                        {% endif %}
+                        {% if astreintes.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ astreintes.communeimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for astreintes in astreintes %}
+                        {% set maxId = max(astreintes.id, maxId) %}
+                    {% endfor %}
+                    {% for astreintes in astreintes %}
+                        {% if astreintes.id == maxId %}
+                            <p>{{ astreintes.titletechnique }}</p>
+                        {% endif %}
+                        {% if astreintes.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ astreintes.techniqueimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </tbody>
+
+{% endblock %}
+
+

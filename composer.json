@@ -29,6 +29,9 @@
         "symfony/serializer": "^2.7",
         "friendsofsymfony/jsrouting-bundle": "^1.5",
         "egeloen/ckeditor-bundle": "^4.0"
+        "incenteev/composer-parameter-handler": "~2.0"
+
+
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

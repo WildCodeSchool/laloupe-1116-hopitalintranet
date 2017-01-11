@@ -69,7 +69,6 @@ swiftmailer:
     spool:     { type: memory }
 
 
-
 #### Sonata Configuration ####
     ####### SonataAdmin #######
 sonata_admin:
@@ -190,3 +189,4 @@ ivory_ck_editor:
     configs:
         my_config:
             toolbar: [  [ 'Image', '-', 'Link','Unlink' ], "/", [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat', '-', 'NumberedList','BulletedList', '-', 'JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], "/", [ 'Styles','Format','FontSize', 'TextColor' ] ]
+

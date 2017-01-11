@@ -1,0 +1,48 @@
+HopitalBundle\Entity\Plans:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\PlansRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+    fields:
+        plansglobal:
+            type: string
+            length: 25
+            nullable: true
+        plansbatarc:
+            type: string
+            length: 25
+            nullable: true
+        plansbatae:
+            type: string
+            length: 25
+            nullable: true
+        plansbatbrj:
+            type: string
+            length: 25
+            nullable: true
+        plansbatbrc:
+            type: string
+            length: 25
+            nullable: true
+        plansbatbe:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5, preUpload6 ]
+      preUpdate: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5, preUpload6 ]
+      postPersist: [ upload, upload1, upload2,upload3, upload4, upload5, upload6 ]
+      postUpdate: [ upload, upload1, upload2,upload3, upload4,upload5, upload6 ]
+      postRemove: [ removeUpload, removeUpload1, removeUpload2,removeUpload3, removeUpload4,removeUpload5, removeUpload6 ]
+
