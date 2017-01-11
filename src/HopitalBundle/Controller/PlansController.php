@@ -16,13 +16,7 @@ class PlansController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-<<<<<<< HEAD
-
         $planss = $em->getRepository('HopitalBundle:Plans')->findAll();
-
-=======
-        $planss = $em->getRepository('HopitalBundle:Plans')->findAll();
->>>>>>> book
         return $this->render('HopitalBundle:presentation:plans_index.html.twig', array(
             'planss' => $planss,
         ));
@@ -54,10 +48,6 @@ class PlansController extends Controller
     public function showAction(Plans $plans)
     {
         $plans_deleteForm = $this->createDeleteForm($plans);
-<<<<<<< HEAD
-
-=======
->>>>>>> book
         return $this->render('HopitalBundle:presentation:plans_show.html.twig', array(
             'plans' => $plans,
             'plans_delete_form' => $plans_deleteForm->createView(),

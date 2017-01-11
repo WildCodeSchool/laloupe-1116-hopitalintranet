@@ -17,10 +17,16 @@ documentation_contacts:
     defaults: { _controller: "HopitalBundle:Documentation:contacts" }
     methods:  GET
 
-<<<<<<< HEAD
-documentation_journaux:
-=======
+documentation_galerie_index:
+    path:     /galerie
+    defaults: { _controller: "HopitalBundle:Galerie:index" }
+    methods:  GET
 
+    
+documentation_instances:
+    path:     /instances
+    defaults: { _controller: "HopitalBundle:Documentation:instances" }
+    methods:  GET
 
 documentation_astreintes:
     path:     /astreintes
@@ -36,13 +42,10 @@ documentation_groupe:
 
 
 documentation_journaux_index:
->>>>>>> book
     path:     /journaux
     defaults: { _controller: "HopitalBundle:Journaux:index" }
     methods:  GET
 
-<<<<<<< HEAD
-=======
 documentation_journaux_show:
     path:     /journaux/{id}/show
     defaults: { _controller: "HopitalBundle:Journaux:show" }
@@ -62,29 +65,6 @@ documentation_journaux_delete:
     path:     /journaux/{id}/delete
     defaults: { _controller: "HopitalBundle:Journaux:delete" }
     methods:  DELETE
-
-
-
->>>>>>> book
-documentation_instances:
-    path:     /instances
-    defaults: { _controller: "HopitalBundle:Documentation:instances" }
-    methods:  GET
-
-
-
-
-documentation_galerie_index:
-    path:     /galerie
-    defaults: { _controller: "HopitalBundle:Galerie:index" }
-    methods:  GET
-
-<<<<<<< HEAD
-
-
-
-
-
 
 
 documentation_astreintes_index:
@@ -113,47 +93,6 @@ documentation_astreintes_delete:
     methods:  DELETE
 
 
-
-
-documentation_basedoc_index:
-    path:     /basedoc
-    defaults: { _controller: "HopitalBundle:Basedoc:index" }
-    methods:  GET
-
-documentation_basedoc_show:
-    path:     /basedoc/{id}/show
-    defaults: { _controller: "HopitalBundle:Basedoc:show" }
-    methods:  GET
-
-documentation_basedoc_new:
-    path:     /basedoc/new
-    defaults: { _controller: "HopitalBundle:Basedoc:new" }
-    methods:  [GET, POST]
-
-documentation_basedoc_edit:
-    path:     /basedoc/{id}/edit
-    defaults: { _controller: "HopitalBundle:Basedoc:edit" }
-    methods:  [GET, POST]
-
-documentation_basedoc_delete:
-    path:     /basedoc/{id}/delete
-    defaults: { _controller: "HopitalBundle:Basedoc:delete" }
-    methods:  DELETE
-
-
-
-
-documentation_fournisseur_index:
-    path:     /fournisseur
-    defaults: { _controller: "HopitalBundle:Fournisseur:index" }
-    methods:  GET
-
-documentation_fournisseur_show:
-    path:     /fournisseur/{id}/show
-    defaults: { _controller: "HopitalBundle:Fournisseur:show" }
-    methods:  GET
-
-=======
 documentation_galerie_show:
     path:     /galerie/{id}/show
     defaults: { _controller: "HopitalBundle:Galerie:show" }
@@ -214,7 +153,6 @@ documentation_fournisseur_show:
     defaults: { _controller: "HopitalBundle:Fournisseur:show" }
     methods:  GET
 
->>>>>>> book
 documentation_fournisseur_new:
     path:     /fournisseur/new
     defaults: { _controller: "HopitalBundle:Fournisseur:new" }
@@ -231,31 +169,4 @@ documentation_fournisseur_delete:
     methods:  DELETE
 
 
-<<<<<<< HEAD
-documentation_galerie_index:
-    path:     /galerie
-    defaults: { _controller: "HopitalBundle:Galerie:index" }
-    methods:  GET
 
-documentation_galerie_show:
-    path:     /galerie/{id}/show
-    defaults: { _controller: "HopitalBundle:Galerie:show" }
-    methods:  GET
-
-documentation_galerie_new:
-    path:     /galerie/new
-    defaults: { _controller: "HopitalBundle:Galerie:new" }
-    methods:  [GET, POST]
-
-documentation_galerie_edit:
-    path:     /galerie/{id}/edit
-    defaults: { _controller: "HopitalBundle:Galerie:edit" }
-    methods:  [GET, POST]
-
-documentation_galerie_delete:
-    path:     /galerie/{id}/delete
-    defaults: { _controller: "HopitalBundle:Galerie:delete" }
-    methods:  DELETE
-=======
-
->>>>>>> book
