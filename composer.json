@@ -20,15 +20,8 @@
         "symfony/monolog-bundle": "~2.11.3",
         "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "sonata-project/admin-bundle": "2.3.*",
-        "sonata-project/doctrine-orm-admin-bundle": "2.3.*",
-        "sonata-project/easy-extends-bundle": "^2.1",
-        "sonata-project/user-bundle": "^2.2",
-        "knplabs/knp-menu-bundle": "~1.1",
-        "symfony/serializer": "^2.7",
-        "friendsofsymfony/jsrouting-bundle": "^1.5",
-        "egeloen/ckeditor-bundle": "^4.0"
+        "incenteev/composer-parameter-handler": "~2.0"
+
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

@@ -1,3 +1,0 @@
-{% if admin.isGranted('DELETE', object) and admin.hasRoute('reset') %}
-    <a class="btn btn-sm btn-default" href="{{ admin.generateObjectUrl('reset', object) }}">Réinitialiser mdp</a>
-{% endif %}
