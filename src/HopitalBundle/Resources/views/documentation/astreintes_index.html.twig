@@ -19,32 +19,29 @@
                 <div class="col-md-2">
 
 
-
                     <!--Début archives astreintes-->
+
+
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle astreintesbtn" type="button" id="dropdownMenu1" data-toggle="dropdown">
                             Administratif
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            {% for astreintes in astreintess %}
-                                <div class="container-fluid">
-                                    {% set maxId = 0 %}
-                                    {% for astreintes in astreintes %}
-                                        {% set maxId = max(astreintes.id, maxId) %}
-                                    {% endfor %}
+                            <div class="container-fluid">
+                                {% set maxId = 0 %}
+                                {% for astreintes in astreintes %}
+                                    {% set maxId = max(astreintes.id, maxId) %}
+                                {% endfor %}
                                     {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
-                                    <div class=" col-sm-6">
-                                        {% for astreintes in astreintes %}
-                                            {% if astreintes.id != maxId %}
-                                                {% if astreintes.titleadministratif != NULL %}
-                                                    <p> {{ astreintes.titleadministratif }} </p>
-                                                {% endif %}
+                                    {% for astreintes in astreintes %}
+                                        {% if astreintes.id != maxId %}
+                                            {% if astreintes.titleadministratif != NULL %}
+                                                <p data-toggle="modal" data-target=".bs-example-modal-lg1" class="astreintesarchivestitres"> {{ astreintes.titleadministratif }} </p>
                                             {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                            </div>
                         </ul>
                     </div>
 
@@ -54,24 +51,20 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            {% for astreintes in astreintess %}
-                                <div class="container-fluid">
-                                    {% set maxId = 0 %}
-                                    {% for astreintes in astreintes %}
-                                        {% set maxId = max(astreintes.id, maxId) %}
-                                    {% endfor %}
-                                    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
-                                    <div class=" col-sm-6">
-                                        {% for astreintes in astreintes %}
-                                            {% if astreintes.id != maxId %}
-                                                {% if astreintes.titlemedical != NULL %}
-                                                    <p> {{ astreintes.titlemedical }} </p>
-                                                {% endif %}
-                                            {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            {% endfor %}
+                            <div class="container-fluid">
+                                {% set maxId = 0 %}
+                                {% for astreintes in astreintes %}
+                                    {% set maxId = max(astreintes.id, maxId) %}
+                                {% endfor %}
+                                {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+                                {% for astreintes in astreintes %}
+                                    {% if astreintes.id != maxId %}
+                                        {% if astreintes.titlemedical != NULL %}
+                                            <p data-toggle="modal" data-target=".bs-example-modal-lg2" class="astreintesarchivestitres"> {{ astreintes.titlemedical }} </p>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
                         </ul>
                     </div>
 
@@ -81,24 +74,20 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            {% for astreintes in astreintess %}
-                                <div class="container-fluid">
-                                    {% set maxId = 0 %}
-                                    {% for astreintes in astreintes %}
-                                        {% set maxId = max(astreintes.id, maxId) %}
-                                    {% endfor %}
-                                    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
-                                    <div class=" col-sm-6">
-                                        {% for astreintes in astreintes %}
-                                            {% if astreintes.id != maxId %}
-                                                {% if astreintes.titlecommune != NULL %}
-                                                    <p> {{ astreintes.titlecommune }} </p>
-                                                {% endif %}
-                                            {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            {% endfor %}
+                            <div class="container-fluid">
+                                {% set maxId = 0 %}
+                                {% for astreintes in astreintes %}
+                                    {% set maxId = max(astreintes.id, maxId) %}
+                                {% endfor %}
+                                {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+                                {% for astreintes in astreintes %}
+                                    {% if astreintes.id != maxId %}
+                                        {% if astreintes.titlecommune != NULL %}
+                                            <p data-toggle="modal" data-target=".bs-example-modal-lg3" class="astreintesarchivestitres"> {{ astreintes.titlecommune }} </p>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
                         </ul>
                     </div>
 
@@ -108,32 +97,30 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            {% for astreintes in astreintess %}
-                                <div class="container-fluid">
-                                    {% set maxId = 0 %}
-                                    {% for astreintes in astreintes %}
-                                        {% set maxId = max(astreintes.id, maxId) %}
-                                    {% endfor %}
-                                    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
-                                    <div class=" col-sm-6">
-                                        {% for astreintes in astreintes %}
-                                            {% if astreintes.id != maxId %}
-                                                {% if astreintes.titletechnique != NULL %}
-                                                    <p> {{ astreintes.titletechnique }} </p>
-                                                {% endif %}
-                                            {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            {% endfor %}
+                            <div class="container-fluid">
+                                {% set maxId = 0 %}
+                                {% for astreintes in astreintes %}
+                                    {% set maxId = max(astreintes.id, maxId) %}
+                                {% endfor %}
+                                {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+                                {% for astreintes in astreintes %}
+                                    {% if astreintes.id != maxId %}
+                                        {% if astreintes.titletechnique != NULL %}
+                                            <p data-toggle="modal" data-target=".bs-example-modal-lg4" class="astreintesarchivestitres"> {{ astreintes.titletechnique }} </p>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
                         </ul>
                     </div>
 
                 </div>
 
+
                 <!--Fin archives astreintes-->
 
 
+                <!--Début nouvelles astreintes-->
 
 
                 <div class="col-md-5">
@@ -204,8 +191,129 @@
                     {% endfor %}
                 </div>
             </div>
+
+            <!--Fin nouvelles astreintes-->
+
+
+
+
+            <!--Début modal-->
+
+
+
+            <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body" style="height: 700px">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <br>
+                            <br>
+                            <br>
+                            {% for astreintes in astreintes %}
+                                {% if astreintes.id != maxId %}
+                                            <object data="{{ app.request.basepath }}/uploads/{{ astreintes.administratifimg }}" type="application/pdf" class="menuremplacepdf">
+                                            </object>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body" style="height: 700px">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <br>
+                            <br>
+                            <br>
+                            {% for astreintes in astreintes %}
+                                {% if astreintes.id != maxId %}
+                                    <object data="{{ app.request.basepath }}/uploads/{{ astreintes.medicalimg }}" type="application/pdf" class="menuremplacepdf">
+                                    </object>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade bs-example-modal-lg3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body" style="height: 700px">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <br>
+                            <br>
+                            <br>
+                            {% for astreintes in astreintes %}
+                                {% if astreintes.id != maxId %}
+                                    <object data="{{ app.request.basepath }}/uploads/{{ astreintes.communeimg }}" type="application/pdf" class="menuremplacepdf">
+                                    </object>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade bs-example-modal-lg4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body" style="height: 700px">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <br>
+                            <br>
+                            <br>
+                            {% for astreintes in astreintes %}
+                                {% if astreintes.id != maxId %}
+                                    <object data="{{ app.request.basepath }}/uploads/{{ astreintes.techniqueimg }}" type="application/pdf" class="menuremplacepdf">
+                                    </object>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--Fin modal-->
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </tbody>
 
