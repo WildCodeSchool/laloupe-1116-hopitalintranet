@@ -49,7 +49,7 @@ class PlansType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'psychobundle_psycho';
+        return 'hopitalbundle_plans';
     }
 
 

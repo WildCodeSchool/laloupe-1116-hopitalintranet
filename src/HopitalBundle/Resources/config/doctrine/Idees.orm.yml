@@ -9,4 +9,10 @@ HopitalBundle\Entity\Idees:
             generator:
                 strategy: AUTO
 
+
+    fields:
+        ideestitle:
+            type: string
+            length: 50
+
     lifecycleCallbacks: {  }
