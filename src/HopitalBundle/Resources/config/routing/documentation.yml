@@ -18,10 +18,7 @@ documentation_edit:
     defaults: { _controller: "HopitalBundle:Documentation:edit" }
     methods:  [GET, POST]
 
-documentation_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "HopitalBundle:Documentation:delete" }
-    methods:  DELETE
+
 
 documentation_note:
     path:     /note
@@ -43,10 +40,30 @@ documentation_astreintes:
     defaults: { _controller: "HopitalBundle:Documentation:astreintes" }
     methods:  GET
 
-documentation_journaux:
+documentation_journaux_index:
     path:     /journaux
-    defaults: { _controller: "HopitalBundle:Documentation:journaux" }
+    defaults: { _controller: "HopitalBundle:Journaux:index" }
     methods:  GET
+
+documentation_journaux_show:
+    path:     /journaux/{id}/show
+    defaults: { _controller: "HopitalBundle:Journaux:show" }
+    methods:  GET
+
+documentation_journaux_new:
+    path:     /journaux/new
+    defaults: { _controller: "HopitalBundle:Journaux:new" }
+    methods:  [GET, POST]
+
+documentation_journaux_edit:
+    path:     /journaux/{id}/edit
+    defaults: { _controller: "HopitalBundle:Journaux:edit" }
+    methods:  [GET, POST]
+
+documentation_journaux_delete:
+    path:     /journaux/{id}/delete
+    defaults: { _controller: "HopitalBundle:Journaux:delete" }
+    methods:  DELETE
 
 documentation_basedoc:
     path:     /basedoc
