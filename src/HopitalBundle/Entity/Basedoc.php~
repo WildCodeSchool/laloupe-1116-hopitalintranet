@@ -5,9 +5,9 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Fournisseur
+ * Basedoc
  */
-class Fournisseur
+class Basedoc
 {
     public $file1;
 
@@ -18,17 +18,17 @@ class Fournisseur
 
     protected function getUploadRootDir()
     {
-        return __DIR__ . '/../../../web/' . $this->getUploadDir();
+        return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
 
     public function getWebPath()
     {
-        return null === $this->image ? null : $this->getUploadDir() . '/' . $this->image;
+        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
 
     public function getAbsolutePath()
     {
-        return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
+        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
 
 
@@ -36,7 +36,7 @@ class Fournisseur
     {
         if (null !== $this->file1) {
             // do whatever you want to generate a unique name
-            $this->fournisseur1 = uniqid() . '.' . $this->file1->guessExtension();
+            $this->basedoc1 = uniqid().'.'.$this->file1->guessExtension();
         }
     }
 
@@ -49,7 +49,7 @@ class Fournisseur
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->fournisseur1);
+        $this->file1->move($this->getUploadRootDir(), $this->basedoc1);
 
         unset($this->file1);
     }
@@ -86,6 +86,8 @@ class Fournisseur
     }
 
 
+
+
     /**
      * @var string
      */
@@ -96,7 +98,7 @@ class Fournisseur
      * Set image
      *
      * @param string $image
-     * @return Fournisseur
+     * @return Basedoc
      */
     public function setImage($image)
     {
@@ -130,35 +132,33 @@ class Fournisseur
     {
         return $this->id;
     }
-
     /**
      * @var string
      */
-    private $fournisseur1;
+    private $basedoc1;
 
 
     /**
-     * Set fournisseur1
+     * Set basedoc1
      *
-     * @param string $fournisseur1
+     * @param string $basedoc1
      *
-     * @return Fournisseur
+     * @return Basedoc
      */
-    public function setFournisseur1($fournisseur1)
+    public function setBasedoc1($basedoc1)
     {
-        $this->fournisseur1 = $fournisseur1;
+        $this->basedoc1 = $basedoc1;
 
         return $this;
     }
 
     /**
-     * Get fournisseur1
+     * Get basedoc1
      *
      * @return string
      */
-    public function getFournisseur1()
+    public function getBasedoc1()
     {
-        return $this->fournisseur1;
+        return $this->basedoc1;
     }
-
 }
