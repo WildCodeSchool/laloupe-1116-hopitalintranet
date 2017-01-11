@@ -3,25 +3,61 @@ documentation_note:
     defaults: { _controller: "HopitalBundle:Documentation:note" }
     methods:  GET
 
+
+
 documentation_noteservice:
     path:     /noteservice
     defaults: { _controller: "HopitalBundle:Documentation:noteservice" }
     methods:  GET
+
+
 
 documentation_contacts:
     path:     /contacts
     defaults: { _controller: "HopitalBundle:Documentation:contacts" }
     methods:  GET
 
+
+
 documentation_astreintes:
     path:     /astreintes
     defaults: { _controller: "HopitalBundle:Documentation:astreintes" }
     methods:  GET
 
-documentation_journaux:
-    path:     /journaux
-    defaults: { _controller: "HopitalBundle:Documentation:journaux" }
+
+documentation_groupe:
+    path:     /groupe
+    defaults: { _controller: "HopitalBundle:Documentation:groupe" }
     methods:  GET
+
+
+
+documentation_journaux_index:
+    path:     /journaux
+    defaults: { _controller: "HopitalBundle:Journaux:index" }
+    methods:  GET
+
+documentation_journaux_show:
+    path:     /journaux/{id}/show
+    defaults: { _controller: "HopitalBundle:Journaux:show" }
+    methods:  GET
+
+documentation_journaux_new:
+    path:     /journaux/new
+    defaults: { _controller: "HopitalBundle:Journaux:new" }
+    methods:  [GET, POST]
+
+documentation_journaux_edit:
+    path:     /journaux/{id}/edit
+    defaults: { _controller: "HopitalBundle:Journaux:edit" }
+    methods:  [GET, POST]
+
+documentation_journaux_delete:
+    path:     /journaux/{id}/delete
+    defaults: { _controller: "HopitalBundle:Journaux:delete" }
+    methods:  DELETE
+
+
 
 documentation_instances:
     path:     /instances
@@ -30,10 +66,6 @@ documentation_instances:
 
 
 
-documentation_groupe:
-    path:     /groupe
-    defaults: { _controller: "HopitalBundle:Documentation:groupe" }
-    methods:  GET
 
 documentation_galerie_index:
     path:     /galerie

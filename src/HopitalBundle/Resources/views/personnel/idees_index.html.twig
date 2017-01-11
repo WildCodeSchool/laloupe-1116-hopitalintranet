@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <tbody>
+    {% for idees in ideess %}
+
+        <div class="row">
+            <div id="page-contact">
+                <div class="col-md-offset-2  col-md-8 fondblanc">
+                    <h1 class="lienstitre">Boîte à idées</h1>
+                    <br/>
+                    <br/>
+                    <h4 class="lienssoustitre">Envoyez vos idées pour améliorer la vie à l'hôpital.</h4>
+                    <form action="{{  path('personnel_idees') }}" method="post">
+                        <div class="form-group">
+                            <input class="form-control objet" type="text" value="Objet" name="object" id="example-text-input">
+                        </div>
+                        <br/>
+                        <div class="form-group message">
+                            <label for="exampleTextarea" >Votre message :</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="10" name="message"></textarea>
+                        </div>
+                        <br/>
+                        <div class="send">
+                            <input type="submit" value="Envoyer" class="btn btn-succcess">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+    </tbody>
+
+{% endblock %}

@@ -8,6 +8,11 @@ annonce_indexCgos:
     defaults: { _controller: "VlAnnonceBundle:Annonce:indexCgos" }
     methods:  GET
 
+annonce_indexAmicale:
+    path:     /Amicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexAmicale" }
+    methods:  GET
+
 annonce_show:
     path:     /{id}/show
     defaults: { _controller: "VlAnnonceBundle:Annonce:show" }
@@ -16,6 +21,11 @@ annonce_show:
 annonce_showCgos:
     path:     /{id}/showCgos
     defaults: { _controller: "VlAnnonceBundle:Annonce:showCgos" }
+    methods:  [GET, POST]
+
+annonce_showAmicale:
+    path:     /{id}/showAmicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:showAmicale" }
     methods:  [GET, POST]
 
 annonce_new:
@@ -28,13 +38,24 @@ annonce_newCgos:
     defaults: { _controller: "VlAnnonceBundle:Annonce:newCgos" }
     methods:  [GET, POST]
 
+annonce_newAmicale:
+    path:     /newAmicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:newAmicale" }
+    methods:  [GET, POST]
+
 annonce_edit:
     path:     /{id}/edit
     defaults: { _controller: "VlAnnonceBundle:Annonce:edit" }
     methods:  [GET, POST]
+
 annonce_editCgos:
     path:     /{id}/editCgos
     defaults: { _controller: "VlAnnonceBundle:Annonce:editCgos" }
+    methods:  [GET, POST]
+
+annonce_editAmicale:
+    path:     /{id}/editAmicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:editAmicale" }
     methods:  [GET, POST]
 
 annonce_delete:

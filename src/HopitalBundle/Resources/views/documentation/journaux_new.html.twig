@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Journaux internes création</h1>
+
+            <div class="row journaux">
+                <div class="col-md-4">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <input type="submit" value="Create" />
+                    {{ form_end(form) }}
+                </div>
+                <div class="col-md-offset-1 col-md-4">
+                    <a href="{{ path('documentation_journaux_index') }}">Back to the list</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

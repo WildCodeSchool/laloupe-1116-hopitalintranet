@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <tbody>
+    {% for has in hass %}
+
+        <div class="row">
+            <div class="col-md-offset-2  col-md-8 fondblanc">
+                <h1 class="lienstitre">HAS</h1>
+                <h4 class="lienssoustitre">Haute autorité de santé</h4>
+
+                <a href="{{ asset('http://www.has-sante.fr/portail/') }}">
+                    <object data="{{ app.request.basepath }}/uploads/{{ has.hasimg }}" type="application/pdf" alt="has" class="lienimg"">
+                    </object>
+                </a>
+
+            </div>
+        </div>
+
+    {% endfor %}
+    </tbody>
+
+
+{% endblock %}

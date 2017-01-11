@@ -9,9 +9,7 @@ agenda:
 annonce:
     resource: "@VlAnnonceBundle/Resources/config/routing.yml"
     prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
-
-fos_js_routing:
-    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

@@ -51,6 +51,7 @@ class MoncompteController extends Controller
         ));
     }
 
+
     /**
      * Finds and displays a moncompte entity.
      *
@@ -60,6 +61,16 @@ class MoncompteController extends Controller
         $deleteForm = $this->createDeleteForm($moncompte);
 
         return $this->render('HopitalBundle:moncompte:show.html.twig', array(
+            'moncompte' => $moncompte,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    public function showAmicaleAction(Moncompte $moncompte)
+    {
+        $deleteForm = $this->createDeleteForm($moncompte);
+
+        return $this->render('VlAnnonceBundle:annonce:showAmicale.html.twig', array(
             'moncompte' => $moncompte,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -88,6 +99,7 @@ class MoncompteController extends Controller
         ));
     }
 
+
     /**
      * Deletes a moncompte entity.
      *
@@ -104,6 +116,20 @@ class MoncompteController extends Controller
         }
 
         return $this->redirectToRoute('moncompte_index');
+    }
+
+    public function deleteAmicaleAction(Request $request, Moncompte $moncompte)
+    {
+        $form = $this->createDeleteForm($moncompte);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($moncompte);
+            $em->flush($moncompte);
+        }
+
+        return $this->redirectToRoute('annonce_indexAmicale');
     }
 
     /**
@@ -125,7 +151,7 @@ class MoncompteController extends Controller
 
 
 
-    /**********************CODE AJOUTÉ ***********************************
+    /**********************CODE AJOUTÉ CGOS***********************************
 
 
     /**
@@ -151,7 +177,7 @@ class MoncompteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $moncomptes = $em->getRepository('HopitalBundle:Moncompte')->findAll();
+        $moncomptes = $em->getRepository('HopitalBundle:Annonce')->findAll();
 
         return $this->render('HopitalBundle:moncompte:amicale.html.twig', array(
             'moncomptes' => $moncomptes,
@@ -202,4 +228,6 @@ class MoncompteController extends Controller
             'moncomptes' => $moncomptes,
         ));
     }
-    }
+
+
+}

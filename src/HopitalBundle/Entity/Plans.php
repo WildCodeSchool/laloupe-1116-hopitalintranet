@@ -60,6 +60,13 @@ class Plans
             unlink($file1);
         }
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
     public $file2;
 
     public function preUpload2()
@@ -90,6 +97,13 @@ class Plans
             unlink($file2);
         }
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
     public $file3;
 
     public function preUpload3()
@@ -258,6 +272,11 @@ class Plans
     {
         return $this->image;
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
     /**
      * @var string
      */
