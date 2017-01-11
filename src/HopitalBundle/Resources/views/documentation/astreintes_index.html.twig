@@ -20,7 +20,11 @@
 
 
 
+<<<<<<< HEAD
                     <!--Début archives astreintes-->
+=======
+     <!--Début archives astreintes-->
+>>>>>>> book
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle astreintesbtn" type="button" id="dropdownMenu1" data-toggle="dropdown">
                             Administratif
@@ -33,6 +37,7 @@
                                     {% for astreintes in astreintes %}
                                         {% set maxId = max(astreintes.id, maxId) %}
                                     {% endfor %}
+<<<<<<< HEAD
                                     {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
                                     <div class=" col-sm-6">
                                         {% for astreintes in astreintes %}
@@ -43,6 +48,8 @@
                                             {% endif %}
                                         {% endfor %}
                                     </div>
+=======
+>>>>>>> book
                                 </div>
                             {% endfor %}
                         </ul>
@@ -60,6 +67,7 @@
                                     {% for astreintes in astreintes %}
                                         {% set maxId = max(astreintes.id, maxId) %}
                                     {% endfor %}
+<<<<<<< HEAD
                                     {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
                                     <div class=" col-sm-6">
                                         {% for astreintes in astreintes %}
@@ -70,6 +78,8 @@
                                             {% endif %}
                                         {% endfor %}
                                     </div>
+=======
+>>>>>>> book
                                 </div>
                             {% endfor %}
                         </ul>
@@ -87,6 +97,7 @@
                                     {% for astreintes in astreintes %}
                                         {% set maxId = max(astreintes.id, maxId) %}
                                     {% endfor %}
+<<<<<<< HEAD
                                     {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
                                     <div class=" col-sm-6">
                                         {% for astreintes in astreintes %}
@@ -97,6 +108,8 @@
                                             {% endif %}
                                         {% endfor %}
                                     </div>
+=======
+>>>>>>> book
                                 </div>
                             {% endfor %}
                         </ul>
@@ -114,6 +127,7 @@
                                     {% for astreintes in astreintes %}
                                         {% set maxId = max(astreintes.id, maxId) %}
                                     {% endfor %}
+<<<<<<< HEAD
                                     {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
                                     <div class=" col-sm-6">
                                         {% for astreintes in astreintes %}
@@ -124,6 +138,8 @@
                                             {% endif %}
                                         {% endfor %}
                                     </div>
+=======
+>>>>>>> book
                                 </div>
                             {% endfor %}
                         </ul>
@@ -131,7 +147,11 @@
 
                 </div>
 
+<<<<<<< HEAD
                 <!--Fin archives astreintes-->
+=======
+    <!--Fin archives astreintes-->
+>>>>>>> book
 
 
 
@@ -207,6 +227,82 @@
         </div>
     </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+    {% if astreintes.id != maxId %}
+        <div class=" col-sm-6">
+            {% if astreintes.administratifimg != NULL %}
+                <!--<p> {{ astreintes.administratifimg }} </p>-->
+                <img style="height: 200px;width: auto" src="{{ app.request.basepath }}/uploads/{{ astreintes.administratifimg }}">
+            {% endif %}
+        </div>
+    {% endif %}
+
+
+
+
+    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+    {% if astreintes.id != maxId %}
+        <div class=" col-sm-6">
+            {% if astreintes.medicalimg != NULL %}
+                <!--<p> {{ astreintes.medicalimg }} </p>-->
+                <img style="height: 200px;width: auto" src="{{ app.request.basepath }}/uploads/{{ astreintes.medicalimg }}">
+            {% endif %}
+        </div>
+    {% endif %}
+
+
+
+
+
+
+
+    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+    {% if astreintes.id != maxId %}
+        <div class=" col-sm-6">
+            {% if astreintes.communeimg != NULL %}
+                <!--<p> {{ astreintes.communeimg }} </p>-->
+                <img style="height: 200px;width: auto" src="{{ app.request.basepath }}/uploads/{{ astreintes.communeimg }}">
+            {% endif %}
+        </div>
+    {% endif %}
+
+
+
+
+
+
+    {# Affichage des informations ne correspondant pas à l'Id sauvegarder#}
+    {% if astreintes.id != maxId %}
+        <div class=" col-sm-6">
+            {% if astreintes.techniqueimg != NULL %}
+                <!--<p> {{ astreintes.techniqueimg }} </p>-->
+                <img style="height: 200px;width: auto" src="{{ app.request.basepath }}/uploads/{{ astreintes.techniqueimg }}">
+            {% endif %}
+        </div>
+    {% endif %}
+
+
+
+
+
+
+
+>>>>>>> book
     </tbody>
 
 {% endblock %}

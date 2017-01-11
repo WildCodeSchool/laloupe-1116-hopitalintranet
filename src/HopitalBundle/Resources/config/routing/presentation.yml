@@ -17,21 +17,26 @@ presentation_plans_show:
 
 presentation_plans_new:
     path:     /plans/new
-    defaults: { _controller: "HopitalBundle:Plans:new" }
+    defaults: { _controller: "HopitalBundle:Presentation:Plans:new" }
     methods:  [GET, POST]
 
 presentation_plans_edit:
     path:     /plans/{id}/edit
-    defaults: { _controller: "HopitalBundle:Plans:edit" }
+    defaults: { _controller: "HopitalBundle:Presentation:Plans:edit" }
     methods:  [GET, POST]
 
 presentation_plans_delete:
     path:     /plans/{id}/delete
+<<<<<<< HEAD
     defaults: { _controller: "HopitalBundle:Plans:delete" }
+=======
+    defaults: { _controller: "HopitalBundle:Presentation:Plans:delete" }
+>>>>>>> book
     methods:  DELETE
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -60,6 +65,39 @@ presentation_organigramme_delete:
     defaults: { _controller: "HopitalBundle:Organigramme:delete" }
     methods:  DELETE
 
+=======
+presentation_livret:
+    path:     /livret
+    defaults: { _controller: "HopitalBundle:Presentation:livret" }
+    methods:  GET
 
+
+
+
+presentation_organigramme_index:
+    path:     /organigramme
+    defaults: { _controller: "HopitalBundle:Organigramme:index" }
+    methods:  GET
+
+presentation_organigramme_show:
+    path:     /organigramme/{id}/show
+    defaults: { _controller: "HopitalBundle:Organigramme:show" }
+    methods:  GET
+>>>>>>> book
+
+presentation_organigramme_new:
+    path:     /organigramme/new
+    defaults: { _controller: "HopitalBundle:Organigramme:new" }
+    methods:  [GET, POST]
+
+presentation_organigramme_edit:
+    path:     /organigramme/{id}/edit
+    defaults: { _controller: "HopitalBundle:Organigramme:edit" }
+    methods:  [GET, POST]
+
+presentation_organigramme_delete:
+    path:     /organigramme/{id}/delete
+    defaults: { _controller: "HopitalBundle:Organigramme:delete" }
+    methods:  DELETE
 
 

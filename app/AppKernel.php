@@ -34,8 +34,7 @@ class AppKernel extends Kernel
             new IuchBundle\IuchBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
-            new InfoMailBundle\InfoMailBundle(),            
-
+            new InfoMailBundle\InfoMailBundle(),
             new AppBundle\AppBundle(),
             new Vl\AgendaBundle\VlAgendaBundle(),
             new Vl\AnnonceBundle\VlAnnonceBundle(),

@@ -62,6 +62,11 @@ class Idees
         return $this->id;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> book
 
 
 
@@ -72,6 +77,10 @@ class Idees
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
+>>>>>>> book
     
 }
 

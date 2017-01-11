@@ -60,10 +60,19 @@ class Plans
             unlink($file1);
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> book
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
+>>>>>>> book
     public $file2;
 
     public function preUpload2()
@@ -94,10 +103,19 @@ class Plans
             unlink($file2);
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> book
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
+>>>>>>> book
     public $file3;
 
     public function preUpload3()
@@ -266,8 +284,16 @@ class Plans
     {
         return $this->image;
     }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
+>>>>>>> book
     /**
      * @var string
      */
