@@ -33,6 +33,3 @@ presentation_organigrammes:
     defaults: { _controller: "HopitalBundle:Presentation:organigrammes" }
     methods:  GET
 
-
-
-
