@@ -30,8 +30,9 @@ moncompte_cgos:
 
 moncompte_amicale:
     path:     /amicale
-    defaults: { _controller: "HopitalBundle:Moncompte:amicale" }
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexAmicale" }
     methods:  GET
+
 
 moncompte_sacha:
     path:     /sacha
