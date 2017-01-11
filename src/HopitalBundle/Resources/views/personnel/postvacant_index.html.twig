@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Annonces Postes vacants</h1>
+            <div class="noteservice">
+                {% set maxId = 0 %}
+                {% for postvacant in postvacants %}
+                    {% set maxId = max(postvacant.id, maxId) %}
+                {% endfor %}
+                {% for postvacant in postvacants %}
+                {% if postvacant.id == maxId %}
+                <object style="  width: 100%; height: 100%;" data=" {{ app.request.basepath }}/uploads/{{ postvacant.postvacantimg }}">
+                    {% endif %}
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
