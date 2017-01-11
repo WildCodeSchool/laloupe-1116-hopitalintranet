@@ -18,7 +18,7 @@ class Galerie
 
     protected function getUploadRootDir()
     {
-        return __DIR__.'/../../web/'.$this->getUploadDir();
+        return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
 
     public function getWebPath()
@@ -131,5 +131,34 @@ class Galerie
     public function getId()
     {
         return $this->id;
+    }
+    /**
+     * @var string
+     */
+    private $galerie1;
+
+
+    /**
+     * Set galerie1
+     *
+     * @param string $galerie1
+     *
+     * @return Galerie
+     */
+    public function setGalerie1($galerie1)
+    {
+        $this->galerie1 = $galerie1;
+
+        return $this;
+    }
+
+    /**
+     * Get galerie1
+     *
+     * @return string
+     */
+    public function getGalerie1()
+    {
+        return $this->galerie1;
     }
 }

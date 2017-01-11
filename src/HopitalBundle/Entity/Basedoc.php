@@ -5,9 +5,9 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Galerie
+ * Basedoc
  */
-class Galerie
+class Basedoc
 {
     public $file1;
 
@@ -36,7 +36,7 @@ class Galerie
     {
         if (null !== $this->file1) {
             // do whatever you want to generate a unique name
-            $this->galerie1 = uniqid().'.'.$this->file1->guessExtension();
+            $this->basedoc1 = uniqid().'.'.$this->file1->guessExtension();
         }
     }
 
@@ -49,7 +49,7 @@ class Galerie
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->galerie1);
+        $this->file1->move($this->getUploadRootDir(), $this->basedoc1);
 
         unset($this->file1);
     }
@@ -98,7 +98,7 @@ class Galerie
      * Set image
      *
      * @param string $image
-     * @return Galerie
+     * @return Basedoc
      */
     public function setImage($image)
     {
@@ -135,30 +135,30 @@ class Galerie
     /**
      * @var string
      */
-    private $galerie1;
+    private $basedoc1;
 
 
     /**
-     * Set galerie1
+     * Set basedoc1
      *
-     * @param string $galerie1
+     * @param string $basedoc1
      *
-     * @return Galerie
+     * @return Basedoc
      */
-    public function setGalerie1($galerie1)
+    public function setBasedoc1($basedoc1)
     {
-        $this->galerie1 = $galerie1;
+        $this->basedoc1 = $basedoc1;
 
         return $this;
     }
 
     /**
-     * Get galerie1
+     * Get basedoc1
      *
      * @return string
      */
-    public function getGalerie1()
+    public function getBasedoc1()
     {
-        return $this->galerie1;
+        return $this->basedoc1;
     }
 }

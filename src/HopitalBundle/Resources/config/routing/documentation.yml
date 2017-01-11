@@ -23,24 +23,16 @@ documentation_journaux:
     defaults: { _controller: "HopitalBundle:Documentation:journaux" }
     methods:  GET
 
-documentation_basedoc:
-    path:     /basedoc
-    defaults: { _controller: "HopitalBundle:Documentation:basedoc" }
-    methods:  GET
-
 documentation_instances:
     path:     /instances
     defaults: { _controller: "HopitalBundle:Documentation:instances" }
     methods:  GET
 
+
+
 documentation_groupe:
     path:     /groupe
     defaults: { _controller: "HopitalBundle:Documentation:groupe" }
-    methods:  GET
-
-documentation_fournisseurs:
-    path:     /fournisseurs
-    defaults: { _controller: "HopitalBundle:Documentation:fournisseurs" }
     methods:  GET
 
 documentation_galerie_index:
@@ -63,7 +55,65 @@ documentation_galerie_edit:
     defaults: { _controller: "HopitalBundle:Galerie:edit" }
     methods:  [GET, POST]
 
-documentation_delete:
-    path:     /{id}/delete
+documentation_galerie_delete:
+    path:     galerie/{id}/delete
     defaults: { _controller: "HopitalBundle:Galerie:delete" }
     methods:  DELETE
+
+
+
+
+documentation_basedoc_index:
+    path:     /basedoc
+    defaults: { _controller: "HopitalBundle:Basedoc:index" }
+    methods:  GET
+
+documentation_basedoc_show:
+    path:     /basedoc/{id}/show
+    defaults: { _controller: "HopitalBundle:Basedoc:show" }
+    methods:  GET
+
+documentation_basedoc_new:
+    path:     /basedoc/new
+    defaults: { _controller: "HopitalBundle:Basedoc:new" }
+    methods:  [GET, POST]
+
+documentation_basedoc_edit:
+    path:     /basedoc/{id}/edit
+    defaults: { _controller: "HopitalBundle:Basedoc:edit" }
+    methods:  [GET, POST]
+
+documentation_basedoc_delete:
+    path:     /basedoc//{id}/delete
+    defaults: { _controller: "HopitalBundle:Basedoc:delete" }
+    methods:  DELETE
+
+
+
+documentation_fournisseur_index:
+    path:     /fournisseur
+    defaults: { _controller: "HopitalBundle:Fournisseur:index" }
+    methods:  GET
+
+documentation_fournisseur_show:
+    path:     /fournisseur/{id}/show
+    defaults: { _controller: "HopitalBundle:Fournisseur:show" }
+    methods:  GET
+
+documentation_fournisseur_new:
+    path:     /fournisseur/new
+    defaults: { _controller: "HopitalBundle:Fournisseur:new" }
+    methods:  [GET, POST]
+
+documentation_fournisseur_edit:
+    path:     /fournisseur/{id}/edit
+    defaults: { _controller: "HopitalBundle:Fournisseur:edit" }
+    methods:  [GET, POST]
+
+documentation_fournisseur_delete:
+    path:     /fournisseur/{id}/delete
+    defaults: { _controller: "HopitalBundle:Fournisseur:delete" }
+    methods:  DELETE
+
+
+

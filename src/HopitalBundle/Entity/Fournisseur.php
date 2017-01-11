@@ -5,9 +5,9 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Galerie
+ * Fournisseur
  */
-class Galerie
+class Fournisseur
 {
     public $file1;
 
@@ -18,17 +18,17 @@ class Galerie
 
     protected function getUploadRootDir()
     {
-        return __DIR__.'/../../../web/'.$this->getUploadDir();
+        return __DIR__ . '/../../../web/' . $this->getUploadDir();
     }
 
     public function getWebPath()
     {
-        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+        return null === $this->image ? null : $this->getUploadDir() . '/' . $this->image;
     }
 
     public function getAbsolutePath()
     {
-        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+        return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
     }
 
 
@@ -36,7 +36,7 @@ class Galerie
     {
         if (null !== $this->file1) {
             // do whatever you want to generate a unique name
-            $this->galerie1 = uniqid().'.'.$this->file1->guessExtension();
+            $this->fournisseur1 = uniqid() . '.' . $this->file1->guessExtension();
         }
     }
 
@@ -49,7 +49,7 @@ class Galerie
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->galerie1);
+        $this->file1->move($this->getUploadRootDir(), $this->fournisseur1);
 
         unset($this->file1);
     }
@@ -86,8 +86,6 @@ class Galerie
     }
 
 
-
-
     /**
      * @var string
      */
@@ -98,7 +96,7 @@ class Galerie
      * Set image
      *
      * @param string $image
-     * @return Galerie
+     * @return Fournisseur
      */
     public function setImage($image)
     {
@@ -132,33 +130,35 @@ class Galerie
     {
         return $this->id;
     }
+
     /**
      * @var string
      */
-    private $galerie1;
+    private $fournisseur1;
 
 
     /**
-     * Set galerie1
+     * Set fournisseur1
      *
-     * @param string $galerie1
+     * @param string $fournisseur1
      *
-     * @return Galerie
+     * @return Fournisseur
      */
-    public function setGalerie1($galerie1)
+    public function setFournisseur1($fournisseur1)
     {
-        $this->galerie1 = $galerie1;
+        $this->fournisseur1 = $fournisseur1;
 
         return $this;
     }
 
     /**
-     * Get galerie1
+     * Get fournisseur1
      *
      * @return string
      */
-    public function getGalerie1()
+    public function getFournisseur1()
     {
-        return $this->galerie1;
+        return $this->fournisseur1;
     }
+
 }

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Base documentaire</h1>
+
+
+        {% for basedoc in basedocs %}
+
+            <img src="{{ app.request.basepath }}/uploads/{{ basedoc.basedoc1 }}"/>
+
+        {% endfor %}
+
+
+{% endblock %}
