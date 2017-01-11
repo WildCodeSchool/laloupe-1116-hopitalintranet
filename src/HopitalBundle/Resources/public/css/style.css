@@ -615,3 +615,34 @@ div.c-wrapper{
 }
 
 /**************************** FIN BOÎTE À IDÉES **********************/
+
+
+
+
+
+/**************************** DEBUT ASTREINTES **********************/
+
+.astreintesbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 150px;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.astreintesimg{
+    width: 400px;
+    height: 230px;
+    margin-right: 50px;
+}
+
+
+
+
+/**************************** FIN ASTREINTES **********************/
+

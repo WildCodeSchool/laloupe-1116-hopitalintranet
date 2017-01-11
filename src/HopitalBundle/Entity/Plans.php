@@ -60,6 +60,10 @@ class Plans
             unlink($file1);
         }
     }
+
+
+
+
     public $file2;
 
     public function preUpload2()
@@ -90,6 +94,10 @@ class Plans
             unlink($file2);
         }
     }
+
+
+
+
     public $file3;
 
     public function preUpload3()
@@ -258,6 +266,8 @@ class Plans
     {
         return $this->image;
     }
+
+
     /**
      * @var string
      */

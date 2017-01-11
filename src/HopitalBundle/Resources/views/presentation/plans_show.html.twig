@@ -44,9 +44,9 @@
             <a href="{{ path('presentation_plans_edit', { 'id': plans.id }) }}">Edit</a>
         </li>
         <li>
-            {{ form_start(delete_form) }}
+            {{ form_start(plans_delete_form) }}
                 <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
+            {{ form_end(plans_delete_form) }}
         </li>
     </ul>
 {% endblock %}

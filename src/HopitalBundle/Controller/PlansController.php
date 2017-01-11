@@ -57,11 +57,11 @@ class PlansController extends Controller
      */
     public function showAction(Plans $plans)
     {
-        $deleteForm = $this->createDeleteForm($plans);
+        $plans_deleteForm = $this->createDeleteForm($plans);
 
         return $this->render('HopitalBundle:presentation:plans_show.html.twig', array(
             'plans' => $plans,
-            'delete_form' => $deleteForm->createView(),
+            'plans_delete_form' => $plans_deleteForm->createView(),
         ));
     }
 
@@ -71,7 +71,7 @@ class PlansController extends Controller
      */
     public function editAction(Request $request, Plans $plans)
     {
-        $deleteForm = $this->createDeleteForm($plans);
+        $plans_deleteForm = $this->createDeleteForm($plans);
         $editForm = $this->createForm('HopitalBundle\Form\PlansType', $plans);
         $editForm->handleRequest($request);
 
@@ -84,7 +84,7 @@ class PlansController extends Controller
         return $this->render('HopitalBundle:presentation:plans_edit.html.twig', array(
             'plans' => $plans,
             'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+            'plans_delete_form' => $plans_deleteForm->createView(),
         ));
     }
 
@@ -116,7 +116,7 @@ class PlansController extends Controller
     private function createDeleteForm(Plans $plans)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('presentation_delete', array('id' => $plans->getId())))
+            ->setAction($this->generateUrl('presentation_plans_delete', array('id' => $plans->getId())))
             ->setMethod('DELETE')
             ->getForm();
     }
