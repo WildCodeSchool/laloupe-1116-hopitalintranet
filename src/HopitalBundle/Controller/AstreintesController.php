@@ -26,8 +26,16 @@ class AstreintesController extends Controller
         return $this->render('HopitalBundle:documentation:astreintes_index.html.twig', array(
             'astreintess' => $astreintess,
             'astreintes' => $astreintess,
-
         ));
+
+        $repository = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('SdzBlogBundle:Article');
+
+        $article = $repository->findOneBy(array('titre' => 'Mon dernier weekend'));
+// $article est une instance de Article
+
+
     }
     /**
      * Creates a new astreintes entity.
