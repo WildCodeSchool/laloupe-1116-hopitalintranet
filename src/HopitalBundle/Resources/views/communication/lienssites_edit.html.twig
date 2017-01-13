@@ -1,90 +1,35 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
 
 {% block body %}
-    <h1>Liens vers les sites edit</h1>
 
-    {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création de lien vers les sites externes</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(edit_form) }}
+                    {{ form_label(edit_form.sitechartres, 'Nommez votre lien:', {'sitechartres': {'class': ''}}) }}
+                    {{ form_widget(edit_form.sitechartres)}}
+                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(edit_form.file1)}}
+                    <br>
 
+                    {{ form_end(edit_form) }}
 
+                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier" />
+                    {{ form_start(lienssites_delete_form) }}
+                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
+                    {{ form_end(lienssites_delete_form) }}
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitechartres }}"/>
-        {{edit_form.children.file1.vars.label}}
-        {{ form_widget(edit_form.file1) }}
-        {{ form_errors(edit_form.file1) }}
-        {{ form_widget(edit_form.sitechartres) }}
-        {{ form_errors(edit_form.sitechartres) }}
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitenogent }}"/>
-        {{edit_form.children.file2.vars.label}}
-        {{ form_widget(edit_form.file2) }}
-        {{ form_errors(edit_form.file2) }}
-        {{ form_widget(edit_form.sitenogent) }}
-        {{ form_errors(edit_form.sitenogent) }}
-    </div>
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitedreux }}"/>
-        {{edit_form.children.file3.vars.label}}
-        {{ form_widget(edit_form.file3) }}
-        {{ form_errors(edit_form.file3) }}
-        {{ form_widget(edit_form.sitedreux) }}
-        {{ form_errors(edit_form.sitedreux) }}
-    </div>
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitebonneval }}"/>
-        {{edit_form.children.file4.vars.label}}
-        {{ form_widget(edit_form.file4) }}
-        {{ form_errors(edit_form.file4) }}
-        {{ form_widget(edit_form.sitebonneval) }}
-        {{ form_errors(edit_form.sitebonneval) }}
-    </div>
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitechateaudun }}"/>
-        {{edit_form.children.file5.vars.label}}
-        {{ form_widget(edit_form.file5) }}
-        {{ form_errors(edit_form.file5) }}
-        {{ form_widget(edit_form.sitechateaudun) }}
-        {{ form_errors(edit_form.sitechateaudun) }}
-    </div>
-
-
-
-
-
-
-    {{ form_widget(edit_form) }}
-
-    <input type="submit" value="Edit"/>
-
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('communication_lienssites_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(lienssites_delete_form) }}
-            <input type="submit" value="Delete">
-            {{ form_end(lienssites_delete_form) }}
-        </li>
-    </ul>
-
-
-
-
-    {{ form_end(edit_form) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}

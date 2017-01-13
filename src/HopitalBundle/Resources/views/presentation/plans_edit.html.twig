@@ -1,121 +1,33 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
 
 {% block body %}
-    <h1>Plans edit</h1>
 
-    {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création de plans</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(edit_form) }}
+                    {{ form_label(edit_form.plansglobal, 'Nommez votre plan:', {'plansglobal': {'class': ''}}) }}
+                    {{ form_widget(edit_form.plansglobal)}}
+                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(edit_form.file1)}}
+                    <br>
+                    {{ form_end(edit_form) }}
 
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
 
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ plans.plansglobal }}"/>
-        {{edit_form.children.file1.vars.label}}
-        {{ form_widget(edit_form.file1) }}
-        {{ form_errors(edit_form.file1) }}
-        {{ form_widget(edit_form.plansglobal) }}
-        {{ form_errors(edit_form.plansglobal) }}
+                    {{ form_start(plans_delete_form) }}
+                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
+                    {{ form_end(plans_delete_form) }}
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ plans.plansbatarc }}"/>
-        {{edit_form.children.file2.vars.label}}
-        {{ form_widget(edit_form.file2) }}
-        {{ form_errors(edit_form.file2) }}
-        {{ form_widget(edit_form.plansbatarc) }}
-        {{ form_errors(edit_form.plansbatarc) }}
-    </div>
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ plans.plansbatae }}"/>
-        {{edit_form.children.file3.vars.label}}
-        {{ form_widget(edit_form.file3) }}
-        {{ form_errors(edit_form.file3) }}
-        {{ form_widget(edit_form.plansbatae) }}
-        {{ form_errors(edit_form.plansbatae) }}
-    </div>
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ plans.plansbatbrj }}"/>
-        {{edit_form.children.file4.vars.label}}
-        {{ form_widget(edit_form.file4) }}
-        {{ form_errors(edit_form.file4) }}
-        {{ form_widget(edit_form.plansbatbrj) }}
-        {{ form_errors(edit_form.plansbatbrj) }}
-    </div>
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ plans.plansbatbrc }}"/>
-        {{edit_form.children.file5.vars.label}}
-        {{ form_widget(edit_form.file5) }}
-        {{ form_errors(edit_form.file5) }}
-        {{ form_widget(edit_form.plansbatbrc) }}
-        {{ form_errors(edit_form.plansbatbrc) }}
-    </div>
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ plans.plansbatbe }}"/>
-        {{edit_form.children.file6.vars.label}}
-        {{ form_widget(edit_form.file6) }}
-        {{ form_errors(edit_form.file6) }}
-        {{ form_widget(edit_form.plansbatbe) }}
-        {{ form_errors(edit_form.plansbatbe) }}
-    </div>
-
-
-
-
-
-
-
-
-
-
-    {{ form_widget(edit_form) }}
-
-        <input type="submit" value="Edit"/>
-
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('presentation_plans_index') }}">Back to the list</a>
-        </li>
-        <li>
-<<<<<<< HEAD
-            {{ form_start(plans_delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(plans_delete_form) }}
-=======
-<<<<<<< HEAD
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-=======
-            {{ form_start(plans_delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(plans_delete_form) }}
->>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
->>>>>>> book
-        </li>
-    </ul>
-
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    {{ form_end(edit_form) }}
-=======
->>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
->>>>>>> book
-
-
-    <br/>
-    <br/>
 {% endblock %}
