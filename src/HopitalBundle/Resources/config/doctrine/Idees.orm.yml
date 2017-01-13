@@ -9,19 +9,9 @@ HopitalBundle\Entity\Idees:
             generator:
                 strategy: AUTO
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> book
-
     fields:
         ideestitle:
             type: string
             length: 50
 
-<<<<<<< HEAD
-=======
->>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
->>>>>>> book
     lifecycleCallbacks: {  }
