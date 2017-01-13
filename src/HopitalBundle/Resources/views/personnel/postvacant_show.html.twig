@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Annonces postes vacants</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ postvacant.id }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('personnel_postvacant_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('personnel_postvacant_edit', { 'id': postvacant.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(postvacant_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(postvacant_delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

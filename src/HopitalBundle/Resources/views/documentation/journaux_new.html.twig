@@ -4,17 +4,22 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Journaux internes création</h1>
-
+            <h1 class="lienstitre">Création de Journaux internes</h1>
+            <br>
             <div class="row journaux">
                 <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     {{ form_start(form) }}
-                    {{ form_widget(form) }}
-                    <input type="submit" value="Create" />
+                    {{ form_label(form.journauximg, 'Nommez votre journal:', {'journauximg': {'class': 'journauximg'}}) }}
+                    {{ form_widget(form.journauximg)}}
+                    {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(form.file1)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
                     {{ form_end(form) }}
-                </div>
-                <div class="col-md-offset-1 col-md-4">
-                    <a href="{{ path('documentation_journaux_index') }}">Back to the list</a>
                 </div>
             </div>
 

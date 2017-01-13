@@ -10,7 +10,7 @@
 
 {% block body %}
     <div class="container">
-        <h1 class="center-align">Modifier l'annonce de l'Amicale{{ annonce.titre }}</h1>
+        <h1 class="center-align">Modifier l'annonce de l'Amicale{{ amicale.titre }}</h1>
 
         <div class="row">
             {{ form_start(edit_form) }}
@@ -39,7 +39,7 @@
 
             <div class="row">
                 <div class="col s1">
-                    <img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="image actuelle">
+                    <img src="{{ app.request.basepath }}/uploads/{{ amicale.image }}" alt="image actuelle">
                 </div>
                 <div class="file-field input-field col s11">
                     <div class="btn">

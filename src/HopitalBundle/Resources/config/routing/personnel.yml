@@ -1,8 +1,3 @@
-personnel_postvacant:
-    path:     /postvacant
-    defaults: { _controller: "HopitalBundle:Personnel:postvacant" }
-    methods:  GET
-
 personnel_idees:
     path:     /idees
     defaults: { _controller: "HopitalBundle:Personnel:idees" }
@@ -122,3 +117,31 @@ personnel_planniciel_delete:
      path:     /planniciel/{id}/delete
      defaults: { _controller: "HopitalBundle:Planniciel:delete" }
      methods:  DELETE
+
+
+
+
+personnel_postvacant_index:
+    path:     /postvacant
+    defaults: { _controller: "HopitalBundle:Postvacant:index" }
+    methods:  GET
+
+personnel_postvacant_show:
+    path:     /postvacant/{id}/show
+    defaults: { _controller: "HopitalBundle:Postvacant:show" }
+    methods:  GET
+
+personnel_postvacant_new:
+    path:     /postvacant/new
+    defaults: { _controller: "HopitalBundle:Postvacant:new" }
+    methods:  [GET, POST]
+
+personnel_postvacant_edit:
+    path:     /postvacant/{id}/edit
+    defaults: { _controller: "HopitalBundle:Postvacant:edit" }
+    methods:  [GET, POST]
+
+personnel_postvacant_delete:
+    path:     /postvacant/{id}/delete
+    defaults: { _controller: "HopitalBundle:Postvacant:delete" }
+    methods:  DELETE

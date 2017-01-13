@@ -10,23 +10,23 @@
 
 {% block body %}
     <div class="container">
-        <h1 class="center-align">{{ annonce.titre }}</h1>
+        <h1 class="center-align">{{ amicale.titre }}</h1>
 
         <div class="row">
             <div class="col s12 m6">
                 <div class="card">
                     <div class="card-image">
-                        <img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="annonce">
-                        <span class="card-title">{{ annonce.titre }}</span>
+                        <img src="{{ app.request.basepath }}/uploads/{{ amicale.image }}" alt="annonce">
+                        <span class="card-title">{{ amicale.titre }}</span>
                     </div>
                     <div class="card-content">
-                        <p><span>Auteur: </span>{{ annonce.auteur }}</p>
-                        <p><span>Description: </span>{{ annonce.description }}</p>
-                        <p><span>Prix: </span>{{ annonce.prix }}</p>
+                        <p><span>Auteur: </span>{{ amicale.auteur }}</p>
+                        <p><span>Description: </span>{{ amicale.description }}</p>
+                        <p><span>Prix: </span>{{ amicale.prix }}</p>
                     </div>
                     <div class="card-action center-align">
-                        <a href="{{ path('annonce_editAmicale', { 'id': annonce.id }) }}"><i class="material-icons">mode_edit</i></a>
-                        <a href="{{ path('annonce_delete', { 'id': annonce.id }) }}"><i class="material-icons">delete_forever</i></a>
+                        <a href="{{ path('annonce_editAmicale', { 'id': amicale.id }) }}"><i class="material-icons">mode_edit</i></a>
+                        <a href="{{ path('annonce_deleteAmicale', { 'id': amicale.id }) }}"><i class="material-icons">delete_forever</i></a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                                             <p>{{ message.message }}</p>
                                         </div>
                                         <div class="card-action">
-                                            <a href="{{ path('commentaire_delete', {'id': message.id, 'id_advert': annonce.id }) }}">Supprimer le commentaire</a>
+                                            <a href="{{ path('commentaire_deleteAmicale', {'id': message.id, 'id_amicale': amicale.id }) }}">Supprimer le commentaire</a>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                 {% else %}
                     <h4 class="center-align">Pas de commentaire</h4>
                 {% endif %}
-                <a href="{{ path('annonce_indexCgos') }}">Retour à la liste des annonces</a>
+                <a href="{{ path('annonce_indexAmicale') }}">Retour à la liste des annonces</a>
             </div>
         </div>
     </div>

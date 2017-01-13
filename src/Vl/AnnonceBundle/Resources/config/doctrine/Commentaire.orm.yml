@@ -22,4 +22,14 @@ Vl\AnnonceBundle\Entity\Commentaire:
             joinColumn:
                 onDelete: CASCADE
 
+        cgoss:
+            targetEntity: Vl\AnnonceBundle\Entity\Cgos
+            joinColumn:
+                onDelete: CASCADE
+
+        amicales:
+            targetEntity: Vl\AnnonceBundle\Entity\Amicale
+            joinColumn:
+                onDelete: CASCADE
+
     lifecycleCallbacks: {  }

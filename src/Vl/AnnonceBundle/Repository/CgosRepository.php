@@ -1,6 +1,6 @@
 <?php
 
-namespace HopitalBundle\Repository;
+namespace Vl\AnnonceBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
