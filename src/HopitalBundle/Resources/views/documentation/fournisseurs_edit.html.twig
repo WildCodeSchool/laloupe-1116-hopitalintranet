@@ -1,63 +1,36 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
 
 {% block body %}
-    <h1>Fournisseurs edit</h1>
 
-    {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création de fournisseur</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(edit_form) }}
+                    {{ form_label(edit_form.fournisseur1, 'Nommez votre fournisseur:', {'fournisseur1': {'class': ''}}) }}
+                    {{ form_widget(edit_form.fournisseur1)}}
+                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(edit_form.file1)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier" />
+                    {{ form_end(edit_form) }}
 
 
+                    {{ form_start(organigramme_delete_form) }}
+                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
+                    {{ form_end(organigramme_delete_form) }}
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ fournisseur.fournisseur1 }}"/>
-        {{edit_form.children.file1.vars.label}}
-        {{ form_widget(edit_form.file1) }}
-        {{ form_errors(edit_form.file1) }}
-<<<<<<< HEAD
-        {{ form_widget(edit_form.fournisseur1) }}
-        {{ form_errors(edit_form.fournisseur1) }}
-=======
-<<<<<<< HEAD
-        {{ form_widget(edit_form.fournisseurs1) }}
-        {{ form_errors(edit_form.fournisseurs1) }}
-=======
-        {{ form_widget(edit_form.fournisseur1) }}
-        {{ form_errors(edit_form.fournisseur1) }}
->>>>>>> b5081c74eadd43691d274f1232309d8ee62c399b
->>>>>>> book
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
-
-
-
-    {{ form_widget(edit_form) }}
-
-    <input type="submit" value="Edit"/>
-
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('documentation_fournisseur_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-            <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-
-
-
-
-    {{ form_end(edit_form) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}
