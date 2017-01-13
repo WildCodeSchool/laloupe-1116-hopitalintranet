@@ -23,10 +23,30 @@ demarches_delete:
     defaults: { _controller: "HopitalBundle:Demarches:delete" }
     methods:  DELETE
 
-demarches_certification:
+demarches_certification_index:
     path:     /certification
-    defaults: { _controller: "HopitalBundle:Demarches:certification" }
+    defaults: { _controller: "HopitalBundle:Certification:index" }
     methods:  GET
+
+demarches_certification_show:
+    path:     /certification/{id}/show
+    defaults: { _controller: "HopitalBundle:Certification:show" }
+    methods:  GET
+
+demarches_certification_new:
+    path:     /certification/new
+    defaults: { _controller: "HopitalBundle:Certification:new" }
+    methods:  [GET, POST]
+
+demarches_certification_edit:
+    path:     /certification/{id}/edit
+    defaults: { _controller: "HopitalBundle:Certification:edit" }
+    methods:  [GET, POST]
+
+demarches_certification_delete:
+    path:     /certification/{id}/delete
+    defaults: { _controller: "HopitalBundle:Certification:delete" }
+    methods:  DELETE
 
 demarches_epp:
     path:     /epp
