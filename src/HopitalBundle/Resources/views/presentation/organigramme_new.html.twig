@@ -1,16 +1,27 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Organigramme creation</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="row" xmlns="http://www.w3.org/1999/html">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Organigramme Création</h1>
+            <div class="row">
+                    <div class="col-md-offset-3 col-md-4">
+                    <br/>
+                    <div class="bouton-new">
 
-    <ul>
-        <li>
-            <a href="{{ path('presentation_organigramme_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                        {{ form_start(form, {'attr': {'class': 'bouton-tst'}}) }}
+                        {{ form_widget(form)}}
+                        <br/>
+                        <input type="submit" class="btn btn-lg primary" value="Créer" />
+                        {{ form_end(form) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 {% endblock %}

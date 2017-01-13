@@ -16,11 +16,10 @@ class OrganigrammeType extends AbstractType
     {
         $builder
             ->add('organigrammeimg')
-            ->add('file7', 'file', array('required' => false));
+            ->add('file7', 'file', array('label' => 'Nom du PDF', 'required' => false));
     }
 
     /**FIN CODE AJOUTÉ
-
 
 
     /**
