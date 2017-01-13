@@ -20,7 +20,7 @@
             </form>
         </div>
 
-        {% if annonces != null %}
+        {% if cgoss != null %}
             <table class="centered striped">
                 <thead>
                 <tr class="table_head">
@@ -32,17 +32,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for annonce in annonces %}
+                {% for cgos in cgoss %}
                     <tr>
-                        <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="annonce"></td>
-                        <td>{{ annonce.titre }}</td>
-                        <td>{{ annonce.auteur }}</td>
-                        <td>{{ annonce.description }}</td>
-                        <td>{{ annonce.prix }}</td>
+                        <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ cgos.image }}" alt="annonce"></td>
+                        <td>{{ cgos.titre }}</td>
+                        <td>{{ cgos.auteur }}</td>
+                        <td>{{ cgos.description }}</td>
+                        <td>{{ cgos.prix }}</td>
                         <td>
-                            <a href="{{ path('annonce_showCgos', { 'id': annonce.id }) }}"><i class="material-icons">search</i></a>
-                            <a href="{{ path('annonce_editCgos', { 'id': annonce.id }) }}"><i class="material-icons">mode_edit</i></a>
-                            <a href="{{ path('annonce_delete', { 'id': annonce.id }) }}"><i class="material-icons">delete_forever</i></a>
+                            <a href="{{ path('annonce_showCgos', { 'id': cgos.id }) }}"><i class="material-icons">search</i></a>
+                            <a href="{{ path('annonce_editCgos', { 'id': cgos.id }) }}"><i class="material-icons">mode_edit</i></a>
+                            <a href="{{ path('annonce_deleteCgos', { 'id': cgos.id }) }}"><i class="material-icons">delete_forever</i></a>
                         </td>
                     </tr>
                 {% endfor %}

@@ -115,4 +115,76 @@ class Commentaire
     private $annonces;
 
 
+    /**
+     * @var \Vl\AnnonceBundle\Entity\Cgos
+     */
+    private $cgos;
+
+
+    /**
+     * Set cgoss
+     *
+     * @param \Vl\AnnonceBundle\Entity\Cgos $cgoss
+     *
+     * @return Commentaire
+     */
+    public function setCgoss(\Vl\AnnonceBundle\Entity\Cgos $cgoss = null)
+    {
+        $this->cgoss = $cgoss;
+
+        return $this;
+    }
+
+    /**
+     * Get cgoss
+     *
+     * @return \Vl\AnnonceBundle\Entity\Cgos
+     */
+    public function getCgoss()
+    {
+        return $this->cgoss;
+    }
+    /**
+     * @var \Vl\AnnonceBundle\Entity\Cgos
+     */
+    private $cgoss;
+
+
+
+
+    /**
+     * @var \Vl\AnnonceBundle\Entity\Amicale
+     */
+    private $amicale;
+
+
+    /**
+     * Set amicales
+     *
+     * @param \Vl\AnnonceBundle\Entity\Amicale $amicales
+     *
+     * @return Commentaire
+     */
+    public function setAmicales(\Vl\AnnonceBundle\Entity\Amicale $amicales = null)
+    {
+        $this->amicales = $amicales;
+
+        return $this;
+    }
+
+    /**
+     * Get amicales
+     *
+     * @return \Vl\AnnonceBundle\Entity\Amicale
+     */
+    public function getAMicales()
+    {
+        return $this->amicales;
+    }
+    /**
+     * @var \Vl\AnnonceBundle\Entity\Amicale
+     */
+    private $amicales
+    ;
+
 }
