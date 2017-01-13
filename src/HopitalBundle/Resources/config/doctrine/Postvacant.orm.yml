@@ -1,0 +1,23 @@
+HopitalBundle\Entity\Postvacant:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\PostvacantRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    fields:
+        postvacantimg:
+            type: string
+            length: 25
+            nullable: true
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1 ]
+      preUpdate: [ preUpload, preUpload1 ]
+      postPersist: [ upload, upload1 ]
+      postUpdate: [ upload, upload1 ]
+      postRemove: [ removeUpload, removeUpload1 ]

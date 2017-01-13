@@ -1,0 +1,51 @@
+HopitalBundle\Entity\Lienssites:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\LienssitesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+
+    fields:
+        sitechartres:
+            type: string
+            length: 25
+            nullable: true
+
+        sitenogent:
+            type: string
+            length: 25
+            nullable: true
+
+        sitedreux:
+            type: string
+            length: 25
+            nullable: true
+
+        sitebonneval:
+            type: string
+            length: 25
+            nullable: true
+
+        sitechateaudun:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5 ]
+      preUpdate: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5 ]
+      postPersist: [ upload, upload1, upload2,upload3, upload4, upload5 ]
+      postUpdate: [ upload, upload1, upload2,upload3, upload4,upload5 ]
+      postRemove: [ removeUpload, removeUpload1, removeUpload2,removeUpload3, removeUpload4,removeUpload5 ]

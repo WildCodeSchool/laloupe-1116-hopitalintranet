@@ -1,0 +1,11 @@
+HopitalBundle\Entity\Demarches:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\DemarchesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

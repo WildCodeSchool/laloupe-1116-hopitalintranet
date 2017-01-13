@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Bulletin Officiel</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ bulletinoff.id }}</td>
+        </tr>
+        <tr>
+            <th>bulletinoffimg</th>
+            <td>{{ bulletinoff.bulletinoffimg }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('recommandation_bulletinoff_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('recommandation_bulletinoff_edit', { 'id': bulletinoff.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(bulletinoff_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(bulletinoff_delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

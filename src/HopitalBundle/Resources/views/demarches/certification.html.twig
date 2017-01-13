@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Certification</h1>
+            <object data="{{ asset('bundles/hopital/img/Certification.pdf') }}" type="application/pdf" class="notedinformation">
+            </object>
+        </div>
+    </div>
+
+    {#<table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for demarch in demarches %}
+            <tr>
+                <td><a href="{{ path('demarches_show', { 'id': demarch.id }) }}">{{ demarch.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('demarches_show', { 'id': demarch.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('demarches_edit', { 'id': demarch.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('demarches_new') }}">Create a new demarch</a>
+        </li>
+    </ul>#}
+{% endblock %}

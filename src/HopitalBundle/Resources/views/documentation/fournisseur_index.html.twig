@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Fournisseurs</h1>
+
+
+    {% for fournisseur in fournisseurs %}
+
+        <img src="{{ app.request.basepath }}/uploads/{{ fournisseur.fournisseur1 }}"/>
+
+    {% endfor %}
+
+
+{% endblock %}

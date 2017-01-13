@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <tbody>
+    {% for anesm in anesms %}
+
+        <div class="row">
+            <div class="col-md-offset-2  col-md-8 fondblanc">
+                <h1 class="lienstitre">ANESM</h1>
+                <h4 class="lienssoustitre">Agence nationale de l'évaluation et de la qualité des établissements et services sociaux et médico-sociaux </h4>
+                <a href="{{ asset('http://www.anesm.sante.gouv.fr/spip.php?article677&var_mode=calcul') }}">
+                    <object data="{{ app.request.basepath }}/uploads/{{ anesm.anesmimg }}" alt="anesm" type="application/pdf" class="lienimg">
+                    </object>
+                </a>
+            </div>
+        </div>
+
+    {% endfor %}
+    </tbody>
+
+
+{% endblock %}
