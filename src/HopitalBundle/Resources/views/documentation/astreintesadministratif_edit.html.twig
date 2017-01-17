@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Astreintes Administratif edit</h1>
+
+
+    <li>
+        <a href="{{ path('documentation_astreintesadministratif_new') }}">Ajouter une astreinte</a>
+    </li>
+
+    {{ form_start(edit_form_administratif) }}
+    <h2 class="titre">{{ administratif.titleadministratif }}</h2>
+    <div>
+        <img src="{{ app.request.basepath }}/uploads/{{ administratif .administratifimg }}" type="application/pdf" class="directioncommune"/>
+        {{edit_form_administratif.children.file1.vars.label}}
+        {{ form_widget(edit_form_administratif.file1) }}
+        {{ form_errors(edit_form_administratif.file1) }}
+        {{ form_widget(edit_form_administratif.administratifimg) }}
+        {{ form_errors(edit_form_administratif.administratifimg) }}
+
+        {{ form_widget(edit_form_administratif) }}
+        <input type="submit" value="Edit"/>
+    </div>
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(edit_form_administratif) }}
+            {{ form_start(astreintes_delete_form_administratif) }}
+            <input type="submit" value="Delete">
+            {{ form_end(astreintes_delete_form_administratif) }}
+            {{ form_end(edit_form_administratif) }}
+        </li>
+    </ul>
+
+    {{ form_end(edit_form_administratif) }}
+
+    <br/>
+    <br/>
+{% endblock %}

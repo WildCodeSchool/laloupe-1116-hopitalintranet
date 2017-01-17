@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Astreintes</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ commune.id }}</td>
+        </tr>
+        <tr>
+            <th>communeimg</th>
+            <td>{{ commune.communeimg }}</td>
+        </tr>
+        <tr>
+            <th>Titlebilancommune</th>
+            <td>{{ commune.titlecommune }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('documentation_astreintescommune_edit', { 'id': commune.id }) }}">Edit</a>
+        </li>
+
+            {{ form_start(astreintes_delete_formcommune) }}
+            <input type="submit" value="Delete">
+            {{ form_end(astreintes_delete_formcommune) }}
+        </li>
+    </ul>
+{% endblock %}

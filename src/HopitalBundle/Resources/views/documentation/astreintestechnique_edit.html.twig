@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Astreintes Technique edit</h1>
+    {{ form_start(edit_form_technique) }}
+
+
+    <li>
+        <a href="{{ path('documentation_astreintestechnique_new') }}">Ajouter une astreinte</a>
+    </li>
+
+
+    <h2 class="titre">{{ technique.titletechnique }}</h2>
+    <div>
+       <img src="{{ app.request.basepath }}/uploads/{{ technique.techniqueimg }}" type="application/pdf" class="directioncommune"/>
+        {{edit_form_technique.children.file4.vars.label}}
+        {{ form_widget(edit_form_technique.file4) }}
+        {{ form_errors(edit_form_technique.file4) }}
+        {{ form_widget(edit_form_technique.techniqueimg) }}
+        {{ form_errors(edit_form_technique.techniqueimg) }}
+        {{ form_end(edit_form_technique) }}
+
+        {{ form_widget(edit_form_technique) }}
+        <input type="submit" value="Edit"/>
+    </div>
+
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(edit_form_technique) }}
+            {{ form_start(astreintes_delete_form_technique) }}
+            <input type="submit" value="Delete">
+            {{ form_end(astreintes_delete_form_technique) }}
+            {{ form_end(edit_form_technique) }}
+        </li>
+    </ul>
+    {{ form_end(edit_form_technique) }}
+
+
+    <br/>
+    <br/>
+{% endblock %}

@@ -1,0 +1,30 @@
+HopitalBundle\Entity\Medical:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\MedicalRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+    fields:
+        medicalimg:
+            type: string
+            length: 25
+            nullable: true
+        titlemedical:
+            type: string
+            length: 255
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload2 ]
+      preUpdate: [ preUpload, preUpload2 ]
+      postPersist: [ upload, upload2 ]
+      postUpdate: [ upload, upload2 ]
+      postRemove: [ removeUpload, removeUpload2 ]
+

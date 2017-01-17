@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Medical creation</h1>
+
+    {{ form_start(formMedical) }}
+    {{ form_widget(formMedical) }}
+    <input type="submit" value="Create" />
+    {{ form_end(formMedical) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,30 @@
+HopitalBundle\Entity\Commune:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\CommuneRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+    fields:
+        communeimg:
+            type: string
+            length: 25
+            nullable: true
+        titlecommune:
+            type: string
+            length: 255
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload3 ]
+      preUpdate: [ preUpload, preUpload3 ]
+      postPersist: [ upload, upload3 ]
+      postUpdate: [ upload, upload3 ]
+      postRemove: [ removeUpload, removeUpload3 ]
+

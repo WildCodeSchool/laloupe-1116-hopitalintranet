@@ -1,0 +1,29 @@
+HopitalBundle\Entity\Technique:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\TechniqueRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+    fields:
+        techniqueimg:
+            type: string
+            length: 25
+            nullable: true
+        titletechnique:
+            type: string
+            length: 255
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload4 ]
+      preUpdate: [ preUpload, preUpload4 ]
+      postPersist: [ upload, upload4 ]
+      postUpdate: [ upload, upload4 ]
+      postRemove: [ removeUpload, removeUpload4 ]
