@@ -184,20 +184,6 @@ class MoncompteController extends Controller
         ));
     }
 
-    /**
-     * Lists all moncompte entities.
-     *
-     */
-    public function sachaAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $moncomptes = $em->getRepository('HopitalBundle:Moncompte')->findAll();
-
-        return $this->render('HopitalBundle:moncompte:sacha.html.twig', array(
-            'moncomptes' => $moncomptes,
-        ));
-    }
 
     /**
      * Lists all moncompte entities.
