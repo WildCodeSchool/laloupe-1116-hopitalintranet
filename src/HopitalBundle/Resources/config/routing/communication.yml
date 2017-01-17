@@ -1,15 +1,7 @@
-communication_lettreinfo:
-    path:     /lettreinfo
-    defaults: { _controller: "HopitalBundle:Communication:lettreinfo" }
-    methods:  GET
-
 communication_articles:
     path:     /articles
     defaults: { _controller: "HopitalBundle:Communication:articles" }
     methods:  GET
-
-
-
 
 
 
@@ -39,6 +31,31 @@ communication_lienssites_delete:
     methods:  DELETE
 
 
+
+communication_lettreinfo_index:
+    path:     /lettreinfo
+    defaults: { _controller: "HopitalBundle:Lettreinfo:index" }
+    methods:  GET
+
+communication_lettreinfo_show:
+    path:     /lettreinfo/{id}/show
+    defaults: { _controller: "HopitalBundle:Lettreinfo:show" }
+    methods:  GET
+
+communication_lettreinfo_new:
+    path:     /lettreinfo/new
+    defaults: { _controller: "HopitalBundle:Lettreinfo:new" }
+    methods:  [GET, POST]
+
+communication_lettreinfo_edit:
+    path:     /lettreinfo/{id}/edit
+    defaults: { _controller: "HopitalBundle:Lettreinfo:edit" }
+    methods:  [GET, POST]
+
+communication_lettreinfo_delete:
+    path:     /lettreinfo/{id}/delete
+    defaults: { _controller: "HopitalBundle:Lettreinfo:delete" }
+    methods:  DELETE
 
 
 

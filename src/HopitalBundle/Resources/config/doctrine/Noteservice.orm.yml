@@ -8,4 +8,21 @@ HopitalBundle\Entity\Noteservice:
             id: true
             generator:
                 strategy: AUTO
-    lifecycleCallbacks: {  }
+
+
+
+    fields:
+        noteserviceimg:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1 ]
+      preUpdate: [ preUpload, preUpload1 ]
+      postPersist: [ upload, upload1 ]
+      postUpdate: [ upload, upload1 ]
+      postRemove: [ removeUpload, removeUpload1 ]
+

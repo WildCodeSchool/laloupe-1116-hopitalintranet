@@ -64,6 +64,8 @@ class EventsController extends Controller
             $endEvent = $endtime->format('d-m-Y H:i:s');
             $event->setEnd(new \DateTime($endEvent));
         }
+
+
         else {
             $event->setStart(new \DateTime($start));
             $event->setEnd(new \DateTime($start));
@@ -85,7 +87,6 @@ class EventsController extends Controller
             'form' => $form->createView(),
         ));
     }
-
 
 
 

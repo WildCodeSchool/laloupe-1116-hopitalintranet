@@ -83,6 +83,10 @@ footer{
 
 /*modal Eleves*/
 
+.modal-header {
+    text-align: center;
+}
+
 .modal-body{
     color: black;
     font-size: 1.2em;
@@ -92,13 +96,22 @@ footer{
     color: #FE8801;
 }
 
+.nom-linked {
+    text-align: center;
+}
+
 .alert{
     background-color: #FE9B1A;
     border: none;
 }
 
 .alert-info{
+    text-align: center;
     color: #fff;
+}
+
+.lienLink {
+    text-align: center;
 }
 
 .lienLink:link {

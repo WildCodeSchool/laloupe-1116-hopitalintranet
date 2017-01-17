@@ -1,186 +1,190 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Intranet La Loupe{% endblock %}</title>
-        {% block stylesheets %}
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Intranet La Loupe{% endblock %}</title>
+    {% block stylesheets %}
 
-            <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-            <link rel="icon" type="image/x-icon" href="{{ asset('bundles/hopital/img/LogoNew.png') }}" />
-        {% endblock %}
-    </head>
-    <body>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/hopital/img/LogoNew.png') }}" />
+    {% endblock %}
+</head>
 
-    <!-- DÉBUT NAVBAR -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav navbar-left">
-
-                <li class="navbarDropdown">
-                    <a href="{{ path('accueil_index') }}" role="button"><img src={{ asset('bundles/hopital/img/LogoNew.png') }} alt="Logo" class="logo"/><span></span></a>
-                </li>
+<body>
 
 
-                <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Présentation</br>de l'établissement<span></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ path('presentation_livret') }}">Livret d'accueil</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('presentation_organigramme_index') }}">Organigramme</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('presentation_plans_index') }}">Plans des locaux</a></li>
-                    </ul>
-                </li>
+<!-- DÉBUT NAVBAR -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+
+            <li class="navbarDropdown">
+                <a href="{{ path('accueil_index') }}" role="button"><img src={{ asset('bundles/hopital/img/LogoNew.png') }} alt="Logo" class="logo"/><span></span></a>
+            </li>
 
 
-                <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation</br>interne <span></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ path('documentation_note') }}">Notes d'information</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_contacts') }}">Contacts</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_astreintes_index') }}">Astreintes</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_journaux_index') }}">Journaux interne</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_basedoc_index') }}">Base documentaire</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_instances') }}">Instances</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_groupe') }}">Groupes de travail</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_fournisseur_index') }}">Liste de fournisseurs</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('documentation_galerie_index') }}">Galeries photos</a></li>
-                    </ul>
-                </li>
-
-                <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Communication</br>externe <span></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ path('communication_lienssites_index') }}">Liens sites établissements</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('communication_direction_index') }}">Direction commune</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('communication_ght_index') }}">GHT</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('communication_lettreinfo') }}">Lettre d'information Chartres</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('communication_articles') }}">Articles de presse</a></li>
-                    </ul>
-                </li>
-
-                <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liens vers les recommandations</br>Réglementation et sites utiles<span></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ path('recommandation_has_index') }}">HAS</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('recommandation_anesm_index') }}">ANESM</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('recommandation_journaloff_index') }}">Journal officiel</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('recommandation_bulletinoff_index') }}">Bulletin officiel (santé)</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('recommandation_pagesjaunes_index') }}">Pages jaunes</a></li>
-
-                    </ul>
-                </li>
+            <li class="navbarDropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Présentation</br>de l'établissement<span></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('presentation_livret_index') }}">Livret d'accueil</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('presentation_organigramme_index') }}">Organigramme</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('presentation_plans_index') }}">Plans des locaux</a></li>
+                </ul>
+            </li>
 
 
-                <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Espace</br>du personnel<span></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ path('personnel_menu_index') }}">Menus</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('personnel_postvacant_index') }}">Annonces postes vacants</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('personnel_covoiturage_index') }}">Co-voiturage</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('personnel_planniciel_index') }}">Planniciel</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('personnel_idees_index') }}">Boîte à idées</a></li>
-                    </ul>
-                </li>
+            <li class="navbarDropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation</br>interne <span></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('documentation_noteservice_index') }}">Notes d'information</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_contacts') }}">Contacts</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_astreintes_index') }}">Astreintes</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_journaux_index') }}">Journaux interne</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_basedoc_index') }}">Base documentaire</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_instances') }}">Instances</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_groupe') }}">Groupes de travail</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_fournisseur_index') }}">Liste de fournisseurs</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_galerie_index') }}">Galeries photos</a></li>
+                </ul>
+            </li>
+
+            <li class="navbarDropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Communication</br>externe <span></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('communication_lienssites_index') }}">Liens sites établissements</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('communication_direction_index') }}">Direction commune</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('communication_ght_index') }}">GHT</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('communication_lettreinfo_index') }}">Lettre d'information Chartres</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('communication_articles') }}">Articles de presse</a></li>
+                </ul>
+            </li>
+
+            <li class="navbarDropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Liens vers les recommandations</br>Réglementation et sites utiles<span></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('recommandation_has_index') }}">HAS</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('recommandation_anesm_index') }}">ANESM</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('recommandation_journaloff_index') }}">Journal officiel</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('recommandation_bulletinoff_index') }}">Bulletin officiel (santé)</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('recommandation_pagesjaunes_index') }}">Pages jaunes</a></li>
+
+                </ul>
+            </li>
 
 
-                <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Démarche qualité</br>Gestion des risques<span></span></a>
-                    <ul class="dropdown-menu">
-                        {#<li><a href="{{ path('#') }}">Certifications</a></li>#}
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('demarches_epp') }}">EPP</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('demarches_processus') }}">Processus</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('demarches_paqss') }}">PAQSS</a></li>
-                    </ul>
-                </li>
+            <li class="navbarDropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Espace</br>du personnel<span></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('personnel_menu_index') }}">Menus</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('personnel_postvacant_index') }}">Annonces postes vacants</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('personnel_covoiturage_index') }}">Co-voiturage</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('personnel_planniciel_index') }}">Planniciel</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('personnel_idees_index') }}">Boîte à idées</a></li>
+                </ul>
+            </li>
 
 
-                <li class="navbarDropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></br>Mon compte<span></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ path('moncompte_cgos') }}">CGOS</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('moncompte_amicale') }}">Amicale</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('moncompte_sacha') }}">Lien vers SACH@</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('moncompte_petitesannonces') }}">Petites annonces</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{{ path('moncompte_agenda') }}">Agenda des ressources</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.container-fluid -->
-    </nav>
-
-    <!-- FIN NAVBAR -->
+            <li class="navbarDropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Démarche qualité</br>Gestion des risques<span></span></a>
+                <ul class="dropdown-menu">
+                    {#<li><a href="{{ path('#') }}">Certifications</a></li>#}
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('demarches_epp') }}">EPP</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('demarches_processus') }}">Processus</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('demarches_paqss') }}">PAQSS</a></li>
+                </ul>
+            </li>
 
 
+            <li class="navbarDropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></br>Mon compte<span></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('moncompte_cgos') }}">CGOS</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('moncompte_amicale') }}">Amicale</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('moncompte_sacha') }}">Lien vers SACH@</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('moncompte_petitesannonces') }}">Petites annonces</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('moncompte_agenda') }}">Agenda des ressources</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- FIN NAVBAR -->
 
 
-        {% block body %}{% endblock %}
+
+{% block body %}{% endblock %}
 
 
-    <!--DEBUT FOOTER-->
-    <footer>
-        <p>
-            <a data-toggle="modal" data-target="#eleves" class="ml">Site créé par les élèves de la Wild Code School</a>
-        </p>
-        <div id="eleves" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <img src="{{ asset('bundles/hopital/img/logoWCS.jpg') }}" alt="Logo Wild Code School" class="wcs" >
-                    </div>
-                    <div class="modal-body">
-                        <p class="alert alert-info">Site créé par les élèves de la Wild Code School</p>
-                        <p>Véronique LEJEUNE - <a href="https://www.linkedin.com/in/veronique-lejeune?authType=NAME_SEARCH&authToken=E-j6&locale=fr_FR&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A440029519%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1483518676398%2Ctas%3AV%C3%A9roni" class="lienLink">Lien Linkedin</a></p>
-                        <p>Lionel PICARD - <a href="https://www.linkedin.com/in/lionel-picard?authType=name&authToken=EYH2&trk=Skyline_click_NBM&sl=NBM%3B394750447%3A1483518678481%3B0%3B440029519%3B" class="lienLink">Lien Linkedin</a></p>
-                        <p>Sylvie RETAT - <a href="https://www.linkedin.com/in/sylvie-r%C3%A9tat-66724bb0" class="lienLink">Lien Linkedin</a></p>
-                    </div>
-                </div>
+
+
+<!--DEBUT FOOTER-->
+<footer>
+
+    <p>
+        <a data-toggle="modal" data-target="#eleves" class="ml" >Site créé par les élèves de la Wild Code School</a>
+    </p>
+
+</footer>
+
+<div id="eleves" class="modal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <img src="{{ asset('bundles/hopital/img/logoWCS.jpg') }}" alt="Logo Wild Code School" class="wcs" >
+            </div>
+            <div class="modal-body">
+                <p class="alert alert-info">Site créé par les élèves de la Wild Code School</p>
+                <p class="nom-linked">Véronique LEJEUNE - <a href="https://www.linkedin.com/in/veronique-lejeune?authType=NAME_SEARCH&authToken=E-j6&locale=fr_FR&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A440029519%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1483518676398%2Ctas%3AV%C3%A9roni" class="lienLink">Lien Linkedin</a></p>
+                <p class="nom-linked">Lionel PICARD - <a href="https://www.linkedin.com/in/lionel-picard?authType=name&authToken=EYH2&trk=Skyline_click_NBM&sl=NBM%3B394750447%3A1483518678481%3B0%3B440029519%3B" class="lienLink">Lien Linkedin</a></p>
+                <p class="nom-linked">Sylvie RETAT - <a href="https://www.linkedin.com/in/sylvie-r%C3%A9tat-66724bb0" class="lienLink">Lien Linkedin</a></p>
             </div>
         </div>
-    </footer>
     </div>
+</div>
 
+<!--FIN FOOTER-->
 
-    <!--FIN FOOTER-->
-
-        {% block javascripts %}
-            <!-- Latest compiled and minified JavaScript -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-            <!-- <script src="http://www.jquery.info/scripts/jquery-1.0.1.pack.js" type="text/javascript"></script> -->
-            <script type="text/javascript" src="{{ asset('bundles/hopital/js/accueil.js') }}"></script>
-        {% endblock %}
-    </body>
+{% block javascripts %}
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="http://www.jquery.info/scripts/jquery-1.0.1.pack.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="{{ asset('bundles/hopital/js/accueil.js') }}"></script>
+{% endblock %}
+</body>
 </html>
