@@ -70,7 +70,6 @@ $(document).ready(function() {
                         $(element).css("backgroundColor", "pink");
                     if(event.salle == 'PASA')
                         $(element).css("backgroundColor", "brown");
-
                 }
                 if (!!event.voiture) {
                     element.append(
@@ -79,6 +78,16 @@ $(document).ready(function() {
                         event.voiture +
                         '</strong>'
                     );
+                    if(event.voiture == 'Clio')
+                        $(element).css("backgroundColor", "red");
+                    if(event.voiture == '407')
+                        $(element).css("backgroundColor", "blue");
+                    if(event.voiture == 'Voiture du SIAD')
+                        $(element).css("backgroundColor", "green");
+                    if(event.voiture == 'Boxer')
+                        $(element).css("backgroundColor", "orange");
+                    if(event.voiture == 'Mini-bus')
+                        $(element).css("backgroundColor", "yellow");
                 }
                 if (!!event.evenement) {
                     element.append(
@@ -87,6 +96,18 @@ $(document).ready(function() {
                         event.evemement +
                         '</strong>'
                     );
+                    if(event.evenement == 'Instances')
+                        $(element).css("backgroundColor", "red");
+                    if(event.evenement == 'Animations')
+                        $(element).css("backgroundColor", "blue");
+                    if(event.evenement == 'Interventions techniques')
+                        $(element).css("backgroundColor", "green");
+                    if(event.evenement == 'Interventions extérieures')
+                        $(element).css("backgroundColor", "orange");
+                    if(event.evenement == 'Cérémonies')
+                        $(element).css("backgroundColor", "yellow");
+                    if(event.evenement == 'Autres')
+                        $(element).css("backgroundColor", "pink");
                 }
             })
         },
