@@ -116,7 +116,7 @@ class GalerieController extends Controller
     private function createDeleteForm(Galerie $galerie)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('documentation_delete', array('id' => $galerie->getId())))
+            ->setAction($this->generateUrl('documentation_galerie_delete', array('id' => $galerie->getId())))
             ->setMethod('DELETE')
             ->getForm();
     }
