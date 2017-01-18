@@ -4,33 +4,31 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier un Journal interne </h1>
+            <h1 class="lienstitre">Modifiaction de lettre d'information</h1>
             <br>
-            {{ form_start(edit_form) }}
             <div class="row journaux">
                 <div class="col-md-4">
                     <br>
                     <br>
                     <br>
                     <br>
-                    {{edit_form.children.file1.vars.label}}
-                    {{ form_label(edit_form.journauximg, 'Nommez votre journal:', {'journauximg': {'class': 'journauximg'}}) }}
-                    {{ form_widget(edit_form.journauximg)}}
-                    {{ form_errors(edit_form.journauximg) }}
+                    {{ form_start(edit_form) }}
+                    {{ form_label(edit_form.lettreinfoimg, 'Nommez votre lettre d\'information:', {'lettreinfoimg': {'class': ''}}) }}
+                    {{ form_widget(edit_form.lettreinfoimg)}}
                     {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(edit_form.file1)}}
-                    {{ form_errors(edit_form.file1) }}
-
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
-
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier" />
                     {{ form_end(edit_form) }}
 
 
-                    {{ form_start(journaux_delete_form) }}
+                    {{ form_start(lettreinfo_delete_form) }}
                     <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(journaux_delete_form) }}
+                    {{ form_end(lettreinfo_delete_form) }}
+
                 </div>
             </div>
+
         </div>
     </div>
 

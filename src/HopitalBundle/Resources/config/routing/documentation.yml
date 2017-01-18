@@ -1,14 +1,27 @@
-documentation_note:
-    path:     /note
-    defaults: { _controller: "HopitalBundle:Documentation:note" }
-    methods:  GET
-
-
-
-documentation_noteservice:
+documentation_noteservice_index:
     path:     /noteservice
-    defaults: { _controller: "HopitalBundle:Documentation:noteservice" }
+    defaults: { _controller: "HopitalBundle:Noteservice:index" }
     methods:  GET
+
+documentation_noteservice_show:
+    path:     /noteservice/{id}/show
+    defaults: { _controller: "HopitalBundle:Noteservice:show" }
+    methods:  GET
+
+documentation_noteservice_new:
+    path:     /noteservice/new
+    defaults: { _controller: "HopitalBundle:Noteservice:new" }
+    methods:  [GET, POST]
+
+documentation_noteservice_edit:
+    path:     /noteservice/{id}/edit
+    defaults: { _controller: "HopitalBundle:Noteservice:edit" }
+    methods:  [GET, POST]
+
+documentation_noteservice_delete:
+    path:     /noteservice/{id}/delete
+    defaults: { _controller: "HopitalBundle:Noteservice:delete" }
+    methods:  DELETE
 
 
 
@@ -17,16 +30,14 @@ documentation_contacts:
     defaults: { _controller: "HopitalBundle:Documentation:contacts" }
     methods:  GET
 
-documentation_galerie_index:
-    path:     /galerie
-    defaults: { _controller: "HopitalBundle:Galerie:index" }
-    methods:  GET
+
 
     
 documentation_instances:
     path:     /instances
     defaults: { _controller: "HopitalBundle:Documentation:instances" }
     methods:  GET
+
 
 documentation_astreintes:
     path:     /astreintes
@@ -67,6 +78,8 @@ documentation_journaux_delete:
     methods:  DELETE
 
 
+
+
 documentation_astreintes_index:
     path:     /astreintes
     defaults: { _controller: "HopitalBundle:Astreintes:index" }
@@ -92,6 +105,13 @@ documentation_astreintes_delete:
     defaults: { _controller: "HopitalBundle:Astreintes:delete" }
     methods:  DELETE
 
+
+
+
+documentation_galerie_index:
+    path:     /galerie
+    defaults: { _controller: "HopitalBundle:Galerie:index" }
+    methods:  GET
 
 documentation_galerie_show:
     path:     /galerie/{id}/show

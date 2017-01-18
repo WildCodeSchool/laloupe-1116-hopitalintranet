@@ -1,23 +1,18 @@
-HopitalBundle\Entity\Noteservice:
+HopitalBundle\Entity\Certification:
     type: entity
     table: null
-    repositoryClass: HopitalBundle\Repository\NoteserviceRepository
+    repositoryClass: HopitalBundle\Repository\CertificationRepository
     id:
         id:
             type: integer
             id: true
             generator:
                 strategy: AUTO
-
-
-
     fields:
-        noteserviceimg:
+        certificationimg:
             type: string
             length: 25
             nullable: true
-
-
 
     lifecycleCallbacks:
       prePersist: [ preUpload, preUpload1 ]
@@ -25,4 +20,3 @@ HopitalBundle\Entity\Noteservice:
       postPersist: [ upload, upload1 ]
       postUpdate: [ upload, upload1 ]
       postRemove: [ removeUpload, removeUpload1 ]
-

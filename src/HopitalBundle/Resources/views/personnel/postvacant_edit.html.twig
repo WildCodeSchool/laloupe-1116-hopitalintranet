@@ -4,46 +4,34 @@
 
 <div class="row">
     <div class="col-md-offset-2 col-md-8 fondblanc">
-        <h1 class="lienstitre">Annonces postes vacants edit</h1>
+
+        <h1 class="lienstitre">Modifier les Annonces postes vacants </h1>
         {{ form_start(edit_form) }}
         <div class="row journaux">
             <div class="col-md-4">
-                <object data="{{ asset('bundles/hopital/img/journaux/16_07FlashInfo.pdf') }}" type="application/pdf" class="journalimg"></object>
-                {{edit_form.children.file1.vars.label}}
-                {{ form_widget(edit_form.file1) }}
-                {{ form_errors(edit_form.file1) }}
-                {{ form_widget(edit_form.postvacantimg) }}
-                {{ form_errors(edit_form.postvacantimg) }}
-            </div>
-            <li>
-                <a href="{{ path('personnel_postvacant_new') }}">Ajouter une annonce poste vacant</a>
-            </li>
-            {{ form_widget(edit_form) }}
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{edit_form.children.file1.vars.label}}
+                    {{ form_label(edit_form.postvacantimg, 'Nommez votre annonce:', {'postvacantimg': {'class': 'postvacantimg'}}) }}
+                    {{ form_widget(edit_form.postvacantimg)}}
+                    {{ form_errors(edit_form.postvacantimg) }}
+                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(edit_form.file1)}}
+                    {{ form_errors(edit_form.file1) }}
 
-            <input type="submit" value="Edit"/>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
 
-            {{ form_end(edit_form) }}
+                    {{ form_end(edit_form) }}
 
-            <ul>
-                <li>
-                    <a href="{{ path('personnel_postvacant_index') }}">Back to the list</a>
-                </li>
-                <li>
+
                     {{ form_start(postvacant_delete_form) }}
-                    <input type="submit" value="Delete">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
                     {{ form_end(postvacant_delete_form) }}
-                </li>
-            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-            {{ form_end(edit_form) }}
-
-
-            <br/>
-            <br/>
-
-
-
-            {% endblock %}
+{% endblock %}

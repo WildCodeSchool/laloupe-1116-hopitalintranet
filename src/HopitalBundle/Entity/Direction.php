@@ -164,7 +164,4 @@ class Direction
         // Add your code here
     }
 
-
-
-
 }

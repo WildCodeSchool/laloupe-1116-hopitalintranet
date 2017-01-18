@@ -5,9 +5,9 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Lettreinfo
+ * Certification
  */
-class Lettreinfo
+class Certification
 {
     public $file1;
 
@@ -18,17 +18,17 @@ class Lettreinfo
 
     protected function getUploadRootDir()
     {
-        return __DIR__.'/../../../web/'.$this->getUploadDir();
+        return __DIR__ . '/../../../web/' . $this->getUploadDir();
     }
 
     public function getWebPath()
     {
-        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+        return null === $this->image ? null : $this->getUploadDir() . '/' . $this->image;
     }
 
     public function getAbsolutePath()
     {
-        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+        return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
     }
 
 
@@ -36,7 +36,7 @@ class Lettreinfo
     {
         if (null !== $this->file1) {
             // do whatever you want to generate a unique name
-            $this->lettreinfoimg = uniqid().'.'.$this->file1->guessExtension();
+            $this->certificationimg = uniqid() . '.' . $this->file1->guessExtension();
         }
     }
 
@@ -49,7 +49,7 @@ class Lettreinfo
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->lettreinfoimg);
+        $this->file1->move($this->getUploadRootDir(), $this->certificationimg);
 
         unset($this->file1);
     }
@@ -60,7 +60,6 @@ class Lettreinfo
             unlink($file1);
         }
     }
-
 
 
     /**
@@ -90,7 +89,7 @@ class Lettreinfo
      * Set image
      *
      * @param string $image
-     * @return Lettreinfo
+     * @return Certification
      */
     public function setImage($image)
     {
@@ -113,32 +112,30 @@ class Lettreinfo
     /**
      * @var string
      */
-    private $lettreinfoimg;
-
-
+    private $certificationimg;
 
 
     /**
-     * Set lettreinfoimg
+     * Set certificationimg
      *
-     * @param string $lettreinfoimg
-     * @return Lettreinfo
+     * @param string $certificationimg
+     * @return Certification
      */
-    public function setLettreinfoimg($lettreinfoimg)
+    public function setCertificationimg($certificationimg)
     {
-        $this->lettreinfoimg = $lettreinfoimg;
+        $this->certificationimg = $certificationimg;
 
         return $this;
     }
 
     /**
-     * Get lettreinfoimg
+     * Get certificationimg
      *
      * @return string
      */
-    public function getLettreinfoimg()
+    public function getCertificationimg()
     {
-        return $this->lettreinfoimg;
+        return $this->certificationimg;
     }
 
 
@@ -165,8 +162,6 @@ class Lettreinfo
     {
         // Add your code here
     }
-
-
 
 
 }

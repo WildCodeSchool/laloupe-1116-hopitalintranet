@@ -1,7 +1,31 @@
-presentation_livret:
+presentation_livret_index:
     path:     /livret
-    defaults: { _controller: "HopitalBundle:Presentation:livret" }
+    defaults: { _controller: "HopitalBundle:Livret:index" }
     methods:  GET
+
+presentation_livret_show:
+    path:     /livret/{id}/show
+    defaults: { _controller: "HopitalBundle:Livret:show" }
+    methods:  GET
+
+presentation_livret_new:
+    path:     /livret/new
+    defaults: { _controller: "HopitalBundle:Livret:new" }
+    methods:  [GET, POST]
+
+presentation_livret_edit:
+    path:     /livret/{id}/edit
+    defaults: { _controller: "HopitalBundle:Livret:edit" }
+    methods:  [GET, POST]
+
+presentation_livret_delete:
+    path:     /livret/{id}/delete
+    defaults: { _controller: "HopitalBundle:Livret:delete" }
+    methods:  DELETE
+
+
+
+
 
 presentation_plans_index:
     path:     /plans

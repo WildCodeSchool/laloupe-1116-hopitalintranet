@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modification GHT</h1>
+            <h1 class="lienstitre">Modifiaction de livret</h1>
             <br>
             <div class="row journaux">
                 <div class="col-md-4">
@@ -13,8 +13,8 @@
                     <br>
                     <br>
                     {{ form_start(edit_form) }}
-                    {{ form_label(edit_form.ghtimg, 'Nommez votre GHT:', {'ghtimg': {'class': ''}}) }}
-                    {{ form_widget(edit_form.ghtimg)}}
+                    {{ form_label(edit_form.livretimg, 'Nommez votre livret:', {'livretimg': {'class': ''}}) }}
+                    {{ form_widget(edit_form.livretimg)}}
                     {{ form_label(edit_form.file7, 'Insérez votre Pdf:', {'file7': {'class': 'file7'}}) }}
                     {{ form_widget(edit_form.file7)}}
                     <br>
@@ -22,9 +22,9 @@
                     {{ form_end(edit_form) }}
 
 
-                    {{ form_start(ght_delete_form) }}
+                    {{ form_start(livret_delete_form) }}
                     <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(ght_delete_form) }}
+                    {{ form_end(livret_delete_form) }}
 
                 </div>
             </div>
