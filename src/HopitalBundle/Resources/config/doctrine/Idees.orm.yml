@@ -14,5 +14,4 @@ HopitalBundle\Entity\Idees:
             type: string
             length: 50
 
-
     lifecycleCallbacks: {  }

@@ -3,6 +3,7 @@ presentation_livret_index:
     defaults: { _controller: "HopitalBundle:Livret:index" }
     methods:  GET
 
+
 presentation_livret_show:
     path:     /livret/{id}/show
     defaults: { _controller: "HopitalBundle:Livret:show" }
@@ -22,7 +23,6 @@ presentation_livret_delete:
     path:     /livret/{id}/delete
     defaults: { _controller: "HopitalBundle:Livret:delete" }
     methods:  DELETE
-
 
 
 
