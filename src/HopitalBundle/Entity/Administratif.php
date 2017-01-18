@@ -111,8 +111,6 @@ class Administratif
     }
 
 
-
-
     /**
      * @var int
      */
@@ -146,6 +144,7 @@ class Administratif
      * @var string
      */
     private $idadministratif;
+
 
     /**
      * Set image
