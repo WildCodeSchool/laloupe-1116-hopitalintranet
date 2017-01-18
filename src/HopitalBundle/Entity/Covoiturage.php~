@@ -5,9 +5,9 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Menu
+ * Covoiturage
  */
-class Menu
+class Covoiturage
 {
     public $file1;
 
@@ -36,7 +36,7 @@ class Menu
     {
         if (null !== $this->file1) {
             // do whatever you want to generate a unique name
-            $this->menuimg = uniqid().'.'.$this->file1->guessExtension();
+            $this->covoiturageimg = uniqid().'.'.$this->file1->guessExtension();
         }
     }
 
@@ -49,7 +49,7 @@ class Menu
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->menuimg);
+        $this->file1->move($this->getUploadRootDir(), $this->covoiturageimg);
 
         unset($this->file1);
     }
@@ -60,55 +60,6 @@ class Menu
             unlink($file1);
         }
     }
-
-
-
-
-
-
-
-    public $file2;
-
-
-    public function preUpload2()
-    {
-        if (null !== $this->file2) {
-            // do whatever you want to generate a unique name
-            $this->menuimgrempl = uniqid().'.'.$this->file2->guessExtension();
-        }
-    }
-
-    public function upload2()
-    {
-        if (null === $this->file2) {
-            return;
-        }
-
-        // if there is an error when moving the file, an exception will
-        // be automatically thrown by move(). This will properly prevent
-        // the entity from being persisted to the database on error
-        $this->file2->move($this->getUploadRootDir(), $this->menuimgrempl);
-
-        unset($this->file2);
-    }
-
-    public function removeUpload2()
-    {
-        if ($file2 = $this->getAbsolutePath()) {
-            unlink($file2);
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -139,7 +90,7 @@ class Menu
      * Set image
      *
      * @param string $image
-     * @return Menu
+     * @return Covoiturage
      */
     public function setImage($image)
     {
@@ -162,72 +113,33 @@ class Menu
     /**
      * @var string
      */
-    private $menuimg;
+    private $covoiturageimg;
 
 
 
 
     /**
-     * @var string
-     */
-    private $menuimgrempl;
-
-
-
-
-
-
-    /**
-     * Set menuimg
+     * Set covoiturageimg
      *
-     * @param string $menuimg
-     * @return Menu
+     * @param string $covoiturageimg
+     * @return Covoiturage
      */
-    public function setMenuimg($menuimg)
+    public function setCovoiturageimg($covoiturageimg)
     {
-        $this->menuimg = $menuimg;
+        $this->covoiturageimg = $covoiturageimg;
 
         return $this;
     }
 
     /**
-     * Get menuimg
+     * Get covoiturageimg
      *
      * @return string
      */
-    public function getMenuimg()
+    public function getCovoiturageimg()
     {
-        return $this->menuimg;
+        return $this->covoiturageimg;
     }
-
-
-
-
-    /**
-     * Set menuimgrempl
-     *
-     * @param string $menuimgrempl
-     * @return Menu
-     */
-    public function setMenuimgrempl($menuimgrempl)
-    {
-        $this->menuimgrempl = $menuimgrempl;
-
-        return $this;
-    }
-
-    /**
-     * Get menuimgrempl
-     *
-     * @return string
-     */
-    public function getMenuimgrempl()
-    {
-        return $this->menuimgrempl;
-    }
-
-
-
 
 
     /**

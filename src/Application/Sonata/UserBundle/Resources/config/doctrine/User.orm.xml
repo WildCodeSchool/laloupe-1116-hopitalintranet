@@ -10,7 +10,7 @@
             <generator strategy="AUTO" />
         </id>
 
-      <attribute-overrides>
+      <!--<attribute-overrides>
             <attribute-override name="email">
                 <field column="email" nullable="true"/>
             </attribute-override>
@@ -20,7 +20,7 @@
             <attribute-override name="username">
                <field column="username" type="string" length="6"/>
             </attribute-override>
-       </attribute-overrides>
+       </attribute-overrides>-->
 
         <field name="plaintextPassword" column="plaintextPassword" type="string"/>
         <field name="code_copieur" column="code_copieur" type="string" length="4" />

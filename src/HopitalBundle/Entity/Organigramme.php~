@@ -5,11 +5,11 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Postvacant
+ * Organigramme
  */
-class Postvacant
+class Organigramme
 {
-    public $file1;
+    public $file7;
 
     protected function getUploadDir()
     {
@@ -32,32 +32,32 @@ class Postvacant
     }
 
 
-    public function preUpload1()
+    public function preUpload7()
     {
-        if (null !== $this->file1) {
+        if (null !== $this->file7) {
             // do whatever you want to generate a unique name
-            $this->postvacantimg = uniqid().'.'.$this->file1->guessExtension();
+            $this->organigrammeimg = uniqid().'.'.$this->file7->guessExtension();
         }
     }
 
-    public function upload1()
+    public function upload7()
     {
-        if (null === $this->file1) {
+        if (null === $this->file7) {
             return;
         }
 
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->postvacantimg);
+        $this->file7->move($this->getUploadRootDir(), $this->organigrammeimg);
 
-        unset($this->file1);
+        unset($this->file7);
     }
 
-    public function removeUpload1()
+    public function removeUpload7()
     {
-        if ($file1 = $this->getAbsolutePath()) {
-            unlink($file1);
+        if ($file7 = $this->getAbsolutePath()) {
+            unlink($file7);
         }
     }
 
@@ -90,7 +90,7 @@ class Postvacant
      * Set image
      *
      * @param string $image
-     * @return Postvacant
+     * @return Organigramme
      */
     public function setImage($image)
     {
@@ -113,32 +113,32 @@ class Postvacant
     /**
      * @var string
      */
-    private $postvacantimg;
+    private $organigrammeimg;
 
 
 
 
     /**
-     * Set postvacantimg
+     * Set organigrammeimg
      *
-     * @param string $postvacantimg
-     * @return Postvacant
+     * @param string $organigrammeimg
+     * @return Organigramme
      */
-    public function setPostvacantimg($postvacantimg)
+    public function setOrganigrammeimg($organigrammeimg)
     {
-        $this->postvacantimg = $postvacantimg;
+        $this->organigrammeimg = $organigrammeimg;
 
         return $this;
     }
 
     /**
-     * Get postvacantimg
+     * Get organigrammeimg
      *
      * @return string
      */
-    public function getPostvacantimg()
+    public function getOrganigrammeimg()
     {
-        return $this->postvacantimg;
+        return $this->organigrammeimg;
     }
 
 

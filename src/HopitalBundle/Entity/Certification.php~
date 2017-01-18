@@ -5,9 +5,9 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Menu
+ * Certification
  */
-class Menu
+class Certification
 {
     public $file1;
 
@@ -18,17 +18,17 @@ class Menu
 
     protected function getUploadRootDir()
     {
-        return __DIR__.'/../../../web/'.$this->getUploadDir();
+        return __DIR__ . '/../../../web/' . $this->getUploadDir();
     }
 
     public function getWebPath()
     {
-        return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+        return null === $this->image ? null : $this->getUploadDir() . '/' . $this->image;
     }
 
     public function getAbsolutePath()
     {
-        return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+        return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
     }
 
 
@@ -36,7 +36,7 @@ class Menu
     {
         if (null !== $this->file1) {
             // do whatever you want to generate a unique name
-            $this->menuimg = uniqid().'.'.$this->file1->guessExtension();
+            $this->certificationimg = uniqid() . '.' . $this->file1->guessExtension();
         }
     }
 
@@ -49,7 +49,7 @@ class Menu
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->menuimg);
+        $this->file1->move($this->getUploadRootDir(), $this->certificationimg);
 
         unset($this->file1);
     }
@@ -60,56 +60,6 @@ class Menu
             unlink($file1);
         }
     }
-
-
-
-
-
-
-
-    public $file2;
-
-
-    public function preUpload2()
-    {
-        if (null !== $this->file2) {
-            // do whatever you want to generate a unique name
-            $this->menuimgrempl = uniqid().'.'.$this->file2->guessExtension();
-        }
-    }
-
-    public function upload2()
-    {
-        if (null === $this->file2) {
-            return;
-        }
-
-        // if there is an error when moving the file, an exception will
-        // be automatically thrown by move(). This will properly prevent
-        // the entity from being persisted to the database on error
-        $this->file2->move($this->getUploadRootDir(), $this->menuimgrempl);
-
-        unset($this->file2);
-    }
-
-    public function removeUpload2()
-    {
-        if ($file2 = $this->getAbsolutePath()) {
-            unlink($file2);
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /**
@@ -139,7 +89,7 @@ class Menu
      * Set image
      *
      * @param string $image
-     * @return Menu
+     * @return Certification
      */
     public function setImage($image)
     {
@@ -162,72 +112,31 @@ class Menu
     /**
      * @var string
      */
-    private $menuimg;
-
-
-
-
-    /**
-     * @var string
-     */
-    private $menuimgrempl;
-
-
-
-
+    private $certificationimg;
 
 
     /**
-     * Set menuimg
+     * Set certificationimg
      *
-     * @param string $menuimg
-     * @return Menu
+     * @param string $certificationimg
+     * @return Certification
      */
-    public function setMenuimg($menuimg)
+    public function setCertificationimg($certificationimg)
     {
-        $this->menuimg = $menuimg;
+        $this->certificationimg = $certificationimg;
 
         return $this;
     }
 
     /**
-     * Get menuimg
+     * Get certificationimg
      *
      * @return string
      */
-    public function getMenuimg()
+    public function getCertificationimg()
     {
-        return $this->menuimg;
+        return $this->certificationimg;
     }
-
-
-
-
-    /**
-     * Set menuimgrempl
-     *
-     * @param string $menuimgrempl
-     * @return Menu
-     */
-    public function setMenuimgrempl($menuimgrempl)
-    {
-        $this->menuimgrempl = $menuimgrempl;
-
-        return $this;
-    }
-
-    /**
-     * Get menuimgrempl
-     *
-     * @return string
-     */
-    public function getMenuimgrempl()
-    {
-        return $this->menuimgrempl;
-    }
-
-
-
 
 
     /**
@@ -253,8 +162,6 @@ class Menu
     {
         // Add your code here
     }
-
-
 
 
 }

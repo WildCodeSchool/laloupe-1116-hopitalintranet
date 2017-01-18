@@ -15,6 +15,10 @@ HopitalBundle\Entity\Galerie:
             type: string
             length: 25
             nullable: true
+    manyToOne:
+        categorie:
+            targetEntity: HopitalBundle\Entity\GalerieCategorie
+            inversedBy: photos
 
     lifecycleCallbacks:
         prePersist: [ preUpload, preUpload1 ]
