@@ -87,6 +87,29 @@ class Commune
     }
 
 
+    /**
+     * Set idcommune
+     *
+     * @param string $idcommune
+     * @return Commune
+     */
+    public function setIdcommune($idcommune)
+    {
+        $this->idcommune = $idcommune;
+
+        return $this;
+    }
+
+    /**
+     * Get idcommune
+     *
+     * @return string
+     */
+    public function getIdcommune()
+    {
+        return $this->idcommune;
+    }
+
 
 
     /**
@@ -117,7 +140,10 @@ class Commune
      */
     private $titlecommune;
 
-
+    /**
+     * @var string
+     */
+    private $idcommune;
 
 
 

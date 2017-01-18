@@ -18,6 +18,9 @@ HopitalBundle\Entity\Technique:
         titletechnique:
             type: string
             length: 255
+        idtechnique:
+            type: string
+            length: 255
 
 
 

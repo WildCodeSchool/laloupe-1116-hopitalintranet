@@ -18,6 +18,9 @@ HopitalBundle\Entity\Medical:
         titlemedical:
             type: string
             length: 255
+        idmedical:
+            type: string
+            length: 255
 
 
 

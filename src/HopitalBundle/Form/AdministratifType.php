@@ -17,7 +17,8 @@ class AdministratifType extends AbstractType
         $builder
             ->add('administratifimg')
             ->add('file1', 'file', array('required' => false))
-            ->add('titleadministratif');
+            ->add('titleadministratif')
+            ->add('idadministratif');
     }
 
     /**FIN CODE AJOUTÉ

@@ -17,7 +17,8 @@ class TechniqueType extends AbstractType
         $builder
             ->add('techniqueimg')
             ->add('file4', 'file', array('required' => false))
-            ->add('titletechnique');
+            ->add('titletechnique')
+            ->add('idtechnique');
     }
 
     /**FIN CODE AJOUTÉ

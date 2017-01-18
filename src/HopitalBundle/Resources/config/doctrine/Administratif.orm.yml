@@ -18,6 +18,9 @@ HopitalBundle\Entity\Administratif:
         titleadministratif:
             type: string
             length: 255
+        idadministratif:
+            type: string
+            length: 255
 
 
 

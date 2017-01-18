@@ -88,6 +88,29 @@ class Medical
 
 
 
+    /**
+     * Set idmedical
+     *
+     * @param string $idmedical
+     * @return Medical
+     */
+    public function setIdmedical($idmedical)
+    {
+        $this->idmedical = $idmedical;
+
+        return $this;
+    }
+
+    /**
+     * Get idmedical
+     *
+     * @return string
+     */
+    public function getIdmedical()
+    {
+        return $this->idmedical;
+    }
+
 
     /**
      * @var int
@@ -118,6 +141,10 @@ class Medical
     private $titlemedical;
 
 
+    /**
+     * @var string
+     */
+    private $idmedical;
 
 
 

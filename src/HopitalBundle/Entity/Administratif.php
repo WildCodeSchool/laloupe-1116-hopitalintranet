@@ -87,6 +87,30 @@ class Administratif
     }
 
 
+    /**
+     * Set idadministratif
+     *
+     * @param string $idadministratif
+     * @return Administratif
+     */
+    public function setIdadministratif($idadministratif)
+    {
+        $this->idadministratif = $idadministratif;
+
+        return $this;
+    }
+
+    /**
+     * Get idadministratif
+     *
+     * @return string
+     */
+    public function getIdadministratif()
+    {
+        return $this->idadministratif;
+    }
+
+
 
 
     /**
@@ -118,8 +142,10 @@ class Administratif
     private $titleadministratif;
 
 
-
-
+    /**
+     * @var string
+     */
+    private $idadministratif;
 
     /**
      * Set image

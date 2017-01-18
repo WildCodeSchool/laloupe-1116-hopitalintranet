@@ -16,6 +16,8 @@
 
 
     <h2 class="titre">{{ medical.titlemedical }}</h2>
+    <h2 class="titre">{{ medical.idmedical }}</h2>
+
     <div>
         <img src="{{ app.request.basepath }}/uploads/{{ medical.medicalimg }}"type="application/pdf" class="directioncommune"/>
         {{edit_form_medical.children.file2.vars.label}}

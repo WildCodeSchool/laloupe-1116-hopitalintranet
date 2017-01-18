@@ -87,9 +87,34 @@ class Technique
     }
 
 
+    /**
+     * Set idtechnique
+     *
+     * @param string $idtechnique
+     * @return Technique
+     */
+    public function setIdtechnique($idtechnique)
+    {
+        $this->idtechnique = $idtechnique;
 
+        return $this;
+    }
 
     /**
+     * Get idtechnique
+     *
+     * @return string
+     */
+    public function getIdtechnique()
+    {
+        return $this->idtechnique;
+    }
+
+
+
+
+
+        /**
      * @var int
      */
     private $id;
@@ -118,7 +143,10 @@ class Technique
     private $titletechnique;
 
 
-
+    /**
+     * @var string
+     */
+    private $idtechnique;
 
 
     /**

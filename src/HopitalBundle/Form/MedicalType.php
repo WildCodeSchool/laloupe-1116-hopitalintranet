@@ -17,7 +17,8 @@ class MedicalType extends AbstractType
         $builder
             ->add('medicalimg')
             ->add('file2', 'file', array('required' => false))
-            ->add('titlemedical');
+            ->add('titlemedical')
+            ->add('idmedical');
     }
 
     /**FIN CODE AJOUTÉ

@@ -17,7 +17,8 @@ class CommuneType extends AbstractType
         $builder
             ->add('communeimg')
             ->add('file3', 'file', array('required' => false))
-            ->add('titlecommune');
+            ->add('titlecommune')
+            ->add('idcommune');
     }
 
     /**FIN CODE AJOUTÉ
