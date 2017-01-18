@@ -1,0 +1,21 @@
+HopitalBundle\Entity\GalerieCategorie:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\GalerieCategorieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        categorie:
+            type: string
+            length: 255
+    oneToMany:
+        photos:
+            targetEntity: HopitalBundle\Entity\Galerie
+            mappedBy: categorie
+
+    lifecycleCallbacks: { }
+

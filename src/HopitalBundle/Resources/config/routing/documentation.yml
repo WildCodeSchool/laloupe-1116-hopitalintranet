@@ -133,6 +133,10 @@ documentation_galerie_delete:
     defaults: { _controller: "HopitalBundle:Galerie:delete" }
     methods:  DELETE
 
+documentation_galeriecategorie_new:
+    path:     /categorie/new
+    defaults: { _controller: "HopitalBundle:Galerie:newCategorie" }
+    methods:  [GET, POST]
 
 
 

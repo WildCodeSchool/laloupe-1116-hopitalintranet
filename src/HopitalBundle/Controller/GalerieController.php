@@ -3,6 +3,7 @@
 namespace HopitalBundle\Controller;
 
 use HopitalBundle\Entity\Galerie;
+use HopitalBundle\Entity\GalerieCategorie;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -20,10 +21,15 @@ class GalerieController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $galerie = $em->getRepository('HopitalBundle:Galerie')->findAll();
+        $galeries = $em->getRepository('HopitalBundle:Galerie')->findAll();
+        $categories = $em->getRepository('HopitalBundle:GalerieCategorie')->findAll();
+
+
+
 
         return $this->render('HopitalBundle:documentation:galerie_index.html.twig', array(
-            'galerie' => $galerie,
+            'galeries' => $galeries,
+            'categories' => $categories,
         ));
     }
 
@@ -50,6 +56,31 @@ class GalerieController extends Controller
             'form' => $form->createView(),
         ));
     }
+
+    /**
+     * Creates a new galerie entity.
+     *
+     */
+    public function newCategorieAction(Request $request)
+    {
+        $categorie = new GalerieCategorie();
+        $form = $this->createForm('HopitalBundle\Form\GalerieCategorieType', $categorie);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($categorie);
+            $em->flush($categorie);
+
+            return $this->redirectToRoute('documentation_galerie_index');
+        }
+
+        return $this->render('HopitalBundle:documentation:galerie_new.html.twig', array(
+            'categorie' => $categorie,
+            'form' => $form->createView(),
+        ));
+    }
+
 
     /**
      * Finds and displays a presentation entity.
