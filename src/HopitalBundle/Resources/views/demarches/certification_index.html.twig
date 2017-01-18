@@ -3,10 +3,19 @@
 {% block body %}
 
     <div class="row">
-        <div class="col-md-offset-2  col-md-8 fondblanc">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
             <h1 class="lienstitre">Certifications</h1>
-            <object data="{{ asset('bundles/hopital/img/Certification.pdf') }}" type="application/pdf" class="notedinformation">
-            </object>
+            <div class="noteservice">
+                {% set maxId = 0 %}
+                {% for certification in certifications %}
+                    {% set maxId = max(certification.id, maxId) %}
+                {% endfor %}
+                {% for certification in certifications %}
+                {% if certification.id == maxId %}
+                <object style="width: 100%; height: 100%" data=" {{ app.request.basepath }}/uploads/{{ certification.certificationimg }}">
+                    {% endif %}
+                    {% endfor %}
+            </div>
         </div>
     </div>
 
