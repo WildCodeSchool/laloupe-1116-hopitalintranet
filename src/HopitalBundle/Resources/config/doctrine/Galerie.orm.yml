@@ -15,6 +15,10 @@ HopitalBundle\Entity\Galerie:
             type: string
             length: 25
             nullable: true
+        categorie:
+            type: string
+            length: 255
+
 
     lifecycleCallbacks:
         prePersist: [ preUpload, preUpload1 ]

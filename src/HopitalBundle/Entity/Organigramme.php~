@@ -5,11 +5,11 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Journaux
+ * Organigramme
  */
-class Journaux
+class Organigramme
 {
-    public $file1;
+    public $file7;
 
     protected function getUploadDir()
     {
@@ -32,32 +32,32 @@ class Journaux
     }
 
 
-    public function preUpload1()
+    public function preUpload7()
     {
-        if (null !== $this->file1) {
+        if (null !== $this->file7) {
             // do whatever you want to generate a unique name
-            $this->journauximg = uniqid().'.'.$this->file1->guessExtension();
+            $this->organigrammeimg = uniqid().'.'.$this->file7->guessExtension();
         }
     }
 
-    public function upload1()
+    public function upload7()
     {
-        if (null === $this->file1) {
+        if (null === $this->file7) {
             return;
         }
 
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->journauximg);
+        $this->file7->move($this->getUploadRootDir(), $this->organigrammeimg);
 
-        unset($this->file1);
+        unset($this->file7);
     }
 
-    public function removeUpload1()
+    public function removeUpload7()
     {
-        if ($file1 = $this->getAbsolutePath()) {
-            unlink($file1);
+        if ($file7 = $this->getAbsolutePath()) {
+            unlink($file7);
         }
     }
 
@@ -90,7 +90,7 @@ class Journaux
      * Set image
      *
      * @param string $image
-     * @return Journaux
+     * @return Organigramme
      */
     public function setImage($image)
     {
@@ -113,32 +113,32 @@ class Journaux
     /**
      * @var string
      */
-    private $journauximg;
+    private $organigrammeimg;
 
 
 
 
     /**
-     * Set journauximg
+     * Set organigrammeimg
      *
-     * @param string $journauximg
-     * @return Journaux
+     * @param string $organigrammeimg
+     * @return Organigramme
      */
-    public function setJournauximg($journauximg)
+    public function setOrganigrammeimg($organigrammeimg)
     {
-        $this->journauximg = $journauximg;
+        $this->organigrammeimg = $organigrammeimg;
 
         return $this;
     }
 
     /**
-     * Get journauximg
+     * Get organigrammeimg
      *
      * @return string
      */
-    public function getJournauximg()
+    public function getOrganigrammeimg()
     {
-        return $this->journauximg;
+        return $this->organigrammeimg;
     }
 
 

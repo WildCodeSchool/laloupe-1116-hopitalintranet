@@ -63,7 +63,3 @@ class Idees
     }
 
 }
-
-
-
-
