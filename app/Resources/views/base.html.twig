@@ -41,7 +41,7 @@
             <li class="navbarDropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation</br>interne <span></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ path('documentation_noteservice_index') }}">Notes d'information</a></li>
+                    <li><a href="{{ path('documentation_note_index') }}">Notes d'information</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('documentation_contacts') }}">Contacts</a></li>
                     <li role="separator" class="divider"></li>
@@ -112,7 +112,7 @@
             <li class="navbarDropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Démarche qualité</br>Gestion des risques<span></span></a>
                 <ul class="dropdown-menu">
-                    {#<li><a href="{{ path('#') }}">Certifications</a></li>#}
+                    <li><a href="{{ path('demarches_certification_index') }}">Certifications</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('demarches_epp') }}">EPP</a></li>
                     <li role="separator" class="divider"></li>
@@ -130,7 +130,7 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('moncompte_amicale') }}">Amicale</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="{{ path('moncompte_sacha') }}">Lien vers SACH@</a></li>
+                    <li><a href="{{ path('fos_user_security_login') }}">Lien vers SACH@</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('moncompte_petitesannonces') }}">Petites annonces</a></li>
                     <li role="separator" class="divider"></li>
@@ -140,6 +140,7 @@
         </ul>
     </div><!-- /.container-fluid -->
 </nav>
+
 
 <!-- FIN NAVBAR -->
 
