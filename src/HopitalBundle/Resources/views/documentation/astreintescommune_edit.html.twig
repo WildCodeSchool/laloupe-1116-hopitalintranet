@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Astreintes Commune edit</h1>
+    {{ form_start(edit_form_commune) }}
+
+
+    <li>
+        <a href="{{ path('documentation_astreintescommune_new') }}">Ajouter une astreinte</a>
+    </li>
+
+    <h2 class="titre">{{ commune.titlecommune }}</h2>
+
+    {{ form_start(edit_form_commune) }}
+    <h2 class="titre">{{ commune.titlecommune }}</h2>
+    <div>
+        <img src="{{ app.request.basepath }}/uploads/{{ commune.communeimg }}"type="application/pdf" class="directioncommune"/>
+        {{edit_form_commune.children.file3.vars.label}}
+        {{ form_widget(edit_form_commune.file3) }}
+        {{ form_errors(edit_form_commune.file3) }}
+        {{ form_widget(edit_form_commune.communeimg) }}
+        {{ form_errors(edit_form_commune.communeimg) }}
+        {{ form_end(edit_form_commune) }}
+
+        {{ form_widget(edit_form_commune) }}
+        <input type="submit" value="Edit"/>
+    </div>
+
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(edit_form_commune) }}
+            {{ form_start(astreintes_delete_form_commune) }}
+            <input type="submit" value="Delete">
+            {{ form_end(astreintes_delete_form_commune) }}
+            {{ form_end(edit_form_commune) }}
+        </li>
+    </ul>
+
+    {{ form_end(edit_form_commune) }}
+
+    <br/>
+    <br/>
+{% endblock %}

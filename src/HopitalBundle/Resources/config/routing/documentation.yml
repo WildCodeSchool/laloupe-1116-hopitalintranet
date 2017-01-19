@@ -39,10 +39,94 @@ documentation_instances:
     methods:  GET
 
 
-documentation_astreintes:
+
+
+documentation_astreintes_index:
     path:     /astreintes
-    defaults: { _controller: "HopitalBundle:Documentation:astreintes" }
+    defaults: { _controller: "HopitalBundle:Astreintes:index" }
     methods:  GET
+
+documentation_astreintesadministratif_show:
+    path:     /astreintesadministratif/{id}/show
+    defaults: { _controller: "HopitalBundle:Astreintes:showAdministratif" }
+    methods:  GET
+
+documentation_astreintesmedical_show:
+    path:     /astreintesmedical/{id}/show
+    defaults: { _controller: "HopitalBundle:Astreintes:showMedical" }
+    methods:  GET
+
+documentation_astreintescommune_show:
+    path:     /astreintescommune/{id}/show
+    defaults: { _controller: "HopitalBundle:Astreintes:showCommune" }
+    methods:  GET
+
+documentation_astreintestechnique_show:
+    path:     /astreintestechnique/{id}/show
+    defaults: { _controller: "HopitalBundle:Astreintes:showTechnique" }
+    methods:  GET
+
+documentation_astreintesadministratif_new:
+    path:     /astreintesadministratif/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newAdministratif" }
+    methods:  [GET, POST]
+
+documentation_astreintesmedical_new:
+    path:     /astreintesmedical/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newMedical" }
+    methods:  [GET, POST]
+
+documentation_astreintescommune_new:
+    path:     /astreintescommune/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newCommune" }
+    methods:  [GET, POST]
+
+documentation_astreintestechnique_new:
+    path:     /astreintestechnique/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newTechnique" }
+    methods:  [GET, POST]
+
+documentation_astreintesadministratif_edit:
+    path:     /astreintesadministratif/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editAdministratif" }
+    methods:  [GET, POST]
+
+documentation_astreintesmedical_edit:
+    path:     /astreintesmedical/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editMedical" }
+    methods:  [GET, POST]
+
+documentation_astreintescommune_edit:
+    path:     /astreintescommune/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editCommune" }
+    methods:  [GET, POST]
+
+documentation_astreintestechnique_edit:
+    path:     /astreintestechnique/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editTechnique" }
+    methods:  [GET, POST]
+
+documentation_astreintesadministratif_delete:
+    path:     /astreintes/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteAdministratif" }
+    methods:  DELETE
+
+documentation_astreintesmedical_delete:
+    path:     /astreintesmedical/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteMedical" }
+    methods:  DELETE
+
+documentation_astreintescommune_delete:
+    path:     /astreintescommune/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteCommune" }
+    methods:  DELETE
+
+documentation_astreintestechnique_delete:
+    path:     /astreintestechnique/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteTechnique" }
+    methods:  DELETE
+
+
 
 
 documentation_groupe_index:

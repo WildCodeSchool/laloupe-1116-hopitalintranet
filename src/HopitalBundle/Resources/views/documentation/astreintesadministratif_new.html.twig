@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Administratif creation</h1>
+
+    {{ form_start(formAdministratif) }}
+    {{ form_widget(formAdministratif) }}
+    <input type="submit" value="Create" />
+    {{ form_end(formAdministratif) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

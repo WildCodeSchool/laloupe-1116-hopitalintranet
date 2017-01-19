@@ -2,8 +2,262 @@
 
 {% block body %}
 
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="lienstitre">Astreintes</h1>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <!--Début archives astreintes-->
+
+                <div class="col-md-2">
+
+                    <div class="dropdown">
+                        <button class="btn astreintesbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Administratif
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            {% set maxId = 0 %}
+                            {% for administratif in administratifs %}
+                                {% set maxId = max(administratif.id, maxId) %}
+                            {% endfor %}
+                            {% for administratif in administratifs %}
+                                {% if administratif.id != maxId %}
+                                    {% if administratif.titleadministratif != NULL %}
+                                        <p data-toggle="modal" data-target="{{ '#' ~ administratif.idadministratif }}" class="astreintesarchivestitres"> {{ administratif.titleadministratif }} </p>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <button class="btn astreintesbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Médical
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            {% set maxId = 0 %}
+                            {% for medical in medicals %}
+                                {% set maxId = max(medical.id, maxId) %}
+                            {% endfor %}
+                            {% for medical in medicals %}
+                                {% if medical.id != maxId %}
+                                    {% if medical.titlemedical != NULL %}
+                                        <p data-toggle="modal" data-target="{{ '#' ~ medical.idmedical }}" class="astreintesarchivestitres"> {{ medical.titlemedical }} </p>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <button class="btn astreintesbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Commune
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            {% set maxId = 0 %}
+                            {% for commune in communes %}
+                                {% set maxId = max(commune.id, maxId) %}
+                            {% endfor %}
+                            {% for commune in communes %}
+                                {% if commune.id != maxId %}
+                                    {% if commune.titlecommune != NULL %}
+                                        <p data-toggle="modal" data-target="{{ '#' ~ commune.idcommune }}" class="astreintesarchivestitres"> {{ commune.titlecommune }} </p>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <button class="btn astreintesbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Technique
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            {% set maxId = 0 %}
+                            {% for technique in techniques %}
+                                {% set maxId = max(technique.id, maxId) %}
+                            {% endfor %}
+                            {% for technique in techniques %}
+                                {% if technique.id != maxId %}
+                                    {% if technique.titletechnique != NULL %}
+                                        <p data-toggle="modal" data-target="{{ '#' ~ technique.idtechnique }}" class="astreintesarchivestitres"> {{ technique.titletechnique }} </p>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!--Fin archives astreintes-->
+
+
+                <!--Début nouvelles astreintes-->
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for administratif in administratifs %}
+                        {% set maxId = max(administratif.id, maxId) %}
+                    {% endfor %}
+                    {% for administratif in administratifs %}
+                        {% if administratif.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ administratif.idadministratif }}">{{ administratif.titleadministratif }}</p>
+                        {% endif %}
+                        {% if administratif.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ administratif.administratifimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for medical in medicals %}
+                        {% set maxId = max(medical.id, maxId) %}
+                    {% endfor %}
+                    {% for medical in medicals %}
+                        {% if medical.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ medical.idmedical }}">{{ medical.titlemedical }}</p>
+                        {% endif %}
+                        {% if medical.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ medical.medicalimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-2 col-md-5">
+                    {% set maxId = 0 %}
+                    {% for commune in communes %}
+                        {% set maxId = max(commune.id, maxId) %}
+                    {% endfor %}
+                    {% for commune in communes %}
+                        {% if commune.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ commune.idcommune }}">{{ commune.titlecommune }}</p>
+                        {% endif %}
+                        {% if commune.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ commune.communeimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for technique in techniques %}
+                        {% set maxId = max(technique.id, maxId) %}
+                    {% endfor %}
+                    {% for technique in techniques %}
+                        {% if technique.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ technique.idtechnique }}">{{ technique.titletechnique }}</p>
+                        {% endif %}
+                        {% if technique.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ technique.techniqueimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!--Fin nouvelles astreintes-->
+
+
+
+
+        <!--Début modal archives-->
+
+        {% for administratif in administratifs %}
+            <div id="{{ administratif.idadministratif }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if administratif.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ administratif.administratifimg }}" type="application/pdf" class="astreintemodalpdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        {% for medical in medicals %}
+            <div id="{{ medical.idmedical }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if medical.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ medical.medicalimg }}" type="application/pdf" class="astreintemodalpdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        {% for commune in communes %}
+            <div id="{{ commune.idcommune }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if commune.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ commune.communeimg }}" type="application/pdf" class="astreintemodalpdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        {% for technique in techniques %}
+            <div id="{{ technique.idtechnique }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if technique.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ technique.techniqueimg }}" type="application/pdf" class="astreintemodalpdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+        <!--Fin modal archives-->
+
+
+
+    </div>
 
 
 {% endblock %}
-
-
