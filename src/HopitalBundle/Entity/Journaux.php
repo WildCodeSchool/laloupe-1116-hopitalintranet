@@ -1,37 +1,28 @@
 <?php
-
 namespace HopitalBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Journaux
  */
 class Journaux
 {
     public $file1;
-
     protected function getUploadDir()
     {
         return 'uploads';
     }
-
     protected function getUploadRootDir()
     {
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
-
     public function getWebPath()
     {
         return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
-
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
-
-
     public function preUpload1()
     {
         if (null !== $this->file1) {
@@ -39,36 +30,67 @@ class Journaux
             $this->journauximg = uniqid().'.'.$this->file1->guessExtension();
         }
     }
-
     public function upload1()
     {
         if (null === $this->file1) {
             return;
         }
-
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
         $this->file1->move($this->getUploadRootDir(), $this->journauximg);
-
         unset($this->file1);
     }
-
     public function removeUpload1()
     {
         if ($file1 = $this->getAbsolutePath()) {
             unlink($file1);
         }
     }
-
-
-
+    /**
+     * Set titlejournaux
+     *
+     * @param string $titlejournaux
+     * @return Journaux
+     */
+    public function setTitlejournaux($titlejournaux)
+    {
+        $this->titlejournaux = $titlejournaux;
+        return $this;
+    }
+    /**
+     * Get titlejournaux
+     *
+     * @return string
+     */
+    public function getTitlejournaux()
+    {
+        return $this->titlejournaux;
+    }
+    /**
+     * Set idjournaux
+     *
+     * @param string $idjournaux
+     * @return Journaux
+     */
+    public function setIdjournaux($idjournaux)
+    {
+        $this->idjournaux = $idjournaux;
+        return $this;
+    }
+    /**
+     * Get idjournaux
+     *
+     * @return string
+     */
+    public function getIdjournaux()
+    {
+        return $this->idjournaux;
+    }
     /**
      * @var int
      */
     private $id;
-
-
     /**
      * Get id
      *
@@ -78,14 +100,18 @@ class Journaux
     {
         return $this->id;
     }
-
-
     /**
      * @var string
      */
     private $image;
-
-
+    /**
+     * @var string
+     */
+    private $titlejournaux;
+    /**
+     * @var string
+     */
+    private $idjournaux;
     /**
      * Set image
      *
@@ -95,10 +121,8 @@ class Journaux
     public function setImage($image)
     {
         $this->image = $image;
-
         return $this;
     }
-
     /**
      * Get image
      *
@@ -108,16 +132,10 @@ class Journaux
     {
         return $this->image;
     }
-
-
     /**
      * @var string
      */
     private $journauximg;
-
-
-
-
     /**
      * Set journauximg
      *
@@ -127,10 +145,8 @@ class Journaux
     public function setJournauximg($journauximg)
     {
         $this->journauximg = $journauximg;
-
         return $this;
     }
-
     /**
      * Get journauximg
      *
@@ -140,8 +156,6 @@ class Journaux
     {
         return $this->journauximg;
     }
-
-
     /**
      * @ORM\PrePersist
      */
@@ -149,7 +163,6 @@ class Journaux
     {
         // Add your code here
     }
-
     /**
      * @ORM\PostPersist
      */
@@ -157,7 +170,6 @@ class Journaux
     {
         // Add your code here
     }
-
     /**
      * @ORM\PostRemove
      */
@@ -165,8 +177,4 @@ class Journaux
     {
         // Add your code here
     }
-
-
-
-
 }

@@ -29,4 +29,4 @@ HopitalBundle\Entity\Commune:
       preUpdate: [ preUpload, preUpload3 ]
       postPersist: [ upload, upload3 ]
       postUpdate: [ upload, upload3 ]
-postRemove: [ removeUpload, removeUpload3 ]
+      postRemove: [ removeUpload, removeUpload3 ]

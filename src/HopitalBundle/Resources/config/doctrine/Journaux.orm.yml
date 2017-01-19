@@ -8,11 +8,21 @@ HopitalBundle\Entity\Journaux:
             id: true
             generator:
                 strategy: AUTO
+
+
     fields:
         journauximg:
             type: string
             length: 25
             nullable: true
+        titlejournaux:
+            type: string
+            length: 255
+        idjournaux:
+            type: string
+            length: 255
+
+
 
     lifecycleCallbacks:
       prePersist: [ preUpload, preUpload1 ]

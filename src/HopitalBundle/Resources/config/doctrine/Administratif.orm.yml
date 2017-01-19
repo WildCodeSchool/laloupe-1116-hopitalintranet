@@ -29,4 +29,4 @@ HopitalBundle\Entity\Administratif:
       preUpdate: [ preUpload, preUpload1 ]
       postPersist: [ upload, upload1 ]
       postUpdate: [ upload, upload1 ]
-postRemove: [ removeUpload, removeUpload1 ]
+      postRemove: [ removeUpload, removeUpload1 ]

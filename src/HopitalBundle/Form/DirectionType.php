@@ -1,11 +1,8 @@
 <?php
-
 namespace HopitalBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class DirectionType extends AbstractType
 {
     /**CODE AJOUTÉ
@@ -16,13 +13,11 @@ class DirectionType extends AbstractType
     {
         $builder
             ->add('directionimg')
-            ->add('file6', 'file', array('required' => false));
+            ->add('file1', 'file', array('required' => false))
+            ->add('titledirection')
+            ->add('iddirection');
     }
-
     /**FIN CODE AJOUTÉ
-
-
-
     /**
      * {@inheritdoc}
      */
@@ -32,8 +27,6 @@ class DirectionType extends AbstractType
             'data_class' => 'HopitalBundle\Entity\Direction'
         ));
     }
-
-
     /**
      * {@inheritdoc}
      */
@@ -41,5 +34,4 @@ class DirectionType extends AbstractType
     {
         return 'hopital_direction';
     }
-
 }

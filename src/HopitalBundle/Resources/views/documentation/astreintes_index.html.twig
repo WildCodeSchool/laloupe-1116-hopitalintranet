@@ -31,7 +31,7 @@
                             {% for administratif in administratifs %}
                                 {% if administratif.id != maxId %}
                                     {% if administratif.titleadministratif != NULL %}
-                                        <p data-toggle="modal" data-target="{{ '#' ~ administratif.idadministratif }}" class="astreintesarchivestitres"> {{ administratif.titleadministratif }} </p>
+                                        <p data-toggle="modal" data-target="{{ '#' ~ administratif.idadministratif }}" class="archivestitres"> {{ administratif.titleadministratif }} </p>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -52,7 +52,7 @@
                             {% for medical in medicals %}
                                 {% if medical.id != maxId %}
                                     {% if medical.titlemedical != NULL %}
-                                        <p data-toggle="modal" data-target="{{ '#' ~ medical.idmedical }}" class="astreintesarchivestitres"> {{ medical.titlemedical }} </p>
+                                        <p data-toggle="modal" data-target="{{ '#' ~ medical.idmedical }}" class="archivestitres"> {{ medical.titlemedical }} </p>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -73,7 +73,7 @@
                             {% for commune in communes %}
                                 {% if commune.id != maxId %}
                                     {% if commune.titlecommune != NULL %}
-                                        <p data-toggle="modal" data-target="{{ '#' ~ commune.idcommune }}" class="astreintesarchivestitres"> {{ commune.titlecommune }} </p>
+                                        <p data-toggle="modal" data-target="{{ '#' ~ commune.idcommune }}" class="archivestitres"> {{ commune.titlecommune }} </p>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -94,7 +94,7 @@
                             {% for technique in techniques %}
                                 {% if technique.id != maxId %}
                                     {% if technique.titletechnique != NULL %}
-                                        <p data-toggle="modal" data-target="{{ '#' ~ technique.idtechnique }}" class="astreintesarchivestitres"> {{ technique.titletechnique }} </p>
+                                        <p data-toggle="modal" data-target="{{ '#' ~ technique.idtechnique }}" class="archivestitres"> {{ technique.titletechnique }} </p>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}

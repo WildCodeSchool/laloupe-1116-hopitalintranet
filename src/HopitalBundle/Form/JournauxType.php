@@ -1,14 +1,10 @@
 <?php
-
 namespace HopitalBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class JournauxType extends AbstractType
 {
-
     /**CODE AJOUTÉ
     /**
      * {@inheritdoc}
@@ -17,12 +13,11 @@ class JournauxType extends AbstractType
     {
         $builder
             ->add('journauximg')
-            ->add('file1', 'file', array('required' => false));
-
+            ->add('file1', 'file', array('required' => false))
+            ->add('titlejournaux')
+            ->add('idjournaux');
     }
-
     /**FIN CODE AJOUTÉ
-
     /**
      * {@inheritdoc}
      */
@@ -32,14 +27,11 @@ class JournauxType extends AbstractType
             'data_class' => 'HopitalBundle\Entity\Journaux'
         ));
     }
-
     /**
      * {@inheritdoc}
      */
     public function getBlockPrefix()
     {
-        return 'hopitalbundle_journaux';
+        return 'hopital_journaux';
     }
-
-
 }

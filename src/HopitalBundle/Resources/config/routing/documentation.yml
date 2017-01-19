@@ -182,33 +182,6 @@ documentation_journaux_delete:
 
 
 
-documentation_astreintes_index:
-    path:     /astreintes
-    defaults: { _controller: "HopitalBundle:Astreintes:index" }
-    methods:  GET
-
-documentation_astreintes_show:
-    path:     /astreintes/{id}/show
-    defaults: { _controller: "HopitalBundle:Astreintes:show" }
-    methods:  GET
-
-documentation_astreintes_new:
-    path:     /astreintes/new
-    defaults: { _controller: "HopitalBundle:Astreintes:new" }
-    methods:  [GET, POST]
-
-documentation_astreintes_edit:
-    path:     /astreintes/{id}/edit
-    defaults: { _controller: "HopitalBundle:Astreintes:edit" }
-    methods:  [GET, POST]
-
-documentation_astreintes_delete:
-    path:     /astreintes/{id}/delete
-    defaults: { _controller: "HopitalBundle:Astreintes:delete" }
-    methods:  DELETE
-
-
-
 
 documentation_galerie_index:
     path:     /galerie
