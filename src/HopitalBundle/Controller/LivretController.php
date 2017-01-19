@@ -42,7 +42,7 @@ class LivretController extends Controller
             $em->persist($livret);
             $em->flush($livret);
 
-            return $this->redirectToRoute('presentation_livret_show', array('id' => $livret->getId()));
+            return $this->redirectToRoute('presentation_livret_index', array('id' => $livret->getId()));
         }
 
         return $this->render('HopitalBundle:presentation:livret_new.html.twig', array(
@@ -51,19 +51,6 @@ class LivretController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Livret $livret)
-    {
-        $livret_deleteForm = $this->createDeleteForm($livret);
-
-        return $this->render('HopitalBundle:presentation:livret_show.html.twig', array(
-            'livret' => $livret,
-            'livret_delete_form' => $livret_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing livret entity.

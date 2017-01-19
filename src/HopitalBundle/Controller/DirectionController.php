@@ -42,26 +42,12 @@ class DirectionController extends Controller
             $em->persist($direction);
             $em->flush($direction);
 
-            return $this->redirectToRoute('communication_direction_show', array('id' => $direction->getId()));
+            return $this->redirectToRoute('communication_direction_index', array('id' => $direction->getId()));
         }
 
         return $this->render('HopitalBundle:communication:direction_new.html.twig', array(
             'direction' => $direction,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a communication entity.
-     *
-     */
-    public function showAction(Direction $direction)
-    {
-        $direction_deleteForm = $this->createDeleteForm($direction);
-
-        return $this->render('HopitalBundle:communication:direction_show.html.twig', array(
-            'direction' => $direction,
-            'direction_delete_form' => $direction_deleteForm->createView(),
         ));
     }
 

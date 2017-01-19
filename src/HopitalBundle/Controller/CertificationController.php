@@ -44,27 +44,13 @@ class CertificationController extends Controller
             $em->persist($certification);
             $em->flush($certification);
 
-            return $this->redirectToRoute('demarches_certification_show', array('id' => $certification->getId()));
+            return $this->redirectToRoute('demarches_certification_index', array('id' => $certification->getId()));
         }
 
         return $this->render('HopitalBundle:demarches:certification_new.html.twig', array(
             'certification' => $certification,
             'form' => $form->createView(),
 
-        ));
-    }
-
-    /**
-     * Finds and displays a certification entity.
-     *
-     */
-    public function showAction(certification $certification)
-    {
-        $certification_deleteForm = $this->createDeleteForm($certification);
-
-        return $this->render('HopitalBundle:demarches:certification_show.html.twig', array(
-            'certification' => $certification,
-            'certification_delete_form' => $certification_deleteForm->createView(),
         ));
     }
 

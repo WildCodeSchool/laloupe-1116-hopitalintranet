@@ -42,7 +42,7 @@ class ArticlesController extends Controller
             $em->persist($articles);
             $em->flush($articles);
 
-            return $this->redirectToRoute('communication_articles_show', array('id' => $articles->getId()));
+            return $this->redirectToRoute('communication_articles_index', array('id' => $articles->getId()));
         }
 
         return $this->render('HopitalBundle:communication:articles_new.html.twig', array(
@@ -51,19 +51,6 @@ class ArticlesController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a communication entity.
-     *
-     */
-    public function showAction(Articles $articles)
-    {
-        $articles_deleteForm = $this->createDeleteForm($articles);
-
-        return $this->render('HopitalBundle:communication:articles_show.html.twig', array(
-            'articles' => $articles,
-            'articles_delete_form' => $articles_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing articles entity.

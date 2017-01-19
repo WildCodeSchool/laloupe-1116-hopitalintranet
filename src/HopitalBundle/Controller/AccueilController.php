@@ -42,7 +42,7 @@ class AccueilController extends Controller
             $em->persist($accueil);
             $em->flush($accueil);
 
-            return $this->redirectToRoute('accueil_show', array('id' => $accueil->getId()));
+            return $this->redirectToRoute('accueil_index', array('id' => $accueil->getId()));
         }
 
         return $this->render('@Hopital/accueil/new.html.twig', array(
@@ -51,19 +51,6 @@ class AccueilController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a accueil entity.
-     *
-     */
-    public function showAction(Accueil $accueil)
-    {
-        $deleteForm = $this->createDeleteForm($accueil);
-
-        return $this->render('HopitalBundle:accueil:show.html.twig', array(
-            'accueil' => $accueil,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing accueil entity.

@@ -3,12 +3,6 @@ presentation_livret_index:
     defaults: { _controller: "HopitalBundle:Livret:index" }
     methods:  GET
 
-
-presentation_livret_show:
-    path:     /livret/{id}/show
-    defaults: { _controller: "HopitalBundle:Livret:show" }
-    methods:  GET
-
 presentation_livret_new:
     path:     /livret/new
     defaults: { _controller: "HopitalBundle:Livret:new" }
@@ -30,11 +24,6 @@ presentation_livret_delete:
 presentation_plans_index:
     path:     /plans
     defaults: { _controller: "HopitalBundle:Plans:index" }
-    methods:  GET
-
-presentation_plans_show:
-    path:     /plans/{id}/show
-    defaults: { _controller: "HopitalBundle:Plans:show" }
     methods:  GET
 
 presentation_plans_new:
@@ -69,11 +58,6 @@ presentation_organigramme_edit:
 presentation_organigramme_index:
     path:     /organigramme
     defaults: { _controller: "HopitalBundle:Organigramme:index" }
-    methods:  GET
-
-presentation_organigramme_show:
-    path:     /organigramme/{id}/show
-    defaults: { _controller: "HopitalBundle:Organigramme:show" }
     methods:  GET
 
 presentation_organigramme_delete:

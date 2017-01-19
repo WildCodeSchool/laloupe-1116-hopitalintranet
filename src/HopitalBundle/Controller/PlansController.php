@@ -34,25 +34,14 @@ class PlansController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($plans);
             $em->flush($plans);
-            return $this->redirectToRoute('presentation_plans_show', array('id' => $plans->getId()));
+            return $this->redirectToRoute('presentation_plans_index', array('id' => $plans->getId()));
         }
         return $this->render('HopitalBundle:presentation:plans_new.html.twig', array(
             'plans' => $plans,
             'form' => $form->createView(),
         ));
     }
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Plans $plans)
-    {
-        $plans_deleteForm = $this->createDeleteForm($plans);
-        return $this->render('HopitalBundle:presentation:plans_show.html.twig', array(
-            'plans' => $plans,
-            'plans_delete_form' => $plans_deleteForm->createView(),
-        ));
-    }
+
     /**
      * Displays a form to edit an existing plans entity.
      *

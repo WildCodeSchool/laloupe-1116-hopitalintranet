@@ -48,7 +48,7 @@ class ProcessusController extends Controller
             $em->persist($processus);
             $em->flush($processus);
 
-            return $this->redirectToRoute('demarches_processus_show', array('id' => $processus->getId()));
+            return $this->redirectToRoute('demarches_processus_index', array('id' => $processus->getId()));
         }
 
         return $this->render('HopitalBundle:demarches:processus_new.html.twig', array(
@@ -78,21 +78,6 @@ class ProcessusController extends Controller
         return $this->render('HopitalBundle:demarches:processus_new.html.twig', array(
             'categorie' => $categorie,
             'form' => $form->createView(),
-        ));
-    }
-
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Processus $processus)
-    {
-        $deleteForm = $this->createDeleteForm($processus);
-
-        return $this->render('HopitalBundle:demarches:processus_show.html.twig', array(
-            'processus' => $processus,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 

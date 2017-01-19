@@ -42,26 +42,12 @@ class NoteserviceController extends Controller
             $em->persist($noteservice);
             $em->flush($noteservice);
 
-            return $this->redirectToRoute('documentation_noteservice_show', array('id' => $noteservice->getId()));
+            return $this->redirectToRoute('documentation_noteservice_index', array('id' => $noteservice->getId()));
         }
 
         return $this->render('HopitalBundle:documentation:noteservice_new.html.twig', array(
             'noteservice' => $noteservice,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a documentation entity.
-     *
-     */
-    public function showAction(Noteservice $noteservice)
-    {
-        $noteservice_deleteForm = $this->createDeleteForm($noteservice);
-
-        return $this->render('HopitalBundle:documentation:noteservice_show.html.twig', array(
-            'noteservice' => $noteservice,
-            'noteservice_delete_form' => $noteservice_deleteForm->createView(),
         ));
     }
 

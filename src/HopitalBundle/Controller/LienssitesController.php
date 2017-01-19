@@ -42,7 +42,7 @@ class LienssitesController extends Controller
             $em->persist($lienssites);
             $em->flush($lienssites);
 
-            return $this->redirectToRoute('communication_lienssites_show', array('id' => $lienssites->getId()));
+            return $this->redirectToRoute('communication_lienssites_index', array('id' => $lienssites->getId()));
         }
 
         return $this->render('HopitalBundle:communication:lienssites_new.html.twig', array(
@@ -51,19 +51,6 @@ class LienssitesController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a communication entity.
-     *
-     */
-    public function showAction(Lienssites $lienssites)
-    {
-        $lienssites_deleteForm = $this->createDeleteForm($lienssites);
-
-        return $this->render('HopitalBundle:communication:lienssites_show.html.twig', array(
-            'lienssites' => $lienssites,
-            'lienssites_delete_form' => $lienssites_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing lienssites entity.
