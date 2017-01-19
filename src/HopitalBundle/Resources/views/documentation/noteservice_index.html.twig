@@ -2,48 +2,36 @@
 
 {% block body %}
 
-
     <div class="row">
-        <div class="col-md-offset-2  col-md-8 fondblanc">
-            <div class="noteboutons">
-                <a class="btn btn-default notebtn" href="" role="button">Note d'information</a>
-                <a class="btn btn-default notebtn" href="" role="button">Note de service</a>
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Modifier la galerie </h1>
+            <br>
+            {{ form_start(edit_form) }}
+            <div class="row galerie">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{edit_form.children.file1.vars.label}}
+                    {{ form_label(edit_form.galerie1, 'Nommez votre galerie:', {'galerie1': {'class': 'galerie1'}}) }}
+                    {{ form_widget(edit_form.galerie1)}}
+                    {{ form_errors(edit_form.galerie1) }}
+                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(edit_form.file1)}}
+                    {{ form_errors(edit_form.file1) }}
+
+                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
+
+                    {{ form_end(edit_form) }}
+
+
+                    {{ form_start(galerie_delete_form) }}
+                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
+                    {{ form_end(galerie_delete_form) }}
+                </div>
             </div>
-            <object data="{{ asset('bundles/hopital/img/notes/NoteDeService2016.01.pdf') }}" type="application/pdf" class="noteservice">
-            </object>
         </div>
     </div>
 
-
-    {#<table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for documentation in documentations %}
-            <tr>
-                <td><a href="{{ path('documentation_show', { 'id': documentation.id }) }}">{{ documentation.id }}</a></td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('documentation_show', { 'id': documentation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('documentation_edit', { 'id': documentation.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('documentation_new') }}">Create a new documentation</a>
-        </li>
-    </ul>#}
 {% endblock %}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Vl\AnnonceBundle\Controller;
+namespace HopitalBundle\Controller;
 
 use HopitalBundle\Entity\Groupe;
 use HopitalBundle\Entity\Groupemessage;
