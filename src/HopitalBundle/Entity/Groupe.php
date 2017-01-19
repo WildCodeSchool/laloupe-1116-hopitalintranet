@@ -9,9 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Groupe
 {
-    //==================
-//    Upload image
-//    ==================
+
+
     public $file;
 
     protected function getUploadDir()
@@ -73,6 +72,7 @@ class Groupe
         }
     }
     // GENERATED CODE
+
     /**
      * @var int
      */
@@ -93,17 +93,17 @@ class Groupe
      */
     private $image;
     /**
+
      * Get id
      *
      * @return integer 
      */
 
-
-
     public function getId()
     {
         return $this->id;
     }
+
 
 
     /**
@@ -173,4 +173,5 @@ class Groupe
     {
         return $this->image;
     }
+
 }

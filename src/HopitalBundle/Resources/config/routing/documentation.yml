@@ -32,7 +32,6 @@ documentation_contacts:
 
 
 
-
 documentation_instances:
     path:     /instances
     defaults: { _controller: "HopitalBundle:Documentation:instances" }
@@ -66,8 +65,10 @@ documentation_groupe_edit:
 
 documentation_groupe_delete:
     path:     /groupe/{id}/delete
-    defaults: { _controller: "HopitalBundle:Groupe:delete" }
+    defaults: { _controller: "HopitalBundle:Groupe:deleteCgos" }
     methods:  DELETE
+
+
 
 
 documentation_journaux_index:

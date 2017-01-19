@@ -70,6 +70,10 @@ $(document).ready(function() {
                         $(element).css("backgroundColor", "pink");
                     if(event.salle == 'PASA')
                         $(element).css("backgroundColor", "brown");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
                 }
                 if (!!event.voiture) {
                     element.append(
@@ -78,6 +82,7 @@ $(document).ready(function() {
                         event.voiture +
                         '</strong>'
                     );
+<<<<<<< HEAD
                     if(event.voiture == 'Clio')
                         $(element).css("backgroundColor", "red");
                     if(event.voiture == '407')
@@ -88,6 +93,8 @@ $(document).ready(function() {
                         $(element).css("backgroundColor", "orange");
                     if(event.voiture == 'Mini-bus')
                         $(element).css("backgroundColor", "yellow");
+=======
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
                 }
                 if (!!event.evenement) {
                     element.append(
@@ -96,6 +103,7 @@ $(document).ready(function() {
                         event.evemement +
                         '</strong>'
                     );
+<<<<<<< HEAD
                     if(event.evenement == 'Instances')
                         $(element).css("backgroundColor", "red");
                     if(event.evenement == 'Animations')
@@ -108,6 +116,8 @@ $(document).ready(function() {
                         $(element).css("backgroundColor", "yellow");
                     if(event.evenement == 'Autres')
                         $(element).css("backgroundColor", "pink");
+=======
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
                 }
             })
         },

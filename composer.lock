@@ -4,8 +4,13 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "hash": "9a37dcbbed9ccedeb6d4ea2718d9baa4",
     "content-hash": "e035100836d9a02cfba384e409248eec",
+=======
+    "hash": "b73b0c01628330b130de2dd9064bea69",
+    "content-hash": "29fbb9614eed0db1b3522b721b7bc2d7",
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
     "packages": [
         {
             "name": "cocur/slugify",
@@ -350,6 +355,7 @@
         },
         {
             "name": "doctrine/dbal",
+<<<<<<< HEAD
             "version": "v2.5.8",
             "source": {
                 "type": "git",
@@ -360,6 +366,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/dbal/zipball/6314d55f60f85f0295c90688397b75c13faf9f0e",
                 "reference": "6314d55f60f85f0295c90688397b75c13faf9f0e",
+=======
+            "version": "v2.5.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "3a351369582dade60c750e2cef540eb7b568e6b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/3a351369582dade60c750e2cef540eb7b568e6b3",
+                "reference": "3a351369582dade60c750e2cef540eb7b568e6b3",
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
                 "shasum": ""
             },
             "require": {
@@ -417,7 +435,11 @@
                 "persistence",
                 "queryobject"
             ],
+<<<<<<< HEAD
             "time": "2017-01-17 17:48:38"
+=======
+            "time": "2017-01-14 21:05:28"
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -3945,6 +3967,7 @@
     ],
     "packages-dev": [
         {
+<<<<<<< HEAD
             "name": "doctrine/data-fixtures",
             "version": "v1.2.2",
             "source": {
@@ -4061,6 +4084,8 @@
             "time": "2015-11-04 21:23:23"
         },
         {
+=======
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
             "name": "liip/functional-test-bundle",
             "version": "1.0.4",
             "target-dir": "Liip/FunctionalTestBundle",

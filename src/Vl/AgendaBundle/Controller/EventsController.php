@@ -99,6 +99,7 @@ class EventsController extends Controller
         $events = $em->getRepository('VlAgendaBundle:Events')->findBy(array(), array('start' => 'desc'));
 
         return $this->render('VlAgendaBundle:events:index.html.twig', array(
+
             'events' => $events
         ));
     }

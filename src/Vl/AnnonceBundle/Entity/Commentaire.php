@@ -9,7 +9,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Commentaire
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 98cceec23c35bbca64ce00da4034c4dfc97b399b
     /**
      * @var int
      */

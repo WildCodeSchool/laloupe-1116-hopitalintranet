@@ -8,6 +8,7 @@ HopitalBundle\Entity\Groupe:
             id: true
             generator:
                 strategy: AUTO
+
     fields:
         utilisateur:
             type: string
@@ -24,3 +25,4 @@ HopitalBundle\Entity\Groupe:
         postPersist: [ upload ]
         postUpdate: [ upload ]
         postRemove: [ removeUpload ]
+

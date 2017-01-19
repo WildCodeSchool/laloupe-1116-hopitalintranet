@@ -42,6 +42,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation</br>interne <span></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Notes d'information</a></li>
+                    <li><a href="{{ path('documentation_noteservice_index') }}">Notes d'information</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('documentation_contacts') }}">Contacts</a></li>
                     <li role="separator" class="divider"></li>
@@ -53,6 +54,7 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('documentation_instances') }}">Instances</a></li>
                     <li role="separator" class="divider"></li>
+                    <li><a href="{{ path('documentation_groupe_index') }}">Groupes de travail</a></li>
                     <li><a href="{{ path('documentation_groupe_index') }}">Groupes de travail</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('documentation_fournisseur_index') }}">Liste de fournisseurs</a></li>
@@ -131,6 +133,7 @@
                     <li><a href="{{ path('moncompte_amicale') }}">Amicale</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('fos_user_security_login') }}">Lien vers SACH@</a></li>
+                    <li><a href="{{ path('moncompte_sacha') }}">Lien vers SACH@</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="{{ path('moncompte_petitesannonces') }}">Petites annonces</a></li>
                     <li role="separator" class="divider"></li>
@@ -140,7 +143,6 @@
         </ul>
     </div><!-- /.container-fluid -->
 </nav>
-
 
 <!-- FIN NAVBAR -->
 
@@ -173,7 +175,6 @@
                 <p class="nom-linked">Véronique LEJEUNE - <a href="https://www.linkedin.com/in/veronique-lejeune?authType=NAME_SEARCH&authToken=E-j6&locale=fr_FR&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A440029519%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1483518676398%2Ctas%3AV%C3%A9roni" class="lienLink">Lien Linkedin</a></p>
                 <p class="nom-linked">Lionel PICARD - <a href="https://www.linkedin.com/in/lionel-picard?authType=name&authToken=EYH2&trk=Skyline_click_NBM&sl=NBM%3B394750447%3A1483518678481%3B0%3B440029519%3B" class="lienLink">Lien Linkedin</a></p>
                 <p class="nom-linked">Sylvie RETAT - <a href="https://www.linkedin.com/in/sylvie-r%C3%A9tat-66724bb0" class="lienLink">Lien Linkedin</a></p>
-
             </div>
         </div>
     </div>

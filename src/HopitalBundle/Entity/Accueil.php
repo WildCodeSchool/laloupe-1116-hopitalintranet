@@ -1,5 +1,6 @@
 <?php
 
+
 namespace HopitalBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
