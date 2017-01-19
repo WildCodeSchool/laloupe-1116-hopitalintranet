@@ -32,7 +32,7 @@ documentation_contacts:
 
 
 
-    
+
 documentation_instances:
     path:     /instances
     defaults: { _controller: "HopitalBundle:Documentation:instances" }
@@ -45,11 +45,29 @@ documentation_astreintes:
     methods:  GET
 
 
-documentation_groupe:
+documentation_groupe_index:
     path:     /groupe
-    defaults: { _controller: "HopitalBundle:Documentation:groupe" }
+    defaults: { _controller: "HopitalBundle:Groupe:index" }
+    methods:  GET
+documentation_groupe_show:
+    path:     /groupe/{id}/show
+    defaults: { _controller: "HopitalBundle:Groupe:show" }
     methods:  GET
 
+documentation_groupe_new:
+    path:     /groupe/new
+    defaults: { _controller: "HopitalBundle:Groupe:new" }
+    methods:  [GET, POST]
+
+documentation_groupe_edit:
+    path:     /groupe/{id}/edit
+    defaults: { _controller: "HopitalBundle:Groupe:edit" }
+    methods:  [GET, POST]
+
+documentation_groupe_delete:
+    path:     /groupe/{id}/delete
+    defaults: { _controller: "HopitalBundle:Groupe:delete" }
+    methods:  DELETE
 
 
 documentation_journaux_index:

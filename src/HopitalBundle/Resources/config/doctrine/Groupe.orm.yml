@@ -8,4 +8,19 @@ HopitalBundle\Entity\Groupe:
             id: true
             generator:
                 strategy: AUTO
-    lifecycleCallbacks: {  }
+    fields:
+        utilisateur:
+            type: string
+            length: 255
+        message:
+            type: text
+        image:
+            type: string
+            length: 255
+
+    lifecycleCallbacks:
+        prePersist: [ preUpload ]
+        preUpdate: [ preUpload ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]

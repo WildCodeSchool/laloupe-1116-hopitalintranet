@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1 class="center-align">Liste des groupes de travail</h1>
+        <div class="row">
+            <form action="{{ path('annonce_index') }}">
+                <div class="col s2">
+                    <input class="btn waves-effect waves-light" type="submit" value="Afficher">
+                </div>
+            </form>
+        </div>
+
+        {% if groupes != null %}
+            <table class="centered striped">
+                <thead>
+                <tr class="table_head">
+                    <th>Image</th>
+                    <th>Uilisateur</th>
+                    <th>Message</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for groupe in groupes %}
+                    <tr>
+                        <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ groupe.image }}" alt="groupe"></td>
+                        <td>{{ groupe.utilisateur }}</td>
+                        <td>{{ groupe.message }}</td>
+                        <td>
+                            <a href="{{ path('documentation_groupe_show', { 'id': groupe.id }) }}"><i class="material-icons">search</i></a>
+                            <a href="{{ path('documentation_groupe_edit', { 'id': groupe.id }) }}"><i class="material-icons">mode_edit</i></a>
+                            <a href="{{ path('documentation_groupe_delete', { 'id': groupe.id }) }}"><i class="material-icons">delete_forever</i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h3>Il n'y a pas de groupes de travail</h3>
+        {% endif %}
+        <div class="add_button center-align">
+            <a class="waves-effect waves-light btn" href="{{ path('documentation_groupe_new') }}">Ajouter un groupe de travail</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {# Call jQuery #}
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+{% endblock %}
+
