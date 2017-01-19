@@ -10,52 +10,51 @@
 
 
 {% block body %}
-    <div class="container">
-        <h1 class="center-align">Liste des petites annonces</h1>
-        <div class="row">
-            <form action="{{ path('annonce_index') }}">
-                <div class="col s2">
-                    <input class="btn waves-effect waves-light" type="submit" value="Afficher">
-                </div>
-            </form>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <br>
+        <div class="container">
+            <h4 class="lienstitre">Liste des petites annonces</h4>
+
+            {% if annonces != null %}
+                <table class="centered striped">
+                    <thead>
+                    <tr class="table_head">
+                        <th>Image</th>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for annonce in annonces %}
+                        <tr>
+                            <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="annonce"></td>
+                            <td>{{ annonce.titre }}</td>
+                            <td>{{ annonce.auteur }}</td>
+                            <td>{{ annonce.description }}</td>
+                            <td>{{ annonce.prix }}</td>
+                            <td>
+                                <a href="{{ path('annonce_show', { 'id': annonce.id }) }}"><i class="material-icons">search</i></a>
+                                <a href="{{ path('annonce_edit', { 'id': annonce.id }) }}"><i class="material-icons">mode_edit</i></a>
+                                <a href="{{ path('annonce_delete', { 'id': annonce.id }) }}"><i class="material-icons">delete_forever</i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <h6>Il n'y a pas d'annonces</h6>
+            {% endif %}
+            <div class="add_button center-align">
+                <a class="waves-effect waves-light btn" href="{{ path('annonce_new') }}">Ajouter une annonce</a>
+            </div>
         </div>
 
-        {% if annonces != null %}
-            <table class="centered striped">
-                <thead>
-                <tr class="table_head">
-                    <th>Image</th>
-                    <th>Titre</th>
-                    <th>Auteur</th>
-                    <th>Description</th>
-                    <th>Prix</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for annonce in annonces %}
-                    <tr>
-                        <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="annonce"></td>
-                        <td>{{ annonce.titre }}</td>
-                        <td>{{ annonce.auteur }}</td>
-                        <td>{{ annonce.description }}</td>
-                        <td>{{ annonce.prix }}</td>
-                        <td>
-                            <a href="{{ path('annonce_show', { 'id': annonce.id }) }}"><i class="material-icons">search</i></a>
-                            <a href="{{ path('annonce_edit', { 'id': annonce.id }) }}"><i class="material-icons">mode_edit</i></a>
-                            <a href="{{ path('annonce_delete', { 'id': annonce.id }) }}"><i class="material-icons">delete_forever</i></a>
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        {% else %}
-            <h3>Il n'y a pas d'annonces</h3>
-        {% endif %}
-        <div class="add_button center-align">
-            <a class="waves-effect waves-light btn" href="{{ path('annonce_new') }}">Ajouter une annonce</a>
-        </div>
     </div>
-{% endblock %}
+
+    {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
