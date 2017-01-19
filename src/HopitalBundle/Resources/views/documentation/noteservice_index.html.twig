@@ -42,12 +42,12 @@
             <!--Fin archives noteservice-->
 
 
-            <!--Début nouvelles astreintes-->
+            <!--Début nouvelles noteservices-->
 
             <div class="col-md-10">
                 {% set maxId = 0 %}
                 {% for noteservice in noteservices %}
-                    {% set maxId = max(v.id, maxId) %}
+                    {% set maxId = max(noteservice.id, maxId) %}
                 {% endfor %}
                 {% for noteservice in noteservices %}
                     {% if noteservice.id == maxId %}
