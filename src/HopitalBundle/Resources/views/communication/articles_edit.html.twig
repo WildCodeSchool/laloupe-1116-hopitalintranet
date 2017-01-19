@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier la ght </h1>
+            <h1 class="lienstitre">Modifier la articles </h1>
             <br>
             {{ form_start(edit_form) }}
             <div class="row journaux">
@@ -14,9 +14,9 @@
                     <br>
                     <br>
                     {{edit_form.children.file1.vars.label}}
-                    {{ form_label(edit_form.ghtimg, 'Nommez votre ght:', {'ghtimg': {'class': 'ghtimg'}}) }}
-                    {{ form_widget(edit_form.ghtimg)}}
-                    {{ form_errors(edit_form.ghtimg) }}
+                    {{ form_label(edit_form.articlesimg, 'Nommez votre articles:', {'articlesimg': {'class': 'articlesimg'}}) }}
+                    {{ form_widget(edit_form.articlesimg)}}
+                    {{ form_errors(edit_form.articlesimg) }}
                     {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(edit_form.file1)}}
                     {{ form_errors(edit_form.file1) }}
@@ -26,9 +26,9 @@
                     {{ form_end(edit_form) }}
 
 
-                    {{ form_start(ght_delete_form) }}
+                    {{ form_start(articles_delete_form) }}
                     <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(ght_delete_form) }}
+                    {{ form_end(articles_delete_form) }}
                 </div>
             </div>
         </div>

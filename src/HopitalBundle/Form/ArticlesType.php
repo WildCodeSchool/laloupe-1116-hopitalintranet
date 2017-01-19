@@ -3,7 +3,7 @@ namespace HopitalBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-class LettreinfoType extends AbstractType
+class ArticlesType extends AbstractType
 {
     /**CODE AJOUTÉ
     /**
@@ -12,10 +12,10 @@ class LettreinfoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('lettreinfoimg')
+            ->add('articlesimg')
             ->add('file1', 'file', array('required' => false))
-            ->add('titlelettreinfo')
-            ->add('idlettreinfo');
+            ->add('titlearticles')
+            ->add('idarticles');
     }
     /**FIN CODE AJOUTÉ
     /**
@@ -24,7 +24,7 @@ class LettreinfoType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Lettreinfo'
+            'data_class' => 'HopitalBundle\Entity\Articles'
         ));
     }
     /**
@@ -32,6 +32,6 @@ class LettreinfoType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'hopital_lettreinfo';
+        return 'hopital_articles';
     }
 }

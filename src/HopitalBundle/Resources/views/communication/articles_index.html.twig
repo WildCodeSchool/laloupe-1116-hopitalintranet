@@ -7,7 +7,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <h1 class="lienstitre">Lettre d'information de Chartres</h1>
+                <h1 class="lienstitre">Articles de presse</h1>
             </div>
         </div>
 
@@ -15,7 +15,7 @@
 
         <div class="row">
 
-            <!--Début archives lettreinfo-->
+            <!--Début archives articles-->
 
             <div class="col-md-2">
                 <div class="dropdown">
@@ -25,13 +25,13 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dLabel">
                         {% set maxId = 0 %}
-                        {% for lettreinfo in lettreinfos %}
-                            {% set maxId = max(lettreinfo.id, maxId) %}
+                        {% for articles in articless %}
+                            {% set maxId = max(articles.id, maxId) %}
                         {% endfor %}
-                        {% for lettreinfo in lettreinfos %}
-                            {% if lettreinfo.id != maxId %}
-                                {% if lettreinfo.titlelettreinfo != NULL %}
-                                    <p data-toggle="modal" data-target="{{ '#' ~ lettreinfo.idlettreinfo }}" class="archivestitres"> {{ lettreinfo.titlelettreinfo }} </p>
+                        {% for articles in articless %}
+                            {% if articles.id != maxId %}
+                                {% if articles.titlearticles != NULL %}
+                                    <p data-toggle="modal" data-target="{{ '#' ~ articles.idarticles }}" class="archivestitres"> {{ articles.titlearticles }} </p>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
@@ -39,45 +39,45 @@
                 </div>
             </div>
 
-            <!--Fin archives lettreinfo-->
+            <!--Fin archives articles-->
 
 
             <!--Début nouvelles astreintes-->
 
             <div class="col-md-10">
                 {% set maxId = 0 %}
-                {% for lettreinfo in lettreinfos %}
-                    {% set maxId = max(lettreinfo.id, maxId) %}
+                {% for articles in articless %}
+                    {% set maxId = max(articles.id, maxId) %}
                 {% endfor %}
-                {% for lettreinfo in lettreinfos %}
-                    {% if lettreinfo.id == maxId %}
-                        <p>{{ lettreinfo.titlelettreinfo }}</p>
+                {% for articles in articless %}
+                    {% if articles.id == maxId %}
+                        <p>{{ articles.titlearticles }}</p>
                     {% endif %}
-                    {% if lettreinfo.id == maxId %}
-                        <object data="{{ app.request.basepath }}/uploads/{{ lettreinfo.lettreinfoimg }}" type="application/pdf" class="journaux">
+                    {% if articles.id == maxId %}
+                        <object data="{{ app.request.basepath }}/uploads/{{ articles.articlesimg }}" type="application/pdf" class="journaux">
                         </object>
                     {% endif %}
                 {% endfor %}
             </div>
         </div>
 
-        <!--Fin nouvelles lettreinfo-->
+        <!--Fin nouvelles articles-->
 
 
 
 
-        <!--Début modal lettreinfo-->
+        <!--Début modal articles-->
 
-        {% for lettreinfo in lettreinfos %}
-            <div id="{{ lettreinfo.idlettreinfo }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        {% for articles in articless %}
+            <div id="{{ articles.idarticles }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content" style="height: 750px">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <br>
                         <br>
                         <br>
-                        {% if lettreinfo.id != maxId %}
-                            <object data="{{ app.request.basepath }}/uploads/{{ lettreinfo.lettreinfoimg }}" type="application/pdf" class="modalarchivespdf">
+                        {% if articles.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ articles.articlesimg }}" type="application/pdf" class="modalarchivespdf">
                             </object>
                         {% endif %}
                     </div>
@@ -85,7 +85,7 @@
             </div>
         {% endfor %}
 
-        <!--Fin modal lettreinfo-->
+        <!--Fin modal articles-->
 
 
 
