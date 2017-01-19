@@ -11,9 +11,36 @@ class Idees
 {
 
     /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $ideestitle;
+
+    /**
+     * @var string
+     */
+    private $txtdef;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
      * Set ideestitle
      *
      * @param string $ideestitle
+     *
      * @return Idees
      */
     public function setIdeestitle($ideestitle)
@@ -33,37 +60,27 @@ class Idees
         return $this->ideestitle;
     }
 
-
-
-
     /**
-     * @var int
-     */
-    private $id;
-
-
-    /**
-     * @var string
-     */
-    private $ideestitle;
-
-
-
-
-
-
-    /**
-     * Get id
+     * Set txtdef
      *
-     * @return integer 
+     * @param string $txtdef
+     *
+     * @return Idees
      */
-    public function getId()
+    public function setTxtdef($txtdef)
     {
-        return $this->id;
+        $this->txtdef = $txtdef;
+
+        return $this;
     }
 
+    /**
+     * Get txtdef
+     *
+     * @return string
+     */
+    public function getTxtdef()
+    {
+        return $this->txtdef;
+    }
 }
-
-
-
-

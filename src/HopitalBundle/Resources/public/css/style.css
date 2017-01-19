@@ -682,3 +682,37 @@ div.c-wrapper{
 
 /**************************** FIN GALERIE ****************************/
 
+.imgannonce{
+    height: 300px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.card{
+    margin-left: 20px;
+}
+
+.auteurannonce{
+    margin-bottom: 30px;
+}
+
+.commentaireannonce{
+    margin-top: 10px;
+    padding:10px;
+}
+
+.commentaireancien{
+    margin-top: 10px;
+    border:5px solid #E7E7E7;
+    padding:10px;
+}
+
+.zonecommentaire{
+    width: 470px;
+    margin-bottom: 10px;
+}
+
+.materialize-textarea{
+    width: 470px;
+    height: 100px;
+}
