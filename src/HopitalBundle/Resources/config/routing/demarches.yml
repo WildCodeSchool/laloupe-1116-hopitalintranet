@@ -98,7 +98,28 @@ demarches_processuscategorie_new:
 
 
 
-demarches_paqss:
+demarches_paqss_new:
+    path:     /paqss/new
+    defaults: { _controller: "HopitalBundle:Paqss:new" }
+    methods:  [GET, POST]
+
+demarches_paqss_edit:
+    path:     /paqss/{id}/edit
+    defaults: { _controller: "HopitalBundle:Paqss:edit" }
+    methods:  [GET, POST]
+
+demarches_paqss_index:
     path:     /paqss
-    defaults: { _controller: "HopitalBundle:Demarches:paqss" }
+    defaults: { _controller: "HopitalBundle:Paqss:index" }
     methods:  GET
+
+demarches_paqss_show:
+    path:     /paqss/{id}/show
+    defaults: { _controller: "HopitalBundle:Paqss:show" }
+    methods:  GET
+
+demarches_paqss_delete:
+    path:     /paqss/{id}/delete
+    defaults: { _controller: "HopitalBundle:Paqss:delete" }
+    methods:  DELETE
+
