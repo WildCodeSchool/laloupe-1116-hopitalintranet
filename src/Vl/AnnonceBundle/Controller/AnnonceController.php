@@ -8,6 +8,8 @@ use Vl\AnnonceBundle\Entity\Amicale;
 use Vl\AnnonceBundle\Entity\Commentaire;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use IuchBundle\Entity\Service;
+use IuchBundle\Entity\ServiceRepository;
 
 /**
  * Annonce controller.
@@ -45,9 +47,11 @@ class AnnonceController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $amicales = $em->getRepository('VlAnnonceBundle:Amicale')->findAll();
+        $services = $em->getRepository('IuchBundle:Service')->findAll();
 
         return $this->render('VlAnnonceBundle:annonce:indexAmicale.html.twig', array(
             'amicales' => $amicales,
+            'services' => $services
         ));
     }
 
