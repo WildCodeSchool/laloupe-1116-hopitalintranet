@@ -40,6 +40,7 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, F
         $user1->setLastLogin(new \DateTime('now'));
         $user1->setFonction($this->getReference('10'));
         $user1->setService($this->getReference('4'));
+        $user1->setcodeCopieur('3');
 
         // Update the user
         $userManager->updateUser($user1, true);

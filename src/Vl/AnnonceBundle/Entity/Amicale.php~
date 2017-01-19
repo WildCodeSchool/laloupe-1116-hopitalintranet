@@ -231,33 +231,4 @@ class Amicale
     {
         return $this->prix;
     }
-    /**
-     * @var \IuchBundle\Entity\Service
-     */
-    private $service;
-
-
-    /**
-     * Set service
-     *
-     * @param \IuchBundle\Entity\Service $service
-     *
-     * @return Amicale
-     */
-    public function setService(\IuchBundle\Entity\Service $service = null)
-    {
-        $this->service = $service;
-
-        return $this;
-    }
-
-    /**
-     * Get service
-     *
-     * @return \IuchBundle\Entity\Service
-     */
-    public function getService()
-    {
-        return $this->service;
-    }
 }

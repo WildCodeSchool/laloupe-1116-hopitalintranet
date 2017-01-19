@@ -168,6 +168,8 @@ fos_user:
             handler:            fos_user.profile.form.handler.default
             name:               fos_user_profile_form
             validation_groups:  [Authentication] # Please note : this is not the default value
+
+
 ####### SonataUser #######
 sonata_user:
     security_acl: false

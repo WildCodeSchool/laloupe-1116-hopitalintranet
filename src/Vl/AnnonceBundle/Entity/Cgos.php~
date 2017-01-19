@@ -5,9 +5,9 @@ namespace Vl\AnnonceBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Amicale
+ * Cgos
  */
-class Amicale
+class Cgos
 {
     //==================
 //    Upload image
@@ -72,8 +72,6 @@ class Amicale
             unlink($file);
         }
     }
-    
-    
     // GENERATED CODE
 
     /**
@@ -121,7 +119,7 @@ class Amicale
      * Set titre
      *
      * @param string $titre
-     * @return Amicale
+     * @return Cgos
      */
     public function setTitre($titre)
     {
@@ -144,7 +142,7 @@ class Amicale
      * Set description
      *
      * @param string $description
-     * @return Amicale
+     * @return Cgos
      */
     public function setDescription($description)
     {
@@ -167,7 +165,7 @@ class Amicale
      * Set auteur
      *
      * @param string $auteur
-     * @return Amicale
+     * @return Cgos
      */
     public function setAuteur($auteur)
     {
@@ -190,7 +188,7 @@ class Amicale
      * Set image
      *
      * @param string $image
-     * @return Amicale
+     * @return Cgos
      */
     public function setImage($image)
     {
@@ -213,7 +211,7 @@ class Amicale
      * Set prix
      *
      * @param integer $prix
-     * @return Amicale
+     * @return Cgos
      */
     public function setPrix($prix)
     {
@@ -230,34 +228,5 @@ class Amicale
     public function getPrix()
     {
         return $this->prix;
-    }
-    /**
-     * @var \IuchBundle\Entity\Service
-     */
-    private $service;
-
-
-    /**
-     * Set service
-     *
-     * @param \IuchBundle\Entity\Service $service
-     *
-     * @return Amicale
-     */
-    public function setService(\IuchBundle\Entity\Service $service = null)
-    {
-        $this->service = $service;
-
-        return $this;
-    }
-
-    /**
-     * Get service
-     *
-     * @return \IuchBundle\Entity\Service
-     */
-    public function getService()
-    {
-        return $this->service;
     }
 }
