@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="center-align">Modifier l'annonce {{ annonce.titre }}</h1>
+
+        <div class="row">
+            {{ form_start(edit_form) }}
+            <div class="row">
+                <div class="input-field col m6 s12">
+                    {{ form_label(edit_form.titre) }}
+                    {{ form_widget(edit_form.titre) }}
+                    {{ form_errors(edit_form.titre) }}
+                </div>
+                <div class="input-field col m6 s12">
+                    {{ form_label(edit_form.auteur) }}
+                    {{ form_widget(edit_form.auteur) }}
+                    {{ form_errors(edit_form.auteur) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    {{ form_widget(edit_form.description) }}
+                    {{ form_errors(edit_form.description) }}
+                </div>
+                <div class="input-field col s6">
+                    {{ form_widget(edit_form.prix) }}
+                    {{ form_errors(edit_form.prix) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s1">
+                    <img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="image actuelle">
+                </div>
+                <div class="file-field input-field col s11">
+                    <div class="btn">
+                        <span>Image de l'annonce</span>
+                        {{ form_widget(edit_form.file) }}
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="add_button center-align">
+                <input class="waves-effect waves-light btn" type="submit" value="Modifier l'annonce" />
+            </div>
+            {{ form_end(edit_form) }}
+        </div>
+        <a href="{{ path('annonce_index') }}">Retour à la liste des annonces</a>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {# Call jQuery #}
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+{% endblock %}

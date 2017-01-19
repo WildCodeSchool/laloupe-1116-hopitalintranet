@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="center-align">{{ cgos.titre }}</h1>
+
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ app.request.basepath }}/uploads/{{ cgos.image }}" alt="annonce">
+                        <span class="card-title">{{ cgos.titre }}</span>
+                    </div>
+                    <div class="card-content">
+                        <p><span>Auteur: </span>{{ cgos.auteur }}</p>
+                        <p><span>Description: </span>{{ cgos.description }}</p>
+                        <p><span>Prix: </span>{{ cgos.prix }}</p>
+                    </div>
+                    <div class="card-action center-align">
+                        <a href="{{ path('annonce_editCgos', { 'id': cgos.id }) }}"><i class="material-icons">mode_edit</i></a>
+                        <a href="{{ path('annonce_deleteCgos', { 'id': cgos.id }) }}"><i class="material-icons">delete_forever</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col m6 s12">
+                <div class="row">
+                    {{ form_start(form) }}
+                    <div class="input-field col s12">
+                        {{ form_label(form.utilisateur) }}
+                        {{ form_widget(form.utilisateur) }}
+                        {{ form_errors(form.utilisateur) }}
+                    </div>
+                    <div class="input-field col s12">
+                        {{ form_label(form.message) }}
+                        {{ form_widget(form.message) }}
+                        {{ form_errors(form.message) }}
+                    </div>
+                    <div class="add_button center-align">
+                        <input class="waves-effect waves-light btn" type="submit" value="Ajouter le commentaire" />
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+                {% if commentaire != null %}
+                    <div class="row">
+                        <h4 class="center-align">Liste des commentaires</h4>
+                        {% for message in commentaire %}
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">Auteur: {{ message.utilisateur }}</span>
+                                            <p>{{ message.message }}</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="{{ path('commentaire_deleteCgos', {'id': message.id, 'id_cgos': cgos.id }) }}">Supprimer le commentaire</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <h4 class="center-align">Pas de commentaire</h4>
+                {% endif %}
+                <a href="{{ path('annonce_indexCgos') }}">Retour à la liste des annonces</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {# Call jQuery #}
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+{% endblock %}

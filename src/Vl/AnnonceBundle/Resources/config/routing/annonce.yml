@@ -1,0 +1,90 @@
+annonce_index:
+    path:     /
+    defaults: { _controller: "VlAnnonceBundle:Annonce:index" }
+    methods:  GET
+
+annonce_indexCgos:
+    path:     /Cgos
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexCgos" }
+    methods:  GET
+
+annonce_indexAmicale:
+    path:     /Amicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:indexAmicale" }
+    methods:  GET
+
+annonce_show:
+    path:     /{id}/show
+    defaults: { _controller: "VlAnnonceBundle:Annonce:show" }
+    methods:  [GET, POST]
+
+annonce_showCgos:
+    path:     /{id}/showCgos
+    defaults: { _controller: "VlAnnonceBundle:Annonce:showCgos" }
+    methods:  [GET, POST]
+
+annonce_showAmicale:
+    path:     /{id}/showAmicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:showAmicale" }
+    methods:  [GET, POST]
+
+annonce_new:
+    path:     /new
+    defaults: { _controller: "VlAnnonceBundle:Annonce:new" }
+    methods:  [GET, POST]
+
+annonce_newCgos:
+    path:     /newCgos
+    defaults: { _controller: "VlAnnonceBundle:Annonce:newCgos" }
+    methods:  [GET, POST]
+
+annonce_newAmicale:
+    path:     /newAmicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:newAmicale" }
+    methods:  [GET, POST]
+
+annonce_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VlAnnonceBundle:Annonce:edit" }
+    methods:  [GET, POST]
+
+annonce_editCgos:
+    path:     /{id}/editCgos
+    defaults: { _controller: "VlAnnonceBundle:Annonce:editCgos" }
+    methods:  [GET, POST]
+
+annonce_editAmicale:
+    path:     /{id}/editAmicale
+    defaults: { _controller: "VlAnnonceBundle:Annonce:editAmicale" }
+    methods:  [GET, POST]
+
+annonce_delete:
+    path:     /{id}/advert/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteAdvert" }
+    methods:  [GET, POST]
+
+annonce_deleteAmicale:
+    path:     /{id}/amicale/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteAmicale" }
+    methods:  [GET, POST]
+
+annonce_deleteCgos:
+    path:     /{id}/cgos/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteCgos" }
+    methods:  [GET, POST]
+
+commentaire_delete:
+    path:     /{id}/{id_advert}/commentaire/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteCommentaire" }
+    methods:  [GET, POST]
+
+
+commentaire_deleteAmicale:
+    path:     /{id}/{id_amicale}/commentaire/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteCommentaireAmicale" }
+    methods:  [GET, POST]
+
+commentaire_deleteCgos:
+    path:     /{id}/{id_cgos}/commentaire/delete
+    defaults: { _controller: "VlAnnonceBundle:Annonce:deleteCommentaireCgos" }
+    methods:  [GET, POST]

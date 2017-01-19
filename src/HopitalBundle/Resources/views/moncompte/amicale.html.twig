@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Amicale</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for moncompte in moncomptes %}
+            <tr>
+                <td><a href="{{ path('moncompte_show', { 'id': moncompte.id }) }}">{{ moncompte.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('moncompte_show', { 'id': moncompte.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('moncompte_edit', { 'id': moncompte.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('moncompte_new') }}">Create a new moncompte</a>
+        </li>
+    </ul>
+{% endblock %}

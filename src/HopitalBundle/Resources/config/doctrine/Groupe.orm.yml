@@ -1,0 +1,26 @@
+HopitalBundle\Entity\Groupe:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\GroupeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        utilisateur:
+            type: string
+            length: 255
+        message:
+            type: text
+        image:
+            type: string
+            length: 255
+
+    lifecycleCallbacks:
+        prePersist: [ preUpload ]
+        preUpdate: [ preUpload ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]

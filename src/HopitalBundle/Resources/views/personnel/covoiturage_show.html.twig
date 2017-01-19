@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Covoiturage</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ covoiturage.id }}</td>
+        </tr>
+        <tr>
+            <th>covoiturageimg</th>
+            <td>{{ covoiturage.covoiturageimg }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('personnel_covoiturage_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('personnel_covoiturage_edit', { 'id': covoiturage.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(covoiturage_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(covoiturage_delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

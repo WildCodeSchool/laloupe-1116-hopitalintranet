@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création de plans</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(edit_form) }}
+                    {{ form_label(edit_form.plansglobal, 'Nommez votre plan:', {'plansglobal': {'class': ''}}) }}
+                    {{ form_widget(edit_form.plansglobal)}}
+                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(edit_form.file1)}}
+                    <br>
+                    {{ form_end(edit_form) }}
+
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+
+                    {{ form_start(plans_delete_form) }}
+                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
+                    {{ form_end(plans_delete_form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
