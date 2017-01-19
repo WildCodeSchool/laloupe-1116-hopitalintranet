@@ -1,16 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Pages Jaunes creation</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création Pages Jaunes</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(form) }}
+                    {{ form_label(form. pagesjaunesimg, 'Nommez votre image:', {'pagesjaunesimg': {'class': 'pagesjaunesimg'}}) }}
+                    {{ form_widget(form.pagesjaunesimg)}}
+                    {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(form.file1)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(form) }}
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('recommandation_pagesjaunes_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}

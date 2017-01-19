@@ -161,4 +161,33 @@ class Galerie
     {
         return $this->galerie1;
     }
+    /**
+     * @var string
+     */
+    private $categorie;
+
+
+    /**
+     * Set categorie
+     *
+     * @param string $categorie
+     *
+     * @return Galerie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return string
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
 }

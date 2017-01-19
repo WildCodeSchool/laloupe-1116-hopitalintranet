@@ -20,9 +20,7 @@ class GroupeController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $groupes = $em->getRepository('HopitalBundle:Groupe')->findAll();
-
         return $this->render('HopitalBundle:documentation:groupe_index.html.twig', array(
             'groupes' => $groupes,
         ));
@@ -37,15 +35,12 @@ class GroupeController extends Controller
         $groupe = new Groupe();
         $form = $this->createForm('HopitalBundle\Form\GroupeType', $groupe);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($groupe);
             $em->flush($groupe);
-
             return $this->redirectToRoute('documentation_groupe_show', array('id' => $groupe->getId()));
         }
-
         return $this->render('HopitalBundle:documentation:groupe_new.html.twig', array(
             'groupe' => $groupe,
             'form' => $form->createView(),
@@ -53,16 +48,29 @@ class GroupeController extends Controller
     }
 
     /**
-     * Finds and displays a documentation entity.
+     * Finds and displays a groupe entity.
      *
      */
-    public function showAction(Groupe $groupe)
+    public function showAction(Groupe $groupe, Request $request)
     {
-        $groupe_deleteForm = $this->createDeleteForm($groupe);
-
+        $em = $this->getDoctrine()->getManager();
+        $groupemessage = $em->getRepository('HopitalBundle:Groupemessage')->findBy(array('groupes' => $groupe->getId()));
+        $newGroupemessage = new Groupemessage();
+        $form = $this->createForm('HopitalBundle\Form\GroupemessageType', $newGroupemessage);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            if ($newGroupemessage->getUtilisateur() == null) {
+                $newGroupemessage->setUtilisateur('Anonyme');
+            }
+            $newGroupemessage->setGroupes($groupe);
+            $em->persist($newGroupemessage);
+            $em->flush();
+            return $this->redirectToRoute('documentation_groupe_show', array('id' => $groupe->getId()));
+        }
         return $this->render('HopitalBundle:documentation:groupe_show.html.twig', array(
+            'groupemessage' => $groupemessage,
+            'form' => $form->createView(),
             'groupe' => $groupe,
-            'groupe_delete_form' => $groupe_deleteForm->createView(),
         ));
     }
 
@@ -72,54 +80,44 @@ class GroupeController extends Controller
      */
     public function editAction(Request $request, Groupe $groupe)
     {
-        $groupe_deleteForm = $this->createDeleteForm($groupe);
         $editForm = $this->createForm('HopitalBundle\Form\GroupeType', $groupe);
         $editForm->handleRequest($request);
-
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('documentation_groupe_edit', array('id' => $groupe->getId()));
+            $em = $this->getDoctrine()->getManager();
+            $groupe->preUpload();
+            $em->persist($groupe);
+            $em->flush();
+            return $this->redirectToRoute('documentation_groupe_index');
         }
-
         return $this->render('HopitalBundle:documentation:groupe_edit.html.twig', array(
             'groupe' => $groupe,
             'edit_form' => $editForm->createView(),
-            'groupe_delete_form' => $groupe_deleteForm->createView(),
         ));
     }
 
     /**
-     * Deletes a groupe entity.
+     * Delete a groupe
      *
      */
-    public function deleteAction(Request $request, Groupe $groupe)
+    public function deleteAction($id)
     {
-        $form = $this->createDeleteForm($groupe);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($groupe);
-            $em->flush($groupe);
-        }
-
+        $em = $this->getDoctrine()->getManager();
+        $groupe = $em->getRepository('HopitalBundle:Groupe')->findOneById($id);
+        $em->remove($groupe);
+        $em->flush();
         return $this->redirectToRoute('documentation_groupe_index');
     }
 
     /**
-     * Creates a form to delete a groupe entity.
+     * Delete Groupemessage
      *
-     * @param Groupe $documentation The groupe entity
-     *
-     * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Groupe $groupe)
+    public function deleteGroupeMessageAction($id)
     {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('documentation_groupe_delete', array('id' => $groupe->getId())))
-            ->setMethod('DELETE')
-            ->getForm();
+        $em = $this->getDoctrine()->getManager();
+        $groupemessage = $em->getRepository('HopitalBundle:Groupemessage')->findOneById($id);
+        $em->remove($groupemessage);
+        $em->flush();
+        return $this->redirectToRoute('documentation_groupe_index');
     }
-
 }

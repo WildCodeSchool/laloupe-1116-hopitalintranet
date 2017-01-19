@@ -21,7 +21,7 @@
     {{ form_start(edit_form_administratif) }}
     <h2 class="titre">{{ administratif.titleadministratif }}</h2>
     <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ administratif .administratifimg }}" type="application/pdf" class="directioncommune"/>
+        <img src="{{ app.request.basepath }}/uploads/{{ administratif.administratifimg }}" type="application/pdf" class="directioncommune"/>
         {{edit_form_administratif.children.file1.vars.label}}
         {{ form_widget(edit_form_administratif.file1) }}
         {{ form_errors(edit_form_administratif.file1) }}

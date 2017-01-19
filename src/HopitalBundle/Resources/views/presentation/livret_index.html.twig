@@ -2,41 +2,26 @@
 
 {% block body %}
 
-    <div class="row">
+
+
+        <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc1">
             <h3 class="lienstitre">Livret d'accueil</h3>
+
             <div class="flipbook-viewport">
                 <div class="container" style="margin-left: 50px;">
                     <div class="flipbook">
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page1.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page2.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page3.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page4.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page5.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page6.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page7.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page8.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page9.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page10.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page11.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page12.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page13.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page14.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page15.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page16.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page17.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page18.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page19.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page20.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page21.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page22.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page23.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page24.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page25.jpg') }})"></div>
-                        <div style="background-image:url({{ asset('bundles/hopital/img/Livret/file-page26.jpg') }})"></div>
+                        {% for livret in livrets %}
+
+                        <img src="{{ app.request.basepath }}/uploads/{{ livret.livretimg }}"/>
+
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
+
+
             <div class="row center-block" style="margin-top: 1%;">
                 <a class="bouton_dl" href="{{ asset('bundles/hopital/img/Livret/Livret_Accueil.pdf') }}">Télécharger PDF</a>
             </div>
@@ -45,7 +30,10 @@
     </div>
 
 
+
+    {#{{ app.request.basepath }}/uploads/{{ livret.livretimg }}#}
 {% endblock %}
+
 
 
     {% block javascripts %}
@@ -79,5 +67,4 @@
             });
 
         </script>
-
     {% endblock %}

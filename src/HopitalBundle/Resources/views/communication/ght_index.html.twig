@@ -2,20 +2,94 @@
 
 {% block body %}
 
-
-    <tbody>
-    {% for ght in ghts %}
+    <div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
 
         <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
+            <div class="col-md-12">
                 <h1 class="lienstitre">GHT</h1>
-                <object data="{{ app.request.basepath }}/uploads/{{ ght.ghtimg }}" type="application/pdf" class="directioncommune">
-                </object>
             </div>
         </div>
 
-    {% endfor %}
-    </tbody>
+
+
+        <div class="row">
+
+            <!--Début archives ght-->
+
+            <div class="col-md-2">
+                <div class="dropdown">
+                    <button class="btn journauxbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Archives
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        {% set maxId = 0 %}
+                        {% for ght in ghts %}
+                            {% set maxId = max(ght.id, maxId) %}
+                        {% endfor %}
+                        {% for ght in ghts %}
+                            {% if ght.id != maxId %}
+                                {% if ght.titleght != NULL %}
+                                    <p data-toggle="modal" data-target="{{ '#' ~ ght.idght }}" class="archivestitres"> {{ ght.titleght }} </p>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!--Fin archives ght-->
+
+
+            <!--Début nouvelles astreintes-->
+
+            <div class="col-md-10">
+                {% set maxId = 0 %}
+                {% for ght in ghts %}
+                    {% set maxId = max(ght.id, maxId) %}
+                {% endfor %}
+                {% for ght in ghts %}
+                    {% if ght.id == maxId %}
+                        <p>{{ ght.titleght }}</p>
+                    {% endif %}
+                    {% if ght.id == maxId %}
+                        <object data="{{ app.request.basepath }}/uploads/{{ ght.ghtimg }}" type="application/pdf" class="journaux">
+                        </object>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!--Fin nouvelles ght-->
+
+
+
+
+        <!--Début modal ght-->
+
+        {% for ght in ghts %}
+            <div id="{{ ght.idght }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content" style="height: 750px">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if ght.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ ght.ghtimg }}" type="application/pdf" class="modalarchivespdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!--Fin modal ght-->
+
+
+
+    </div>
 
 
 {% endblock %}
