@@ -43,7 +43,7 @@ class PaqssController extends Controller
             $em->persist($paqss);
             $em->flush($paqss);
 
-            return $this->redirectToRoute('demarches_paqss_show', array('id' => $paqss->getId()));
+            return $this->redirectToRoute('demarches_paqss_index', array('id' => $paqss->getId()));
         }
 
         return $this->render('HopitalBundle:demarches:paqss_new.html.twig', array(
@@ -52,19 +52,6 @@ class PaqssController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a demarches entity.
-     *
-     */
-    public function showAction(Paqss $paqss)
-    {
-        $paqss_deleteForm = $this->createDeleteForm($paqss);
-
-        return $this->render('HopitalBundle:demarches:paqss_show.html.twig', array(
-            'paqss' => $paqss,
-            'paqss_delete_form' => $paqss_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing paqss entity.

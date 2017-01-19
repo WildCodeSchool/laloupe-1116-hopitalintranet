@@ -3,11 +3,6 @@ recommandation_anesm_index:
     defaults: { _controller: "HopitalBundle:Anesm:index" }
     methods:  GET
 
-recommandation_anesm_show:
-    path:     /anesm/{id}/show
-    defaults: { _controller: "HopitalBundle:Anesm:show" }
-    methods:  GET
-
 recommandation_anesm_new:
     path:     /anesm/new
     defaults: { _controller: "HopitalBundle:Anesm:new" }
@@ -30,11 +25,6 @@ recommandation_anesm_delete:
 recommandation_bulletinoff_index:
     path:     /bulletinoff
     defaults: { _controller: "HopitalBundle:Bulletinoff:index" }
-    methods:  GET
-
-recommandation_bulletinoff_show:
-    path:     /bulletinoff/{id}/show
-    defaults: { _controller: "HopitalBundle:Bulletinoff:show" }
     methods:  GET
 
 recommandation_bulletinoff_new:
@@ -61,11 +51,6 @@ recommandation_has_index:
     defaults: { _controller: "HopitalBundle:Has:index" }
     methods:  GET
 
-recommandation_has_show:
-    path:     /has/{id}/show
-    defaults: { _controller: "HopitalBundle:Has:show" }
-    methods:  GET
-
 recommandation_has_new:
     path:     /has/new
     defaults: { _controller: "HopitalBundle:Has:new" }
@@ -90,11 +75,6 @@ recommandation_journaloff_index:
     defaults: { _controller: "HopitalBundle:Journaloff:index" }
     methods:  GET
 
-recommandation_journaloff_show:
-    path:     /journaloff/{id}/show
-    defaults: { _controller: "HopitalBundle:Journaloff:show" }
-    methods:  GET
-
 recommandation_journaloff_new:
     path:     /journaloff/new
     defaults: { _controller: "HopitalBundle:Journaloff:new" }
@@ -117,11 +97,6 @@ recommandation_journaloff_delete:
 recommandation_pagesjaunes_index:
     path:     /pagesjaunes
     defaults: { _controller: "HopitalBundle:Pagesjaunes:index" }
-    methods:  GET
-
-recommandation_pagesjaunes_show:
-    path:     /pagesjaunes/{id}/show
-    defaults: { _controller: "HopitalBundle:Pagesjaunes:show" }
     methods:  GET
 
 recommandation_pagesjaunes_new:

@@ -43,26 +43,12 @@ class BulletinoffController extends Controller
             $em->persist($bulletinoff);
             $em->flush($bulletinoff);
 
-            return $this->redirectToRoute('recommandation_bulletinoff_show', array('id' => $bulletinoff->getId()));
+            return $this->redirectToRoute('recommandation_bulletinoff_index', array('id' => $bulletinoff->getId()));
         }
 
         return $this->render('HopitalBundle:recommandation:bulletinoff_new.html.twig', array(
             'bulletinoff' => $bulletinoff,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a recommandation entity.
-     *
-     */
-    public function showAction(Bulletinoff $bulletinoff)
-    {
-        $bulletinoff_deleteForm = $this->createDeleteForm($bulletinoff);
-
-        return $this->render('HopitalBundle:recommandation:bulletinoff_show.html.twig', array(
-            'bulletinoff' => $bulletinoff,
-            'bulletinoff_delete_form' => $bulletinoff_deleteForm->createView(),
         ));
     }
 

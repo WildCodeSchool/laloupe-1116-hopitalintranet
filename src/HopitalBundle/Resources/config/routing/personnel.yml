@@ -3,11 +3,6 @@ personnel_menu_index:
     defaults: { _controller: "HopitalBundle:Menu:index" }
     methods:  GET
 
-personnel_menu_show:
-    path:     /menu/{id}/show
-    defaults: { _controller: "HopitalBundle:Menu:show" }
-    methods:  GET
-
 personnel_menu_new:
     path:     /menu/new
     defaults: { _controller: "HopitalBundle:Menu:new" }
@@ -30,11 +25,6 @@ personnel_menu_delete:
 personnel_covoiturage_index:
     path:     /covoiturage
     defaults: { _controller: "HopitalBundle:Covoiturage:index" }
-    methods:  GET
-
-personnel_covoiturage_show:
-    path:     /covoiturage/{id}/show
-    defaults: { _controller: "HopitalBundle:Covoiturage:show" }
     methods:  GET
 
 personnel_covoiturage_new:
@@ -65,11 +55,6 @@ personnel_idees_index:
     defaults: { _controller: "HopitalBundle:Idees:index" }
     methods:  [GET, POST]
 
-personnel_idees_show:
-    path:     /idees/{id}/show
-    defaults: { _controller: "HopitalBundle:Idees:show" }
-    methods:  GET
-
 personnel_idees_new:
     path:     /idees/new
     defaults: { _controller: "HopitalBundle:Idees:new" }
@@ -93,11 +78,6 @@ personnel_planniciel_index:
      defaults: { _controller: "HopitalBundle:Planniciel:index" }
      methods:  GET
 
-personnel_planniciel_show:
-     path:     /planniciel/{id}/show
-     defaults: { _controller: "HopitalBundle:Planniciel:show" }
-     methods:  GET
-
 personnel_planniciel_new:
      path:     /planniciel/new
      defaults: { _controller: "HopitalBundle:Planniciel:new" }
@@ -119,11 +99,6 @@ personnel_planniciel_delete:
 personnel_postvacant_index:
     path:     /postvacant
     defaults: { _controller: "HopitalBundle:Postvacant:index" }
-    methods:  GET
-
-personnel_postvacant_show:
-    path:     /postvacant/{id}/show
-    defaults: { _controller: "HopitalBundle:Postvacant:show" }
     methods:  GET
 
 personnel_postvacant_new:

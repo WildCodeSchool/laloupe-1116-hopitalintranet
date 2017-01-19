@@ -43,26 +43,12 @@ class AnesmController extends Controller
             $em->persist($anesm);
             $em->flush($anesm);
 
-            return $this->redirectToRoute('recommandation_anesm_show', array('id' => $anesm->getId()));
+            return $this->redirectToRoute('recommandation_anesm_index', array('id' => $anesm->getId()));
         }
 
         return $this->render('HopitalBundle:recommandation:anesm_new.html.twig', array(
             'anesm' => $anesm,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a recommandation entity.
-     *
-     */
-    public function showAction(Anesm $anesm)
-    {
-        $anesm_deleteForm = $this->createDeleteForm($anesm);
-
-        return $this->render('HopitalBundle:recommandation:anesm_show.html.twig', array(
-            'anesm' => $anesm,
-            'anesm_delete_form' => $anesm_deleteForm->createView(),
         ));
     }
 

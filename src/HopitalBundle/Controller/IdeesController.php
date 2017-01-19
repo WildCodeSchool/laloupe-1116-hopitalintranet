@@ -44,7 +44,7 @@ class IdeesController extends Controller
             $em->persist($idees);
             $em->flush($idees);
 
-            return $this->redirectToRoute('personnel_idees_show', array('id' => $idees->getId()));
+            return $this->redirectToRoute('personnel_idees_index', array('id' => $idees->getId()));
         }
 
         return $this->render('HopitalBundle:personnel:idees_new.html.twig', array(
@@ -53,19 +53,6 @@ class IdeesController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a idees entity.
-     *
-     */
-    public function showAction(Idees $idees)
-    {
-        $idees_deleteForm = $this->createDeleteForm($idees);
-
-        return $this->render('HopitalBundle:personnel:idees_show.html.twig', array(
-            'idees' => $idees,
-            'idees_delete_form' => $idees_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing idees entity.

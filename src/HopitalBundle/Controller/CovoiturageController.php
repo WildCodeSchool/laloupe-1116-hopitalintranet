@@ -43,7 +43,7 @@ class CovoiturageController extends Controller
             $em->persist($covoiturage);
             $em->flush($covoiturage);
 
-            return $this->redirectToRoute('personnel_covoiturage_show', array('id' => $covoiturage->getId()));
+            return $this->redirectToRoute('personnel_covoiturage_index', array('id' => $covoiturage->getId()));
         }
 
         return $this->render('HopitalBundle:personnel:covoiturage_new.html.twig', array(
@@ -52,19 +52,6 @@ class CovoiturageController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a personnel entity.
-     *
-     */
-    public function showAction(Covoiturage $covoiturage)
-    {
-        $covoiturage_deleteForm = $this->createDeleteForm($covoiturage);
-
-        return $this->render('HopitalBundle:personnel:covoiturage_show.html.twig', array(
-            'covoiturage' => $covoiturage,
-            'covoiturage_delete_form' => $covoiturage_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing covoiturage entity.

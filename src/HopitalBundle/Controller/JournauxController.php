@@ -44,27 +44,13 @@ class JournauxController extends Controller
             $em->persist($journaux);
             $em->flush($journaux);
 
-            return $this->redirectToRoute('documentation_journaux_show', array('id' => $journaux->getId()));
+            return $this->redirectToRoute('documentation_journaux_index', array('id' => $journaux->getId()));
         }
 
         return $this->render('HopitalBundle:documentation:journaux_new.html.twig', array(
             'journaux' => $journaux,
             'form' => $form->createView(),
 
-        ));
-    }
-
-    /**
-     * Finds and displays a journaux entity.
-     *
-     */
-    public function showAction(journaux $journaux)
-    {
-        $journaux_deleteForm = $this->createDeleteForm($journaux);
-
-        return $this->render('HopitalBundle:documentation:journaux_show.html.twig', array(
-            'journaux' => $journaux,
-            'journaux_delete_form' => $journaux_deleteForm->createView(),
         ));
     }
 

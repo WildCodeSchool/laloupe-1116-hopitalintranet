@@ -3,11 +3,6 @@ communication_articles_index:
     defaults: { _controller: "HopitalBundle:Articles:index" }
     methods:  GET
 
-communication_articles_show:
-    path:     /articles/{id}/show
-    defaults: { _controller: "HopitalBundle:Articles:show" }
-    methods:  GET
-
 communication_articles_new:
     path:     /articles/new
     defaults: { _controller: "HopitalBundle:Articles:new" }
@@ -30,11 +25,6 @@ communication_lienssites_index:
     defaults: { _controller: "HopitalBundle:Lienssites:index" }
     methods:  GET
 
-communication_lienssites_show:
-    path:     /lienssites/{id}/show
-    defaults: { _controller: "HopitalBundle:Lienssites:show" }
-    methods:  GET
-
 communication_lienssites_new:
     path:     /lienssites/new
     defaults: { _controller: "HopitalBundle:Lienssites:new" }
@@ -55,11 +45,6 @@ communication_lienssites_delete:
 communication_lettreinfo_index:
     path:     /lettreinfo
     defaults: { _controller: "HopitalBundle:Lettreinfo:index" }
-    methods:  GET
-
-communication_lettreinfo_show:
-    path:     /lettreinfo/{id}/show
-    defaults: { _controller: "HopitalBundle:Lettreinfo:show" }
     methods:  GET
 
 communication_lettreinfo_new:
@@ -85,11 +70,6 @@ communication_direction_index:
     defaults: { _controller: "HopitalBundle:Direction:index" }
     methods:  GET
 
-communication_direction_show:
-    path:     /direction/{id}/show
-    defaults: { _controller: "HopitalBundle:Direction:show" }
-    methods:  GET
-
 communication_direction_new:
     path:     /direction/new
     defaults: { _controller: "HopitalBundle:Direction:new" }
@@ -113,11 +93,6 @@ communication_direction_delete:
 communication_ght_index:
     path:     /ght
     defaults: { _controller: "HopitalBundle:Ght:index" }
-    methods:  GET
-
-communication_ght_show:
-    path:     /ght/{id}/show
-    defaults: { _controller: "HopitalBundle:Ght:show" }
     methods:  GET
 
 communication_ght_new:

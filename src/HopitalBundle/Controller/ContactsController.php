@@ -43,26 +43,12 @@ class ContactsController extends Controller
             $em->persist($contacts);
             $em->flush($contacts);
 
-            return $this->redirectToRoute('documentation_contacts_show', array('id' => $contacts->getId()));
+            return $this->redirectToRoute('documentation_contacts_index', array('id' => $contacts->getId()));
         }
 
         return $this->render('HopitalBundle:documentation:contacts_new.html.twig', array(
             'contacts' => $contacts,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a documentation entity.
-     *
-     */
-    public function showAction(Contacts $contacts)
-    {
-        $contacts_deleteForm = $this->createDeleteForm($contacts);
-
-        return $this->render('HopitalBundle:documentation:contacts_show.html.twig', array(
-            'contacts' => $contacts,
-            'contacts_delete_form' => $contacts_deleteForm->createView(),
         ));
     }
 

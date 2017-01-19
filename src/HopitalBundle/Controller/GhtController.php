@@ -42,26 +42,12 @@ class GhtController extends Controller
             $em->persist($ght);
             $em->flush($ght);
 
-            return $this->redirectToRoute('communication_ght_show', array('id' => $ght->getId()));
+            return $this->redirectToRoute('communication_ght_index', array('id' => $ght->getId()));
         }
 
         return $this->render('HopitalBundle:communication:ght_new.html.twig', array(
             'ght' => $ght,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a communication entity.
-     *
-     */
-    public function showAction(Ght $ght)
-    {
-        $ght_deleteForm = $this->createDeleteForm($ght);
-
-        return $this->render('HopitalBundle:communication:ght_show.html.twig', array(
-            'ght' => $ght,
-            'ght_delete_form' => $ght_deleteForm->createView(),
         ));
     }
 
