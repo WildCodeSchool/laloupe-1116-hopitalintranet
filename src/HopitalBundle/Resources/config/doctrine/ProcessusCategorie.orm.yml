@@ -1,0 +1,21 @@
+HopitalBundle\Entity\ProcessusCategorie:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\ProcessusCategorieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        categorie:
+            type: string
+            length: 255
+    oneToMany:
+        photos:
+            targetEntity: HopitalBundle\Entity\Processus
+            mappedBy: categorie
+
+    lifecycleCallbacks: { }
+

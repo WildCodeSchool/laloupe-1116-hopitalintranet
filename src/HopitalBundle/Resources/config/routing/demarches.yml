@@ -54,12 +54,72 @@ demarches_epp:
     defaults: { _controller: "HopitalBundle:Demarches:epp" }
     methods:  GET
 
-demarches_processus:
+
+
+
+
+
+
+demarches_processus_index:
     path:     /processus
-    defaults: { _controller: "HopitalBundle:Demarches:processus" }
+    defaults: { _controller: "HopitalBundle:Processus:index" }
     methods:  GET
 
-demarches_paqss:
-    path:     /paqss
-    defaults: { _controller: "HopitalBundle:Demarches:paqss" }
+demarches_processus_show:
+    path:     /processus/{id}/show
+    defaults: { _controller: "HopitalBundle:Processus:show" }
     methods:  GET
+
+demarches_processus_new:
+    path:     /processus/new
+    defaults: { _controller: "HopitalBundle:Processus:new" }
+    methods:  [GET, POST]
+
+demarches_processus_edit:
+    path:     /processus/{id}/edit
+    defaults: { _controller: "HopitalBundle:Processus:edit" }
+    methods:  [GET, POST]
+
+demarches_processus_delete:
+    path:     processus/{id}/delete
+    defaults: { _controller: "HopitalBundle:Processus:delete" }
+    methods:  DELETE
+
+demarches_processuscategorie_new:
+    path:     /categorie/new
+    defaults: { _controller: "HopitalBundle:Processus:newCategorie" }
+    methods:  [GET, POST]
+
+
+
+
+
+
+
+
+
+demarches_paqss_new:
+    path:     /paqss/new
+    defaults: { _controller: "HopitalBundle:Paqss:new" }
+    methods:  [GET, POST]
+
+demarches_paqss_edit:
+    path:     /paqss/{id}/edit
+    defaults: { _controller: "HopitalBundle:Paqss:edit" }
+    methods:  [GET, POST]
+
+demarches_paqss_index:
+    path:     /paqss
+    defaults: { _controller: "HopitalBundle:Paqss:index" }
+    methods:  GET
+
+demarches_paqss_show:
+    path:     /paqss/{id}/show
+    defaults: { _controller: "HopitalBundle:Paqss:show" }
+    methods:  GET
+
+demarches_paqss_delete:
+    path:     /paqss/{id}/delete
+    defaults: { _controller: "HopitalBundle:Paqss:delete" }
+    methods:  DELETE
+

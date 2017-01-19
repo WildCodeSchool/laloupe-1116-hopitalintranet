@@ -1,16 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Administratif creation</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création Astreintes adminitratives</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(formAdministratif) }}
+                    {{ form_label(formAdministratif.idadministratif, 'Id de votre astreinte administrative:', {'idadministratif': {'class': 'idadministratif'}}) }}
+                    {{ form_widget(formAdministratif.idadministratif)}}
 
-    {{ form_start(formAdministratif) }}
-    {{ form_widget(formAdministratif) }}
-    <input type="submit" value="Create" />
-    {{ form_end(formAdministratif) }}
+                    {{ form_label(formAdministratif.titleadministratif, 'Titre de votre astreinte administrative:', {'titleadministratif': {'class': 'titleadministratif'}}) }}
+                    {{ form_widget(formAdministratif.titleadministratif)}}
+                    {{ form_label(formAdministratif.administratifimg, 'Nommez votre astreinte administrative:', {'administratifimg': {'class': 'administratifimg'}}) }}
+                    {{ form_widget(formAdministratif.administratifimg)}}
+                    {{ form_label(formAdministratif.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(formAdministratif.file1)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(formAdministratif) }}
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}

@@ -1,16 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Commune creation</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création Astreintes communes</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(formCommune) }}
+                    {{ form_label(formCommune.idcommune, 'Id de votre astreinte commune:', {'idcommune': {'class': 'idcommune'}}) }}
+                    {{ form_widget(formCommune.idcommune)}}
 
-    {{ form_start(formCommune) }}
-    {{ form_widget(formCommune) }}
-    <input type="submit" value="Create" />
-    {{ form_end(formCommune) }}
+                    {{ form_label(formCommune.titlecommune, 'Titre de votre astreinte commune:', {'titlecommune': {'class': 'titlecommune'}}) }}
+                    {{ form_widget(formCommune.titlecommune)}}
+                    {{ form_label(formCommune.communeimg, 'Nommez votre astreinte commune:', {'communeimg': {'class': 'communeimg'}}) }}
+                    {{ form_widget(formCommune.communeimg)}}
+                    {{ form_label(formCommune.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file3'}}) }}
+                    {{ form_widget(formCommune.file3)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(formCommune) }}
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}

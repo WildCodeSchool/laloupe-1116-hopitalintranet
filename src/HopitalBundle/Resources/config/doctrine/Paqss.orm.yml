@@ -8,4 +8,21 @@ HopitalBundle\Entity\Paqss:
             id: true
             generator:
                 strategy: AUTO
-    lifecycleCallbacks: {  }
+
+
+
+    fields:
+        paqssimg:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload7 ]
+      preUpdate: [ preUpload, preUpload7 ]
+      postPersist: [ upload, upload7 ]
+      postUpdate: [ upload, upload7 ]
+      postRemove: [ removeUpload, removeUpload7 ]
+

@@ -1,11 +1,3 @@
-personnel_idees:
-    path:     /idees
-    defaults: { _controller: "HopitalBundle:Personnel:idees" }
-    methods:  [GET, POST]
-
-
-
-
 personnel_menu_index:
     path:     /menu
     defaults: { _controller: "HopitalBundle:Menu:index" }
@@ -64,11 +56,14 @@ personnel_covoiturage_delete:
 
 
 
-
+personnel_idees_idees:
+    path:     /ideess
+    defaults: { _controller: "HopitalBundle:Idees:idees" }
+    methods:  [GET, POST]
 personnel_idees_index:
     path:     /idees
     defaults: { _controller: "HopitalBundle:Idees:index" }
-    methods:  GET
+    methods:  [GET, POST]
 
 personnel_idees_show:
     path:     /idees/{id}/show
