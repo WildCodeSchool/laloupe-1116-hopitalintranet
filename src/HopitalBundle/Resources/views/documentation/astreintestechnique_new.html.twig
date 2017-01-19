@@ -1,16 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Technique creation</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création Astreintes techniques</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(formTechnique) }}
+                    {{ form_label(formTechnique.idtechnique, 'Id de votre astreinte technique:', {'idtechnique': {'class': 'idtechnique'}}) }}
+                    {{ form_widget(formTechnique.idtechnique)}}
 
-    {{ form_start(formTechnique) }}
-    {{ form_widget(formTechnique) }}
-    <input type="submit" value="Create" />
-    {{ form_end(formTechnique) }}
+                    {{ form_label(formTechnique.titletechnique, 'Titre de votre astreinte technique:', {'titletechnique': {'class': 'titletechnique'}}) }}
+                    {{ form_widget(formTechnique.titletechnique)}}
+                    {{ form_label(formTechnique.techniqueimg, 'Nommez votre astreinte technique:', {'techniqueimg': {'class': 'techniqueimg'}}) }}
+                    {{ form_widget(formTechnique.techniqueimg)}}
+                    {{ form_label(formTechnique.file4, 'Insérez votre Pdf:', {'file4': {'class': 'file4'}}) }}
+                    {{ form_widget(formTechnique.file4)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(formTechnique) }}
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}
