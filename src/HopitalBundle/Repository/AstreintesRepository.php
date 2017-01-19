@@ -1,9 +1,6 @@
 <?php
-
 namespace HopitalBundle\Repository;
-
 use Doctrine\ORM\EntityRepository;
-
 /**
  * AstreintesRepository
  *

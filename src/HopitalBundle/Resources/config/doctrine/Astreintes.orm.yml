@@ -9,43 +9,4 @@ HopitalBundle\Entity\Astreintes:
             generator:
                 strategy: AUTO
 
-
-    fields:
-        administratifimg:
-            type: string
-            length: 25
-            nullable: true
-        medicalimg:
-            type: string
-            length: 25
-            nullable: true
-        communeimg:
-            type: string
-            length: 25
-            nullable: true
-        techniqueimg:
-            type: string
-            length: 25
-            nullable: true
-        titleadministratif:
-            type: string
-            length: 255
-        titlemedical:
-            type: string
-            length: 255
-        titlecommune:
-            type: string
-            length: 255
-        titletechnique:
-            type: string
-            length: 255
-
-
-
-    lifecycleCallbacks:
-      prePersist: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4 ]
-      preUpdate: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4 ]
-      postPersist: [ upload, upload1, upload2, upload3, upload4 ]
-      postUpdate: [ upload, upload1, upload2, upload3, upload4 ]
-      postRemove: [ removeUpload, removeUpload1, removeUpload2, removeUpload3, removeUpload4 ]
-
+    lifecycleCallbacks: {  }

@@ -1,11 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Basedoc creation</h1>
-    <img src="{{ app.request.basepath }}/uploads/{{ basedoc.basedoc1 }}"/>
+    <h1>Base Documentaire</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ basedoc.id }}</td>
+        </tr>
+        </tbody>
+    </table>
+
     <ul>
         <li>
             <a href="{{ path('documentation_basedoc_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('documentation_basedoc_edit', { 'id': basedoc.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(basedoc_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(basedoc_delete_form) }}
         </li>
     </ul>
 {% endblock %}

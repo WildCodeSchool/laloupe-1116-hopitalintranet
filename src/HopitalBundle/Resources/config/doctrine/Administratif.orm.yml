@@ -1,0 +1,32 @@
+HopitalBundle\Entity\Administratif:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\AdministratifRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+    fields:
+        administratifimg:
+            type: string
+            length: 25
+            nullable: true
+        titleadministratif:
+            type: string
+            length: 255
+        idadministratif:
+            type: string
+            length: 255
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1 ]
+      preUpdate: [ preUpload, preUpload1 ]
+      postPersist: [ upload, upload1 ]
+      postUpdate: [ upload, upload1 ]
+      postRemove: [ removeUpload, removeUpload1 ]

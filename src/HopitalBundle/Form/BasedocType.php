@@ -1,11 +1,8 @@
 <?php
-
 namespace HopitalBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class BasedocType extends AbstractType
 {
     /**CODE AJOUTÉ
@@ -15,14 +12,12 @@ class BasedocType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('basedoc1')
-            ->add('file1', 'file', array('required' => false));
-
+            ->add('basedocimg')
+            ->add('file1', 'file', array('required' => false))
+            ->add('titlebasedoc')
+            ->add('idbasedoc');
     }
-
     /**FIN CODE AJOUTÉ
-     *
-     *
     /**
      * {@inheritdoc}
      */
@@ -32,14 +27,11 @@ class BasedocType extends AbstractType
             'data_class' => 'HopitalBundle\Entity\Basedoc'
         ));
     }
-
-
     /**
      * {@inheritdoc}
      */
     public function getBlockPrefix()
     {
-        return 'hopitalBundle_basedoc';
+        return 'hopital_basedoc';
     }
-
 }
