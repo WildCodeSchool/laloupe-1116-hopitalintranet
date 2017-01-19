@@ -10,18 +10,23 @@ HopitalBundle\Entity\Direction:
                 strategy: AUTO
 
 
-
     fields:
         directionimg:
             type: string
             length: 25
             nullable: true
+        titledirection:
+            type: string
+            length: 255
+        iddirection:
+            type: string
+            length: 255
 
 
 
     lifecycleCallbacks:
-      prePersist: [ preUpload, preUpload6 ]
-      preUpdate: [ preUpload, preUpload6 ]
-      postPersist: [ upload, upload6 ]
-      postUpdate: [ upload, upload6 ]
-      postRemove: [ removeUpload, removeUpload6 ]
+      prePersist: [ preUpload, preUpload1 ]
+      preUpdate: [ preUpload, preUpload1 ]
+      postPersist: [ upload, upload1 ]
+      postUpdate: [ upload, upload1 ]
+      postRemove: [ removeUpload, removeUpload1 ]

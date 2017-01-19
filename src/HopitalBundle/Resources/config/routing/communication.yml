@@ -1,7 +1,27 @@
-communication_articles:
+communication_articles_index:
     path:     /articles
-    defaults: { _controller: "HopitalBundle:Communication:articles" }
+    defaults: { _controller: "HopitalBundle:Articles:index" }
     methods:  GET
+
+communication_articles_show:
+    path:     /articles/{id}/show
+    defaults: { _controller: "HopitalBundle:Articles:show" }
+    methods:  GET
+
+communication_articles_new:
+    path:     /articles/new
+    defaults: { _controller: "HopitalBundle:Articles:new" }
+    methods:  [GET, POST]
+
+communication_articles_edit:
+    path:     /articles/{id}/edit
+    defaults: { _controller: "HopitalBundle:Articles:edit" }
+    methods:  [GET, POST]
+
+communication_articles_delete:
+    path:     /articles/{id}/delete
+    defaults: { _controller: "HopitalBundle:Articles:delete" }
+    methods:  DELETE
 
 
 

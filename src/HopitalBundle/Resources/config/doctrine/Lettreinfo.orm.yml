@@ -15,6 +15,12 @@ HopitalBundle\Entity\Lettreinfo:
             type: string
             length: 25
             nullable: true
+        titlelettreinfo:
+            type: string
+            length: 255
+        idlettreinfo:
+            type: string
+            length: 255
 
 
 
@@ -24,4 +30,3 @@ HopitalBundle\Entity\Lettreinfo:
       postPersist: [ upload, upload1 ]
       postUpdate: [ upload, upload1 ]
       postRemove: [ removeUpload, removeUpload1 ]
-

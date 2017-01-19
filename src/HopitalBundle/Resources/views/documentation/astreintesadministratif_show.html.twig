@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Astreintes</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ administratif.id }}</td>
+        </tr>
+        <tr>
+            <th>administratifimg</th>
+            <td>{{ administratif.administratifimg }}</td>
+        </tr>
+        <tr>
+            <th>Titleadministratif</th>
+            <td>{{ administratif.titleadministratif}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('documentation_astreintesadministratif_edit', { 'id': administratif.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(astreintes_delete_formadministratif) }}
+            <input type="submit" value="Delete">
+            {{ form_end(astreintes_delete_formadministratif) }}
+        </li>
+    </ul>
+{% endblock %}
