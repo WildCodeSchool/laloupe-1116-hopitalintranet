@@ -42,26 +42,12 @@ class BasedocController extends Controller
             $em->persist($basedoc);
             $em->flush($basedoc);
 
-            return $this->redirectToRoute('documentation_basedoc_show', array('id' => $basedoc->getId()));
+            return $this->redirectToRoute('documentation_basedoc_index', array('id' => $basedoc->getId()));
         }
 
         return $this->render('HopitalBundle:documentation:basedoc_new.html.twig', array(
             'basedoc' => $basedoc,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Basedoc $basedoc)
-    {
-        $deleteForm = $this->createDeleteForm($basedoc);
-
-        return $this->render('HopitalBundle:documentation:basedoc_show.html.twig', array(
-            'basedoc' => $basedoc,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 

@@ -1,16 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Medical creation</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création Astreintes médicales</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(formMedical) }}
+                    {{ form_label(formMedical.idmedical, 'Id de votre astreinte médicale:', {'idmedical': {'class': 'idmedical'}}) }}
+                    {{ form_widget(formMedical.idmedical)}}
 
-    {{ form_start(formMedical) }}
-    {{ form_widget(formMedical) }}
-    <input type="submit" value="Create" />
-    {{ form_end(formMedical) }}
+                    {{ form_label(formMedical.titlemedical, 'Titre de votre astreinte médicale:', {'titlemedical': {'class': 'titlemedical'}}) }}
+                    {{ form_widget(formMedical.titlemedical)}}
+                    {{ form_label(formMedical.medicalimg, 'Nommez votre astreinte médicale:', {'medicalimg': {'class': 'medicalimg'}}) }}
+                    {{ form_widget(formMedical.medicalimg)}}
+                    {{ form_label(formMedical.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}
+                    {{ form_widget(formMedical.file2)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(formMedical) }}
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}

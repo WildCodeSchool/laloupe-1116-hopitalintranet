@@ -17,7 +17,8 @@ class CommentaireType extends AbstractType
             ->add('utilisateur', 'text', array(
                 'required' => false,
                 'attr' => array(
-                    'placeholder' => "Si non renseigné, anonyme"
+                    'placeholder' => "Si non renseigné, anonyme",
+                    'class' => "zonecommentaire"
                 )
             ))
             ->add('message', 'textarea', array(

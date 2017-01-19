@@ -10,15 +10,12 @@
 
 
 {% block body %}
+
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <br>
     <div class="container">
-        <h1 class="center-align">Liste des annonces de l'Amicale</h1>
-        <div class="row">
-            <form action="{{ path('annonce_indexAmicale') }}">
-                <div class="col s2">
-                    <input class="btn waves-effect waves-light" type="submit" value="Afficher">
-                </div>
-            </form>
-        </div>
+        <h4 class="lienstitre">Liste des annonces de l'Amicale</h4>
 
         {% if amicales != null %}
             <table class="centered striped">
@@ -49,12 +46,14 @@
                 </tbody>
             </table>
         {% else %}
-            <h3>Il n'y a pas d'annonces</h3>
+            <h6>Il n'y a pas d'annonces</h6>
         {% endif %}
         <div class="add_button center-align">
             <a class="waves-effect waves-light btn" href="{{ path('annonce_newAmicale') }}">Ajouter une annonce</a>
         </div>
     </div>
+
+        </div>
 {% endblock %}
 
 {% block javascripts %}

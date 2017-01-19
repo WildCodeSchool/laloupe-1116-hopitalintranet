@@ -9,54 +9,61 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1 class="center-align">Ajouter une annonce CGOS</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <br>
+            <div class="container">
+                <h4 class="lienstitre">Ajouter une annonce pour les CGOS</h4>
 
-        <div class="row">
-            {{ form_start(form) }}
-            <div class="row">
-                <div class="input-field col m6 s12">
-                    {{ form_label(form.titre) }}
-                    {{ form_widget(form.titre) }}
-                    {{ form_errors(form.titre) }}
-                </div>
-                <div class="input-field col m6 s12">
-                    {{ form_label(form.auteur) }}
-                    {{ form_widget(form.auteur) }}
-                    {{ form_errors(form.auteur) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    {{ form_label(form.description) }}
-                    {{ form_widget(form.description) }}
-                    {{ form_errors(form.description) }}
-                </div>
-                <div class="input-field col s6">
-                    {{ form_label(form.prix) }}
-                    {{ form_widget(form.prix) }}
-                    {{ form_errors(form.prix) }}
-                </div>
-            </div>
+                <div class="row">
+                    {{ form_start(form) }}
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            {{ form_label(form.titre) }}
+                            {{ form_widget(form.titre) }}
+                            {{ form_errors(form.titre) }}
+                        </div>
+                        <div class="input-field col m6 s12">
+                            {{ form_label(form.auteur) }}
+                            {{ form_widget(form.auteur) }}
+                            {{ form_errors(form.auteur) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form_label(form.description) }}
+                            {{ form_widget(form.description) }}
+                            {{ form_errors(form.description) }}
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form_label(form.prix) }}
+                            {{ form_widget(form.prix) }}
+                            {{ form_errors(form.prix) }}
+                        </div>
+                    </div>
 
-            <div class="row">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>Image de l'annonce</span>
-                        {{ form_widget(form.file) }}
+                    <div class="row">
+                        <div class="file-field input-field">
+
+                                <span>Cliquer pour intégrer l'image de l'annonce</span>
+                                {{ form_widget(form.file) }}
+
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                            {{ form_errors(form.file) }}
+                        </div>
                     </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
+                    <div class="add_button center-align">
+                        <input class="waves-effect waves-light btn" type="submit" value="Ajouter l'annonce" />
                     </div>
-                    {{ form_errors(form.file) }}
+                    {{ form_end(form) }}
+                </div>
+                <div class="add_button center-align">
+                    <a class="waves-effect waves-light btn" href="{{ path('annonce_indexCgos') }}">Retour à la liste des annonces</a>
                 </div>
             </div>
-            <div class="add_button center-align">
-                <input class="waves-effect waves-light btn" type="submit" value="Ajouter l'annonce" />
-            </div>
-            {{ form_end(form) }}
         </div>
-        <a href="{{ path('annonce_indexCgos') }}">Retour à la liste des annonces</a>
     </div>
 
 {% endblock %}

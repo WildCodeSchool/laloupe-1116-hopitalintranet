@@ -42,7 +42,7 @@ class LettreinfoController extends Controller
             $em->persist($lettreinfo);
             $em->flush($lettreinfo);
 
-            return $this->redirectToRoute('communication_lettreinfo_show', array('id' => $lettreinfo->getId()));
+            return $this->redirectToRoute('communication_lettreinfo_index', array('id' => $lettreinfo->getId()));
         }
 
         return $this->render('HopitalBundle:communication:lettreinfo_new.html.twig', array(
@@ -51,19 +51,6 @@ class LettreinfoController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a communication entity.
-     *
-     */
-    public function showAction(Lettreinfo $lettreinfo)
-    {
-        $lettreinfo_deleteForm = $this->createDeleteForm($lettreinfo);
-
-        return $this->render('HopitalBundle:communication:lettreinfo_show.html.twig', array(
-            'lettreinfo' => $lettreinfo,
-            'lettreinfo_delete_form' => $lettreinfo_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing lettreinfo entity.

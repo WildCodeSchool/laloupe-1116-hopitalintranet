@@ -13,5 +13,8 @@ HopitalBundle\Entity\Idees:
         ideestitle:
             type: string
             length: 50
+        txtdef:
+            type: string
+            length: 255
 
     lifecycleCallbacks: {  }

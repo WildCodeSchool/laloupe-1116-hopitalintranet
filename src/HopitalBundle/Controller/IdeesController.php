@@ -6,6 +6,7 @@ use HopitalBundle\Entity\Idees;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use HopitalBundle\Form\IdeesType;
+use HopitalBundle\Repository\IdeesRepository;
 
 /**
  * Idees controller.
@@ -21,10 +22,10 @@ class IdeesController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $ideess = $em->getRepository('HopitalBundle:Idees')->findAll();
+        $idees = $em->getRepository('HopitalBundle:Idees')->findAll();
 
         return $this->render('HopitalBundle:personnel:idees_index.html.twig', array(
-            'ideess' => $ideess,
+            'idees' => $idees,
         ));
     }
 
@@ -43,7 +44,7 @@ class IdeesController extends Controller
             $em->persist($idees);
             $em->flush($idees);
 
-            return $this->redirectToRoute('personnel_idees_show', array('id' => $idees->getId()));
+            return $this->redirectToRoute('personnel_idees_index', array('id' => $idees->getId()));
         }
 
         return $this->render('HopitalBundle:personnel:idees_new.html.twig', array(
@@ -52,19 +53,6 @@ class IdeesController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a personnel entity.
-     *
-     */
-    public function showAction(Idees $idees)
-    {
-        $idees_deleteForm = $this->createDeleteForm($idees);
-
-        return $this->render('HopitalBundle:personnel:idees_show.html.twig', array(
-            'idees' => $idees,
-            'idees_delete_form' => $idees_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing idees entity.
@@ -110,7 +98,7 @@ class IdeesController extends Controller
     /**
      * Creates a form to delete a idees entity.
      *
-     * @param Idees $personnel The idees entity
+     * @param Idees $idees The idees entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
@@ -120,6 +108,29 @@ class IdeesController extends Controller
             ->setAction($this->generateUrl('personnel_idees_delete', array('id' => $idees->getId())))
             ->setMethod('DELETE')
             ->getForm();
+    }
+
+
+    public function ideesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $Request = $this->getRequest();
+        if ($Request->getMethod() == "POST") {
+            $subject = $Request->get("object");
+
+            $message = "" . "\n\n" . $Request->get("message");
+
+            $message = \Swift_Message::newInstance('Test')
+                ->setSubject($subject)
+                ->setFrom(array('boiteaidees28@gmail.com' => 'Site internet'))
+                ->setTo(array('retatsylvie@gmail.com'))
+                ->setBody($message);
+            $this->get('mailer')->send($message);
+
+
+
+        }
+        return $this->render('HopitalBundle:personnel:idees_index.html.twig');
     }
 
 }

@@ -1,19 +1,6 @@
-personnel_idees:
-    path:     /idees
-    defaults: { _controller: "HopitalBundle:Personnel:idees" }
-    methods:  [GET, POST]
-
-
-
-
 personnel_menu_index:
     path:     /menu
     defaults: { _controller: "HopitalBundle:Menu:index" }
-    methods:  GET
-
-personnel_menu_show:
-    path:     /menu/{id}/show
-    defaults: { _controller: "HopitalBundle:Menu:show" }
     methods:  GET
 
 personnel_menu_new:
@@ -40,11 +27,6 @@ personnel_covoiturage_index:
     defaults: { _controller: "HopitalBundle:Covoiturage:index" }
     methods:  GET
 
-personnel_covoiturage_show:
-    path:     /covoiturage/{id}/show
-    defaults: { _controller: "HopitalBundle:Covoiturage:show" }
-    methods:  GET
-
 personnel_covoiturage_new:
     path:     /covoiturage/new
     defaults: { _controller: "HopitalBundle:Covoiturage:new" }
@@ -64,16 +46,14 @@ personnel_covoiturage_delete:
 
 
 
-
+personnel_idees_idees:
+    path:     /ideess
+    defaults: { _controller: "HopitalBundle:Idees:idees" }
+    methods:  [GET, POST]
 personnel_idees_index:
     path:     /idees
     defaults: { _controller: "HopitalBundle:Idees:index" }
-    methods:  GET
-
-personnel_idees_show:
-    path:     /idees/{id}/show
-    defaults: { _controller: "HopitalBundle:Idees:show" }
-    methods:  GET
+    methods:  [GET, POST]
 
 personnel_idees_new:
     path:     /idees/new
@@ -98,11 +78,6 @@ personnel_planniciel_index:
      defaults: { _controller: "HopitalBundle:Planniciel:index" }
      methods:  GET
 
-personnel_planniciel_show:
-     path:     /planniciel/{id}/show
-     defaults: { _controller: "HopitalBundle:Planniciel:show" }
-     methods:  GET
-
 personnel_planniciel_new:
      path:     /planniciel/new
      defaults: { _controller: "HopitalBundle:Planniciel:new" }
@@ -124,11 +99,6 @@ personnel_planniciel_delete:
 personnel_postvacant_index:
     path:     /postvacant
     defaults: { _controller: "HopitalBundle:Postvacant:index" }
-    methods:  GET
-
-personnel_postvacant_show:
-    path:     /postvacant/{id}/show
-    defaults: { _controller: "HopitalBundle:Postvacant:show" }
     methods:  GET
 
 personnel_postvacant_new:
