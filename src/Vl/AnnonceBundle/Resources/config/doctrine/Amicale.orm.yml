@@ -24,6 +24,12 @@ Vl\AnnonceBundle\Entity\Amicale:
         prix:
             type: integer
 
+
+    manyToOne:
+          service:
+              targetEntity: IuchBundle\Entity\Service
+              inversedBy: id
+
     lifecycleCallbacks:
         prePersist: [ preUpload ]
         preUpdate: [ preUpload ]
