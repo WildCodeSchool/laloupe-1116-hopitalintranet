@@ -106,6 +106,36 @@ class Amicale
      */
     private $prix;
 
+    /**
+     * @var int
+     */
+    private $nom;
+
+
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Amicale
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
 
     /**
      * Get id
