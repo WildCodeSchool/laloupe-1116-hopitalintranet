@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <h1>Création d'un évènement</h1>
+
+    {{ form_start(form) }}
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="">Date de début d'évènement</p>
+                    <div class="input-group">
+                        {{ form_widget(form.start) }}
+                        {{ form_errors(form.start) }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p class="">Date de fin d'évènement</p>
+                    <div class="input-group">
+                        {{ form_widget(form.end ) }}
+                        {{ form_errors(form.end) }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p class="">Réservations Salles</p>
+                    <div class="input-group">
+                        {{ form_widget(form.salle) }}
+                        {{ form_errors(form.salle) }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p class="">Réservations Voiture</p>
+                    <div class="input-group">
+                        {{ form_widget(form.voiture ) }}
+                        {{ form_errors(form.voiture) }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p class="">Evènements</p>
+                    <div class="input-group">
+                        {{ form_widget(form.evenement ) }}
+                        {{ form_errors(form.evenement) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <p class="">Titre de l'évènement</p>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    {{ form_widget(form.titre , {'attr': {'class': 'form-control', 'placeholder': 'Titre de l\'évènement'}}) }}
+                    {{ form_errors(form.titre) }}
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <p class="">Description de l'évènement</p>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    {{ form_widget(form.contenu , {'attr': {'class': 'form-control', 'placeholder': 'Description de l\'évènement'}}) }}
+                    {{ form_errors(form.contenu) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="input-group">
+                    {{ form_widget(form.images, {'attr': {'class': 'help-block'}}) }}
+                    {{ form_errors(form.images) }}
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="checkbox">
+                    <label>
+                        {{ form_widget(form.addHomeActu) }} Afficher en page d'accueil
+                    </label>
+                    {{ form_errors(form.addHomeActu) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="edit_admin">
+            <input class="btn btn-default edit_admin"  type="submit" value="Créer" />
+            <a class="btn btn-default edit_admin"  href="{{ path('vl_agenda_homepage') }}">Retour au calendrier</a>
+        </div>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
+

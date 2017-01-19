@@ -1,0 +1,191 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: "@HopitalBundle/Resources/config/services.yml" }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: fr
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #     path:     "%database_path%"
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }
+
+
+#### Sonata Configuration ####
+    ####### SonataAdmin #######
+sonata_admin:
+    security:
+        handler: sonata.admin.security.handler.role
+
+    title:      'SACH@'
+    title_logo:  bundles/iuch/img/logoIntranet.png
+    templates:
+        layout:  'IuchBundle:Admin:standart_layout.html.twig'
+
+
+    ### config blocks dashboard admin ###
+    dashboard:
+        groups:
+            iuch.group.user:
+                icon: '<i class="fa fa-users"></i>'
+                label: "Utilisateurs"
+                items:
+                    - sonata.user.admin.user
+                    - sonata.service
+                    - sonata.fonction
+            iuch.group.photo:
+                icon: '<i class="fa fa-camera"></i>'
+                label: "Photos"
+
+            iuch.group.chartes:
+                icon: '<i class="fa fa-file"></i>'
+                label: "Chartes"
+
+            iuch.group.tenue:
+                icon: '<i class="fa fa-user-md"></i>'
+                label: "Tenues"
+
+            iuch.group.keys:
+                icon: '<i class="fa fa-key"></i>'
+                label: "Matériel"
+
+            iuch.group.mails:
+                icon: '<i class="fa fa-envelope"></i>'
+                label: "Mails"
+
+        blocks:
+          -
+            position: top
+            class: col-md-12
+            type: sonata.admin.block.admin_list
+
+          - position: bottom
+            class: col-md-12
+            type: sonata.block.service.text
+            settings:
+                content: >
+                    <footer class="footer-admin">
+                      <p>Développé par les élèves de la <a href="http://www.wildcodeschool.fr">Wild Code School</a> - Erwan Haquet - Thierry Damey - Lucie Mannechez</p>
+                    </footer>
+
+sonata_doctrine_orm_admin:
+    templates:
+        form:
+            - ApplicationSonataUserBundle:Admin:custom_form_admin_fields.html.twig
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        sonata.user.block.menu:    # used to display the menu in profile pages
+        sonata.user.block.account: # used to display menu option (login option)
+        sonata.block.service.text:
+        sonata.block.service.rss:
+        sonata.admin.block.search_result:
+            contexts: [admin]
+
+        # Block Stat créé pour le DashBoard
+        sonata.block.service.stat: ~
+        sonata.block.service.statmateriel: ~
+        sonata.block.service.statlastuser: ~
+        sonata.block.service.stattenue: ~
+
+#### FOSUser Bundle Configuration ####
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Application\Sonata\UserBundle\Entity\User
+
+    group:
+        group_class:   Application\Sonata\UserBundle\Entity\Group
+        group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
+
+    service:
+        user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
+
+    profile:  # Authentication Form
+        form:
+            type:               fos_user_profile
+            handler:            fos_user.profile.form.handler.default
+            name:               fos_user_profile_form
+            validation_groups:  [Authentication] # Please note : this is not the default value
+####### SonataUser #######
+sonata_user:
+    security_acl: false
+    manager_type: orm
+    profile:
+        form:
+            type:               application_sonata_user_profile
+            #handler:            application.sonata.user.profile.form.handler
+            name:               sonata_user_profile_form
+            validation_groups:  [Profile]
+
+    admin:
+        user:
+            class:          IuchBundle\Admin\UserAdmin           # Override User CRUD in SonataAdmin
+            controller:     ApplicationSonataAdminBundle:CRUD    # Extend CRUDController of SonataAdmin
+            translation:    SonataUserBundle
+
+ivory_ck_editor:
+    configs:
+        my_config:
+            toolbar: [  [ 'Image', '-', 'Link','Unlink' ], "/", [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat', '-', 'NumberedList','BulletedList', '-', 'JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], "/", [ 'Styles','Format','FontSize', 'TextColor' ] ]

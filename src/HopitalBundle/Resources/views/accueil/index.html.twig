@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <body>
+    <main>
+        <div class="row">
+            <div class="col-md-6" id="nouveautes">
+                <ul id="news">
+                    <li>Consulter la nouvelle <a href="">lettre d'information</a> de Chartres.</li>
+                    <li>Reservez vos places à <a href="">DisneyLand Paris</a>.</li>
+                    <li>Organisez votre <a href="">groupe de travail</a>.</li>
+                    <li>Consultez les <a href="">postes vacants</a> pour de nouvelles opportunités.</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="container" id="search">
+                    <div class="input-group" id="adv-search">
+                        <input type="text" class="form-control" placeholder="Rechercher" />
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 actu">
+                <div class="jumbotron">
+                    <div class="container">
+                        <h3>ACTUALITÉS</h3>
+                        <p class="actuliens">
+                            <!-- start feedwind code -->
+                            <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="?widget_parameter=%7B%22sources%22%3A%5B%7B%22source%22%3A%22http%3A%2F%2Fwww.le-perche.fr%2Ffeed%2F%22%2C%22type%22%3A%22RSS%22%7D%5D%2C%22name%22%3A%22%22%2C%22width%22%3A0%2C%22height%22%3A%22240%22%2C%22height_by_article%22%3A0%2C%22target%22%3A%22_blank%22%2C%22font%22%3A%22Arial%2C%20Helvetica%2C%20sans-serif%22%2C%22title_font_size%22%3A%2216%22%2C%22item_title_font_size%22%3A%2216%22%2C%22item_description_font_size%22%3A%2212%22%2C%22border%22%3A%22on%22%2C%22css_url%22%3A%22%22%2C%22responsive%22%3A%22on%22%2C%22text_direction%22%3A%22left%22%2C%22text_alignment%22%3A%22left%22%2C%22corner%22%3A%22rounded%22%2C%22scroll%22%3A%22on%22%2C%22auto_scroll%22%3A%22on%22%2C%22auto_scroll_direction%22%3A%22up%22%2C%22auto_scroll_step_speed%22%3A%222%22%2C%22auto_scroll_mc_speed%22%3A%2220%22%2C%22sort%22%3A%22new%22%2C%22title%22%3A%22on%22%2C%22title_sentence%22%3A%22%22%2C%22title_link%22%3A%22%22%2C%22title_bgcolor%22%3A%22%23ffffff%22%2C%22title_color%22%3A%22%23505659%22%2C%22title_bgimage%22%3A%22%22%2C%22item_bgcolor%22%3A%22%23ffffff%22%2C%22item_bgimage%22%3A%22%22%2C%22item_title_length%22%3A%2255%22%2C%22item_title_color%22%3A%22%232e7ec8%22%2C%22item_border_bottom%22%3A%22on%22%2C%22item_description%22%3A%22both%22%2C%22item_link%22%3A%22off%22%2C%22item_description_length%22%3A%22100%22%2C%22item_description_color%22%3A%22%23505659%22%2C%22item_date%22%3A%22on%22%2C%22item_date_format%22%3A%22%25b%20%25e%2C%20%25Y%20%25k%3A%25M%22%2C%22item_date_timezone%22%3A%22%22%2C%22item_description_style%22%3A%22thumbnail%22%2C%22item_thumbnail%22%3A%22crop%22%2C%22item_thumbnail_selection%22%3A%22auto%22%2C%22article_num%22%3A%2215%22%2C%22item_player%22%3A%22youtube%22%2C%22keyword_inc%22%3A%22%22%2C%22keyword_exc%22%3A%22%22%7D">
+
+                            </script> <!-- end feedwind code -->
+
+
+                            <!--FLUX RSS qui-ne-fonctionne-plus-mais-quand-même-on-ne-sait-jamais
+                            <script language="Javascript">
+                                var member=""; //optionnel si vous etes inscrit sur la plateforme actifpub  le parametrage se fait dans votre espace membre
+                                var fichier="http://www.le-perche.fr/feed/";
+                                var limite="1";  //  sujets compris entre 1
+                                var limite1="5";   //  et plus
+                                var aspect="1";    //  0 ou 1 (1 permet d'afficher lien + description, 0 que les liens)
+                                var minute="1";      //  0 ou 1 (1 permet d'afficher date et heure, 0 pas de date et heure)
+                                var sujet="1"; //  0 ou 1 (1 permet d'afficher le titre des sujets traités, 0 pas de titre )
+                                var te="Arial, sans-serif";  // Police de caractères (Verdana, arial etc...)
+                                var fil_textsize="14";     // taille des liens et description
+                                var title_textcolor="337AB7";    // couleur des liens (000000 donne noir)
+                                var tlien="none";  // style du lien none ou underline
+                                var text_textcolor="000000";  // couleur description (000000 donne noir)
+                                var frame_color=""; // couleur arrière plan (FFFFFF donne blanc)
+                                var content="0"; // 0 ou 1 comme paramètre optionnel, 1  format html,  0  format texte
+                                var extract="";  // laisser vide ou indiquez le nombre de caractères que vous souhaitez garder dans le corps du flux
+                                var cache="15"; // gestion du cache exprimée en minutes - en fonction de la fréquence de mise à jour
+                                document.write('<s'+'cript language="JavaScript" charset="ISO-8859-1" type="text/javascript" SRC="http://www.actifpub.com/rss.php?fichier_AP_='+fichier+'&limite_AP_='+limite+'&limite1_AP_='+limite1+'&aspect_AP_='+aspect+'&minute_AP_='+minute+'&sujet_AP_='+sujet+'&te_AP_='+te+'&fil_textsize_AP_='+fil_textsize+'&title_textcolor_AP_='+title_textcolor+'&text_textcolor_AP_='+text_textcolor+'&frame_color_AP_='+frame_color+'&content_AP_='+content+'&cache_AP_='+cache+'&extract_AP_='+extract+'&tlien_AP_='+tlien+'&java=1&member_AP_='+member+'"></sc'+'ript>');
+                            </script></p> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 liensUtiles">
+                <div class="jumbotron">
+                    <div class="container utiles">
+                        <h3>LIENS UTILES</h3>
+                        <a href="{{ path('moncompte_agenda') }}">- Calendrier des réservations</a><br>
+                        <a href="{{ path('moncompte_agenda') }}">- Alertes DGS</a><br>
+
+                        <a href="{{ asset('https://bms.bluekango.com/hl-la-loupe-11312/index.php') }}">- Blue Médi</a><br>
+                        <a href="{{ asset('https://trajectoire.sante-ra.fr/Trajectoire/pages/AccesLibre/Orienter.aspx') }}">- Via Trajectoire</a><br>
+                        <a href="{{ path('moncompte_agenda') }}">- Vidal Hoptimal</a><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 meteo">
+                <div class="jumbotron">
+                    <div class="container">
+                        <p class="alerte"><iframe src="http://vigilance.meteofrance.com/vignette_vigi_dep_mini.html?a=28&b="  width="380" height="111" frameborder="0">
+                            </iframe></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    </body>
+{% endblock %}

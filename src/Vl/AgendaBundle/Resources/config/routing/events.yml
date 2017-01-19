@@ -1,0 +1,26 @@
+events:
+    path:     /
+    defaults: { _controller: "VlAgendaBundle:Events:index" }
+    methods:  GET
+    options:
+        expose: true
+
+show_all_events:
+    path:     /events
+    defaults: { _controller: "VlAgendaBundle:Events:showAllEvents" }
+
+
+events_new:
+    path:     /{start}/new
+    defaults: { _controller: "VlAgendaBundle:Events:new", start: 0 }
+    methods:  [GET, POST]
+
+events_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VlAgendaBundle:Events:edit" }
+    methods:  [GET, POST]
+
+events_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VlAgendaBundle:Events:delete" }
+    methods:  [GET, DELETE]

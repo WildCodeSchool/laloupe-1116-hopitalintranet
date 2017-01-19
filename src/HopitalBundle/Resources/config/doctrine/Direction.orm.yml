@@ -1,0 +1,27 @@
+HopitalBundle\Entity\Direction:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\DirectionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+
+    fields:
+        directionimg:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload6 ]
+      preUpdate: [ preUpload, preUpload6 ]
+      postPersist: [ upload, upload6 ]
+      postUpdate: [ upload, upload6 ]
+      postRemove: [ removeUpload, removeUpload6 ]

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<tbody>
+{% for lettreinfo in lettreinfos %}
+
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Lettreinfo</h1>
+            <object data="{{ app.request.basepath }}/uploads/{{ lettreinfo.file1 }}" type="application/pdf" class="notedinformation">
+            </object>
+        </div>
+    </div>
+
+{% endfor %}
+
+
+{% endblock %}
+

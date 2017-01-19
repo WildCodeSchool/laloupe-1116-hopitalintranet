@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Journaux internes</h1>
+            <div class="noteservice">
+                {% set maxId = 0 %}
+                {% for journaux in journauxs %}
+                    {% set maxId = max(journaux.id, maxId) %}
+                {% endfor %}
+                {% for journaux in journauxs %}
+                    {% if journaux.id == maxId %}
+                        <object style="width: 100%; height: 100%" data=" {{ app.request.basepath }}/uploads/{{ journaux.journauximg }}">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field%}
+    <a href="{{ path('admin_iuch_service_edit', {'id': object.service.id }) }}">
+        {% if object.chefService %}
+            <span class="label label-success">oui</span>
+        {% else %}
+            <span class="label label-danger">non</span>
+        {% endif %}
+    </a>
+{% endblock %}

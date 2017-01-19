@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Note de service</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ noteservice.id }}</td>
+        </tr>
+        <tr>
+            <th>Galerie1</th>
+            <img src="{{ app.request.basepath }}/uploads/{{ noteservice.noteservice1 }}"/>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_noteservice_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('documentation_noteservice_edit', { 'id': noteservice.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,39 @@
+hopital_homepage:
+    path:     /
+    defaults: { _controller: HopitalBundle:Default:index }
+
+
+hopital_accueil:
+    resource: "@HopitalBundle/Resources/config/routing/accueil.yml"
+    prefix:   /accueil
+
+
+hopital_presentation:
+    resource: "@HopitalBundle/Resources/config/routing/presentation.yml"
+    prefix:   /presentation
+
+
+hopital_documentation:
+        resource: "@HopitalBundle/Resources/config/routing/documentation.yml"
+        prefix:   /documentation
+
+
+hopital_communication:
+        resource: "@HopitalBundle/Resources/config/routing/communication.yml"
+        prefix:   /communication
+
+hopital_recommandation:
+        resource: "@HopitalBundle/Resources/config/routing/recommandation.yml"
+        prefix:   /recommandation
+
+hopital_personnel:
+        resource: "@HopitalBundle/Resources/config/routing/personnel.yml"
+        prefix:   /personnel
+
+hopital_demarches:
+        resource: "@HopitalBundle/Resources/config/routing/demarches.yml"
+        prefix:   /demarches
+
+hopital_moncompte:
+        resource: "@HopitalBundle/Resources/config/routing/moncompte.yml"
+        prefix:   /moncompte

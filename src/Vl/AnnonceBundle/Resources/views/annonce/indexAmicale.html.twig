@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        <h1 class="center-align">Liste des annonces de l'Amicale</h1>
+        <div class="row">
+            <form action="{{ path('annonce_indexAmicale') }}">
+                <div class="col s2">
+                    <input class="btn waves-effect waves-light" type="submit" value="Afficher">
+                </div>
+            </form>
+        </div>
+
+        {% if amicales != null %}
+            <table class="centered striped">
+                <thead>
+                <tr class="table_head">
+                    <th>Image</th>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for amicale in amicales %}
+                    <tr>
+                        <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ amicale.image }}" alt="annonce"></td>
+                        <td>{{ amicale.titre }}</td>
+                        <td>{{ amicale.auteur }}</td>
+                        <td>{{ amicale.description }}</td>
+                        <td>{{ amicale.prix }}</td>
+                        <td>
+                            <a href="{{ path('annonce_showAmicale', { 'id': amicale.id }) }}"><i class="material-icons">search</i></a>
+                            <a href="{{ path('annonce_editAmicale', { 'id': amicale.id }) }}"><i class="material-icons">mode_edit</i></a>
+                            <a href="{{ path('annonce_deleteAmicale', { 'id': amicale.id }) }}"><i class="material-icons">delete_forever</i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h3>Il n'y a pas d'annonces</h3>
+        {% endif %}
+        <div class="add_button center-align">
+            <a class="waves-effect waves-light btn" href="{{ path('annonce_newAmicale') }}">Ajouter une annonce</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {# Call jQuery #}
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+{% endblock %}

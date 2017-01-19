@@ -1,0 +1,27 @@
+HopitalBundle\Entity\Ght:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\GhtRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+
+    fields:
+        ghtimg:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload7 ]
+      preUpdate: [ preUpload, preUpload7 ]
+      postPersist: [ upload, upload7 ]
+      postUpdate: [ upload, upload7 ]
+      postRemove: [ removeUpload, removeUpload7 ]
