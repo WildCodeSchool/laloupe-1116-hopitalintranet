@@ -9,54 +9,66 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1 class="center-align">Modifier l'annonce {{ annonce.titre }}</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <br>
+            <div class="container">
+                <h4 class="lienstitre">Modifier la petite annonce {{ annonce.titre }}</h4>
 
-        <div class="row">
-            {{ form_start(edit_form) }}
-            <div class="row">
-                <div class="input-field col m6 s12">
-                    {{ form_label(edit_form.titre) }}
-                    {{ form_widget(edit_form.titre) }}
-                    {{ form_errors(edit_form.titre) }}
+                <div class="row">
+                    {{ form_start(edit_form) }}
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            {{ form_label(edit_form.titre) }}
+                            {{ form_widget(edit_form.titre) }}
+                            {{ form_errors(edit_form.titre) }}
+                        </div>
+                        <div class="input-field col m6 s12">
+                            {{ form_label(edit_form.auteur) }}
+                            {{ form_widget(edit_form.auteur) }}
+                            {{ form_errors(edit_form.auteur) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            {{ form_label(edit_form.description) }}
+                            {{ form_widget(edit_form.description) }}
+                            {{ form_errors(edit_form.description) }}
+                        </div>
+                        <div class="input-field col s6">
+                            {{ form_label(edit_form.prix) }}
+                            {{ form_widget(edit_form.prix) }}
+                            {{ form_errors(edit_form.prix) }}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s1">
+                            <img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="image actuelle">
+                        </div>
+                        <div class="file-field input-field col s11">
+
+                            {{ form_label(edit_form.file, 'Cliquer pour insérer votre image', {'image': {'class': 'imgage'}}) }}
+                            {{ form_widget(edit_form.file) }}
+
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add_button center-align">
+                        <input class="waves-effect waves-light btn" type="submit" value="Modifier l'annonce"/>
+                    </div>
+                    {{ form_end(edit_form) }}
                 </div>
-                <div class="input-field col m6 s12">
-                    {{ form_label(edit_form.auteur) }}
-                    {{ form_widget(edit_form.auteur) }}
-                    {{ form_errors(edit_form.auteur) }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    {{ form_widget(edit_form.description) }}
-                    {{ form_errors(edit_form.description) }}
-                </div>
-                <div class="input-field col s6">
-                    {{ form_widget(edit_form.prix) }}
-                    {{ form_errors(edit_form.prix) }}
+
+                <div class="add_button center-align">
+                    <a class="waves-effect waves-light btn" href="{{ path('annonce_index') }}">Retour à la liste
+                        des annonces</a>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col s1">
-                    <img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="image actuelle">
-                </div>
-                <div class="file-field input-field col s11">
-                    <div class="btn">
-                        <span>Image de l'annonce</span>
-                        {{ form_widget(edit_form.file) }}
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
-                    </div>
-                </div>
-            </div>
-            <div class="add_button center-align">
-                <input class="waves-effect waves-light btn" type="submit" value="Modifier l'annonce" />
-            </div>
-            {{ form_end(edit_form) }}
         </div>
-        <a href="{{ path('annonce_index') }}">Retour à la liste des annonces</a>
     </div>
 {% endblock %}
 
