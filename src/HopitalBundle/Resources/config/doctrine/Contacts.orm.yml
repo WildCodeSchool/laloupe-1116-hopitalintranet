@@ -8,4 +8,27 @@ HopitalBundle\Entity\Contacts:
             id: true
             generator:
                 strategy: AUTO
-    lifecycleCallbacks: {  }
+
+
+    fields:
+        contactsimg1:
+            type: string
+            length: 25
+            nullable: true
+        contactsimg2:
+            type: string
+            length: 25
+            nullable: true
+        contactsimg3:
+            type: string
+            length: 25
+            nullable: true
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1, preUpload2, preUpload3 ]
+      preUpdate: [ preUpload, preUpload1, preUpload2, preUpload3 ]
+      postPersist: [ upload, upload1, upload2, upload3 ]
+      postUpdate: [ upload, upload1, upload2, upload3 ]
+      postRemove: [ removeUpload, removeUpload1, removeUpload2, removeUpload3 ]

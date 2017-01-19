@@ -25,10 +25,30 @@ documentation_noteservice_delete:
 
 
 
-documentation_contacts:
+documentation_contacts_index:
     path:     /contacts
-    defaults: { _controller: "HopitalBundle:Documentation:contacts" }
+    defaults: { _controller: "HopitalBundle:Contacts:index" }
     methods:  GET
+
+documentation_contacts_show:
+    path:     /contacts/{id}/show
+    defaults: { _controller: "HopitalBundle:Contacts:show" }
+    methods:  GET
+
+documentation_contacts_new:
+    path:     /contacts/new
+    defaults: { _controller: "HopitalBundle:Contacts:new" }
+    methods:  [GET, POST]
+
+documentation_contacts_edit:
+    path:     /contacts/{id}/edit
+    defaults: { _controller: "HopitalBundle:Contacts:edit" }
+    methods:  [GET, POST]
+
+documentation_contacts_delete:
+    path:     /contacts/{id}/delete
+    defaults: { _controller: "HopitalBundle:Contacts:delete" }
+    methods:  DELETE
 
 
 
