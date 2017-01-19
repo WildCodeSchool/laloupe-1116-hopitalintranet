@@ -1,0 +1,33 @@
+HopitalBundle\Entity\Groupemessage:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\GroupemessageRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        utilisateur:
+            type: string
+            length: 255
+        message:
+            type: text
+        image:
+            type: string
+            length: 255
+
+    manyToOne:
+        groupes:
+            targetEntity: HopitalBundle\Entity\Groupe
+            joinColumn:
+                onDelete: CASCADE
+
+
+    lifecycleCallbacks:
+        prePersist: [ preUpload ]
+        preUpdate: [ preUpload ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]

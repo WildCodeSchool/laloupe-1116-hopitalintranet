@@ -15,16 +15,6 @@ class GroupeType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('utilisateur', 'text', array(
-                'required' => false,
-                'attr' => array(
-                    'placeholder' => "Si non renseigné, anonyme"
-                )
-            ))
-            ->add('message', 'textarea', array(
-                'attr' => array('class' => 'materialize-textarea')
-            ))
-            ->add('file', 'file', array('label' => 'Image du message', 'required' => false))
         ;
     }
 
