@@ -538,28 +538,23 @@ div.c-wrapper{
 
 /**************************** DEBUT JOURNAL ***********************/
 
-.journalimg{
-
-    border: 5px solid #E7E7E7;
-}
-
 .journaux{
-    margin-left: 120px;
+    width: 900px;
+    height: 500px;
+    margin-right: 50px;
 }
 
-.journalimgmodal{
-    width: 860px;
-    height: 600px;
-    margin: 0px 20px 20px 20px;
-}
-
-.close{
-    margin-top:5px;
-    margin:10px;
-}
-
-.boutonjournal{
-    margin-left: 0px;
+.journauxbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 150px;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-top:30px;
+    margin-bottom: 10px;
 }
 
 
@@ -653,6 +648,15 @@ div.c-wrapper{
     margin-right: 50px;
 }
 
+.archivestitres{
+    margin-left: 10px;
+}
+
+.modalarchivespdf{
+    height: 650px;
+    width: 860px;
+    margin-left: 20px;
+}
 
 
 

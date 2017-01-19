@@ -3,35 +3,92 @@
 {% block body %}
 
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier la galerie </h1>
-            <br>
-            {{ form_start(edit_form) }}
-            <div class="row galerie">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{edit_form.children.file1.vars.label}}
-                    {{ form_label(edit_form.galerie1, 'Nommez votre galerie:', {'galerie1': {'class': 'galerie1'}}) }}
-                    {{ form_widget(edit_form.galerie1)}}
-                    {{ form_errors(edit_form.galerie1) }}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(edit_form.file1)}}
-                    {{ form_errors(edit_form.file1) }}
+    <div class="col-md-offset-2 col-md-8 fondblanc">
 
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
-
-                    {{ form_end(edit_form) }}
-
-
-                    {{ form_start(galerie_delete_form) }}
-                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(galerie_delete_form) }}
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="lienstitre">Notes de services</h1>
             </div>
         </div>
+
+
+        <div class="row">
+
+            <!--Début archives noteservice-->
+
+            <div class="col-md-2">
+                <div class="dropdown">
+                    <button class="btn journauxbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Archives
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        {% set maxId = 0 %}
+                        {% for noteservice in noteservices %}
+                            {% set maxId = max(noteservice.id, maxId) %}
+                        {% endfor %}
+                        {% for noteservice in noteservices %}
+                            {% if noteservice.id != maxId %}
+                                {% if noteservice.titlenoteservice != NULL %}
+                                    <p data-toggle="modal" data-target="{{ '#' ~ noteservice.idnoteservice }}" class="archivestitres"> {{ noteservice.titlenoteservice }} </p>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!--Fin archives noteservice-->
+
+
+            <!--Début nouvelles astreintes-->
+
+            <div class="col-md-10">
+                {% set maxId = 0 %}
+                {% for noteservice in noteservices %}
+                    {% set maxId = max(noteservice.id, maxId) %}
+                {% endfor %}
+                {% for noteservice in noteservices %}
+                    {% if noteservice.id == maxId %}
+                        <p>{{ noteservice.titlenoteservice }}</p>
+                    {% endif %}
+                    {% if noteservice.id == maxId %}
+                        <object data="{{ app.request.basepath }}/uploads/{{ noteservice.noteserviceimg }}" type="application/pdf" class="journaux">
+                        </object>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!--Fin nouvelles noteservice-->
+
+
+
+
+        <!--Début modal noteservice-->
+
+        {% for noteservice in noteservices %}
+            <div id="{{ noteservice.idnoteservice }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content" style="height: 750px">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if noteservice.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ noteservice.noteserviceimg }}" type="application/pdf" class="modalarchivespdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!--Fin modal noteservice-->
+
+
+
     </div>
+
 
 {% endblock %}

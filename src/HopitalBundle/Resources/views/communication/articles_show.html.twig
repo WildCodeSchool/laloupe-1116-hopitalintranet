@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Articles</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ articles.id }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('communication_articles_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('communication_articles_edit', { 'id': articles.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(articles_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(articles_delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

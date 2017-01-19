@@ -1,11 +1,8 @@
 <?php
-
 namespace HopitalBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class LettreinfoType extends AbstractType
 {
     /**CODE AJOUTÉ
@@ -16,13 +13,11 @@ class LettreinfoType extends AbstractType
     {
         $builder
             ->add('lettreinfoimg')
-            ->add('file1', 'file', array('required' => false));
+            ->add('file1', 'file', array('required' => false))
+            ->add('titlelettreinfo')
+            ->add('idlettreinfo');
     }
-
     /**FIN CODE AJOUTÉ
-
-
-
     /**
      * {@inheritdoc}
      */
@@ -32,8 +27,6 @@ class LettreinfoType extends AbstractType
             'data_class' => 'HopitalBundle\Entity\Lettreinfo'
         ));
     }
-
-
     /**
      * {@inheritdoc}
      */
@@ -41,5 +34,4 @@ class LettreinfoType extends AbstractType
     {
         return 'hopital_lettreinfo';
     }
-
 }

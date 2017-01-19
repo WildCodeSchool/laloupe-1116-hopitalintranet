@@ -45,21 +45,21 @@ class LettreinfoController extends Controller
             return $this->redirectToRoute('communication_lettreinfo_show', array('id' => $lettreinfo->getId()));
         }
 
-        return $this->render('@Hopital/communication/lettreinfo_new.html.twig', array(
+        return $this->render('HopitalBundle:communication:lettreinfo_new.html.twig', array(
             'lettreinfo' => $lettreinfo,
             'form' => $form->createView(),
         ));
     }
 
     /**
-     * Finds and displays a presentation entity.
+     * Finds and displays a communication entity.
      *
      */
     public function showAction(Lettreinfo $lettreinfo)
     {
         $lettreinfo_deleteForm = $this->createDeleteForm($lettreinfo);
 
-        return $this->render('@Hopital/communication/lettreinfo_show.html.twig', array(
+        return $this->render('HopitalBundle:communication:lettreinfo_show.html.twig', array(
             'lettreinfo' => $lettreinfo,
             'lettreinfo_delete_form' => $lettreinfo_deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class LettreinfoController extends Controller
             return $this->redirectToRoute('communication_lettreinfo_edit', array('id' => $lettreinfo->getId()));
         }
 
-        return $this->render('@Hopital/communication/lettreinfo_edit.html.twig', array(
+        return $this->render('HopitalBundle:communication:lettreinfo_edit.html.twig', array(
             'lettreinfo' => $lettreinfo,
             'edit_form' => $editForm->createView(),
             'lettreinfo_delete_form' => $lettreinfo_deleteForm->createView(),
@@ -109,7 +109,7 @@ class LettreinfoController extends Controller
     /**
      * Creates a form to delete a lettreinfo entity.
      *
-     * @param Lettreinfo $presentation The lettreinfo entity
+     * @param Lettreinfo $communication The lettreinfo entity
      *
      * @return \Symfony\Component\Form\Form The form
      */

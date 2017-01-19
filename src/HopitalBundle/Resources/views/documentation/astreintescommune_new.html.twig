@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Commune creation</h1>
+
+    {{ form_start(formCommune) }}
+    {{ form_widget(formCommune) }}
+    <input type="submit" value="Create" />
+    {{ form_end(formCommune) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
