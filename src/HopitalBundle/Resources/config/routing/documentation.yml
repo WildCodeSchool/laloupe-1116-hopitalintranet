@@ -149,6 +149,7 @@ documentation_astreintestechnique_delete:
 
 
 
+
 documentation_groupe_index:
     path:     /groupe
     defaults: { _controller: "HopitalBundle:Groupe:index" }
@@ -156,7 +157,7 @@ documentation_groupe_index:
 documentation_groupe_show:
     path:     /groupe/{id}/show
     defaults: { _controller: "HopitalBundle:Groupe:show" }
-    methods:  GET
+    methods:  [GET, POST]
 
 documentation_groupe_new:
     path:     /groupe/new
@@ -171,7 +172,13 @@ documentation_groupe_edit:
 documentation_groupe_delete:
     path:     /groupe/{id}/delete
     defaults: { _controller: "HopitalBundle:Groupe:delete" }
+    methods:  GET
+
+documentation_groupemessage_delete:
+    path:     /groupemessage/{id}/delete
+    defaults: { _controller: "HopitalBundle:Groupe:deleteGroupeMessage" }
     methods:  DELETE
+
 
 
 documentation_journaux_index:
@@ -227,6 +234,11 @@ documentation_galerie_delete:
     path:     galerie/{id}/delete
     defaults: { _controller: "HopitalBundle:Galerie:delete" }
     methods:  DELETE
+
+documentation_galeriecategorie_new:
+    path:     /categorie/new
+    defaults: { _controller: "HopitalBundle:Galerie:newCategorie" }
+    methods:  [GET, POST]
 
 
 
