@@ -16,7 +16,12 @@ class LivretType extends AbstractType
     {
         $builder
             ->add('livretimg')
-            ->add('file1', 'file', array('required' => false));
+            ->add('file1', 'file',   array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "Nom de la page",
+                    'class' => "zonenomimg"
+                )));
     }
 
     /**FIN CODE AJOUTÉ
