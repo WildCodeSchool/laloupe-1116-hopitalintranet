@@ -1,28 +1,3 @@
-demarches_index:
-    path:     /
-    defaults: { _controller: "HopitalBundle:Demarches:index" }
-    methods:  GET
-
-demarches_show:
-    path:     /{id}/show
-    defaults: { _controller: "HopitalBundle:Demarches:show" }
-    methods:  GET
-
-demarches_new:
-    path:     /new
-    defaults: { _controller: "HopitalBundle:Demarches:new" }
-    methods:  [GET, POST]
-
-demarches_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "HopitalBundle:Demarches:edit" }
-    methods:  [GET, POST]
-
-demarches_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "HopitalBundle:Demarches:delete" }
-    methods:  DELETE
-
 demarches_certification_index:
     path:     /certification
     defaults: { _controller: "HopitalBundle:Certification:index" }
@@ -53,8 +28,6 @@ demarches_epp:
 
 
 
-
-
 demarches_processus_index:
     path:     /processus
     defaults: { _controller: "HopitalBundle:Processus:index" }
@@ -79,9 +52,6 @@ demarches_processuscategorie_new:
     path:     /categorie/new
     defaults: { _controller: "HopitalBundle:Processus:newCategorie" }
     methods:  [GET, POST]
-
-
-
 
 
 
