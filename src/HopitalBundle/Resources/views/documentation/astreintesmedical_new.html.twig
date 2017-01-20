@@ -3,30 +3,31 @@
 {% block body %}
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Création Astreintes médicales</h1>
+            <h1 class="lienstitrenew">Création d'une astreintes medical</h1>
             <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{ form_start(formMedical) }}
-                    {{ form_label(formMedical.idmedical, 'Id de votre astreinte médicale:', {'idmedical': {'class': 'idmedical'}}) }}
-                    {{ form_widget(formMedical.idmedical)}}
-
-                    {{ form_label(formMedical.titlemedical, 'Titre de votre astreinte médicale:', {'titlemedical': {'class': 'titlemedical'}}) }}
-                    {{ form_widget(formMedical.titlemedical)}}
-                    {{ form_label(formMedical.medicalimg, 'Nommez votre astreinte médicale:', {'medicalimg': {'class': 'medicalimg'}}) }}
-                    {{ form_widget(formMedical.medicalimg)}}
-                    {{ form_label(formMedical.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}
-                    {{ form_widget(formMedical.file2)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_start(formMedical) }}
+                            {{ form_label(formMedical.medicalimg, 'Nommez votre astreinte médicale:') }}<br>
+                            {{ form_widget(formMedical.medicalimg)}}<br>
+                            {{ form_label(formMedical.file2, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(formMedical.file2)}}<br>
+                            {{ form_label(formMedical.idmedical, 'Id de votre astreinte médicale:') }}<br>
+                            {{ form_widget(formMedical.idmedical)}}<br>
+                            {{ form_label(formMedical.titlemedical, 'Titre de votre astreinte médicale:') }}<br>
+                            {{ form_widget(formMedical.titlemedical)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Create" class="btnnew" />
+                        </div>
+                    </div>
                     {{ form_end(formMedical) }}
                 </div>
             </div>
-
         </div>
     </div>
 {% endblock %}

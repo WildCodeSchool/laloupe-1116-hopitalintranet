@@ -6,10 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DemarchesType extends AbstractType
+class EppType extends AbstractType
 {
-
-
     /**CODE AJOUTÉ
     /**
      * {@inheritdoc}
@@ -17,33 +15,32 @@ class DemarchesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('certification')
-            ->add('epp')
-            ->add('processus')
-            ->add('paqss');
+            ->add('epp1')
+            ->add('file1', 'file', array('required' => false))
+            ->add('rubrique');
 
     }
 
     /**FIN CODE AJOUTÉ
-
-
+     *
+     *
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Demarches'
+            'data_class' => 'HopitalBundle\Entity\Epp'
         ));
     }
+
 
     /**
      * {@inheritdoc}
      */
     public function getBlockPrefix()
     {
-        return 'hopitalbundle_demarches';
+        return 'hopitalBundle_epp';
     }
-
 
 }

@@ -12,10 +12,27 @@ class NoteserviceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('noteserviceimg')
+            ->add('noteserviceimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                        'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('titlenoteservice')
-            ->add('idnoteservice');
+            ->add('titlenoteservice', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Note de service 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idnoteservice', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: NS0001",
+                    'class' => "zonenew"
+                )
+            ));
+
+
     }
     /**FIN CODE AJOUTÉ
     /**

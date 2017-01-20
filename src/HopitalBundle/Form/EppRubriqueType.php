@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class LivretType extends AbstractType
+class EppRubriqueType extends AbstractType
 {
     /**CODE AJOUTÉ
     /**
@@ -15,30 +15,20 @@ class LivretType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('livretimg', 'text', array(
-                'required' => false,
-                'attr' => array(
-                    'class' => "zonenew"
-                )))
-            ->add('file1', 'file',   array(
-                'required' => false,
-                'attr' => array(
-                    'placeholder' => "Nom de la page",
-                    'class' => "zonenomimg"
-                )));
+            ->add('rubrique');
+
     }
 
     /**FIN CODE AJOUTÉ
-
-
-
+     *
+     *
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Livret'
+            'data_class' => 'HopitalBundle\Entity\EppRubrique'
         ));
     }
 
@@ -48,7 +38,7 @@ class LivretType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'hopital_livret';
+        return 'hopitalBundle_epp';
     }
 
 }

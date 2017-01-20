@@ -1,12 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Livret creation</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Création d'une page du livret</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenew">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(form) }}
+                            {{ form_label(form.livretimg, 'Nommez votre page:') }}<br>
+                            {{ form_widget(form.livretimg) }}<br><br>
+                            {{ form_label(form.file1, 'Inserer votre page:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(form.file1)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Create" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
 
     <ul>
         <li>
