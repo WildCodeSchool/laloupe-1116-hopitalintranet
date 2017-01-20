@@ -12,10 +12,24 @@ class MedicalType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('medicalimg')
+            ->add('medicalimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file2', 'file', array('required' => false))
-            ->add('titlemedical')
-            ->add('idmedical');
+            ->add('titlemedical', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Medical 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idmedical', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: M0001",
+                    'class' => "zonenew"
+                )));
     }
     /**FIN CODE AJOUTÉ
     /**

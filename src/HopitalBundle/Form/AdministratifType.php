@@ -12,10 +12,24 @@ class AdministratifType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('administratifimg')
+            ->add('administratifimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('titleadministratif')
-            ->add('idadministratif');
+            ->add('titleadministratif', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Administratif 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idadministratif', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: A0001",
+                    'class' => "zonenew"
+                )));
     }
     /**FIN CODE AJOUTÉ
     /**

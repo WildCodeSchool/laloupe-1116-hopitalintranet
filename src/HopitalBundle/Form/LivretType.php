@@ -15,7 +15,11 @@ class LivretType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('livretimg')
+            ->add('livretimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file',   array(
                 'required' => false,
                 'attr' => array(
