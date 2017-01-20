@@ -15,10 +15,26 @@ class MenuType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('menuimg')
+            ->add('menu1img')
             ->add('file1', 'file', array('required' => false))
+            ->add('menu2img')
+            ->add('file2', 'file', array('required' => false))
+            ->add('menu3img')
+            ->add('file3', 'file', array('required' => false))
+            ->add('menu4img')
+            ->add('file4', 'file', array('required' => false))
             ->add('menuimgrempl')
-            ->add('file2', 'file', array('required' => false));
+            ->add('file5', 'file', array('required' => false))
+            ->add('titlemenu1')
+            ->add('titlemenu2')
+            ->add('titlemenu3')
+            ->add('titlemenu4')
+            ->add('titlemenurempl')
+            ->add('idmenu1')
+            ->add('idmenu2')
+            ->add('idmenu3')
+            ->add('idmenu4')
+            ->add('idmenurempl');
     }
 
     /**FIN CODE AJOUTÉ
