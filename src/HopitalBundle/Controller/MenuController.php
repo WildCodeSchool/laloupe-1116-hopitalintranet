@@ -22,17 +22,10 @@ class MenuController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $menus = $em->getRepository('HopitalBundle:Menu')->findAll();
-        $menu1s = $em->getRepository('HopitalBundle:Menu')->findAll();
-        $menu2s = $em->getRepository('HopitalBundle:Menu')->findAll();
-        $menu3s = $em->getRepository('HopitalBundle:Menu')->findAll();
-        $menu4s = $em->getRepository('HopitalBundle:Menu')->findAll();
 
         return $this->render('HopitalBundle:personnel:menu_index.html.twig', array(
             'menus' => $menus,
-            'menu1s' => $menu1s,
-            'menu2s' => $menu2s,
-            'menu3s' => $menu3s,
-            'menu4s' => $menu4s,
+
         ));
     }
 
@@ -59,7 +52,6 @@ class MenuController extends Controller
             'form' => $form->createView(),
         ));
     }
-
 
     /**
      * Creates a new menu1 entity.
@@ -108,8 +100,6 @@ class MenuController extends Controller
             'form' => $form->createView(),
         ));
     }
-
-
 
     /**
      * Displays a form to edit an existing menu entity.

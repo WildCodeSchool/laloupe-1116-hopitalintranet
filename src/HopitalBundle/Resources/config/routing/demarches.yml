@@ -50,8 +50,6 @@ demarches_epprubrique_new:
 
 
 
-
-
 demarches_processus_index:
     path:     /processus
     defaults: { _controller: "HopitalBundle:Processus:index" }
@@ -76,9 +74,6 @@ demarches_processuscategorie_new:
     path:     /categorie/new
     defaults: { _controller: "HopitalBundle:Processus:newCategorie" }
     methods:  [GET, POST]
-
-
-
 
 
 

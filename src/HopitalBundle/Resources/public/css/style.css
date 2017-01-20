@@ -744,8 +744,6 @@ div.c-wrapper{
     padding: 30px;
 }
 
-
-
 .lienstitrenew{
     text-align: center;
     color: #0089D0;
@@ -755,7 +753,11 @@ div.c-wrapper{
 .imgnew{
     margin-top: 15px;
     font-size: 1.1em;
+}
 
+.imgnewid{
+    margin-top: 5px;
+    font-size: 1.1em;
 }
 
 .btnnew{
@@ -763,7 +765,7 @@ div.c-wrapper{
     color: #FFFFFF;
     border-radius: 0;
     border:0;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
     margin-left: 5%;
     margin-top:30px;
@@ -771,6 +773,11 @@ div.c-wrapper{
     padding:10px 20px 10px 20px;
 }
 
+/*Dans Type*/
+.zonenew{
+    width: 500px;
+    margin-bottom: 10px;
+}
 
 
 /**************************** Fin NEW ****************************/

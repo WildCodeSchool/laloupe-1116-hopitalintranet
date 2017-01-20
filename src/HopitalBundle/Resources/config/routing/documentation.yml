@@ -48,7 +48,6 @@ documentation_instances_index:
     defaults: { _controller: "HopitalBundle:Instances:index" }
     methods:  GET
 
-
 documentation_instances_new:
     path:     /instances/new
     defaults: { _controller: "HopitalBundle:Instances:new" }

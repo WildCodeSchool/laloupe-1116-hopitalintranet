@@ -12,10 +12,24 @@ class TechniqueType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('techniqueimg')
+            ->add('techniqueimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file4', 'file', array('required' => false))
-            ->add('titletechnique')
-            ->add('idtechnique');
+            ->add('titletechnique', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Technique 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idtechnique', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: T0001",
+                    'class' => "zonenew"
+                )));
     }
     /**FIN CODE AJOUTÉ
     /**

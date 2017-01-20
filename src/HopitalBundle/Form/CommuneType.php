@@ -12,10 +12,24 @@ class CommuneType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('communeimg')
+            ->add('communeimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file3', 'file', array('required' => false))
-            ->add('titlecommune')
-            ->add('idcommune');
+            ->add('titlecommune', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Commune 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idcommune', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: C0001",
+                    'class' => "zonenew"
+                )));
     }
     /**FIN CODE AJOUTÉ
     /**
