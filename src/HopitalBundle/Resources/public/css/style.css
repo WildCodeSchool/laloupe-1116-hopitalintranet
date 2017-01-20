@@ -737,6 +737,15 @@ div.c-wrapper{
     padding: 30px;
 }
 
+.carrenewid{
+    background-color: #E7E7E7;
+    height: 450px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+
+
 .lienstitrenew{
     text-align: center;
     color: #0089D0;
@@ -765,3 +774,39 @@ div.c-wrapper{
 
 
 /**************************** Fin NEW ****************************/
+/**************************** DEBUT EDIT ****************************/
+
+
+.btnedit{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding:10px 20px 10px 20px;
+    width: 120px;
+}
+
+.btneditcommun{
+    margin-top: 50px;
+}
+
+.carreeditid{
+    background-color: #E7E7E7;
+    height: 370px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.carreeditid_plans{
+    background-color: #E7E7E7;
+    height: 500px;
+    width: 1060px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+/**************************** fin EDIT ****************************/

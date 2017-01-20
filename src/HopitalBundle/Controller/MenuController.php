@@ -76,7 +76,7 @@ class MenuController extends Controller
             $em->persist($menu1);
             $em->flush($menu1);
 
-            return $this->redirectToRoute('personnel_menu_show', array('id' => $menu1->getId()));
+            return $this->redirectToRoute('personnel_menu_index', array('id' => $menu1->getId()));
         }
 
         return $this->render('HopitalBundle:personnel:menu_new.html.twig', array(
@@ -100,7 +100,7 @@ class MenuController extends Controller
             $em->persist($menu2);
             $em->flush($menu2);
 
-            return $this->redirectToRoute('personnel_menu_show', array('id' => $menu2->getId()));
+            return $this->redirectToRoute('personnel_menu_index', array('id' => $menu2->getId()));
         }
 
         return $this->render('HopitalBundle:personnel:menu_new.html.twig', array(
@@ -108,19 +108,7 @@ class MenuController extends Controller
             'form' => $form->createView(),
         ));
     }
-    /**
-     * Finds and displays a personnel entity.
-     *
-     */
-    public function showAction(Menu $menu)
-    {
-        $menu_deleteForm = $this->createDeleteForm($menu);
 
-        return $this->render('HopitalBundle:personnel:menu_show.html.twig', array(
-            'menu' => $menu,
-            'menu_delete_form' => $menu_deleteForm->createView(),
-        ));
-    }
 
 
     /**

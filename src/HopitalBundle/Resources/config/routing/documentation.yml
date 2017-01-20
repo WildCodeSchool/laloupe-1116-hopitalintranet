@@ -48,10 +48,6 @@ documentation_instances_index:
     defaults: { _controller: "HopitalBundle:Instances:index" }
     methods:  GET
 
-documentation_instances_show:
-    path:     /instances/{id}/show
-    defaults: { _controller: "HopitalBundle:Instances:show" }
-    methods:  GET
 
 documentation_instances_new:
     path:     /instances/new
@@ -252,11 +248,6 @@ documentation_basedoc_delete:
 documentation_fournisseur_index:
     path:     /fournisseur
     defaults: { _controller: "HopitalBundle:Fournisseur:index" }
-    methods:  GET
-
-documentation_fournisseur_show:
-    path:     /fournisseur/{id}/show
-    defaults: { _controller: "HopitalBundle:Fournisseur:show" }
     methods:  GET
 
 documentation_fournisseur_new:

@@ -2,55 +2,70 @@
 
 {% block body %}
 
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modification des plans</h1>
-            <br>
-            <div class="row journaux">
-                <div class="col-md-5">
-                    <br>
-                    <br>
-                    {{ form_start(edit_form) }}
-                    {{ form_label(edit_form.plansglobal, 'Nommez votre plan global:', {'plansglobal': {'class': ''}}) }}
-                    {{ form_widget(edit_form.plansglobal)}}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(edit_form.file1)}}
-                    {{ form_label(edit_form.plansbatarc, 'Nommez votre plan bat A RC:', {'plansbatarc': {'class': 'plansbatarc'}}) }}
-                    {{ form_widget(edit_form.plansbatarc)}}
-                    {{ form_label(edit_form.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}
-                    {{ form_widget(edit_form.file2)}}
-                    {{ form_label(edit_form.plansbatae, 'Nommez votre plan bat A étage:', {'plansbatae': {'class': 'plansbatae'}}) }}
-                    {{ form_widget(edit_form.plansbatarc)}}
-                    {{ form_label(edit_form.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file3'}}) }}
-                    {{ form_widget(edit_form.file3)}}
-                    {{ form_label(edit_form.plansbatbrc, 'Nommez votre plan bat B RC:', {'plansbatbrc': {'class': 'plansbatae'}}) }}
-                    {{ form_widget(edit_form.plansbatbrc)}}
-                    {{ form_label(edit_form.file5, 'Insérez votre Pdf:', {'file5': {'class': 'file5'}}) }}
-                    {{ form_widget(edit_form.file5)}}
-                </div>
-                <div class="col-md-5">
-                    <br>
-                    <br>
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <h1 class="lienstitrenew">Création des plans</h1>
+        <br>
+        <div class="row">
+            <div class="col-md-offset-0 col-md-6 carreeditid_plans">
+                <div class="row">
+                    <div class="col-md-6 imgnew">
 
-                    {{ form_label(edit_form.plansbatbe, 'Nommez votre plan bat B étage:', {'plansbatbe': {'class': 'plansbatbe'}}) }}
-                    {{ form_widget(edit_form.plansbatbe)}}
-                    {{ form_label(edit_form.file6, 'Insérez votre Pdf:', {'file6': {'class': 'file6'}}) }}
-                    {{ form_widget(edit_form.file6)}}
-                    {{ form_label(edit_form.plansbatbrj, 'Nommez votre plan bat B rez-de-jardin:', {'plansbatbrj': {'class': 'plansbatbrj'}}) }}
-                    {{ form_widget(edit_form.plansbatbrj)}}
-                    {{ form_label(edit_form.file5, 'Insérez votre Pdf:', {'file5': {'class': 'file5'}}) }}
-                    {{ form_widget(edit_form.file5)}}
-                    <br>
-                    {{ form_end(edit_form) }}
+                        {{ form_start(edit_form) }}
+                        {{ form_label(edit_form.plansglobal, 'Nommez votre plan global:', {'plansglobal': {'class': ''}}) }}
+                        {{ form_widget(edit_form.plansglobal)}}
+                        {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                        {{ form_widget(edit_form.file1)}}<br>
+                        {{ form_label(edit_form.plansbatarc, 'Nommez votre plan bat A RC:', {'plansbatarc': {'class': 'plansbatarc'}}) }}
+                        {{ form_widget(edit_form.plansbatarc)}}
+                        {{ form_label(edit_form.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}
+                        {{ form_widget(edit_form.file2)}}<br>
+                        <div class="row">
+                            <div class="col-md-6">
 
-                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
 
-                    {{ form_start(plans_delete_form) }}
-                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(plans_delete_form) }}
+                                {{ form_label(edit_form.plansbatae, 'Nommez votre plan bat A étage:', {'plansbatae': {'class': 'plansbatae'}}) }}
+                                {{ form_widget(edit_form.plansbatarc)}}
+                                {{ form_label(edit_form.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file3'}}) }}
+                                {{ form_widget(edit_form.file3)}}<br>
+                                {{ form_label(edit_form.plansbatbrc, 'Nommez votre plan bat B RC:', {'plansbatbrc': {'class': 'plansbatae'}}) }}
+                                {{ form_widget(edit_form.plansbatbrc)}}
+                                {{ form_label(edit_form.file5, 'Insérez votre Pdf:', {'file5': {'class': 'file5'}}) }}
+                                {{ form_widget(edit_form.file5)}}<br>
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+                                        {{ form_label(edit_form.plansbatbe, 'Nommez votre plan bat B étage:', {'plansbatbe': {'class': 'plansbatbe'}}) }}
+                                        {{ form_widget(edit_form.plansbatbe)}}
+                                        {{ form_label(edit_form.file6, 'Insérez votre Pdf:', {'file6': {'class': 'file6'}}) }}
+                                        {{ form_widget(edit_form.file6)}}<br>
+                                        {{ form_label(edit_form.plansbatbrj, 'Nommez votre plan bat B rez-de-jardin:', {'plansbatbrj': {'class': 'plansbatbrj'}}) }}
+                                        {{ form_widget(edit_form.plansbatbrj)}}
+                                        {{ form_label(edit_form.file5, 'Insérez votre Pdf:', {'file5': {'class': 'file5'}}) }}
+                                        {{ form_widget(edit_form.file5)}}<br>
+                                        <div class="row">
+                                            <div class="col-md-6">
+
+                                                <div class="btneditcommun">
+                                                    {{ form_end(edit_form) }}
+                                                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                                                    {{ form_start(plans_delete_form) }}
+                                                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
+                                                    {{ form_end(plans_delete_form) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-{% endblock %}
+
+
+
+        {% endblock %}
