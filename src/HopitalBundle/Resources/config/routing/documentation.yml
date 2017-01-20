@@ -43,10 +43,26 @@ documentation_contacts_delete:
 
 
 
-documentation_instances:
+
+documentation_instances_index:
     path:     /instances
-    defaults: { _controller: "HopitalBundle:Documentation:instances" }
+    defaults: { _controller: "HopitalBundle:Instances:index" }
     methods:  GET
+
+documentation_instances_new:
+    path:     /instances/new
+    defaults: { _controller: "HopitalBundle:Instances:new" }
+    methods:  [GET, POST]
+
+documentation_instances_edit:
+    path:     /instances/{id}/edit
+    defaults: { _controller: "HopitalBundle:Instances:edit" }
+    methods:  [GET, POST]
+
+documentation_instances_delete:
+    path:     /instances/{id}/delete
+    defaults: { _controller: "HopitalBundle:Instances:delete" }
+    methods:  DELETE
 
 
 
