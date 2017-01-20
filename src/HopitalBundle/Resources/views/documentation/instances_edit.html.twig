@@ -4,19 +4,19 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier la base documentaire </h1>
+            <h1 class="lienstitre">Modifier la instances </h1>
             <br>
             {{ form_start(edit_form) }}
-            <div class="row journaux">
+            <div class="row instances">
                 <div class="col-md-4">
                     <br>
                     <br>
                     <br>
                     <br>
                     {{edit_form.children.file1.vars.label}}
-                    {{ form_label(edit_form.basedocimg, 'Nommez votre base doc:', {'basedocimg': {'class': 'basedocimg'}}) }}
-                    {{ form_widget(edit_form.basedocimg)}}
-                    {{ form_errors(edit_form.basedocimg) }}
+                    {{ form_label(edit_form.instances1, 'Nommez votre instances:', {'instances1': {'class': 'instances1'}}) }}
+                    {{ form_widget(edit_form.instances1)}}
+                    {{ form_errors(edit_form.instances1) }}
                     {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(edit_form.file1)}}
                     {{ form_errors(edit_form.file1) }}
@@ -26,28 +26,30 @@
                     {{ form_end(edit_form) }}
 
 
-                    {{ form_start(basedoc_delete_form) }}
+                    {{ form_start(delete_form) }}
                     <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(basedoc_delete_form) }}
+                    {{ form_end(delete_form) }}
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier la base documentaire </h1>
-            <br>
-            {{ form_start(edit_form) }}
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
 
-            </div>
+    <!--<div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+
+            <h1 class="lienstitre">Instances</h1>
+            <br/>
+
+            <object type="application/vnd.ms-excel"
+                    data="data/test.xls" width="300" height="200">
+                <a href="{{ asset('bundles/hopital/img/Instances/liste des instances.xls') }}">test.xls</a>
+            </object>
+
+
+
         </div>
-    </div>
+    </div>-->
+
 {% endblock %}
