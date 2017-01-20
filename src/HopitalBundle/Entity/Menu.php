@@ -213,6 +213,17 @@ class Menu
      */
     private $idmenu1;
     /**
+     * Set idmenu1
+     *
+     * @param string $idmenu1
+     * @return Menu
+     */
+    public function setIdMenu1($idmenu1)
+    {
+        $this->idmenu1 = $idmenu1;
+        return $this;
+    }
+    /**
      * Get idmenu1
      *
      * @return integer
@@ -225,6 +236,17 @@ class Menu
      * @var int
      */
     private $idmenu2;
+    /**
+     * Set idmenu2
+     *
+     * @param string $idmenu1
+     * @return Menu
+     */
+    public function setIdMenu2($idmenu2)
+    {
+        $this->idmenu2 = $idmenu2;
+        return $this;
+    }
     /**
      * Get idmenu2
      *
@@ -239,6 +261,17 @@ class Menu
      */
     private $idmenu3;
     /**
+     * Set idmenu3
+     *
+     * @param string $idmenu3
+     * @return Menu
+     */
+    public function setIdMenu3($idmenu3)
+    {
+        $this->idmenu3 = $idmenu3;
+        return $this;
+    }
+    /**
      * Get idmenu3
      *
      * @return integer
@@ -251,6 +284,17 @@ class Menu
      * @var int
      */
     private $idmenurempl;
+    /**
+     * Set idmenurempl
+     *
+     * @param string $idmenurempl
+     * @return Menu
+     */
+    public function setIdMenurempl($idmenurempl)
+    {
+        $this->idmenurempl = $idmenurempl;
+        return $this;
+    }
     /**
      * Get idmenurempl
      *
@@ -266,6 +310,17 @@ class Menu
      */
     private $idmenu4;
     /**
+     * Set idmenu4
+     *
+     * @param string $idmenu4
+     * @return Menu
+     */
+    public function setIdMenu4($idmenu4)
+    {
+        $this->idmenu4 = $idmenu4;
+        return $this;
+    }
+    /**
      * Get idmenu4
      *
      * @return integer
@@ -280,6 +335,17 @@ class Menu
      */
     private $titlemenu1;
     /**
+     * Set titlemenu1
+     *
+     * @param string $titlemenu1
+     * @return Menu
+     */
+    public function setTitlemenu1($titlemenu1)
+    {
+        $this->titlemenu1 = $titlemenu1;
+        return $this;
+    }
+    /**
      * Get titlemenu1
      *
      * @return string
@@ -292,6 +358,17 @@ class Menu
      * @var string
      */
     private $titlemenu2;
+    /**
+     * Set titlemenu2
+     *
+     * @param string $titlemenu2
+     * @return Menu
+     */
+    public function setTitlemenu2($titlemenu2)
+    {
+        $this->titlemenu2 = $titlemenu2;
+        return $this;
+    }
     /**
      * Get titlemenu2
      *
@@ -306,6 +383,17 @@ class Menu
      */
     private $titlemenu3;
     /**
+     * Set titlemenu3
+     *
+     * @param string $titlemenu3
+     * @return Menu
+     */
+    public function setTitlemenu3($titlemenu3)
+    {
+        $this->titlemenu3 = $titlemenu3;
+        return $this;
+    }
+    /**
      * Get titlemenu3
      *
      * @return string
@@ -319,6 +407,17 @@ class Menu
      */
     private $titlemenu4;
     /**
+     * Set titlemenu4
+     *
+     * @param string $titlemenu4
+     * @return Menu
+     */
+    public function setTitlemenu4($titlemenu4)
+    {
+        $this->titlemenu4 = $titlemenu4;
+        return $this;
+    }
+    /**
      * Get titlemenu4
      *
      * @return string
@@ -329,6 +428,17 @@ class Menu
     }
 
     private $titlemenurempl;
+    /**
+     * Set titlemenurempl
+     *
+     * @param string $titlemenu1
+     * @return Menu
+     */
+    public function setTitlemenurempl($titlemenurempl)
+    {
+        $this->titlemenurempl = $titlemenurempl;
+        return $this;
+    }
     /**
      * Get titlemenurempl
      *
@@ -374,19 +484,6 @@ class Menu
      */
     private $menuimg;
 
-
-
-
-    /**
-     * @var string
-     */
-    private $menuimgrempl;
-
-
-
-
-
-
     /**
      * Set menuimg
      *
@@ -411,7 +508,10 @@ class Menu
     }
 
 
-
+    /**
+     * @var string
+     */
+    private $menuimgrempl;
 
     /**
      * Set menuimgrempl

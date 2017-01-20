@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>PAQSS</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ paqss.id }}</td>
+        </tr>
+        <tr>
+            <th>paqssimg</th>
+            <td>{{ paqss.paqssimg }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('demarches_paqss_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('demarches_paqss_edit', { 'id': paqss.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(paqss_delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(paqss_delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
