@@ -44,10 +44,30 @@ demarches_certification_delete:
     methods:  DELETE
 
 
-demarches_epp:
+demarches_epp_index:
     path:     /epp
-    defaults: { _controller: "HopitalBundle:Demarches:epp" }
+    defaults: { _controller: "HopitalBundle:Epp:index" }
     methods:  GET
+
+demarches_epp_new:
+    path:     /epp/new
+    defaults: { _controller: "HopitalBundle:Epp:new" }
+    methods:  [GET, POST]
+
+demarches_epp_edit:
+    path:     /epp/{id}/edit
+    defaults: { _controller: "HopitalBundle:Epp:edit" }
+    methods:  [GET, POST]
+
+demarches_epp_delete:
+    path:     epp/{id}/delete
+    defaults: { _controller: "HopitalBundle:Epp:delete" }
+    methods:  DELETE
+
+demarches_epprubrique_new:
+    path:     /epprubrique/new
+    defaults: { _controller: "HopitalBundle:Epp:newRubrique" }
+    methods:  [GET, POST]
 
 
 

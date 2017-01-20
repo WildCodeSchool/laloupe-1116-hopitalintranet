@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création d'epp</h1>
+            <br>
+            <div class="row basedoc">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <br>
+                    <input type="submit" value="Create" />
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <ul>
+        <li>
+            <a href="{{ path('demarches_epp_index') }}">Retour à l'index</a>
+        </li>
+    </ul>
+
+{% endblock %}
