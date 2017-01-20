@@ -12,10 +12,25 @@ class BasedocType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('basedocimg')
+            ->add('basedocimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('titlebasedoc')
-            ->add('idbasedoc');
+            ->add('titlebasedoc', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Base documentaire 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idbasedoc', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: BD0001",
+                    'class' => "zonenew"
+                )
+            ));
     }
     /**FIN CODE AJOUTÉ
     /**

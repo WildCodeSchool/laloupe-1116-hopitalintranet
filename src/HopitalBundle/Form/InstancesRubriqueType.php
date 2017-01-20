@@ -15,7 +15,12 @@ class InstancesRubriqueType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('rubrique');
+            ->add('rubrique', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Instance 2017",
+                    'class' => "zonenew"
+                )));
 
     }
 

@@ -75,7 +75,7 @@ class ProcessusController extends Controller
             return $this->redirectToRoute('demarches_processus_index');
         }
 
-        return $this->render('HopitalBundle:demarches:processus_new.html.twig', array(
+        return $this->render('HopitalBundle:demarches:processuscategorie_new.html.twig', array(
             'categorie' => $categorie,
             'form' => $form->createView(),
         ));

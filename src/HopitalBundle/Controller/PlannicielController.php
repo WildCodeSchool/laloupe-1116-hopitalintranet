@@ -68,7 +68,7 @@ class PlannicielController extends Controller
             return $this->redirectToRoute('personnel_planniciel_edit', array('id' => $planniciel->getId()));
         }
 
-        return $this->render('@Hopital/personnel/planniciel_show.html.twig', array(
+        return $this->render('@Hopital/personnel/planniciel_edit.html.twig', array(
             'planniciel' => $planniciel,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

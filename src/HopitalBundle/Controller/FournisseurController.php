@@ -42,26 +42,12 @@ class FournisseurController extends Controller
             $em->persist($fournisseur);
             $em->flush($fournisseur);
 
-            return $this->redirectToRoute('documentation_fournisseur_show', array('id' => $fournisseur->getId()));
+            return $this->redirectToRoute('documentation_fournisseur_index', array('id' => $fournisseur->getId()));
         }
 
         return $this->render('@Hopital/documentation/fournisseurs_new.html.twig', array(
             'fournisseur' => $fournisseur,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Fournisseur $fournisseur)
-    {
-        $deleteForm = $this->createDeleteForm($fournisseur);
-
-        return $this->render('@Hopital/documentation/fournisseurs_show.html.twig', array(
-            'fournisseur' => $fournisseur,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -81,7 +67,7 @@ class FournisseurController extends Controller
             return $this->redirectToRoute('documentation_fournisseur_edit', array('id' => $fournisseur->getId()));
         }
 
-        return $this->render('@Hopital/documentation/fournisseurs_show.html.twig', array(
+        return $this->render('@Hopital/documentation/fournisseurs_edit.html.twig', array(
             'fournisseur' => $fournisseur,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
