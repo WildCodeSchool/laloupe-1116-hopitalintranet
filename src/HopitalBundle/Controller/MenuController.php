@@ -22,9 +22,17 @@ class MenuController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $menus = $em->getRepository('HopitalBundle:Menu')->findAll();
+        $menu1s = $em->getRepository('HopitalBundle:Menu')->findAll();
+        $menu2s = $em->getRepository('HopitalBundle:Menu')->findAll();
+        $menu3s = $em->getRepository('HopitalBundle:Menu')->findAll();
+        $menu4s = $em->getRepository('HopitalBundle:Menu')->findAll();
 
         return $this->render('HopitalBundle:personnel:menu_index.html.twig', array(
             'menus' => $menus,
+            'menu1s' => $menu1s,
+            'menu2s' => $menu2s,
+            'menu3s' => $menu3s,
+            'menu4s' => $menu4s,
         ));
     }
 
@@ -52,6 +60,53 @@ class MenuController extends Controller
         ));
     }
 
+    /**
+     * Creates a new menu1 entity.
+     *
+     */
+    public function newMenu1Action(Request $request)
+    {
+        $menu1 = new Menu1();
+        $form = $this->createForm('HopitalBundle\Form\MenuType', $menu1);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($menu1);
+            $em->flush($menu1);
+
+            return $this->redirectToRoute('personnel_menu_show', array('id' => $menu1->getId()));
+        }
+
+        return $this->render('HopitalBundle:personnel:menu_new.html.twig', array(
+            'menu1' => $menu1,
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+     * Creates a new menu2 entity.
+     *
+     */
+    public function newMenu2Action(Request $request)
+    {
+        $menu2 = new Menu2();
+        $form = $this->createForm('HopitalBundle\Form\MenuType', $menu2);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($menu2);
+            $em->flush($menu2);
+
+            return $this->redirectToRoute('personnel_menu_show', array('id' => $menu2->getId()));
+        }
+
+        return $this->render('HopitalBundle:personnel:menu_new.html.twig', array(
+            'menu2' => $menu2,
+            'form' => $form->createView(),
+        ));
+    }
     /**
      * Finds and displays a personnel entity.
      *
