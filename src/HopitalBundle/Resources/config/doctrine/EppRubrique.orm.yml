@@ -1,7 +1,7 @@
-HopitalBundle\Entity\InstancesRubrique:
+HopitalBundle\Entity\EppRubrique:
     type: entity
     table: null
-    repositoryClass: HopitalBundle\Repository\InstancesRubriqueRepository
+    repositoryClass: HopitalBundle\Repository\EppRubriqueRepository
     id:
         id:
             type: integer
@@ -14,7 +14,7 @@ HopitalBundle\Entity\InstancesRubrique:
             length: 255
     oneToMany:
         photos:
-            targetEntity: HopitalBundle\Entity\Instances
+            targetEntity: HopitalBundle\Entity\Epp
             mappedBy: rubrique
 
     lifecycleCallbacks: { }

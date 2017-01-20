@@ -1,46 +1,162 @@
 {% extends 'base.html.twig' %}
 
+
 {% block body %}
 
-
-    <tbody>
-    {% for menu in menus %}
-
     <div class="row">
-        <div class="col-md-offset-2  col-md-8 fondblanc">
-            <h1 class="lienstitre">Menu</h1>
-            <h4 class="lienssoustitre">Menus régime normal </h4>
+    <div class="col-md-offset-2 col-md-8 fondblanc">
 
-            <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimg }}" type="application/pdf" class="menupdf">
-            </object>
-
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
-                Menus de remplacement
-            </button>
-            <!-- Modal -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="lienstitre">Menus</h1>
+            </div>
+        </div>
 
 
 
+        <div class="row">
+            <!--Début archives menus-->
 
-            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body" style="height: 650px">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="col-md-2">
 
-                            <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimgrempl }}" type="application/pdf" class="menuremplacepdf">
-                        </div>
-                    </div>
+                <div class="dropdown">
+                    <button class="btn astreintesbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menus hebdomadaires
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        {% set maxId = 0 %}
+                        {% for menu in menus %}
+                            {% set maxId = max(menu.id, maxId) %}
+                        {% endfor %}
+                        {% for menu in menus %}
+                            {% if menu.id != maxId %}
+                                {% if menu.titlemenu != NULL %}
+                                    <p data-toggle="modal" data-target="{{ '#' ~ menu.idmenu }}" class="archivestitres"> {{ menu.titlemenu }} </p>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+
+                <!--Fin archives menus-->
+
+
+                <!--Début nouveaux menus-->
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for menu1 in menu1s %}
+                        {% set maxId = max(menu1.id, maxId) %}
+                    {% endfor %}
+                    {% for menu1 in menu1s %}
+                        {% if menu1.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ menu1.idmenu1 }}">{{ menu1.titlemenu1 }}</p>
+                        {% endif %}
+                        {% if menu1.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ menu1.menu1img }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for menu2 in menu2s %}
+                        {% set maxId = max(menu2.id, maxId) %}
+                    {% endfor %}
+                    {% for menu2 in menu2s %}
+                        {% if menu2.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ menu2.idmenu2 }}">{{ menu2.titlemenu2 }}</p>
+                        {% endif %}
+                        {% if menu2.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ menu2.menu2img }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-md-offset-2 col-md-5">
+                    {% set maxId = 0 %}
+                    {% for menu3 in menu3s %}
+                        {% set maxId = max(menu.id, maxId) %}
+                    {% endfor %}
+                    {% for menu3 in menu3s %}
+                        {% if menu.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ menu3.idmenu3 }}">{{ menu3.titlemenu3 }}</p>
+                        {% endif %}
+                        {% if menu3.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ menu3.menu3img }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="col-md-5">
+                    {% set maxId = 0 %}
+                    {% for menu4 in menu4s %}
+                        {% set maxId = max(menu.id, maxId) %}
+                    {% endfor %}
+                    {% for menu4 in menu4s %}
+                        {% if menu.id == maxId %}
+                            <p type="button" data-toggle="modal" data-target="{{ '#' ~ menu4.idmenu4 }}">{{ menu4.titlemenu4 }}</p>
+                        {% endif %}
+                        {% if menu.id == maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ menu4.menuimg }}" type="application/pdf" class="astreintesimg">
+                            </object>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
+
+        <!--Fin nouveaux menus-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
+            Menus de remplacement
+        </button>
+
+{#        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" style="height: 650px">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                        <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimgrempl }}" type="application/pdf" class="menuremplacepdf">
+                    </div>
+                </div>
+            </div>
+        </div>
+        #}
+        <!--Début modal archives-->
+
+        {% for menu in menus %}
+            <div id="{{ menu.idmenu }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if menu.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimg }}" type="application/pdf" class="astreintemodalpdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+        <!--Fin modal archives-->
+
+
     </div>
 
-
-
-    {% endfor %}
-    </tbody>
 
 {% endblock %}
