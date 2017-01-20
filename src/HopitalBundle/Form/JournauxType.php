@@ -12,10 +12,25 @@ class JournauxType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('journauximg')
+            ->add('journauximg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('titlejournaux')
-            ->add('idjournaux');
+            ->add('titlejournaux', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Journal interne 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idjournaux', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: J0001",
+                    'class' => "zonenew"
+                )
+            ));
     }
     /**FIN CODE AJOUTÉ
     /**

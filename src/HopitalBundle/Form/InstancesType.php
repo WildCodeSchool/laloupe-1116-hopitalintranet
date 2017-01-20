@@ -15,7 +15,12 @@ class InstancesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('instances1')
+            ->add('instances1', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Instance 2017-01",
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
             ->add('rubrique');
 

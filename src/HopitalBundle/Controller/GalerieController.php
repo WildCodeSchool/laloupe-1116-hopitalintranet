@@ -75,7 +75,7 @@ class GalerieController extends Controller
             return $this->redirectToRoute('documentation_galerie_index');
         }
 
-        return $this->render('HopitalBundle:documentation:galerie_new.html.twig', array(
+        return $this->render('HopitalBundle:documentation:galeriecategorie_new.html.twig', array(
             'categorie' => $categorie,
             'form' => $form->createView(),
         ));

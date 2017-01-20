@@ -75,7 +75,7 @@ class InstancesController extends Controller
             return $this->redirectToRoute('documentation_instances_index');
         }
 
-        return $this->render('HopitalBundle:documentation:instances_new.html.twig', array(
+        return $this->render('HopitalBundle:documentation:instancesrubrique_new.html.twig', array(
             'rubrique' => $rubrique,
             'form' => $form->createView(),
         ));
