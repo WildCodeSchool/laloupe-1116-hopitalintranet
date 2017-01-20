@@ -79,7 +79,7 @@ documentation_instancesrubrique_new:
 documentation_astreintes_index:
     path:     /astreintes
     defaults: { _controller: "HopitalBundle:Astreintes:index" }
-    methods:  GETT
+    methods:  GET
 
 documentation_astreintesadministratif_new:
     path:     /astreintesadministratif/new
