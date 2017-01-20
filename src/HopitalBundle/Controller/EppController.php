@@ -48,7 +48,7 @@ class EppController extends Controller
             $em->persist($epp);
             $em->flush($epp);
 
-            return $this->redirectToRoute('demarches_epp_show', array('id' => $epp->getId()));
+            return $this->redirectToRoute('demarches_epp_index', array('id' => $epp->getId()));
         }
 
         return $this->render('HopitalBundle:demarches:epp_new.html.twig', array(
@@ -81,20 +81,6 @@ class EppController extends Controller
         ));
     }
 
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Epp $epp)
-    {
-        $deleteForm = $this->createDeleteForm($epp);
-
-        return $this->render('HopitalBundle:demarches:epp_show.html.twig', array(
-            'epp' => $epp,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing epp entity.

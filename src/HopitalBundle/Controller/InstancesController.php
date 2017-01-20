@@ -48,7 +48,7 @@ class InstancesController extends Controller
             $em->persist($instances);
             $em->flush($instances);
 
-            return $this->redirectToRoute('documentation_instances_show', array('id' => $instances->getId()));
+            return $this->redirectToRoute('documentation_instances_index', array('id' => $instances->getId()));
         }
 
         return $this->render('HopitalBundle:documentation:instances_new.html.twig', array(
@@ -78,21 +78,6 @@ class InstancesController extends Controller
         return $this->render('HopitalBundle:documentation:instances_new.html.twig', array(
             'rubrique' => $rubrique,
             'form' => $form->createView(),
-        ));
-    }
-
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Instances $instances)
-    {
-        $deleteForm = $this->createDeleteForm($instances);
-
-        return $this->render('HopitalBundle:documentation:instances_show.html.twig', array(
-            'instances' => $instances,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
