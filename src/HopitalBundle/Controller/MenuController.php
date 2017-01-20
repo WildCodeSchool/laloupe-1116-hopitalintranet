@@ -51,7 +51,7 @@ class MenuController extends Controller
             $em->persist($menu);
             $em->flush($menu);
 
-            return $this->redirectToRoute('personnel_menu_show', array('id' => $menu->getId()));
+            return $this->redirectToRoute('personnel_menu_index', array('id' => $menu->getId()));
         }
 
         return $this->render('HopitalBundle:personnel:menu_new.html.twig', array(
@@ -59,6 +59,7 @@ class MenuController extends Controller
             'form' => $form->createView(),
         ));
     }
+
 
     /**
      * Creates a new menu1 entity.
@@ -120,6 +121,7 @@ class MenuController extends Controller
             'menu_delete_form' => $menu_deleteForm->createView(),
         ));
     }
+
 
     /**
      * Displays a form to edit an existing menu entity.

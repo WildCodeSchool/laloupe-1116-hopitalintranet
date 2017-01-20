@@ -43,7 +43,7 @@ class PagesjaunesController extends Controller
             $em->persist($pagesjaunes);
             $em->flush($pagesjaunes);
 
-            return $this->redirectToRoute('recommandation_pagesjaunes_show', array('id' => $pagesjaunes->getId()));
+            return $this->redirectToRoute('recommandation_pagesjaunes_index', array('id' => $pagesjaunes->getId()));
         }
 
         return $this->render('HopitalBundle:recommandation:pagesjaunes_new.html.twig', array(
@@ -52,19 +52,6 @@ class PagesjaunesController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a recommandation entity.
-     *
-     */
-    public function showAction(Pagesjaunes $pagesjaunes)
-    {
-        $pagesjaunes_deleteForm = $this->createDeleteForm($pagesjaunes);
-
-        return $this->render('HopitalBundle:recommandation:pagesjaunes_show.html.twig', array(
-            'pagesjaunes' => $pagesjaunes,
-            'pagesjaunes_delete_form' => $pagesjaunes_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing pagesjaunes entity.

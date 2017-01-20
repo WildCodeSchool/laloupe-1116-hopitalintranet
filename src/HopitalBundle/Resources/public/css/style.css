@@ -706,7 +706,10 @@ div.c-wrapper{
     margin-top: 10px;
     border:5px solid #E7E7E7;
     padding:10px;
+    overflow-y: scroll;
+    height: 150px;
 }
+
 
 .zonecommentaire{
     width: 470px;

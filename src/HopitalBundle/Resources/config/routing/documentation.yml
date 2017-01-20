@@ -3,11 +3,6 @@ documentation_noteservice_index:
     defaults: { _controller: "HopitalBundle:Noteservice:index" }
     methods:  GET
 
-documentation_noteservice_show:
-    path:     /noteservice/{id}/show
-    defaults: { _controller: "HopitalBundle:Noteservice:show" }
-    methods:  GET
-
 documentation_noteservice_new:
     path:     /noteservice/new
     defaults: { _controller: "HopitalBundle:Noteservice:new" }
@@ -30,11 +25,6 @@ documentation_contacts_index:
     defaults: { _controller: "HopitalBundle:Contacts:index" }
     methods:  GET
 
-documentation_contacts_show:
-    path:     /contacts/{id}/show
-    defaults: { _controller: "HopitalBundle:Contacts:show" }
-    methods:  GET
-
 documentation_contacts_new:
     path:     /contacts/new
     defaults: { _controller: "HopitalBundle:Contacts:new" }
@@ -53,10 +43,35 @@ documentation_contacts_delete:
 
 
 
-documentation_instances:
+documentation_instances_index:
     path:     /instances
-    defaults: { _controller: "HopitalBundle:Documentation:instances" }
+    defaults: { _controller: "HopitalBundle:Instances:index" }
     methods:  GET
+
+documentation_instances_show:
+    path:     /instances/{id}/show
+    defaults: { _controller: "HopitalBundle:Instances:show" }
+    methods:  GET
+
+documentation_instances_new:
+    path:     /instances/new
+    defaults: { _controller: "HopitalBundle:Instances:new" }
+    methods:  [GET, POST]
+
+documentation_instances_edit:
+    path:     /instances/{id}/edit
+    defaults: { _controller: "HopitalBundle:Instances:edit" }
+    methods:  [GET, POST]
+
+documentation_instances_delete:
+    path:     instances/{id}/delete
+    defaults: { _controller: "HopitalBundle:Instances:delete" }
+    methods:  DELETE
+
+documentation_instancesrubrique_new:
+    path:     /rubrique/new
+    defaults: { _controller: "HopitalBundle:Instances:newRubrique" }
+    methods:  [GET, POST]
 
 
 
@@ -64,26 +79,6 @@ documentation_instances:
 documentation_astreintes_index:
     path:     /astreintes
     defaults: { _controller: "HopitalBundle:Astreintes:index" }
-    methods:  GET
-
-documentation_astreintesadministratif_show:
-    path:     /astreintesadministratif/{id}/show
-    defaults: { _controller: "HopitalBundle:Astreintes:showAdministratif" }
-    methods:  GET
-
-documentation_astreintesmedical_show:
-    path:     /astreintesmedical/{id}/show
-    defaults: { _controller: "HopitalBundle:Astreintes:showMedical" }
-    methods:  GET
-
-documentation_astreintescommune_show:
-    path:     /astreintescommune/{id}/show
-    defaults: { _controller: "HopitalBundle:Astreintes:showCommune" }
-    methods:  GET
-
-documentation_astreintestechnique_show:
-    path:     /astreintestechnique/{id}/show
-    defaults: { _controller: "HopitalBundle:Astreintes:showTechnique" }
     methods:  GET
 
 documentation_astreintesadministratif_new:
@@ -186,11 +181,6 @@ documentation_journaux_index:
     defaults: { _controller: "HopitalBundle:Journaux:index" }
     methods:  GET
 
-documentation_journaux_show:
-    path:     /journaux/{id}/show
-    defaults: { _controller: "HopitalBundle:Journaux:show" }
-    methods:  GET
-
 documentation_journaux_new:
     path:     /journaux/new
     defaults: { _controller: "HopitalBundle:Journaux:new" }
@@ -209,15 +199,9 @@ documentation_journaux_delete:
 
 
 
-
 documentation_galerie_index:
     path:     /galerie
     defaults: { _controller: "HopitalBundle:Galerie:index" }
-    methods:  GET
-
-documentation_galerie_show:
-    path:     /galerie/{id}/show
-    defaults: { _controller: "HopitalBundle:Galerie:show" }
     methods:  GET
 
 documentation_galerie_new:
@@ -231,7 +215,7 @@ documentation_galerie_edit:
     methods:  [GET, POST]
 
 documentation_galerie_delete:
-    path:     galerie/{id}/delete
+    path:     /galerie/{id}/delete
     defaults: { _controller: "HopitalBundle:Galerie:delete" }
     methods:  DELETE
 
@@ -246,11 +230,6 @@ documentation_galeriecategorie_new:
 documentation_basedoc_index:
     path:     /basedoc
     defaults: { _controller: "HopitalBundle:Basedoc:index" }
-    methods:  GET
-
-documentation_basedoc_show:
-    path:     /basedoc/{id}/show
-    defaults: { _controller: "HopitalBundle:Basedoc:show" }
     methods:  GET
 
 documentation_basedoc_new:

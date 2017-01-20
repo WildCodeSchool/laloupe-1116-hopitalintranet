@@ -53,7 +53,7 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($administratif);
             $em->flush($administratif);
-            return $this->redirectToRoute('documentation_astreintesadministratif_show', array('id' => $administratif->getId()));
+            return $this->redirectToRoute('documentation_astreintesadministratif_index', array('id' => $administratif->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintesadministratif_new.html.twig', array(
             'administratif' => $administratif,
@@ -73,7 +73,7 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($medical);
             $em->flush($medical);
-            return $this->redirectToRoute('documentation_astreintesmedical_show', array('id' => $medical->getId()));
+            return $this->redirectToRoute('documentation_astreintesmedical_index', array('id' => $medical->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintesmedical_new.html.twig', array(
             'medical' => $medical,
@@ -93,7 +93,7 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($commune);
             $em->flush($commune);
-            return $this->redirectToRoute('documentation_astreintescommune_show', array('id' => $commune->getId()));
+            return $this->redirectToRoute('documentation_astreintescommune_index', array('id' => $commune->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintescommune_new.html.twig', array(
             'commune' => $commune,
@@ -113,62 +113,14 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($technique);
             $em->flush($technique);
-            return $this->redirectToRoute('documentation_astreintestechnique_show', array('id' => $technique->getId()));
+            return $this->redirectToRoute('documentation_astreintestechnique_index', array('id' => $technique->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintestechnique_new.html.twig', array(
             'technique' => $technique,
             'formTechnique' => $formTechnique->createView(),
         ));
     }
-    /***********SHOW ACTION*************/
-    /**
-     * Finds and displays a documentation entity.
-     *
-     */
-    public function showAdministratifAction(Administratif $administratif)
-    {
-        $astreintes_deleteAdministratifForm = $this->createDeleteAdministratifForm($administratif);
-        return $this->render('HopitalBundle:documentation:astreintesadministratif_show.html.twig', array(
-            'administratif' => $administratif,
-            'astreintes_delete_formadministratif' => $astreintes_deleteAdministratifForm->createView(),
-        ));
-    }
-    /**
-     * Finds and displays a documentation entity.
-     *
-     */
-    public function showMedicalAction(Medical $medical)
-    {
-        $astreintes_deleteMedicalForm = $this->createDeleteMedicalForm($medical);
-        return $this->render('HopitalBundle:documentation:astreintesmedical_show.html.twig', array(
-            'medical' => $medical,
-            'astreintes_delete_formmedical' => $astreintes_deleteMedicalForm->createView(),
-        ));
-    }
-    /**
-     * Finds and displays a documentation entity.
-     *
-     */
-    public function showCommuneAction(Commune $commune)
-    {
-        $astreintes_deleteCommuneForm = $this->createDeleteCommuneForm($commune);
-        return $this->render('HopitalBundle:documentation:astreintescommune_show.html.twig', array(
-            'commune' => $commune,
-            'astreintes_delete_formcommune' => $astreintes_deleteCommuneForm->createView(),
-        ));
-    }
-    /**
-     * Finds and displays a documentation entity.
-     *
-     */
-    public function showTechniqueAction(Technique $technique)
-    {
-        $astreintes_deleteTechniqueForm = $this->createDeleteTechniqueForm($technique);
-        return $this->render('HopitalBundle:documentation:astreintestechnique_show.html.twig', array(
-            'technique' => $technique,
-            'astreintes_delete_formtechnique' => $astreintes_deleteTechniqueForm->createView(),
-        ));
-    }
+
     /***********EDIT ACTION*************/
     /**
      * Displays a form to edit an existing administratif entity.

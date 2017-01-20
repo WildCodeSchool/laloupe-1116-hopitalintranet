@@ -3,11 +3,6 @@ accueil_index:
     defaults: { _controller: "HopitalBundle:Accueil:index" }
     methods:  GET
 
-accueil_show:
-    path:     /{id}/show
-    defaults: { _controller: "HopitalBundle:Accueil:show" }
-    methods:  GET
-
 accueil_new:
     path:     /new
     defaults: { _controller: "HopitalBundle:Accueil:new" }

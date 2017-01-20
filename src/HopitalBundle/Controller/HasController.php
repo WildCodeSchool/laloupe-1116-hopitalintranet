@@ -43,26 +43,12 @@ class HasController extends Controller
             $em->persist($has);
             $em->flush($has);
 
-            return $this->redirectToRoute('recommandation_has_show', array('id' => $has->getId()));
+            return $this->redirectToRoute('recommandation_has_index', array('id' => $has->getId()));
         }
 
         return $this->render('HopitalBundle:recommandation:has_new.html.twig', array(
             'has' => $has,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a recommandation entity.
-     *
-     */
-    public function showAction(Has $has)
-    {
-        $has_deleteForm = $this->createDeleteForm($has);
-
-        return $this->render('HopitalBundle:recommandation:has_show.html.twig', array(
-            'has' => $has,
-            'has_delete_form' => $has_deleteForm->createView(),
         ));
     }
 
