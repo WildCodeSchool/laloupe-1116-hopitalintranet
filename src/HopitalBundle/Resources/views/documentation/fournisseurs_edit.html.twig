@@ -3,70 +3,35 @@
 {% block body %}
 
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modification de fournisseur</h1>
-
-            <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{ form_start(edit_form) }}
-                    {{ form_label(edit_form.fournisseur1, 'Nommez votre fournisseur:', {'fournisseur1': {'class': ''}}) }}
-                    {{ form_widget(edit_form.fournisseur1)}}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(edit_form.file1)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier" />
-                    {{ form_end(edit_form) }}
-
-
-                    {{ form_start(organigramme_delete_form) }}
-                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(organigramme_delete_form) }}
-
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <h1 class="lienstitrenew">Modifier un fournisseur</h1>
+        <br>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 carreeditid">
+                <div class="row">
+                    <div class="col-md-12 imgnew">
+                        {{ form_start(edit_form) }}
+                        {{ form_label(edit_form.fournisseur1, 'Nommez votre fournisseur:', {'fournisseur1': {'class': ''}}) }}<br>
+                        {{ form_widget(edit_form.fournisseur1)}}<br><br>
+                        {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                        {{ form_widget(edit_form.file1)}}
+                    </div>
                 </div>
-            </div>
-
-        </div>
-    </div>
-
-
-{% endblock %}
-{% block body %}
-
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier la liste des fournisseurs </h1>
-            <br>
-            {{ form_start(edit_form) }}
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{edit_form.children.file1.vars.label}}
-                    {{ form_label(edit_form.fournisseur1, 'Nommez votre liste de fournisseurs:', {'fournisseur1': {'class': 'fournisseur1'}}) }}
-                    {{ form_widget(edit_form.fournisseur1)}}
-                    {{ form_errors(edit_form.fournisseur1) }}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(edit_form.file1)}}
-                    {{ form_errors(edit_form.file1) }}
-
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
-
-                    {{ form_end(edit_form) }}
-
-
-                    {{ form_start(journaux_delete_form) }}
-                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(journaux_delete_form) }}
+                <div class="row">
+                    <div class="col-md-offset-5 col-md-2 btneditcommun">
+                        <input type="submit" class="btnedit" value="Modifier" />
+                        {{ form_end(edit_form) }}
+                        {{ form_start(delete_form) }}
+                        <input type="submit" class="btnedit" value="Supprimer">
+                        {{ form_end(delete_form) }}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
 {% endblock %}
+
+
+

@@ -5,14 +5,14 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * GalerieCategorie
+ * EppRubrique
  */
-class GalerieCategorie
+class EppRubrique
 {
 
     public function __toString()
     {
-        return $this->categorie;
+        return $this->rubrique;
     }
 
     /**
@@ -33,31 +33,31 @@ class GalerieCategorie
     /**
      * @var string
      */
-    private $categorie;
+    private $rubrique;
 
 
     /**
-     * Set categorie
+     * Set rubrique
      *
-     * @param string $categorie
+     * @param string $rubrique
      *
-     * @return GalerieCategorie
+     * @return EppRubrique
      */
-    public function setCategorie($categorie)
+    public function setRubrique($rubrique)
     {
-        $this->categorie = $categorie;
+        $this->rubrique = $rubrique;
 
         return $this;
     }
 
     /**
-     * Get categorie
+     * Get rubrique
      *
      * @return string
      */
-    public function getCategorie()
+    public function getRubrique()
     {
-        return $this->categorie;
+        return $this->rubrique;
     }
     /**
      * @var integer
@@ -70,7 +70,7 @@ class GalerieCategorie
      *
      * @param integer $photos
      *
-     * @return GalerieCategorie
+     * @return EppRubrique
      */
     public function setPhotos($photos)
     {
@@ -99,11 +99,11 @@ class GalerieCategorie
     /**
      * Add photo
      *
-     * @param \HopitalBundle\Entity\Galerie $photo
+     * @param \HopitalBundle\Entity\Epp $photo
      *
-     * @return GalerieCategorie
+     * @return EppRubrique
      */
-    public function addPhoto(\HopitalBundle\Entity\Galerie $photo)
+    public function addPhoto(\HopitalBundle\Entity\Epp $photo)
     {
         $this->photos[] = $photo;
 
@@ -113,9 +113,9 @@ class GalerieCategorie
     /**
      * Remove photo
      *
-     * @param \HopitalBundle\Entity\Galerie $photo
+     * @param \HopitalBundle\Entity\Epp $photo
      */
-    public function removePhoto(\HopitalBundle\Entity\Galerie $photo)
+    public function removePhoto(\HopitalBundle\Entity\Epp $photo)
     {
         $this->photos->removeElement($photo);
     }

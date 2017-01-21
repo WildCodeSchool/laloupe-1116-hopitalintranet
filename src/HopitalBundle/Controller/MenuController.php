@@ -101,7 +101,6 @@ class MenuController extends Controller
         ));
     }
 
-
     /**
      * Displays a form to edit an existing menu entity.
      *
