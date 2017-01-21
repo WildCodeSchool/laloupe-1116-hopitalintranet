@@ -19,12 +19,14 @@ class JournauxType extends AbstractType
                 )))
             ->add('file1', 'file', array('required' => false))
             ->add('titlejournaux', 'text', array(
+                'label'=>'Titre du journal',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Journal interne 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idjournaux', 'text', array(
+                'label'=>'ID journaux',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: J0001",

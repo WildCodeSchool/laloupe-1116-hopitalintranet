@@ -18,20 +18,22 @@ class NoteserviceType extends AbstractType
                         'class' => "zonenew"
                 )))
             ->add('file1', 'file', array('required' => false))
+
             ->add('titlenoteservice', 'text', array(
+                'label'=>'Titre de la note de service',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Note de service 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idnoteservice', 'text', array(
+                'label'=>'ID note de service',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: NS0001",
                     'class' => "zonenew"
                 )
             ));
-
 
     }
     /**FIN CODE AJOUTÉ
