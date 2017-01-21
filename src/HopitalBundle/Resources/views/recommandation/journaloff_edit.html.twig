@@ -15,13 +15,25 @@
                     <br>
                     <br>
                     <br>
+                    {{ form_label(edit_form.journalofftitle, 'Titre de votre lien:', {'journalofftitle': {'class': 'journalofftitle'}}) }}
+                    {{ form_widget(edit_form.journalofftitle) }}
+                    {{ form_errors(edit_form.journalofftitle) }}
+                    {{ form_label(edit_form.journaloffimg, 'Description de votre lien:', {'journaloffdescription': {'class': 'journaloffdescription'}}) }}
+                    {{ form_widget(edit_form.journaloffdescription) }}
+                    {{ form_errors(edit_form.journaloffdescription) }}
+
+                    {{ form_label(edit_form.journaloffimg, 'Renommez votre image:', {'journaloffimg': {'class': 'journaloffimg'}}) }}
+
                     {{ edit_form.children.file1.vars.label }}
-                    {{ form_label(edit_form.journaloffimg, 'Nommez votre journal officiel:', {'journaloffimg': {'class': 'journaloffimg'}}) }}
+
                     {{ form_widget(edit_form.journaloffimg) }}
                     {{ form_errors(edit_form.journaloffimg) }}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(edit_form.file1) }}
                     {{ form_errors(edit_form.file1) }}
+                    {{ form_label(edit_form.journaloffurl, 'Url de votre lien:', {'journaloffurl': {'class': 'journaloffurl'}}) }}
+                    {{ form_widget(edit_form.journaloffurl) }}
+                    {{ form_errors(edit_form.journaloffurl) }}
 
                     <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
 

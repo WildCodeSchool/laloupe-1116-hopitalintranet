@@ -16,7 +16,18 @@ HopitalBundle\Entity\Bulletinoff:
             type: string
             length: 25
             nullable: true
-
+        bulletinoffurl:
+            type: string
+            length: 255
+            nullable: true
+        bulletinofftitle:
+            type: string
+            length: 255
+            nullable: true
+        bulletinoffdescription:
+            type: string
+            length: 255
+            nullable: true
 
 
     lifecycleCallbacks:

@@ -13,14 +13,25 @@
                 <br>
                 <br>
                 <br>
-                {{edit_form.children.file1.vars.label}}
-                {{ form_label(edit_form.hasimg, 'Nommez votre HAS:', {'hasimg': {'class': 'hasimg'}}) }}
+                {{ form_label(edit_form.hastitle, 'Titre de votre lien:', {'hastitle': {'class': 'hastitle'}}) }}
+                {{ form_widget(edit_form.hastitle) }}
+                {{ form_errors(edit_form.hastitle) }}
+                {{ form_label(edit_form.hasimg, 'Description de votre lien:', {'hasdescription': {'class': 'hasdescription'}}) }}
+                {{ form_widget(edit_form.hasdescription) }}
+                {{ form_errors(edit_form.hasdescription) }}
+
+                {{ form_label(edit_form.hasimg, 'Renommez votre image:', {'hasimg': {'class': 'hasimg'}}) }}
+
+                {{ edit_form.children.file1.vars.label }}
 
                 {{ form_widget(edit_form.hasimg) }}
                 {{ form_errors(edit_form.hasimg) }}
-                {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                {{ form_widget(edit_form.file1)}}
+                {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                {{ form_widget(edit_form.file1) }}
                 {{ form_errors(edit_form.file1) }}
+                {{ form_label(edit_form.hasurl, 'Url de votre lien:', {'hasurl': {'class': 'hasurl'}}) }}
+                {{ form_widget(edit_form.hasurl) }}
+                {{ form_errors(edit_form.hasurl) }}
 
                 <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
 

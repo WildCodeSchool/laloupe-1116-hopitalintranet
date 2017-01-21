@@ -8,14 +8,12 @@
 
         <div class="row">
             <div class="col-md-offset-2  col-md-8 fondblanc">
-                <h1 class="lienstitre">Bulletin Officiel</h1>
-                <h4 class="lienssoustitre">Ministère des affaires sociales et de la santé</h4>
-
-                <a href="{{ asset('http://social-sante.gouv.fr/ministere/documentation-et-publications-officielles/bulletins-officiels/article/bulletin-officiel-sante-protection-sociale-solidarites') }}">
-                    <object data="{{ app.request.basepath }}/uploads/{{ bulletinoff.bulletinoffimg }}" type="application/pdf" alt="bulettinoff" class="lienimg">
-                    </object>
+                <h1 class="lienstitre">{{ bulletinoff.bulletinofftitle }}</h1>
+                <h4 class="lienssoustitre">{{ bulletinoff.bulletinoffdescription }}</h4>
+                <a href="{{ bulletinoff.bulletinoffurl }}" target="_blank">
+                    <img src="{{ app.request.basepath }}/uploads/{{ bulletinoff.bulletinoffimg }}" alt="bulletinoff" type="application/img" class="lienimg">
+                    </img>
                 </a>
-
             </div>
         </div>
 
