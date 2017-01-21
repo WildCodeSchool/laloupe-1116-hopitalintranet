@@ -797,8 +797,24 @@ div.c-wrapper{
     width: 120px;
 }
 
+.btnnote {
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 35%;
+    margin-bottom: 20px;
+    padding:10px 20px 10px 20px;
+    width: 120px;
+
+}
+
 .btneditcommun{
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-left: 36%;
+
 }
 
 .carreeditid{
@@ -808,10 +824,18 @@ div.c-wrapper{
     padding: 30px;
 }
 
+.carreeditid_note{
+    background-color: #E7E7E7;
+    height: 450px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
 .carreeditid_plans{
     background-color: #E7E7E7;
     height: 500px;
-    width: 1060px;
+    width: 700px;
+    margin-left: 16.5%;
     margin-top: 30px;
     padding: 30px;
 }
