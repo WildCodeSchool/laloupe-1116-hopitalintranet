@@ -16,15 +16,25 @@
 
 
                     <div>
-                        {{ form_label(edit_form.anesmimg, 'Nommez votre ANESM:', {'anesmimg': {'class': 'anesmimg'}}) }}
+                        {{ form_label(edit_form.anesmtitle, 'Titre de votre lien:', {'anesmtitle': {'class': 'anesmtitle'}}) }}
+                        {{ form_widget(edit_form.anesmtitle) }}
+                        {{ form_errors(edit_form.anesmtitle) }}
+                        {{ form_label(edit_form.anesmimg, 'Description de votre lien:', {'anesmdescription': {'class': 'anesmdescription'}}) }}
+                        {{ form_widget(edit_form.anesmdescription) }}
+                        {{ form_errors(edit_form.anesmdescription) }}
+
+                        {{ form_label(edit_form.anesmimg, 'Renommez votre image:', {'anesmimg': {'class': 'anesmimg'}}) }}
 
                         {{ edit_form.children.file1.vars.label }}
 
                         {{ form_widget(edit_form.anesmimg) }}
                         {{ form_errors(edit_form.anesmimg) }}
-                        {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                        {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                         {{ form_widget(edit_form.file1) }}
                         {{ form_errors(edit_form.file1) }}
+                        {{ form_label(edit_form.anesmurl, 'Url de votre lien:', {'anesmurl': {'class': 'anesmurl'}}) }}
+                        {{ form_widget(edit_form.anesmurl) }}
+                        {{ form_errors(edit_form.anesmurl) }}
                         <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
 
                         {{ form_end(edit_form) }}

@@ -13,10 +13,16 @@
                     <br>
                     <br>
                     {{ form_start(form) }}
+                    {{ form_label(form. anesmtitle, 'Nommez votre lien:', {'anesmtitle': {'class': 'anesmtitle'}}) }}
+                    {{ form_widget(form.anesmtitle)}}
+                    {{ form_label(form. anesmdescription, 'Décrivez votre lien:', {'anesmdescription': {'class': 'anesmdescription'}}) }}
+                    {{ form_widget(form.anesmdescription)}}
                     {{ form_label(form. anesmimg, 'Nommez votre image:', {'anesmimg': {'class': 'anesmimg'}}) }}
                     {{ form_widget(form.anesmimg)}}
                     {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(form.file1)}}
+                    {{ form_label(form. anesmurl, 'Indiquez le lien:', {'anesmurl': {'class': 'anesmurl'}}) }}
+                    {{ form_widget(form.anesmurl)}}
                     <br>
                     <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
                     {{ form_end(form) }}
