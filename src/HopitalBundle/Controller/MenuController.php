@@ -53,53 +53,7 @@ class MenuController extends Controller
         ));
     }
 
-    /**
-     * Creates a new menu1 entity.
-     *
-     */
-    public function newMenu1Action(Request $request)
-    {
-        $menu1 = new Menu1();
-        $form = $this->createForm('HopitalBundle\Form\MenuType', $menu1);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($menu1);
-            $em->flush($menu1);
-
-            return $this->redirectToRoute('personnel_menu_index', array('id' => $menu1->getId()));
-        }
-
-        return $this->render('HopitalBundle:personnel:menu_new.html.twig', array(
-            'menu1' => $menu1,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Creates a new menu2 entity.
-     *
-     */
-    public function newMenu2Action(Request $request)
-    {
-        $menu2 = new Menu2();
-        $form = $this->createForm('HopitalBundle\Form\MenuType', $menu2);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($menu2);
-            $em->flush($menu2);
-
-            return $this->redirectToRoute('personnel_menu_index', array('id' => $menu2->getId()));
-        }
-
-        return $this->render('HopitalBundle:personnel:menu_new.html.twig', array(
-            'menu2' => $menu2,
-            'form' => $form->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing menu entity.
