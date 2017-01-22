@@ -15,7 +15,9 @@ class LienssitesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('sitechartres')
+            ->add('sitechartres', 'text', array(
+                    'label'=>'ID journaux')
+            )
             ->add('file1', 'file', array('required' => false))
             ->add('sitenogent')
             ->add('file2', 'file', array('required' => false))
