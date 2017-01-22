@@ -11,8 +11,11 @@ class IdeesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('ideestitle')
-            ->add('txtdef', 'textarea', array('attr' => array('rows' => '15')));
+            ->add('ideestitle', 'text', array(
+                'label'=>'Titre de l\'objet',))
+            ->add('txtdef', 'textarea', array(
+                'label'=>'Texte défini',
+                'attr' => array('rows' => '15')));
     }
 
 
