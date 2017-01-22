@@ -29,12 +29,7 @@ class MenuType extends AbstractType
             ->add('titlemenu2')
             ->add('titlemenu3')
             ->add('titlemenu4')
-            ->add('titlemenurempl')
-            ->add('idmenu1')
-            ->add('idmenu2')
-            ->add('idmenu3')
-            ->add('idmenu4')
-            ->add('idmenurempl');
+            ->add('titlemenurempl');
     }
 
     /**FIN CODE AJOUTÉ

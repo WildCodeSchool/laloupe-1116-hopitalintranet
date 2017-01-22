@@ -16,6 +16,18 @@ HopitalBundle\Entity\Pagesjaunes:
             type: string
             length: 25
             nullable: true
+        pagesjaunesurl:
+            type: string
+            length: 255
+            nullable: true
+        pagesjaunestitle:
+            type: string
+            length: 255
+            nullable: true
+        pagesjaunesdescription:
+            type: string
+            length: 255
+            nullable: true
 
 
 

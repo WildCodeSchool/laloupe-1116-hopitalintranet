@@ -2,6 +2,7 @@ body{
     background-image: url("../img/montagne2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -381,7 +382,7 @@ main {
 
 .fondblanc{
     background-color: #FFFFFF;
-    height: 670px;
+    height: 95%;
     padding: 10px 20px 20px 20px;
 }
 
@@ -392,8 +393,10 @@ main {
 }
 
 .lienimg{
-    width: 1000px;
+    width: 90%;
+    height: 470px;
     margin-left: 5%;
+    margin-right: 5%;
     border:4px solid #E7E7E7;
 }
 

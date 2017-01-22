@@ -13,13 +13,25 @@
                 <br>
                 <br>
                 <br>
+                {{ form_label(edit_form.pagesjaunestitle, 'Titre de votre lien:', {'pagesjaunestitle': {'class': 'pagesjaunestitle'}}) }}
+                {{ form_widget(edit_form.pagesjaunestitle) }}
+                {{ form_errors(edit_form.pagesjaunestitle) }}
+                {{ form_label(edit_form.pagesjaunesimg, 'Description de votre lien:', {'pagesjaunesdescription': {'class': 'pagesjaunesdescription'}}) }}
+                {{ form_widget(edit_form.pagesjaunesdescription) }}
+                {{ form_errors(edit_form.pagesjaunesdescription) }}
+
+                {{ form_label(edit_form.pagesjaunesimg, 'Renommez votre image:', {'pagesjaunesimg': {'class': 'pagesjaunesimg'}}) }}
+
                 {{ edit_form.children.file1.vars.label }}
-                {{ form_label(edit_form.pagesjaunesimg, 'Nommez vos pages jaunes:', {'pagesjaunesimg': {'class': 'pagesjaunesimg'}}) }}
+
                 {{ form_widget(edit_form.pagesjaunesimg) }}
                 {{ form_errors(edit_form.pagesjaunesimg) }}
-                {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                 {{ form_widget(edit_form.file1) }}
                 {{ form_errors(edit_form.file1) }}
+                {{ form_label(edit_form.pagesjaunesurl, 'Url de votre lien:', {'pagesjaunesurl': {'class': 'pagesjaunesurl'}}) }}
+                {{ form_widget(edit_form.pagesjaunesurl) }}
+                {{ form_errors(edit_form.pagesjaunesurl) }}
 
                 <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
 

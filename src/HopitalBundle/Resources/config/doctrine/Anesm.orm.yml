@@ -16,9 +16,18 @@ HopitalBundle\Entity\Anesm:
             type: string
             length: 25
             nullable: true
-
-
-
+        anesmurl:
+            type: string
+            length: 255
+            nullable: true
+        anesmtitle:
+            type: string
+            length: 255
+            nullable: true
+        anesmdescription:
+            type: string
+            length: 255
+            nullable: true
     lifecycleCallbacks:
       prePersist: [ preUpload, preUpload1 ]
       preUpdate: [ preUpload, preUpload1 ]

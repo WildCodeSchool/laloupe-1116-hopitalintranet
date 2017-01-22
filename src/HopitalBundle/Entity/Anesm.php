@@ -143,6 +143,91 @@ class Anesm
 
 
     /**
+     * @var string
+     */
+    private $anesmtitle;
+
+    /**
+     * Set anesmtitle
+     *
+     * @param string $anesmtitle
+     * @return Anesm
+     */
+    public function setAnesmtitle($anesmtitle)
+    {
+        $this->anesmtitle = $anesmtitle;
+
+        return $this;
+    }
+    /**
+     * Get anesmtitle
+     *
+     * @return string
+     */
+    public function getAnesmtitle()
+    {
+        return $this->anesmtitle;
+    }
+
+
+    /**
+     * @var string
+     */
+    private $anesmdescription;
+
+    /**
+     * Set anesmdescription
+     *
+     * @param string $anesmdescription
+     * @return Anesm
+     */
+    public function setAnesmdescription($anesmdescription)
+    {
+        $this->anesmdescription = $anesmdescription;
+
+        return $this;
+    }
+    /**
+     * Get anesmdescription
+     *
+     * @return string
+     */
+    public function getAnesmdescription()
+    {
+        return $this->anesmdescription;
+    }
+    /**
+     * @var string
+     */
+    private $anesmurl;
+
+
+
+
+    /**
+     * Set anesmurl
+     *
+     * @param string $anesmurl
+     * @return Anesm
+     */
+    public function setAnesmurl($anesmurl)
+    {
+        $this->anesmurl = $anesmurl;
+
+        return $this;
+    }
+
+    /**
+     * Get anesmurl
+     *
+     * @return string
+     */
+    public function getAnesmurl()
+    {
+        return $this->anesmurl;
+    }
+
+    /**
      * @ORM\PrePersist
      */
     public function preUpload()

@@ -15,7 +15,12 @@ class ProcessusCategorieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('categorie');
+            ->add('categorie', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Processus 2017",
+                    'class' => "zonenew"
+                )));
 
     }
 

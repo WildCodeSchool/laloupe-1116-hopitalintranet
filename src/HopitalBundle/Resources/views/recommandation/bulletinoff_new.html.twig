@@ -14,10 +14,16 @@
                     <br>
                     <br>
                     {{ form_start(form) }}
-                    {{ form_label(form. bulletinoffmimg, 'Nommez votre image:', {'bulletinoffimg': {'class': 'bulletinoffimg'}}) }}
+                    {{ form_label(form. bulletinofftitle, 'Nommez votre lien:', {'bulletinofftitle': {'class': 'bulletinofftitle'}}) }}
+                    {{ form_widget(form.bulletinofftitle)}}
+                    {{ form_label(form. bulletinoffdescription, 'Décrivez votre lien:', {'bulletinoffescription': {'class': 'bulletinoffdescription'}}) }}
+                    {{ form_widget(form.bulletinoffdescription)}}
+                    {{ form_label(form. bulletinoffimg, 'Nommez votre image:', {'bulletinoffimg': {'class': 'bulletinoffimg'}}) }}
                     {{ form_widget(form.bulletinoffimg)}}
                     {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(form.file1)}}
+                    {{ form_label(form. bulletinoffurl, 'Indiquez le lien:', {'bulletinoffurl': {'class': 'bulletinoffurl'}}) }}
+                    {{ form_widget(form.bulletinoffurl)}}
                     <br>
                     <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
                     {{ form_end(form) }}
