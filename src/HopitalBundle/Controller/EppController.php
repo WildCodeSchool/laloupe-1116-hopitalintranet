@@ -75,7 +75,7 @@ class EppController extends Controller
             return $this->redirectToRoute('demarches_epp_index');
         }
 
-        return $this->render('HopitalBundle:demarches:epp_new.html.twig', array(
+        return $this->render('HopitalBundle:demarches:epprubrique_new.html.twig', array(
             'rubrique' => $rubrique,
             'form' => $form->createView(),
         ));

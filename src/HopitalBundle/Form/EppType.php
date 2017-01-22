@@ -15,7 +15,12 @@ class EppType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('epp1')
+            ->add('epp1', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: EPP 2017-01",
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
             ->add('rubrique');
 

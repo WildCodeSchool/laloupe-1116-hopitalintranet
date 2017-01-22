@@ -3,21 +3,14 @@
 {% block body %}
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitrenew">Ajout d'un article</h1>
+            <h1 class="lienstitrenew">Ajout d'une catégorie PAQSS</h1>
             <br>
             <div class="row">
                 <div class="col-md-offset-3 col-md-6 carrenewid">
                     <div class="row">
                         <div class="col-md-12 imgnewid">
-                            {{ form_start(form) }}
-                            {{ form_label(form.articlesimg, 'Nommez votre GHT:') }}<br>
-                            {{ form_widget(form.articlesimg)}}<br>
-                            {{ form_label(form.file1, 'Insérez votre Pdf:') }}<br>
-                            {{ form_widget(form.file1)}}<br>
-                            {{ form_label(form.idarticles, 'Id de votre GHT:') }}<br>
-                            {{ form_widget(form.idarticles)}}<br>
-                            {{ form_label(form.titlearticles, 'Titre de votre GHT:') }}<br>
-                            {{ form_widget(form.titlearticles)}}
+                            {{ form_label(form.rubrique, 'Nommez la catégorie:') }}<br>
+                            {{ form_widget(form.rubrique)}}<br>
                         </div>
                     </div>
                     <div class="row">
