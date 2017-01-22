@@ -19,12 +19,14 @@ class DirectionType extends AbstractType
                 )))
             ->add('file1', 'file', array('required' => false))
             ->add('titledirection', 'text', array(
+                'label'=>'Titre de la direction',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Direction commune 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('iddirection', 'text', array(
+                'label'=>'ID de la direction',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: D0001",

@@ -19,12 +19,14 @@ class GhtType extends AbstractType
                 )))
             ->add('file1', 'file', array('required' => false))
             ->add('titleght', 'text', array(
+                'label'=>'Titre GHT',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Direction commune 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idght', 'text', array(
+                'label'=>'ID GHT',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: D0001",

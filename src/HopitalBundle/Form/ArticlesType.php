@@ -19,12 +19,14 @@ class ArticlesType extends AbstractType
                 )))
             ->add('file1', 'file', array('required' => false))
             ->add('titlearticles', 'text', array(
+                'label'=>'Titre de l\'article de presse',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Article 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idarticles', 'text', array(
+                'label'=>'ID de l\'article de presse',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: A0001",
