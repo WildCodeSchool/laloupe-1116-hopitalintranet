@@ -15,8 +15,11 @@ class PagesjaunesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('pagesjaunestitle')
+            ->add('pagesjaunesdescription')
             ->add('pagesjaunesimg')
-            ->add('file1', 'file', array('required' => false));
+            ->add('file1', 'file', array('required' => false))
+            ->add('pagesjaunesurl');
     }
 
     /**FIN CODE AJOUTÉ

@@ -81,6 +81,7 @@ class InstancesController extends Controller
         ));
     }
 
+
     /**
      * Displays a form to edit an existing instances entity.
      *

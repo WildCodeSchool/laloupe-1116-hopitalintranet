@@ -13,13 +13,25 @@
                     <br>
                     <br>
                     <br>
+                    {{ form_label(edit_form.bulletinofftitle, 'Titre de votre lien:', {'bulletinofftitle': {'class': 'bulletinofftitle'}}) }}
+                    {{ form_widget(edit_form.bulletinofftitle) }}
+                    {{ form_errors(edit_form.bulletinofftitle) }}
+                    {{ form_label(edit_form.bulletinoffimg, 'Description de votre lien:', {'bulletinoffdescription': {'class': 'bulletinoffdescription'}}) }}
+                    {{ form_widget(edit_form.bulletinoffdescription) }}
+                    {{ form_errors(edit_form.bulletinoffdescription) }}
+
+                    {{ form_label(edit_form.bulletinoffimg, 'Renommez votre image:', {'bulletinoffimg': {'class': 'bulletinoffimg'}}) }}
+
                     {{ edit_form.children.file1.vars.label }}
-                    {{ form_label(edit_form.bulletinoffimg, 'Nommez votre bulletin officiel:', {'bulletinoffimg': {'class': 'bulletinoffimg'}}) }}
+
                     {{ form_widget(edit_form.bulletinoffimg) }}
                     {{ form_errors(edit_form.bulletinoffimg) }}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(edit_form.file1) }}
                     {{ form_errors(edit_form.file1) }}
+                    {{ form_label(edit_form.bulletinoffurl, 'Url de votre lien:', {'bulletinoffurl': {'class': 'bulletinoffurl'}}) }}
+                    {{ form_widget(edit_form.bulletinoffurl) }}
+                    {{ form_errors(edit_form.bulletinoffurl) }}
 
                     <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
 

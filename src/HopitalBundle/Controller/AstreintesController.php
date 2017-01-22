@@ -53,7 +53,7 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($administratif);
             $em->flush($administratif);
-            return $this->redirectToRoute('documentation_astreintesadministratif_index', array('id' => $administratif->getId()));
+            return $this->redirectToRoute('documentation_astreintes_index', array('id' => $administratif->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintesadministratif_new.html.twig', array(
             'administratif' => $administratif,
@@ -73,7 +73,7 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($medical);
             $em->flush($medical);
-            return $this->redirectToRoute('documentation_astreintesmedical_index', array('id' => $medical->getId()));
+            return $this->redirectToRoute('documentation_astreintes_index', array('id' => $medical->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintesmedical_new.html.twig', array(
             'medical' => $medical,
@@ -93,7 +93,7 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($commune);
             $em->flush($commune);
-            return $this->redirectToRoute('documentation_astreintescommune_index', array('id' => $commune->getId()));
+            return $this->redirectToRoute('documentation_astreintes_index', array('id' => $commune->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintescommune_new.html.twig', array(
             'commune' => $commune,
@@ -113,7 +113,7 @@ class AstreintesController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($technique);
             $em->flush($technique);
-            return $this->redirectToRoute('documentation_astreintestechnique_index', array('id' => $technique->getId()));
+            return $this->redirectToRoute('documentation_astreintes_index', array('id' => $technique->getId()));
         }
         return $this->render('HopitalBundle:documentation:astreintestechnique_new.html.twig', array(
             'technique' => $technique,

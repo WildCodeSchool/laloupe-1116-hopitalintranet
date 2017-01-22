@@ -19,12 +19,14 @@ class BasedocType extends AbstractType
                 )))
             ->add('file1', 'file', array('required' => false))
             ->add('titlebasedoc', 'text', array(
+                'label'=>'Titre de la base documentaire',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Base documentaire 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idbasedoc', 'text', array(
+                'label'=>'ID de la base documentaire',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: BD0001",

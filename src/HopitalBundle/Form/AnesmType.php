@@ -15,8 +15,11 @@ class AnesmType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('anesmtitle')
+            ->add('anesmdescription')
             ->add('anesmimg')
-            ->add('file1', 'file', array('required' => false));
+            ->add('file1', 'file', array('required' => false))
+            ->add('anesmurl');
     }
 
     /**FIN CODE AJOUTÉ

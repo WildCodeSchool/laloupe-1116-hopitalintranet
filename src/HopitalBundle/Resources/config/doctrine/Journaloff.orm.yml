@@ -16,7 +16,18 @@ HopitalBundle\Entity\Journaloff:
             type: string
             length: 25
             nullable: true
-
+        journaloffurl:
+            type: string
+            length: 255
+            nullable: true
+        journalofftitle:
+            type: string
+            length: 255
+            nullable: true
+        journaloffdescription:
+            type: string
+            length: 255
+            nullable: true
 
 
     lifecycleCallbacks:

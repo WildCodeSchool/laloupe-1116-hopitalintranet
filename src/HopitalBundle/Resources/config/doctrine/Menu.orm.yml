@@ -12,36 +12,26 @@ HopitalBundle\Entity\Menu:
 
 
     fields:
-        idmenu1:
-            type: string
-            length: 255
-        idmenu2:
-            type: string
-            length: 255
-        idmenu3:
-            type: string
-            length: 255
-        idmenu4:
-            type: string
-            length: 255
-        idmenurempl:
-            type: string
-            length: 255
         titlemenu1:
             type: string
             length: 255
+            nullable: true
         titlemenu2:
             type: string
             length: 255
+            nullable: true
         titlemenu3:
             type: string
             length: 255
+            nullable: true
         titlemenu4:
             type: string
             length: 255
+            nullable: true
         titlemenurempl:
             type: string
             length: 255
+            nullable: true
         menuimg:
             type: string
             length: 25

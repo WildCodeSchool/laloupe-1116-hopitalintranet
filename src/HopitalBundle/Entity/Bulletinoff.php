@@ -141,6 +141,92 @@ class Bulletinoff
         return $this->bulletinoffimg;
     }
 
+    /**
+     * @var string
+     */
+    private $bulletinofftitle;
+
+    /**
+     * Set bulletinofftitle
+     *
+     * @param string $bulletinofftitle
+     * @return Bulletinoff
+     */
+    public function setBulletinofftitle($bulletinofftitle)
+    {
+        $this->bulletinofftitle = $bulletinofftitle;
+
+        return $this;
+    }
+    /**
+     * Get bulletinofftitle
+     *
+     * @return string
+     */
+    public function getBulletinofftitle()
+    {
+        return $this->bulletinofftitle;
+    }
+
+
+    /**
+     * @var string
+     */
+    private $bulletinoffdescription;
+
+    /**
+     * Set bulletinoffdescription
+     *
+     * @param string $bulletinoffdescription
+     * @return Bulletinoff
+     */
+    public function setBulletinoffdescription($bulletinoffdescription)
+    {
+        $this->bulletinoffdescription = $bulletinoffdescription;
+
+        return $this;
+    }
+    /**
+     * Get bulletinoffdescription
+     *
+     * @return string
+     */
+    public function getBulletinoffdescription()
+    {
+        return $this->bulletinoffdescription;
+    }
+    /**
+     * @var string
+     */
+    private $bulletinoffurl;
+
+
+
+
+    /**
+     * Set bulletinoffurl
+     *
+     * @param string $bulletinoffurl
+     * @return Bulletinoff
+     */
+    public function setBulletinoffurl($bulletinoffurl)
+    {
+        $this->bulletinoffurl = $bulletinoffurl;
+
+        return $this;
+    }
+
+    /**
+     * Get bulletinoffurl
+     *
+     * @return string
+     */
+    public function getBulletinoffurl()
+    {
+        return $this->bulletinoffurl;
+    }
+
+
 
     /**
      * @ORM\PrePersist
