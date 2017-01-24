@@ -3,22 +3,18 @@
 {% block body %}
 
 
-    <tbody>
-    {% for bulletinoff in bulletinoffs %}
-
-        <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc2">
+            {% for bulletinoff in bulletinoffs %}
                 <h1 class="lienstitre">{{ bulletinoff.bulletinofftitle }}</h1>
                 <h4 class="lienssoustitre">{{ bulletinoff.bulletinoffdescription }}</h4>
                 <a href="{{ bulletinoff.bulletinoffurl }}" target="_blank">
                     <img src="{{ app.request.basepath }}/uploads/{{ bulletinoff.bulletinoffimg }}" alt="bulletinoff" type="application/img" class="lienimg">
                     </img>
                 </a>
-            </div>
+            {% endfor %}
         </div>
-
-    {% endfor %}
-    </tbody>
+    </div>
 
 
 {% endblock %}
