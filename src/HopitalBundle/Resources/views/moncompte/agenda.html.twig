@@ -1,9 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Agenda des ressources</h1>
+    <div class="fondcalendar">
+    <h1 class="lienstitre">Agenda des ressources</h1>
 
     <a href="{{ path('vl_agenda_homepage') }}">agenda</a>
+
+    </div>
 
     <!--<table>
         <thead>
@@ -28,6 +31,8 @@
                 </td>
             </tr>
         {% endfor %}
+
+
         </tbody>
     </table>
 

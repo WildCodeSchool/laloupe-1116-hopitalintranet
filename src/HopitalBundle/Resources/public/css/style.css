@@ -867,3 +867,75 @@ div.c-wrapper{
 }
 
 /**************************** fin EDIT ****************************/
+
+
+
+/**************************** début calendrier ********************/
+
+.fondcalendar{
+    background-color: #FFFFFF;
+    height: 590px;
+}
+
+.calendarbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin:10px 20px 10px 0px;
+}
+
+.newcalendar{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.choixcalendar{
+    width: 220px;
+}
+
+.choixcalendar1{
+    width: 270px;
+}
+
+.calendarlienstitre{
+    text-align: center;
+    color: #0089D0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calendarnewbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 200px;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin:10px 50px 10px 0px;
+}
+
+.calendarnewbtn1{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 150px;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin:10px 50px 10px 420px;
+}
+
+.listeeventcalendar{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.listebtn{
+    position: absolute;
+    left:560px;
+    top:500px;
+}

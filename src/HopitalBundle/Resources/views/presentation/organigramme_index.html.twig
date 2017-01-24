@@ -2,19 +2,15 @@
 
 {% block body %}
 
-
-    <tbody>
-    {% for organigramme in organigrammes %}
-
-    <div class="row">
-        <div class="col-md-offset-2  col-md-8 fondblanc">
-            <h1 class="lienstitre">Organigramme</h1>
+<div class="row">
+    <div class="col-md-offset-2  col-md-8 fondblanc2">
+        <h1 class="lienstitre">Organigramme</h1>
+        {% for organigramme in organigrammes %}
             <object data="{{ app.request.basepath }}/uploads/{{ organigramme.organigrammeimg }}" type="application/pdf" class="organigramme">
             </object>
-        </div>
+        {% endfor %}
     </div>
-
-    {% endfor %}
+</div>
 
 
 {% endblock %}
