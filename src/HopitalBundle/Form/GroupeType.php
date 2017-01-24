@@ -14,8 +14,10 @@ class GroupeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre')
-        ;
+            ->add('titre', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew")));
     }
 
     /**

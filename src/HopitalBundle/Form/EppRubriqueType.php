@@ -15,7 +15,12 @@ class EppRubriqueType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('rubrique');
+            ->add('rubrique', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: EPP 2017",
+                    'class' => "zonenew"
+                )));
 
     }
 

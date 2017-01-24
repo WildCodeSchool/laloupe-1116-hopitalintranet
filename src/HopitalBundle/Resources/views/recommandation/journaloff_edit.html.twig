@@ -5,47 +5,47 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier un journal officiel</h1>
+            <h1 class="lienstitrenew">Modifier un Journal officiel</h1>
             <br>
-            {{ form_start(edit_form) }}
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_note">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            {{ form_label(edit_form.journalofftitle, 'Titre de votre lien:', {'journalofftitle': {'class': 'journalofftitle'}}) }}
+                            {{ form_widget(edit_form.journalofftitle) }}<br><br>
+                            {{ form_errors(edit_form.journalofftitle) }}
+                            {{ form_label(edit_form.journaloffimg, 'Description de votre lien:', {'journaloffdescription': {'class': 'journaloffdescription'}}) }}
+                            {{ form_widget(edit_form.journaloffdescription) }}<br><br>
+                            {{ form_errors(edit_form.journaloffdescription) }}
 
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{ form_label(edit_form.journalofftitle, 'Titre de votre lien:', {'journalofftitle': {'class': 'journalofftitle'}}) }}
-                    {{ form_widget(edit_form.journalofftitle) }}
-                    {{ form_errors(edit_form.journalofftitle) }}
-                    {{ form_label(edit_form.journaloffimg, 'Description de votre lien:', {'journaloffdescription': {'class': 'journaloffdescription'}}) }}
-                    {{ form_widget(edit_form.journaloffdescription) }}
-                    {{ form_errors(edit_form.journaloffdescription) }}
+                            {{ form_label(edit_form.journaloffimg, 'Renommez votre image:', {'journaloffimg': {'class': 'journaloffimg'}}) }}
 
-                    {{ form_label(edit_form.journaloffimg, 'Renommez votre image:', {'journaloffimg': {'class': 'journaloffimg'}}) }}
+                            {{ edit_form.children.file1.vars.label }}
 
-                    {{ edit_form.children.file1.vars.label }}
-
-                    {{ form_widget(edit_form.journaloffimg) }}
-                    {{ form_errors(edit_form.journaloffimg) }}
-                    {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(edit_form.file1) }}
-                    {{ form_errors(edit_form.file1) }}
-                    {{ form_label(edit_form.journaloffurl, 'Url de votre lien:', {'journaloffurl': {'class': 'journaloffurl'}}) }}
-                    {{ form_widget(edit_form.journaloffurl) }}
-                    {{ form_errors(edit_form.journaloffurl) }}
-
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
-
-                    {{ form_end(edit_form) }}
-
-                    {{ form_start(journaloff_delete_form) }}
-                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(journaloff_delete_form) }}
+                            {{ form_widget(edit_form.journaloffimg) }}<br><br>
+                            {{ form_errors(edit_form.journaloffimg) }}
+                            {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file1) }}<br><br>
+                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.journaloffurl, 'Url de votre lien:', {'journaloffurl': {'class': 'journaloffurl'}}) }}
+                            {{ form_widget(edit_form.journaloffurl) }}
+                            {{ form_errors(edit_form.journaloffurl) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_end(edit_form) }}
+                            {{ form_start(journaloff_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(journaloff_delete_form) }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    </div>
 {% endblock %}
+

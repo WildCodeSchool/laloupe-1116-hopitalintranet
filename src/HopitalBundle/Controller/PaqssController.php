@@ -3,9 +3,9 @@
 namespace HopitalBundle\Controller;
 
 use HopitalBundle\Entity\Paqss;
+use HopitalBundle\Entity\PaqssRubrique;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use HopitalBundle\Form\PaqssType;
 
 /**
  * Paqss controller.
@@ -22,9 +22,14 @@ class PaqssController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $paqsss = $em->getRepository('HopitalBundle:Paqss')->findAll();
+        $rubriques = $em->getRepository('HopitalBundle:PaqssRubrique')->findAll();
+
+
+
 
         return $this->render('HopitalBundle:demarches:paqss_index.html.twig', array(
             'paqsss' => $paqsss,
+            'rubriques' => $rubriques,
         ));
     }
 
@@ -52,6 +57,30 @@ class PaqssController extends Controller
         ));
     }
 
+    /**
+     * Creates a new paqss entity.
+     *
+     */
+    public function newRubriqueAction(Request $request)
+    {
+        $rubrique = new PaqssRubrique();
+        $form = $this->createForm('HopitalBundle\Form\PaqssRubriqueType', $rubrique);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($rubrique);
+            $em->flush($rubrique);
+
+            return $this->redirectToRoute('demarches_paqss_index');
+        }
+
+        return $this->render('HopitalBundle:demarches:paqssrubrique_new.html.twig', array(
+            'rubrique' => $rubrique,
+            'form' => $form->createView(),
+        ));
+    }
+
 
     /**
      * Displays a form to edit an existing paqss entity.
@@ -59,7 +88,7 @@ class PaqssController extends Controller
      */
     public function editAction(Request $request, Paqss $paqss)
     {
-        $paqss_deleteForm = $this->createDeleteForm($paqss);
+        $deleteForm = $this->createDeleteForm($paqss);
         $editForm = $this->createForm('HopitalBundle\Form\PaqssType', $paqss);
         $editForm->handleRequest($request);
 
@@ -72,7 +101,7 @@ class PaqssController extends Controller
         return $this->render('HopitalBundle:demarches:paqss_edit.html.twig', array(
             'paqss' => $paqss,
             'edit_form' => $editForm->createView(),
-            'paqss_delete_form' => $paqss_deleteForm->createView(),
+            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -97,7 +126,7 @@ class PaqssController extends Controller
     /**
      * Creates a form to delete a paqss entity.
      *
-     * @param Paqss $demarches The paqss entity
+     * @param Paqss $presentation The paqss entity
      *
      * @return \Symfony\Component\Form\Form The form
      */

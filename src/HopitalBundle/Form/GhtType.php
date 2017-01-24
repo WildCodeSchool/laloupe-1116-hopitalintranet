@@ -12,10 +12,27 @@ class GhtType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('ghtimg')
+            ->add('ghtimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('titleght')
-            ->add('idght');
+            ->add('titleght', 'text', array(
+                'label'=>'Titre GHT',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Direction commune 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idght', 'text', array(
+                'label'=>'ID GHT',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: D0001",
+                    'class' => "zonenew"
+                )
+            ));
     }
     /**FIN CODE AJOUTÉ
     /**

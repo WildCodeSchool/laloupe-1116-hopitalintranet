@@ -1,0 +1,20 @@
+HopitalBundle\Entity\PaqssRubrique:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\PaqssRubriqueRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        rubrique:
+            type: string
+            length: 255
+    oneToMany:
+        photos:
+            targetEntity: HopitalBundle\Entity\Paqss
+            mappedBy: rubrique
+
+    lifecycleCallbacks: { }

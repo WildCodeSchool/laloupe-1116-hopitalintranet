@@ -1,49 +1,51 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
-        <h1 class="lienstitre">Modifier les pages jaunes</h1>
-        <br>
-        {{ form_start(edit_form) }}
 
-        <div class="row journaux">
-            <div class="col-md-4">
-                <br>
-                <br>
-                <br>
-                <br>
-                {{ form_label(edit_form.pagesjaunestitle, 'Titre de votre lien:', {'pagesjaunestitle': {'class': 'pagesjaunestitle'}}) }}
-                {{ form_widget(edit_form.pagesjaunestitle) }}
-                {{ form_errors(edit_form.pagesjaunestitle) }}
-                {{ form_label(edit_form.pagesjaunesimg, 'Description de votre lien:', {'pagesjaunesdescription': {'class': 'pagesjaunesdescription'}}) }}
-                {{ form_widget(edit_form.pagesjaunesdescription) }}
-                {{ form_errors(edit_form.pagesjaunesdescription) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Modifier un les pages jaunes</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_note">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            {{ form_label(edit_form.pagesjaunestitle, 'Titre de votre lien:', {'pagesjaunestitle': {'class': 'pagesjaunestitle'}}) }}
+                            {{ form_widget(edit_form.pagesjaunestitle) }}<br><br>
+                            {{ form_errors(edit_form.pagesjaunestitle) }}
+                            {{ form_label(edit_form.pagesjaunesimg, 'Description de votre lien:', {'pagesjaunesdescription': {'class': 'pagesjaunesdescription'}}) }}
+                            {{ form_widget(edit_form.pagesjaunesdescription) }}<br><br>
+                            {{ form_errors(edit_form.pagesjaunesdescription) }}
 
-                {{ form_label(edit_form.pagesjaunesimg, 'Renommez votre image:', {'pagesjaunesimg': {'class': 'pagesjaunesimg'}}) }}
+                            {{ form_label(edit_form.pagesjaunesimg, 'Renommez votre image:', {'pagesjaunesimg': {'class': 'pagesjaunesimg'}}) }}
 
-                {{ edit_form.children.file1.vars.label }}
+                            {{ edit_form.children.file1.vars.label }}
 
-                {{ form_widget(edit_form.pagesjaunesimg) }}
-                {{ form_errors(edit_form.pagesjaunesimg) }}
-                {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
-                {{ form_widget(edit_form.file1) }}
-                {{ form_errors(edit_form.file1) }}
-                {{ form_label(edit_form.pagesjaunesurl, 'Url de votre lien:', {'pagesjaunesurl': {'class': 'pagesjaunesurl'}}) }}
-                {{ form_widget(edit_form.pagesjaunesurl) }}
-                {{ form_errors(edit_form.pagesjaunesurl) }}
-
-                <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
-
-                {{ form_end(edit_form) }}
-
-                {{ form_start(pagesjaunes_delete_form) }}
-                <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                {{ form_end(pagesjaunes_delete_form) }}
+                            {{ form_widget(edit_form.pagesjaunesimg) }}<br><br>
+                            {{ form_errors(edit_form.pagesjaunesimg) }}
+                            {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file1) }}<br><br>
+                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.pagesjaunesurl, 'Url de votre lien:', {'pagesjaunesurl': {'class': 'pagesjaunesurl'}}) }}
+                            {{ form_widget(edit_form.pagesjaunesurl) }}
+                            {{ form_errors(edit_form.pagesjaunesurl) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_end(edit_form) }}
+                            {{ form_start(pagesjaunes_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(pagesjaunes_delete_form) }}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-    </div>
 {% endblock %}
+
+

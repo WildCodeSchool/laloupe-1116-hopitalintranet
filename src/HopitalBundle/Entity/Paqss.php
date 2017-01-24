@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Paqss
 {
-    public $file7;
+    public $file1;
 
     protected function getUploadDir()
     {
@@ -32,52 +32,60 @@ class Paqss
     }
 
 
-    public function preUpload7()
+    public function preUpload1()
     {
-        if (null !== $this->file7) {
+        if (null !== $this->file1) {
             // do whatever you want to generate a unique name
-            $this->paqssimg = uniqid().'.'.$this->file7->guessExtension();
+            $this->paqss1 = uniqid().'.'.$this->file1->guessExtension();
         }
     }
 
-    public function upload7()
+    public function upload1()
     {
-        if (null === $this->file7) {
+        if (null === $this->file1) {
             return;
         }
 
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file7->move($this->getUploadRootDir(), $this->paqssimg);
+        $this->file1->move($this->getUploadRootDir(), $this->paqss1);
 
-        unset($this->file7);
+        unset($this->file1);
     }
 
-    public function removeUpload7()
+    public function removeUpload1()
     {
-        if ($file7 = $this->getAbsolutePath()) {
-            unlink($file7);
+        if ($file1 = $this->getAbsolutePath()) {
+            unlink($file1);
         }
     }
 
-
-
     /**
-     * @var int
+     * @ORM\PrePersist
      */
-    private $id;
-
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
+    public function preUpload()
     {
-        return $this->id;
+        // Add your code here
     }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        // Add your code here
+    }
+
+
 
 
     /**
@@ -109,64 +117,77 @@ class Paqss
         return $this->image;
     }
 
+    /**
+     * @var integer
+     */
+    private $id;
 
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
     /**
      * @var string
      */
-    private $paqssimg;
-
-
+    private $paqss1;
 
 
     /**
-     * Set paqssimg
+     * Set paqss1
      *
-     * @param string $paqssimg
+     * @param string $paqss1
+     *
      * @return Paqss
      */
-    public function setPaqssimg($paqssimg)
+    public function setPaqss1($paqss1)
     {
-        $this->paqssimg = $paqssimg;
+        $this->paqss1 = $paqss1;
 
         return $this;
     }
 
     /**
-     * Get paqssimg
+     * Get paqss1
      *
      * @return string
      */
-    public function getPaqssimg()
+    public function getPaqss1()
     {
-        return $this->paqssimg;
+        return $this->paqss1;
     }
+    /**
+     * @var string
+     */
+    private $rubrique;
 
 
     /**
-     * @ORM\PrePersist
+     * Set rubrique
+     *
+     * @param string $rubrique
+     *
+     * @return Paqss
      */
-    public function preUpload()
+    public function setRubrique($rubrique)
     {
-        // Add your code here
+        $this->rubrique = $rubrique;
+
+        return $this;
     }
 
     /**
-     * @ORM\PostPersist
+     * Get rubrique
+     *
+     * @return string
      */
-    public function upload()
+    public function getRubrique()
     {
-        // Add your code here
+        return $this->rubrique;
     }
-
-    /**
-     * @ORM\PostRemove
-     */
-    public function removeUpload()
-    {
-        // Add your code here
-    }
-
-
-
-
 }

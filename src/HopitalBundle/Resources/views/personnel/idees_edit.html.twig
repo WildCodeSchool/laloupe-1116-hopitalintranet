@@ -1,34 +1,29 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
+
 
 {% block body %}
-    <h1>Idees edit</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Modification de la boîte à idées</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_plans">
+                    <div class="row">
+                        <div class="col-md-3 imgnew">
 
-    <input type="submit" value="Edit"/>
+                            {{ form_end(edit_form) }}
+                        </div>
+                        <div class="col-md-4 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier"/>
+                            {{ form_start(idees_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(idees_delete_form) }}
+                        </div>
+                    </div>
 
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('personnel_idees_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(idees_delete_form) }}
-            <input type="submit" value="Delete">
-            {{ form_end(idees_delete_form) }}
-        </li>
-    </ul>
-
-
-
-
-    {{ form_end(edit_form) }}
-
-
-    <br/>
-    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+

@@ -4,34 +4,35 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-
-            <h1 class="lienstitre">Modifiaction d'paqss</h1>
-
+            <h1 class="lienstitre">Modifier la paqss </h1>
             <br>
-            <div class="row journaux">
+            {{ form_start(edit_form) }}
+            <div class="row paqss">
                 <div class="col-md-4">
                     <br>
                     <br>
                     <br>
                     <br>
-                    {{ form_start(edit_form) }}
-                    {{ form_label(edit_form.paqssimg, 'Nommez votre paqss:', {'paqssimg': {'class': 'paqssimg'}}) }}
-                    {{ form_widget(edit_form.paqssimg)}}
-                    {{ form_label(edit_form.file7, 'Insérez votre Pdf:', {'file7': {'class': 'file7'}}) }}
-                    {{ form_widget(edit_form.file7)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier" />
+                    {{edit_form.children.file1.vars.label}}
+                    {{ form_label(edit_form.paqss1, 'Nommez votre paqss:', {'paqss1': {'class': 'paqss1'}}) }}
+                    {{ form_widget(edit_form.paqss1)}}
+                    {{ form_errors(edit_form.paqss1) }}
+                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(edit_form.file1)}}
+                    {{ form_errors(edit_form.file1) }}
+
+                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
+
                     {{ form_end(edit_form) }}
 
 
-                    {{ form_start(paqss_delete_form) }}
+                    {{ form_start(delete_form) }}
                     <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(paqss_delete_form) }}
-
+                    {{ form_end(delete_form) }}
                 </div>
             </div>
-
         </div>
     </div>
+
 
 {% endblock %}
