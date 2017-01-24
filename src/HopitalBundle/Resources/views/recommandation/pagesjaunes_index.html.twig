@@ -3,22 +3,17 @@
 {% block body %}
 
 
-    <tbody>
-    {% for pagesjaunes in pagesjauness %}
-
-        <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc2">
+            {% for pagesjaunes in pagesjauness %}
                 <h1 class="lienstitre">{{ pagesjaunes.pagesjaunestitle }}</h1>
                 <h4 class="lienssoustitre">{{ pagesjaunes.pagesjaunesdescription }}</h4>
                 <a href="{{ pagesjaunes.pagesjaunesurl }}" target="_blank">
                     <img src="{{ app.request.basepath }}/uploads/{{ pagesjaunes.pagesjaunesimg }}" alt="pagesjaunes" type="application/img" class="lienimg">
                     </img>
                 </a>
-            </div>
+            {% endfor %}
         </div>
-
-    {% endfor %}
-    </tbody>
-
+    </div>
 
 {% endblock %}

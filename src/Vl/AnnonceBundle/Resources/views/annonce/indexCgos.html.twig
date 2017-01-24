@@ -1,57 +1,54 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-{% endblock %}
-
-
 {% block body %}
-<div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
-        <br>
-        <div class="container">
-            <h4 class="lienstitre">Liste des annonces CGOS</h4>
 
-        {% if cgoss != null %}
-            <table class="centered striped">
-                <thead>
-                <tr class="table_head">
-                    <th>Image</th>
-                    <th>Titre</th>
-                    <th>Auteur</th>
-                    <th>Description</th>
-                    <th>Prix</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for cgos in cgoss %}
-                    <tr>
-                        <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ cgos.image }}" alt="annonce"></td>
-                        <td>{{ cgos.titre }}</td>
-                        <td>{{ cgos.auteur }}</td>
-                        <td>{{ cgos.description }}</td>
-                        <td>{{ cgos.prix }}</td>
-                        <td>
-                            <a href="{{ path('annonce_showCgos', { 'id': cgos.id }) }}"><i class="material-icons">search</i></a>
-                            <a href="{{ path('annonce_editCgos', { 'id': cgos.id }) }}"><i class="material-icons">mode_edit</i></a>
-                            <a href="{{ path('annonce_deleteCgos', { 'id': cgos.id }) }}"><i class="material-icons">delete_forever</i></a>
-                        </td>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <br>
+            <div class="container">
+                <h4 class="lienstitre">Liste des annonces CGOS</h4>
+            </div>
+            {% if cgoss != null %}
+                <table class="centered striped">
+                    <thead>
+                    <tr class="table_head">
+                        <th>Image</th>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Description</th>
+                        <th>Prix</th>
                     </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        {% else %}
-            <h3>Il n'y a pas d'annonces</h3>
-        {% endif %}
-        <div class="add_button center-align">
-            <a class="waves-effect waves-light btn" href="{{ path('annonce_newCgos') }}">Ajouter une annonce</a>
+                    </thead>
+                    <tbody>
+                    {% for cgos in cgoss %}
+                        <tr>
+                            <td class="line_img"><img src="{{ app.request.basepath }}/uploads/{{ cgos.image }}" alt="annonce"></td>
+                            <td>{{ cgos.titre }}</td>
+                            <td>{{ cgos.auteur }}</td>
+                            <td>{{ cgos.description }}</td>
+                            <td>{{ cgos.prix }}</td>
+                            <td>
+                                <a href="{{ path('annonce_showCgos', { 'id': cgos.id }) }}"><i class="material-icons">search</i></a>
+                                <a href="{{ path('annonce_editCgos', { 'id': cgos.id }) }}"><i class="material-icons">mode_edit</i></a>
+                                <a href="{{ path('annonce_deleteCgos', { 'id': cgos.id }) }}"><i class="material-icons">delete_forever</i></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <h4>Il n'y a pas d'annonces</h4>
+            {% endif %}
+            <div class="add_button center-align">
+                <a class="waves-effect waves-light btn" href="{{ path('annonce_newCgos') }}">Ajouter une annonce</a>
+            </div>
         </div>
     </div>
-        </div>
+
+
+
+
+    </div>
 {% endblock %}
 
 {% block javascripts %}
