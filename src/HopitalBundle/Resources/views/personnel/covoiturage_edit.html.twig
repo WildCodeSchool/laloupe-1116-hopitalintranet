@@ -1,50 +1,39 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
 
 {% block body %}
-    <h1>Covoiturage edit</h1>
 
-    {{ form_start(edit_form) }}
-
-
-
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ covoiturage.covoiturageimg }}"/>
-        {{edit_form.children.file1.vars.label}}
-        {{ form_widget(edit_form.file1) }}
-        {{ form_errors(edit_form.file1) }}
-        {{ form_widget(edit_form.covoiturageimg) }}
-        {{ form_errors(edit_form.covoiturageimg) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Modification d'une page co-voiturage</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            <a href="{{ app.request.basepath }}/uploads/{{ covoiturage.covoiturageimg }}" >Votre image</a>
+                            {{edit_form.children.file1.vars.label}}<br><br>
+                            {{ form_widget(edit_form.file1) }}<br>
+                            {{ form_errors(edit_form.file1) }}
+                            {{ form_widget(edit_form.covoiturageimg) }}<br><br>
+                            {{ form_errors(edit_form.covoiturageimg) }}
+                            {{ form_widget(edit_form) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier"/>
+                            {{ form_end(edit_form) }}
+                            {{ form_start(covoiturage_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(covoiturage_delete_form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    {{ form_widget(edit_form) }}
-
-    <input type="submit" value="Edit"/>
-
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('personnel_covoiturage_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(covoiturage_delete_form) }}
-            <input type="submit" value="Delete">
-            {{ form_end(covoiturage_delete_form) }}
-        </li>
-    </ul>
-
-
-
-
-    {{ form_end(edit_form) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}
+
+

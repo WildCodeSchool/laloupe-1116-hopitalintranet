@@ -19,12 +19,14 @@ class LettreinfoType extends AbstractType
                 )))
             ->add('file1', 'file', array('required' => false))
             ->add('titlelettreinfo', 'text', array(
+                'label'=>'Titre de la lettre d\'information',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Lettre d'information",
                     'class' => "zonenew"
                 )))
             ->add('idlettreinfo', 'text', array(
+                'label'=>'ID de la lettre d\'information',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: LI0001",

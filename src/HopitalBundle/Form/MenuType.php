@@ -25,11 +25,16 @@ class MenuType extends AbstractType
             ->add('file4', 'file', array('required' => false))
             ->add('menuimgrempl')
             ->add('file5', 'file', array('required' => false))
-            ->add('titlemenu1')
-            ->add('titlemenu2')
-            ->add('titlemenu3')
-            ->add('titlemenu4')
-            ->add('titlemenurempl');
+            ->add('titlemenu1', 'text', array(
+                'label'=>'Titre menu 1',))
+            ->add('titlemenu2', 'text', array(
+                'label'=>'Titre menu 2',))
+            ->add('titlemenu3', 'text', array(
+                'label'=>'Titre menu 3',))
+            ->add('titlemenu4', 'text', array(
+                'label'=>'Titre menu 4',))
+            ->add('titlemenurempl', 'text', array(
+                'label'=>'Titre de menu de remplacement',));
     }
 
     /**FIN CODE AJOUTÉ
