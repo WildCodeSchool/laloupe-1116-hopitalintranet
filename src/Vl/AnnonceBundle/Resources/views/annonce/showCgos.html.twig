@@ -1,80 +1,79 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
-        <br>
 
-        <div class="container">
-            <h1 class="lienstitre">{{ cgos.titre }}</h1>
-
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitreshow">{{ cgos.titre }}</h1>
+            <br>
             <div class="row">
-                <div class="col-md-5">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="{{ app.request.basepath }}/uploads/{{ cgos.image }}" alt="annonce"
-                                 class="imgannonce">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="row carreshowannonce">
+
+                        <div class="col-md-5">
+                            <img src="{{ app.request.basepath }}/uploads/{{ cgos.image }}" alt="cgos" class="imgannonce">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-content auteurannonce">
+                                <p><strong>Auteur : </strong>{{ cgos.auteur }}</p>
+                                <p><strong>Description : </strong>{{ cgos.description }}</p>
+                                <p><strong>Prix : </strong>{{ cgos.prix }}</p>
+                            </div>
+                            {{ form_start(form) }}
+                            <div class="input-field">
+                                {{ form_label(form.utilisateur) }}
+                                {{ form_widget(form.utilisateur) }}
+                                {{ form_errors(form.utilisateur) }}
+                            </div>
+                            <div class="input-field">
+                                {{ form_label(form.message) }}
+                                {{ form_widget(form.message) }}
+                                {{ form_errors(form.message) }}
+                            </div>
+                            <div class="add_button center-align">
+                                <input class="btn" type="submit"
+                                       value="Ajouter le commentaire"/>
+                            </div>
+                            {{ form_end(form) }}
                         </div>
                     </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="row commentaireannonce">
-                        <div class="card-content auteurannonce">
-                            <p><span>Auteur : </span>{{ cgos.auteur }}</p>
-                            <p><span>Description : </span>{{ cgos.description }}</p>
-                            <p><span>Prix : </span>{{ cgos.prix }}</p>
-                        </div>
-                        {{ form_start(form) }}
-                        <div class="input-field caseannonce">
-                            {{ form_label(form.utilisateur) }}
-                            {{ form_widget(form.utilisateur) }}
-                            {{ form_errors(form.utilisateur) }}
-                        </div>
-                        <div class="input-field">
-                            {{ form_label(form.message) }}
-                            {{ form_widget(form.message) }}
-                            {{ form_errors(form.message) }}
-                        </div>
-                        <div class="add_button center-align">
-                            <input class="btn" type="submit"
-                                   value="Ajouter le commentaire"/>
-                        </div>
-                        {{ form_end(form) }}
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    {% if commentaire != null %}
-                        <div class="row commentaireancien">
-                                {% for message in commentaire %}
-                                    <div class="row">
-                                        <div class="col s12">
-                                            <div class="card blue-grey darken-1">
-                                                <div class="card-content white-text">
-                                                    <p>Auteur: {{ message.utilisateur }}</p>
-                                                    <p>{{ message.message }}</p>
-                                                </div>
+
+                    <div class="row carreshowcomm">
+                        <div class="col-md-12">
+                            {% if commentaire != null %}
+                                <div class="row commentaireancien">
+                                    {% for message in commentaire %}
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p><strong>Auteur:</strong> {{ message.utilisateur }}</p>
+                                                <p>{{ message.message }}</p>
+                                                <hr>
                                             </div>
-                                            </br></br>
                                         </div>
-                                    </div>
-                                {% endfor %}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <h5 class="center-align"> Il n'y a pas de commentaires</h5>
+                            {% endif %}
                         </div>
-                    {% else %}
-                        <h6 class="center-align"> Il n'y a pas de commentaire pour ce CGOS</h6>
-                    {% endif %}
-                    <div class="add_button center-align">
-                        <a class="waves-effect waves-light btn" href="{{ path('annonce_indexCgos') }}">Retour à la liste des annonces</a>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-offset-8 col-md-4">
+                            <a class="btn" href="{{ path('annonce_indexCgos') }}">Retour à la liste des annonces</a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
-{% block javascripts %}
-    {{ parent() }}
-    {# Call jQuery #}
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        {# Call jQuery #}
+        <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    {% endblock %}

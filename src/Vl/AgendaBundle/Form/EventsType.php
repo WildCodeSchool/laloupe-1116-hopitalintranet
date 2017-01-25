@@ -26,6 +26,7 @@ class EventsType extends AbstractType
                 'minutes' => range(0, 30, 30),
                 //   'model_timezone' => 'Europe/Paris'
             ))
+
             ->add('titre')
             ->add('contenu', 'textarea')
             ->add('images', ImagesType::class, array(

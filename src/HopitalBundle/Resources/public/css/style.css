@@ -698,33 +698,30 @@ div.c-wrapper{
 
 /**************************** FIN GALERIE ****************************/
 
+/**************************** DEBUT ANNONCES *************************/
+
+
 .imgannonce{
-    height: 300px;
-    width: auto;
-    margin-top: 10px;
+    max-width: 270px;
+    margin-left: 20px;
 }
 
-.card{
-    margin-left: 20px;
+.imgannonceedit{
+    max-width: 360px;
 }
 
 .auteurannonce{
     margin-bottom: 30px;
 }
 
-.commentaireannonce{
-    margin-top: 10px;
-    padding:10px;
-}
 
 .commentaireancien{
     margin-top: 10px;
     border:5px solid #E7E7E7;
-    padding:10px;
+    padding:20px;
     overflow-y: scroll;
     height: 150px;
 }
-
 
 .zonecommentaire{
     width: 470px;
@@ -736,12 +733,174 @@ div.c-wrapper{
     height: 100px;
 }
 
+.btnannonce{
+    position: absolute;
+    top:450px;
+    left:420px;
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 0;
+    margin-top:50px;
+    padding:5px 10px 5px 10px;
+}
+
+.btnmodifannonce{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left:430px;
+    margin-top: 30px;
+    padding:5px 10px 5px 10px;
+}
 
 
+.annoncenewbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 50px;
+    padding:5px 10px 5px 10px;
+}
 
 
+.annoncenewbtn1{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 25px;
+    padding:5px 10px 5px 10px;
+}
+
+.btnajout{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 20px;
+    padding:5px 10px 5px 10px;
+}
 
 
+a:focus, a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btnajout a{
+    color: #FFFFFF;
+}
+
+.btneditannonce{
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 20px;
+    padding:5px 10px 5px 10px;
+}
+
+.zoneannonce{
+    width: 630px;
+    margin-bottom: 10px;
+}
+
+.zoneannoncedesc{
+    width: 630px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.fondblancshow{
+    background-color: #FFFFFF;
+    padding: 10px 20px 20px 20px;
+    margin-bottom: 70px;
+}
+
+.fondblancannonce{
+    background-color: #FFFFFF;
+    padding: 10px 20px 20px 20px;
+    margin-bottom: 70px;
+    height: 570px;
+}
+
+.carreshowannonce{
+    background-color: #E7E7E7;
+    padding: 30px;
+    margin-top: -10px;
+}
+
+.carreshowcomm{
+    border: 5px solid #E7E7E7;
+    padding: 30px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.carrelisteannonce{
+    background-color: #E7E7E7;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.lienstitreshow{
+    text-align: center;
+    color: #0089D0;
+    margin-top: 10px;
+}
+
+hr{
+    border-top : 4px solid #E7E7E7;
+}
+
+.desc{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.line_img{
+    max-height: 233px;
+    max-width: 350px;
+}
+
+
+.descriptionannonce{
+    background-color: #FFFFFF;
+    border:4px solid #CCCCCC;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.prixannonce{
+    margin-left: 20px;
+    background-color: #0089D0;
+    width:90px;
+    height:60px;
+    color: #FFFFFF;
+    padding-top:15px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+/**************************** FIN ANNONCES *************************/
 
 /**************************** DEBUT NEW ****************************/
 
@@ -799,6 +958,13 @@ div.c-wrapper{
     height: 450px;
     margin-top: 30px;
     padding: 30px;
+}
+
+.carreneannonce{
+    background-color: #E7E7E7;
+    height: 430px;
+    margin-top: 0px;
+    padding: 20px;
 }
 
 
@@ -939,3 +1105,24 @@ div.c-wrapper{
     left:560px;
     top:500px;
 }
+
+
+/************************ DEBUT IDEES *******************/
+
+.mail{
+    text-align: center;
+}
+
+.btnmail{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 38%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+/************************ FIN IDEES *******************/

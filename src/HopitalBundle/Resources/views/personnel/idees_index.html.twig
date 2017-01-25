@@ -2,10 +2,6 @@
 
 {% block body %}
 
-
-    <tbody>
-    {% for idees in idees %}
-
         <div class="row">
             <div id="page-contact">
                 <div class="col-md-offset-2  col-md-8 fondblanc">
@@ -13,7 +9,7 @@
                     <br/>
                     <br/>
                     <h4 class="lienssoustitre">Envoyez vos idées pour améliorer la vie à l'hôpital.</h4>
-                    <form action="{{  path('personnel_idees_idees') }}" method="post">
+                    <form action="{{  path('personnel_idees_mail') }}" method="post">
                         <div class="form-group">
                             <input class="form-control objet" type="text" value="Objet" name="object" id="object">
                         </div>
@@ -30,8 +26,5 @@
                 </div>
             </div>
         </div>
-
-    {% endfor %}
-    </tbody>
 
 {% endblock %}
