@@ -32,10 +32,6 @@ HopitalBundle\Entity\Menu:
             type: string
             length: 255
             nullable: true
-        menuimg:
-            type: string
-            length: 25
-            nullable: true
         menu1img:
             type: string
             length: 25
@@ -60,9 +56,9 @@ HopitalBundle\Entity\Menu:
 
 
     lifecycleCallbacks:
-      prePersist: [ preUpload, preUpload1, preUpload2 ]
-      preUpdate: [ preUpload, preUpload1, preUpload2 ]
-      postPersist: [ upload, upload1, upload2 ]
-      postUpdate: [ upload, upload1, upload2 ]
-      postRemove: [ removeUpload, removeUpload1, removeUpload2 ]
+      prePersist: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5 ]
+      preUpdate: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4, preUpload5 ]
+      postPersist: [ upload, upload1, upload2, upload3, upload4, upload5 ]
+      postUpdate: [ upload, upload1, upload2, upload3, upload4, upload5 ]
+      postRemove: [ removeUpload, removeUpload1, removeUpload2, removeUpload3, removeUpload4, removeUpload5 ]
 

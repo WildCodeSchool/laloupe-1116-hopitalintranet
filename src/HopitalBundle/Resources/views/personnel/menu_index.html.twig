@@ -3,139 +3,115 @@
 
 {% block body %}
 
-<div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="lienstitre">Menus</h1>
-            </div>
-        </div>
-        {% for menu in menus %}
-        <div class="row">
-            <div class="col-md-offset-2 col-md-5">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
-                    Menus semaine 1
-                </button>
-                <div class="modal fade" id="modal-id">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Menu semaine 1</h4>
-                            </div>
-                            <div class="modal-body" style="height: 650px">
-                                <object data="{{ app.request.basepath }}/uploads/{{ menu.menu1img }}" type="application/pdf" class="menu1img">
-                                </object>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-            </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
             <div class="row">
-                <div class="col-md-5">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
-                        Menus semaine 2
-                    </button>
-                    <div class="modal fade" id="modal-id">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title">Menu semaine 2</h4>
-                                </div>
-                                <div class="modal-body" style="height: 650px">
-                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menu2img }}" type="application/pdf" class="menu1img">
-                                    </object>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
+                <div class="col-md-12">
+                    <h1 class="lienstitre">Menus</h1>
                 </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-md-offset-2 col-md-5">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
-                    Menus semaine 3
-                </button>
-                <div class="modal fade" id="modal-id">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Menu semaine 3</h4>
-                            </div>
-                            <div class="modal-body" style="height: 650px">
-                                <object data="{{ app.request.basepath }}/uploads/{{ menu.menu3img }}" type="application/pdf" class="menu1img">
-                                </object>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-            </div>
-            <div class="row">
-                <div class="col-md-5">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
-                        Menus semaine 4
-                    </button>
-                    <div class="modal fade" id="modal-id">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title">Menu semaine 4</h4>
-                                </div>
-                                <div class="modal-body" style="height: 650px">
-                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menu4img }}" type="application/pdf" class="menu1img">
-                                    </object>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-offset-4 col-md-5">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
-                        Menus de remplacement
-                    </button>
-                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body" style="height: 650px">
+            {% for menu in menus %}
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-5">
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal1-lg">
+                            Menus semaine 1
+                        </button>
+                        <div class="modal fade bs-example-modal1-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" style="height: 700px">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimgrempl }}" type="application/pdf" class="menuremplacepdf">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menu1img }}" type="application/pdf" class="modalarchivespdf">
+                                    </object>>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal2-lg">
+                            Menus semaine 2
+                        </button>
+                        <div class="modal fade bs-example-modal2-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" style="height: 700px">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menu2img }}" type="application/pdf" class="modalarchivespdf">
                                     </object>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <br>
-            <br>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-5">
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal3-lg">
+                            Menus semaine 3
+                        </button>
+                        <div class="modal fade bs-example-modal3-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" style="height: 700px">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menu3img }}" type="application/pdf" class="modalarchivespdf">
+                                    </object>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal4-lg">
+                            Menus semaine 4
+                        </button>
+                        <div class="modal fade bs-example-modal4-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" style="height: 700px">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menu4img }}" type="application/pdf" class="modalarchivespdf">
+                                    </object>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-5">
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal5-lg">
+                            Menus de remplacement
+                        </button>
+                        <div class="modal fade bs-example-modal5-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content" style="height: 700px">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <object data="{{ app.request.basepath }}/uploads/{{ menu.menuimgrempl }}" type="application/pdf" class="modalarchivespdf">
+                                    </object>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
         </div>
     </div>
-            </div>
 
-    {% endfor %}
-    {% endblock %}
+{% endblock %}

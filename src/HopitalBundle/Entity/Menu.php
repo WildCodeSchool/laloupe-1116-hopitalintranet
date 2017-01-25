@@ -69,7 +69,6 @@ class Menu
 
     public $file2;
 
-
     public function preUpload2()
     {
         if (null !== $this->file2) {
@@ -83,7 +82,6 @@ class Menu
         if (null === $this->file2) {
             return;
         }
-
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
@@ -100,8 +98,10 @@ class Menu
     }
 
 
-    public $file3;
 
+
+
+    public $file3;
 
     public function preUpload3()
     {
@@ -132,8 +132,11 @@ class Menu
         }
     }
 
-    public $file4;
 
+
+
+
+    public $file4;
 
     public function preUpload4()
     {
@@ -164,8 +167,11 @@ class Menu
         }
     }
 
-    public $file5;
 
+
+
+
+    public $file5;
 
     public function preUpload5()
     {
@@ -195,6 +201,12 @@ class Menu
             unlink($file5);
         }
     }
+
+
+
+
+
+
     /**
      * @var int
      */
@@ -234,6 +246,10 @@ class Menu
     {
         return $this->titlemenu1;
     }
+
+
+
+
     /**
      * @var string
      */
@@ -258,6 +274,10 @@ class Menu
     {
         return $this->titlemenu2;
     }
+
+
+
+
     /**
      * @var string
      */
@@ -282,6 +302,11 @@ class Menu
     {
         return $this->titlemenu3;
     }
+
+
+
+
+
     /**
      * @var string
      */
@@ -307,6 +332,7 @@ class Menu
         return $this->titlemenu4;
     }
 
+
     private $titlemenurempl;
     /**
      * Set titlemenurempl
@@ -328,6 +354,8 @@ class Menu
     {
         return $this->titlemenurempl;
     }
+
+
 
     /**
      * @var string
@@ -359,34 +387,6 @@ class Menu
     }
 
 
-    /**
-     * @var string
-     */
-    private $menuimg;
-
-    /**
-     * Set menuimg
-     *
-     * @param string $menuimg
-     * @return Menu
-     */
-    public function setMenuimg($menuimg)
-    {
-        $this->menuimg = $menuimg;
-
-        return $this;
-    }
-
-    /**
-     * Get menuimg
-     *
-     * @return string
-     */
-    public function getMenuimg()
-    {
-        return $this->menuimg;
-    }
-
 
     /**
      * @var string
@@ -416,6 +416,9 @@ class Menu
         return $this->menuimgrempl;
     }
 
+
+
+
     /**
      * @var string
      */
@@ -441,6 +444,9 @@ class Menu
         return $this->menu1img;
     }
 
+
+
+
     /**
      * @var string
      */
@@ -456,7 +462,6 @@ class Menu
         $this->menu2img = $menu2img;
         return $this;
     }
-
     /**
      * Get menu2img
      *
@@ -466,6 +471,10 @@ class Menu
     {
         return $this->menu2img;
     }
+
+
+
+
     /**
      * @var string
      */
@@ -481,7 +490,6 @@ class Menu
         $this->menu3img = $menu3img;
         return $this;
     }
-
     /**
      * Get menu3img
      *
@@ -491,6 +499,9 @@ class Menu
     {
         return $this->menu3img;
     }
+
+
+
 
     /**
      * @var string
@@ -507,7 +518,6 @@ class Menu
         $this->menu4img = $menu4img;
         return $this;
     }
-
     /**
      * Get menu4img
      *
@@ -517,6 +527,9 @@ class Menu
     {
         return $this->menu4img;
     }
+
+
+
 
     /**
      * @ORM\PrePersist

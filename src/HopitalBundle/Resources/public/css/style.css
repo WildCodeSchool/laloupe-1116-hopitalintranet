@@ -42,6 +42,8 @@ body{
     margin-top:5px;
 }
 
+
+
 /**************************** FIN NAVBAR ****************************/
 
 
@@ -592,11 +594,6 @@ div.c-wrapper{
 /**************************** DEBUT MENU **********************/
 .menus {
     border: 5px solid #e7e7e7;
-}
-.menupdf{
-    height: 500px;
-    width: 70%;
-    margin-left: 15%;
 }
 
 .btn-lg{
