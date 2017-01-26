@@ -19,12 +19,14 @@ class MedicalType extends AbstractType
                 )))
             ->add('file2', 'file', array('required' => false))
             ->add('titlemedical', 'text', array(
+                'label'=>'Titre de l\'astreinte médical',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Medical 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idmedical', 'text', array(
+                'label'=>'ID de l\'astreinte médical',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: M0001",

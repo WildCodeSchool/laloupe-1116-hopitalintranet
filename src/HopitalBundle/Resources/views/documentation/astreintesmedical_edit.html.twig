@@ -6,48 +6,51 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Astreintes Medical edit</h1>
-    {{ form_start(edit_form_medical) }}
+
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <h1 class="lienstitrenew">Modification de l'astreite administratif</h1>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 astreinte_carre">
+                <div class="row">
+                    <div class="col-md-12 imgnew">
 
 
-    <li>
-        <a href="{{ path('documentation_astreintesmedical_new') }}">Ajouter une astreinte</a>
-    </li>
+                        <div>
+                            <img src="{{ app.request.basepath }}/uploads/{{ medical.medicalimg }}"type="application/pdf" class="directioncommune"/>
+                            {{edit_form_medical.children.file2.vars.label}}
+                            {{ form_widget(edit_form_medical.file2) }}
+                            {{ form_errors(edit_form_medical.file2) }}
+                            {{ form_widget(edit_form_medical.medicalimg) }}
+                            {{ form_errors(edit_form_medical.medicalimg) }}
+                            {{ form_end(edit_form_medical) }}
+                            {{ form_widget(edit_form_medical) }}
+                            <h2 class="titre">{{ medical.titlemedical }}</h2>
+                            <h2 class="titre">{{ medical.idmedical }}</h2>
 
+                            <li>
+                                <a href="{{ path('documentation_astreintesmedical_new') }}">Ajouter une astreinte</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_start(edit_form_medical) }}
+                            {{ form_start(astreintes_delete_form_medical) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(astreintes_delete_form_medical) }}
+                            {{ form_end(edit_form_medical) }}
 
-    <h2 class="titre">{{ medical.titlemedical }}</h2>
-    <h2 class="titre">{{ medical.idmedical }}</h2>
+                            <li>
+                                <a href="{{ path('documentation_astreintes_index') }}">Retour à l'index</a>
+                            </li>
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ medical.medicalimg }}"type="application/pdf" class="directioncommune"/>
-        {{edit_form_medical.children.file2.vars.label}}
-        {{ form_widget(edit_form_medical.file2) }}
-        {{ form_errors(edit_form_medical.file2) }}
-        {{ form_widget(edit_form_medical.medicalimg) }}
-        {{ form_errors(edit_form_medical.medicalimg) }}
-        {{ form_end(edit_form_medical) }}
-
-        {{ form_widget(edit_form_medical) }}
-        <input type="submit" value="Edit"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    <ul>
-        <li>
-            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(edit_form_medical) }}
-            {{ form_start(astreintes_delete_form_medical) }}
-            <input type="submit" value="Delete">
-            {{ form_end(astreintes_delete_form_medical) }}
-            {{ form_end(edit_form_medical) }}
-        </li>
-        <li>
-    </ul>
-    {{ form_end(edit_form_medical) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}

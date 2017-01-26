@@ -105,6 +105,31 @@ class InstancesController extends Controller
         ));
     }
 
+
+    /**
+     * Displays a form to edit an existing instances entity.
+     *
+     */
+    public function editRubriqueAction(Request $request, Instances $instances)
+    {
+        $deleteForm = $this->createDeleteForm($instances);
+        $editForm = $this->createForm('HopitalBundle\Form\InstancesRubriqueType', $instances);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('documentation_instancesrubrique_edit', array('id' => $instances->getId()));
+        }
+
+        return $this->render('HopitalBundle:documentation:instancesrubrique_edit.html.twig', array(
+            'instances' => $instances,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+
     /**
      * Deletes a instances entity.
      *

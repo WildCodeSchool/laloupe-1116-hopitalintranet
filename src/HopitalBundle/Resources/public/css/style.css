@@ -572,7 +572,7 @@ div.c-wrapper{
 
 
 .directioncommune{
-    height: 530px;
+    height: 200px;
     width: 70%;
     margin-left: 15%;
     border: 5px solid #E7E7E7;
@@ -663,7 +663,25 @@ div.c-wrapper{
     width: 860px;
     margin-left: 20px;
 }
+.astreinteimg {
+    height: 300px;
+    width: 600px;
+    margin-left: 2%;
+    border: 5px solid #E7E7E7;
+}
 
+.astreinte_carre {
+    background-color: #E7E7E7;
+    height: 810px;
+    width: 700px;
+    margin-left: 16.5%;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+li {
+    list-style: none;
+}
 
 
 /**************************** FIN ASTREINTES **********************/
@@ -782,7 +800,7 @@ div.c-wrapper{
 
 /*Dans Type*/
 .zonenew{
-    width: 500px;
+    width: 450px;
     margin-bottom: 10px;
 }
 

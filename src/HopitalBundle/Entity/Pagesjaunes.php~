@@ -143,6 +143,90 @@ class Pagesjaunes
 
 
     /**
+     * @var string
+     */
+    private $pagesjaunestitle;
+
+    /**
+     * Set pagesjaunestitle
+     *
+     * @param string $pagesjaunestitle
+     * @return Pagesjaunes
+     */
+    public function setPagesjaunestitle($pagesjaunestitle)
+    {
+        $this->pagesjaunestitle = $pagesjaunestitle;
+
+        return $this;
+    }
+    /**
+     * Get pagesjaunestitle
+     *
+     * @return string
+     */
+    public function getPagesjaunestitle()
+    {
+        return $this->pagesjaunestitle;
+    }
+
+
+    /**
+     * @var string
+     */
+    private $pagesjaunesdescription;
+
+    /**
+     * Set pagesjaunesdescription
+     *
+     * @param string $pagesjaunesdescription
+     * @return Pagesjaunes
+     */
+    public function setPagesjaunesdescription($pagesjaunesdescription)
+    {
+        $this->pagesjaunesdescription = $pagesjaunesdescription;
+
+        return $this;
+    }
+    /**
+     * Get pagesjaunesdescription
+     *
+     * @return string
+     */
+    public function getPagesjaunesdescription()
+    {
+        return $this->pagesjaunesdescription;
+    }
+    /**
+     * @var string
+     */
+    private $pagesjaunesurl;
+
+
+
+
+    /**
+     * Set pagesjaunesurl
+     *
+     * @param string $pagesjaunesurl
+     * @return Pagesjaunes
+     */
+    public function setPagesjaunesurl($pagesjaunesurl)
+    {
+        $this->pagesjaunesurl = $pagesjaunesurl;
+
+        return $this;
+    }
+
+    /**
+     * Get pagesjaunesurl
+     *
+     * @return string
+     */
+    public function getPagesjaunesurl()
+    {
+        return $this->pagesjaunesurl;
+    }
+    /**
      * @ORM\PrePersist
      */
     public function preUpload()
