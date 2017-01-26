@@ -3,20 +3,18 @@
 {% block body %}
 
 
-
-    {% for has in hass %}
-
-        <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc2">
+            {% for has in hass %}
                 <h1 class="lienstitre">{{ has.hastitle }}</h1>
                 <h4 class="lienssoustitre">{{ has.hasdescription }}</h4>
                 <a href="{{ has.hasurl }}" target="_blank">
                     <img src="{{ app.request.basepath }}/uploads/{{ has.hasimg }}" alt="has" type="application/img" class="lienimg">
                     </img>
                 </a>
-            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 
 
 

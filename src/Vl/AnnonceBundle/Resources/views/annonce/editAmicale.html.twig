@@ -1,82 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-{% endblock %}
-
 {% block body %}
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Modifier l'annonce de l'Amicale{{ amicale.titre }}</h1>
             <br>
-            <div class="container">
-                <h4 class="lienstitre">Modifier l'annonce de l'Amicale{{ amicale.titre }}</h4>
-
-                <div class="row">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 carreshowannonce">
                     {{ form_start(edit_form) }}
                     <div class="row">
-                        <div class="input-field col m6 s12">
-                            {{ form_label(edit_form.titre) }}
-                            {{ form_widget(edit_form.titre) }}
+                        <div class="col-md-12">
+                            {{ form_label(edit_form.titre, 'Titre à votre annonce:') }}<br>
+                            {{ form_widget(edit_form.titre) }}<br>
                             {{ form_errors(edit_form.titre) }}
-                        </div>
-                        <div class="input-field col m6 s12">
-                            {{ form_label(edit_form.auteur) }}
-                            {{ form_widget(edit_form.auteur) }}
+                            {{ form_label(edit_form.auteur, 'Votre nom:') }}<br>
+                            {{ form_widget(edit_form.auteur) }}<br>
                             {{ form_errors(edit_form.auteur) }}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s6">
-                            {{ form_label(edit_form.description) }}
-                            {{ form_widget(edit_form.description) }}
+                            {{ form_label(edit_form.description, 'Description de votre annonce:') }}<br>
+                            {{ form_widget(edit_form.description) }}<br>
                             {{ form_errors(edit_form.description) }}
                         </div>
-                        <div class="input-field col s6">
-                            {{ form_label(edit_form.prix) }}
-                            {{ form_widget(edit_form.prix) }}
-                            {{ form_errors(edit_form.prix) }}
-                        </div>
                     </div>
-
                     <div class="row">
-                        <div class="col s1">
-                            <img src="{{ app.request.basepath }}/uploads/{{ amicale.image }}" alt="image actuelle">
-                        </div>
-                        <div class="file-field input-field col s11">
-
-                            {{ form_label(edit_form.file, 'Cliquer pour insérer votre image', {'image': {'class': 'imgage'}}) }}
-                            {{ form_widget(edit_form.file) }}
-
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
-                            </div>
+                        <div class="col-md-6">
+                            {{ form_label(edit_form.prix, 'Prix:') }}<br>
+                            {{ form_widget(edit_form.prix) }}<br>
+                            {{ form_errors(edit_form.prix) }}<br>
                         </div>
                     </div>
-                    <div class="add_button center-align">
-                        <input class="waves-effect waves-light btn" type="submit" value="Modifier l'annonce"/>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <img src="{{ app.request.basepath }}/uploads/{{ amicale.image }}" alt="image actuelle" class="imgannonceedit">
+                        </div>
+                        <div class="col-md-5">
+                            {{ form_label(edit_form.file, 'Modifier votre image', {'image': {'class': 'imgage'}}) }}
+                            {{ form_widget(edit_form.file) }}
+                        </div>
+                    </div>
+                    <div>
+                        <input class="btnmodifannonce" type="submit" value="Modifier l'annonce"/>
                     </div>
                     {{ form_end(edit_form) }}
                 </div>
-
-                <div class="add_button center-align">
-                    <a class="waves-effect waves-light btn" href="{{ path('annonce_indexAmicale') }}">Retour à la liste
-                        des annonces</a>
-                </div>
             </div>
-
         </div>
     </div>
+    <div class="add_button center-align">
+        <a class="waves-effect waves-light btn" href="{{ path('annonce_indexAmicale') }}">Retour à la liste
+            des annonces</a>
+    </div>
+
+
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
     {# Call jQuery #}
-    <script src="https://code.jquery.com/jquery-3.1.1.js"
-            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 {% endblock %}

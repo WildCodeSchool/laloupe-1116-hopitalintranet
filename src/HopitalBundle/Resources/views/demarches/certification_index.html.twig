@@ -3,7 +3,7 @@
 {% block body %}
 
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
+        <div class="col-md-offset-2 col-md-8 fondblanc2">
             <h1 class="lienstitre">Certifications</h1>
             <div class="noteservice">
                 {% set maxId = 0 %}
@@ -13,6 +13,7 @@
                 {% for certification in certifications %}
                 {% if certification.id == maxId %}
                 <object style="width: 100%; height: 100%" data=" {{ app.request.basepath }}/uploads/{{ certification.certificationimg }}">
+                </object>
                     {% endif %}
                     {% endfor %}
             </div>

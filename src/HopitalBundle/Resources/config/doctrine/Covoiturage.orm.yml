@@ -16,7 +16,18 @@ HopitalBundle\Entity\Covoiturage:
             type: string
             length: 25
             nullable: true
-
+        covoiturageurl:
+            type: string
+            length: 255
+            nullable: true
+        covoituragetitle:
+            type: string
+            length: 255
+            nullable: true
+        covoituragedescription:
+            type: string
+            length: 255
+            nullable: true
 
 
     lifecycleCallbacks:

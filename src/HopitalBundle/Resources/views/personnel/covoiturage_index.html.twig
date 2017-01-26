@@ -3,21 +3,18 @@
 {% block body %}
 
 
-    <tbody>
-    {% for covoiturage in covoiturages %}
-
-        <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
-                <h1 class="lienstitre">Co-voiturage</h1>
-                <h4 class="lienssoustitre">covoiturage.eurelien.fr</h4>
-                <a href="{{ asset('http://covoiturage.eurelien.fr/') }}">
-                    <object data="{{ app.request.basepath }}/uploads/{{ covoiturage.covoiturageimg }}" alt="covoiturage" type="application/pdf" class="lienimg">
-                    </object>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc2">
+            {% for covoiturage in covoiturages %}
+                <h1 class="lienstitre">{{ covoiturage.covoituragetitle }}</h1>
+                <h4 class="lienssoustitre">{{ covoiturage.covoituragedescription }}</h4>
+                <a href="{{ covoiturage.covoiturageurl }}" target="_blank">
+                    <img src="{{ app.request.basepath }}/uploads/{{ covoiturage.covoiturageimg }}" alt="covoiturage" type="application/pdf" class="lienimg">
+                    </img>
                 </a>
-            </div>
+            {% endfor %}
         </div>
+    </div>
 
-    {% endfor %}
-    </tbody>
 
 {% endblock %}
