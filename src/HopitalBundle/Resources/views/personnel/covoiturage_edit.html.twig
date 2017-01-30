@@ -4,25 +4,37 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitrenew">Modification d'une page co-voiturage</h1>
+            <h1 class="lienstitrenew">Modifier le lien covoiturage</h1>
             <br>
             <div class="row">
-                <div class="col-md-offset-3 col-md-6 carreeditid">
+                <div class="col-md-offset-3 col-md-6 carreeditid_note">
                     <div class="row">
                         <div class="col-md-12 imgnew">
                             {{ form_start(edit_form) }}
-                            <a href="{{ app.request.basepath }}/uploads/{{ covoiturage.covoiturageimg }}" >Votre image</a>
-                            {{edit_form.children.file1.vars.label}}<br><br>
-                            {{ form_widget(edit_form.file1) }}<br>
-                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.covoituragetitle, 'Titre de votre lien:', {'covoituragetitle': {'class': 'covoituragetitle'}}) }}
+                            {{ form_widget(edit_form.covoituragetitle) }}<br><br>
+                            {{ form_errors(edit_form.covoituragetitle) }}
+                            {{ form_label(edit_form.covoiturageimg, 'Description de votre lien:', {'covoituragedescription': {'class': 'covoituragedescription'}}) }}
+                            {{ form_widget(edit_form.covoituragedescription) }}<br><br>
+                            {{ form_errors(edit_form.covoituragedescription) }}
+
+                            {{ form_label(edit_form.covoiturageimg, 'Renommez votre image:', {'covoiturageimg': {'class': 'covoiturageimg'}}) }}
+
+                            {{ edit_form.children.file1.vars.label }}
+
                             {{ form_widget(edit_form.covoiturageimg) }}<br><br>
                             {{ form_errors(edit_form.covoiturageimg) }}
-                            {{ form_widget(edit_form) }}
+                            {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file1) }}<br><br>
+                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.covoiturageurl, 'Url de votre lien:', {'covoiturageurl': {'class': 'covoiturageurl'}}) }}
+                            {{ form_widget(edit_form.covoiturageurl) }}
+                            {{ form_errors(edit_form.covoiturageurl) }}
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-offset-5 col-md-2 btneditcommun">
-                            <input type="submit" class="btnedit" value="Modifier"/>
+                            <input type="submit" class="btnedit" value="Modifier" />
                             {{ form_end(edit_form) }}
                             {{ form_start(covoiturage_delete_form) }}
                             <input type="submit" class="btnedit" value="Supprimer">

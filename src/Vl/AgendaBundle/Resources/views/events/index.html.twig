@@ -1,49 +1,61 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Liste des évènements</h1>
-    <div class="container">
-        <table id="example" class="display" cellspacing="0" width="100%">
-            <thead>
-            <tr>
-                <th>Titre</th>
-                <th>Début</th>
-                <th>Fin</th>
-                <th>Description</th>
-                <th>Réservation</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for event in events %}
-                <tr>
-                    <td>{{ event.titre }}</td>
-                    <td>{% if event.start %}Le {{ event.start|date('d-m-Y à H:i') }}{% endif %}</td>
-                    <td>{% if event.end %}Le {{ event.end|date('d-m-Y à H:i') }}{% endif %}</td>
-                    <td>{{ event.contenu }}</td>
-                    <td>{{ event.salle }}</td>
-                    <td>{{ event.voiture }}</td>
-                    <td>{{ event.evenement }}</td>
-                    <td>
-                        <ul>
-                            <li>
-                                <a href="{{ path('events_edit', { 'id': event.id }) }}">Modifier</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('events_delete', { 'id': event.id }) }}">Supprimer</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+
+    <div class="calendar">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 fondcalendar">
+                <h1 class="calendarlienstitre">Liste des évènements</h1>
+                <div class="container listeeventcalendar">
+                    <table id="example" class="display" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Début</th>
+                            <th>Fin</th>
+                            <th>Description</th>
+                            <th>Réservation</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for event in events %}
+                            <tr>
+                                <td>{{ event.titre }}</td>
+                                <td>{% if event.start %}Le {{ event.start|date('d-m-Y à H:i') }}{% endif %}</td>
+                                <td>{% if event.end %}Le {{ event.end|date('d-m-Y à H:i') }}{% endif %}</td>
+                                <td>{{ event.contenu }}</td>
+                                <td>{{ event.salle }}</td>
+                                <td>{{ event.voiture }}</td>
+                                <td>{{ event.evenement }}</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ path('events_edit', { 'id': event.id }) }}">Modifier</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('events_delete', { 'id': event.id }) }}">Supprimer</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="listebtn">
+                    <a class="btn btn-default"  href="{{ path('vl_agenda_homepage') }}">Retour au calendrier</a>
+                </div>
+
+            </div>
+        </div>
     </div>
 
 
-    <div class="edit_admin">
-        <a class="btn btn-default edit_admin"  href="{{ path('vl_agenda_homepage') }}">Retour au calendrier</a>
-    </div>
+
+
 {% endblock %}
 
 {% block javascripts %}

@@ -15,8 +15,11 @@ class CovoiturageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('covoituragetitle')
+            ->add('covoituragedescription')
             ->add('covoiturageimg')
-            ->add('file1', 'file', array('required' => false));
+            ->add('file1', 'file', array('required' => false))
+            ->add('covoiturageurl');
     }
 
     /**FIN CODE AJOUTÉ

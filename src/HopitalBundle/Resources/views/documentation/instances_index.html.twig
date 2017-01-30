@@ -3,7 +3,7 @@
 {% block body %}
 
     <div class="row">
-        <div class="col-md-offset-2  col-md-8 fondblanc2">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
             <h1 class="lienstitre">Instances</h1>
             {% for rubrique in rubriques %}
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie" data-toggle="modal" data-target="{{ '#' ~ rubrique.rubrique }}">
@@ -40,7 +40,7 @@
                                             <div class="item">
 
                                                 {% endif %}
-                                                <img src="{{ app.request.basepath }}/uploads/{{ instances.instances1 }}" alt="">
+                                                <object width="700" height="600" data="{{ app.request.basepath }}/uploads/{{ instances.instances1 }}"></object>
                                             </div>
                                             {% set isFirst = false %}
                                             {% endfor %}

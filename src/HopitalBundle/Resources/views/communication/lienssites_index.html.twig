@@ -3,7 +3,6 @@
 {% block body %}
 
     <tbody>
-    {% for lienssites in lienssitess %}
 
 
 
@@ -11,6 +10,8 @@
         <div class="col-md-offset-2  col-md-8 fondblanc">
 
             <h1 class="lienstitre">Liens des sites internet des établissements</h1>
+            {% for lienssites in lienssitess %}
+
             <br>
             <br>
             <div class="col-md-5">
@@ -32,11 +33,11 @@
                 <a  href="{{ asset('http://www.ch-henriey.fr') }}"><button type="button" class="btn btn-primary">Site de Bonneval</button></a><br><br>
 
             </div>
+            {% endfor %}
         </div>
     </div>
 
 
-    {% endfor %}
     </tbody>
 
 

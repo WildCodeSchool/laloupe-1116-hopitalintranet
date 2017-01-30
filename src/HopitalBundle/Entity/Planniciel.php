@@ -23,12 +23,12 @@ class Planniciel
 
     public function getWebPath()
     {
-        return null === $this->image ? null : $this->getUploadDir() . '/' . $this->image;
+        return null === $this->planniciel1 ? null : $this->getUploadDir() . '/' . $this->planniciel1;
     }
 
     public function getAbsolutePath()
     {
-        return null === $this->image ? null : $this->getUploadRootDir() . '/' . $this->image;
+        return null === $this->planniciel1 ? null : $this->getUploadRootDir() . '/' . $this->planniciel1;
     }
 
 

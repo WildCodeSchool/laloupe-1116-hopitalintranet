@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PaqssType extends AbstractType
+class PaqssRubriqueType extends AbstractType
 {
     /**CODE AJOUTÉ
     /**
@@ -35,7 +35,7 @@ class PaqssType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Paqss'
+            'data_class' => 'HopitalBundle\Entity\PaqssRubrique'
         ));
     }
 

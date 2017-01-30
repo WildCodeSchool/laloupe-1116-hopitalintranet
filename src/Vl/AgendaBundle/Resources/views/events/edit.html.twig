@@ -11,65 +11,79 @@
     </style>
 {% endblock %}
 
+
+
+
 {% block body %}
-    <h1>Modifier un évènement</h1>
 
-    {{ form_start(edit_form) }}
 
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-sm-offset-3">
-                    <p class="">Date de début d'évènement</p>
-                    <div class="input-group">
-                        {{ form_widget(edit_form.start) }}
-                        {{ form_errors(edit_form.start) }}
+
+    <div class="calendar">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 fondcalendar">
+                <h1 class="lienstitre">Modifier un évènement</h1>
+
+                {{ form_start(edit_form) }}
+
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3 col-sm-offset-3">
+                                <p class="">Date de début d'évènement</p>
+                                <div class="input-group">
+                                    {{ form_widget(edit_form.start) }}
+                                    {{ form_errors(edit_form.start) }}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="">Date de fin d'évènement</p>
+                                <div class="input-group">
+                                    {{ form_widget(edit_form.end ) }}
+                                    {{ form_errors(edit_form.end) }}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <p class="">Date de fin d'évènement</p>
-                    <div class="input-group">
-                        {{ form_widget(edit_form.end ) }}
-                        {{ form_errors(edit_form.end) }}
+                    <div class="container">
+                        <div class="row">
+                            <p class="">Titre de l'évènement</p>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                {{ form_widget(edit_form.titre , {'attr': {'class': 'form-control', 'placeholder': 'Titre de l\'évènement'}}) }}
+                                {{ form_errors(edit_form.titre) }}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <p class="">Titre de l'évènement</p>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                    {{ form_widget(edit_form.titre , {'attr': {'class': 'form-control', 'placeholder': 'Titre de l\'évènement'}}) }}
-                    {{ form_errors(edit_form.titre) }}
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <p class="">Description de l'évènement</p>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                    {{ form_widget(edit_form.contenu , {'attr': {'class': 'form-control', 'placeholder': 'Description de l\'évènement'}}) }}
-                    {{ form_errors(edit_form.contenu) }}
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="input-group">
-                    {{ form_widget(edit_form.images, {'attr': {'class': 'help-block'}}) }}
-                    {{ form_errors(edit_form.images) }}
-                </div>
-            </div>
-        </div>
+                    <div class="container">
+                        <div class="row">
+                            <p class="">Description de l'évènement</p>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                {{ form_widget(edit_form.contenu , {'attr': {'class': 'form-control', 'placeholder': 'Description de l\'évènement'}}) }}
+                                {{ form_errors(edit_form.contenu) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-group">
+                                {{ form_widget(edit_form.images, {'attr': {'class': 'help-block'}}) }}
+                                {{ form_errors(edit_form.images) }}
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="edit_admin">
-            <input class="btn btn-default edit_admin" type="submit" value="Modifier" />
-            <a class="btn btn-default edit_admin"  href="{{ path('vl_agenda_homepage') }}">Retour au calendrier</a>
+                    <div class="edit_admin">
+                        <input class="btn btn-default edit_admin" type="submit" value="Modifier" />
+                        <a class="btn btn-default edit_admin"  href="{{ path('vl_agenda_homepage') }}">Retour au calendrier</a>
+                    </div>
+                    {{ form_end(edit_form) }}
+                </div>
+
+            </div>
         </div>
-        {{ form_end(edit_form) }}
     </div>
+
 
 {% endblock %}
 

@@ -14,9 +14,21 @@ class AmicaleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre')
-            ->add('description')
-            ->add('auteur')
+            ->add('titre', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zoneannonce"
+                )))
+            ->add('description', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zoneannoncedesc"
+                )))
+            ->add('auteur', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zoneannonce"
+                )))
             ->add('file', 'file', array('label' => 'Image amicale', 'required' => false))
             ->add('prix')        ;
     }

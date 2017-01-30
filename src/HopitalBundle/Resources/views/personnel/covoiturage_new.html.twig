@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Création Co-voiturage</h1>
+            <h1 class="lienstitre">Création lien covoiturage</h1>
             <br>
             <div class="row journaux">
                 <div class="col-md-4">
@@ -13,10 +13,16 @@
                     <br>
                     <br>
                     {{ form_start(form) }}
+                    {{ form_label(form. covoituragetitle, 'Nommez votre lien:', {'covoituragetitle': {'class': 'covoituragetitle'}}) }}
+                    {{ form_widget(form.covoituragetitle)}}
+                    {{ form_label(form. covoituragedescription, 'Décrivez votre lien:', {'covoituragedescription': {'class': 'covoituragedescription'}}) }}
+                    {{ form_widget(form.covoituragedescription)}}
                     {{ form_label(form. covoiturageimg, 'Nommez votre image:', {'covoiturageimg': {'class': 'covoiturageimg'}}) }}
                     {{ form_widget(form.covoiturageimg)}}
                     {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                     {{ form_widget(form.file1)}}
+                    {{ form_label(form. covoiturageurl, 'Indiquez le lien:', {'covoiturageurl': {'class': 'covoiturageurl'}}) }}
+                    {{ form_widget(form.covoiturageurl)}}
                     <br>
                     <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
                     {{ form_end(form) }}

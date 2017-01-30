@@ -59,7 +59,7 @@ documentation_instances_edit:
     methods:  [GET, POST]
 
 documentation_instances_delete:
-    path:     instances/{id}/delete
+    path:     /instances/{id}/delete
     defaults: { _controller: "HopitalBundle:Instances:delete" }
     methods:  DELETE
 
@@ -67,6 +67,16 @@ documentation_instancesrubrique_new:
     path:     /rubrique/new
     defaults: { _controller: "HopitalBundle:Instances:newRubrique" }
     methods:  [GET, POST]
+
+documentation_instancesrubrique_edit:
+    path:     /rubrique/edit
+    defaults: { _controller: "HopitalBundle:Instances:editRubrique" }
+    methods:  [GET, POST]
+
+documentation_instancesrubrique_delete:
+    path:     rubrique/{id}/delete
+    defaults: { _controller: "HopitalBundle:Instances:deleteRubrique" }
+    methods:  DELETE
 
 
 

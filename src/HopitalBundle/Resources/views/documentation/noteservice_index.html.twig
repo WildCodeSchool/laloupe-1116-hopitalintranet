@@ -3,7 +3,7 @@
 {% block body %}
 
     <div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
+    <div class="col-md-offset-2 col-md-8 fondblanc2">
 
         <div class="row">
             <div class="col-md-12">
@@ -54,7 +54,7 @@
                         <p>{{ noteservice.titlenoteservice }}</p>
                     {% endif %}
                     {% if noteservice.id == maxId %}
-                        <object data="{{ app.request.basepath }}/uploads/{{ noteservice.noteserviceimg }}" type="application/pdf" class="journaux">
+                        <object data="{{ app.request.basepath }}/uploads/{{ noteservice.noteserviceimg }}" type="application/pdf" class="notedinformation">
                         </object>
                     {% endif %}
                 {% endfor %}
@@ -71,7 +71,7 @@
         {% for noteservice in noteservices %}
             <div id="{{ noteservice.idnoteservice }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content" style="height: 750px">
+                    <div class="modal-content" style="height: 700px">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <br>
                         <br>

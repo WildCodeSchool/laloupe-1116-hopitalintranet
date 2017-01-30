@@ -382,7 +382,7 @@ main {
 
 .fondblanc{
     background-color: #FFFFFF;
-    height: 95%;
+    height: 570px;
     padding: 10px 20px 20px 20px;
 }
 
@@ -420,7 +420,7 @@ main {
 
 .fondblanc2{
     background-color: #FFFFFF;
-    height: 680px;
+    height: 590px;
     padding: 10px 20px 20px 20px;
 }
 
@@ -454,7 +454,7 @@ div.c-wrapper{
 
 .fondblanccontact{
     background-color: #FFFFFF;
-    height: 670px;
+    height: 570px;
     padding: 10px 20px 20px 20px;
 }
 
@@ -487,7 +487,7 @@ div.c-wrapper{
 /**************************** DEBUT PLANS ***********************/
 
 .planglobal{
-    width: 800px;
+    width: 700px;
     margin-left: 15%;
     border:4px solid #E7E7E7;
 }
@@ -511,9 +511,8 @@ div.c-wrapper{
 
 
 .notedinformation{
-    height: 530px;
-    width: 70%;
-    margin-left: 15%;
+    height: 470px;
+    width: 90%;
 }
 
 
@@ -536,10 +535,19 @@ div.c-wrapper{
 /**************************** FIN NOTES DE SERVICES **********************/
 
 
+.organigramme{
+    height: 480px;
+    width: 90%;
+    margin-left: 5%;
+}
+
 /**************************** DEBUT JOURNAL ***********************/
 
 
-
+.journaux{
+    height: 430px;
+    width: 95%;
+}
 
 
 
@@ -572,7 +580,7 @@ div.c-wrapper{
 
 
 .directioncommune{
-    height: 530px;
+    height: 200px;
     width: 70%;
     margin-left: 15%;
     border: 5px solid #E7E7E7;
@@ -650,7 +658,7 @@ div.c-wrapper{
 
 .astreintesimg{
     width: 400px;
-    height: 230px;
+    height: 200px;
     margin-right: 50px;
 }
 
@@ -659,11 +667,29 @@ div.c-wrapper{
 }
 
 .modalarchivespdf{
-    height: 650px;
+    height: 600px;
     width: 860px;
     margin-left: 20px;
 }
+.astreinteimg {
+    height: 300px;
+    width: 600px;
+    margin-left: 2%;
+    border: 5px solid #E7E7E7;
+}
 
+.astreinte_carre {
+    background-color: #E7E7E7;
+    height: 810px;
+    width: 700px;
+    margin-left: 16.5%;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+li {
+    list-style: none;
+}
 
 
 /**************************** FIN ASTREINTES **********************/
@@ -690,33 +716,30 @@ div.c-wrapper{
 
 /**************************** FIN GALERIE ****************************/
 
+/**************************** DEBUT ANNONCES *************************/
+
+
 .imgannonce{
-    height: 300px;
-    width: auto;
-    margin-top: 10px;
+    max-width: 270px;
+    margin-left: 20px;
 }
 
-.card{
-    margin-left: 20px;
+.imgannonceedit{
+    max-width: 360px;
 }
 
 .auteurannonce{
     margin-bottom: 30px;
 }
 
-.commentaireannonce{
-    margin-top: 10px;
-    padding:10px;
-}
 
 .commentaireancien{
     margin-top: 10px;
     border:5px solid #E7E7E7;
-    padding:10px;
+    padding:20px;
     overflow-y: scroll;
     height: 150px;
 }
-
 
 .zonecommentaire{
     width: 470px;
@@ -728,12 +751,174 @@ div.c-wrapper{
     height: 100px;
 }
 
+.btnannonce{
+    position: absolute;
+    top:450px;
+    left:420px;
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 0;
+    margin-top:50px;
+    padding:5px 10px 5px 10px;
+}
+
+.btnmodifannonce{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left:430px;
+    margin-top: 30px;
+    padding:5px 10px 5px 10px;
+}
 
 
+.annoncenewbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 50px;
+    padding:5px 10px 5px 10px;
+}
 
 
+.annoncenewbtn1{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-left: 25px;
+    padding:5px 10px 5px 10px;
+}
+
+.btnajout{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 20px;
+    padding:5px 10px 5px 10px;
+}
 
 
+a:focus, a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btnajout a{
+    color: #FFFFFF;
+}
+
+.btneditannonce{
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 20px;
+    padding:5px 10px 5px 10px;
+}
+
+.zoneannonce{
+    width: 630px;
+    margin-bottom: 10px;
+}
+
+.zoneannoncedesc{
+    width: 630px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.fondblancshow{
+    background-color: #FFFFFF;
+    padding: 10px 20px 20px 20px;
+    margin-bottom: 70px;
+}
+
+.fondblancannonce{
+    background-color: #FFFFFF;
+    padding: 10px 20px 20px 20px;
+    margin-bottom: 70px;
+    height: 570px;
+}
+
+.carreshowannonce{
+    background-color: #E7E7E7;
+    padding: 30px;
+    margin-top: -10px;
+}
+
+.carreshowcomm{
+    border: 5px solid #E7E7E7;
+    padding: 30px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.carrelisteannonce{
+    background-color: #E7E7E7;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.lienstitreshow{
+    text-align: center;
+    color: #0089D0;
+    margin-top: 10px;
+}
+
+hr{
+    border-top : 4px solid #E7E7E7;
+}
+
+.desc{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.line_img{
+    max-height: 233px;
+    max-width: 350px;
+}
+
+
+.descriptionannonce{
+    background-color: #FFFFFF;
+    border:4px solid #CCCCCC;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.prixannonce{
+    margin-left: 20px;
+    background-color: #0089D0;
+    width:90px;
+    height:60px;
+    color: #FFFFFF;
+    padding-top:15px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+/**************************** FIN ANNONCES *************************/
 
 /**************************** DEBUT NEW ****************************/
 
@@ -746,8 +931,8 @@ div.c-wrapper{
 
 .carrenewid{
     background-color: #E7E7E7;
-    height: 450px;
-    margin-top: 30px;
+    height: 430px;
+    margin-top: 0px;
     padding: 30px;
 }
 
@@ -782,9 +967,25 @@ div.c-wrapper{
 
 /*Dans Type*/
 .zonenew{
-    width: 500px;
+    width: 450px;
     margin-bottom: 10px;
 }
+
+.carrenewannonce{
+    background-color: #E7E7E7;
+    height: 450px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.carreneannonce{
+    background-color: #E7E7E7;
+    height: 430px;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+
 
 
 /**************************** Fin NEW ****************************/
@@ -849,4 +1050,104 @@ div.c-wrapper{
     padding: 30px;
 }
 
+.carreplanniciel{
+    background-color: #E7E7E7;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+
 /**************************** fin EDIT ****************************/
+
+
+
+/**************************** début calendrier ********************/
+
+.fondcalendar{
+    background-color: #FFFFFF;
+    height: 590px;
+}
+
+.calendarbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin:10px 20px 10px 0px;
+}
+
+.newcalendar{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.choixcalendar{
+    width: 220px;
+}
+
+.choixcalendar1{
+    width: 270px;
+}
+
+.calendarlienstitre{
+    text-align: center;
+    color: #0089D0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calendarnewbtn{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 200px;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin:10px 50px 10px 0px;
+}
+
+.calendarnewbtn1{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    width: 150px;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin:10px 50px 10px 420px;
+}
+
+.listeeventcalendar{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.listebtn{
+    position: absolute;
+    left:560px;
+    top:500px;
+}
+
+
+/************************ DEBUT IDEES *******************/
+
+.mail{
+    text-align: center;
+}
+
+.btnmail{
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 38%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+/************************ FIN IDEES *******************/
