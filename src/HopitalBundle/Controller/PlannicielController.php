@@ -59,7 +59,7 @@ class PlannicielController extends Controller
     public function editAction(Request $request, Planniciel $planniciel)
     {
         $deleteForm = $this->createDeleteForm($planniciel);
-        $editForm = $this->createForm('HopitalBundle\Form\PlansType', $planniciel);
+        $editForm = $this->createForm('HopitalBundle\Form\PlannicielType', $planniciel);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
