@@ -11,13 +11,13 @@
                     <div class="row">
                         <div class="col-md-12 imgnew">
                             {{ form_start(edit_form) }}
-                            {{edit_form.children.file1.vars.label}}
+                            {{edit_form.children.file4.vars.label}}
                             {{ form_label(edit_form.articlesimg, 'Nommez votre article:', {'articlesimg': {'class': 'articlesimg'}}) }}
                             {{ form_widget(edit_form.articlesimg)}}
                             {{ form_errors(edit_form.articlesimg) }}
-                            {{ form_label(edit_form.file1, 'Insérez votre PDF:', {'file1': {'class': 'file1'}}) }}
-                            {{ form_widget(edit_form.file1)}}
-                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.file4, 'Insérez votre PDF:', {'file4': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file4)}}
+                            {{ form_errors(edit_form.file4) }}
                         </div>
                     </div>
                     <div class="col-md-0 imgnew">
@@ -30,8 +30,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
     </div>
 
 {% endblock %}

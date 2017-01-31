@@ -25,8 +25,8 @@ HopitalBundle\Entity\Ght:
 
 
     lifecycleCallbacks:
-      prePersist: [ preUpload, preUpload1 ]
-      preUpdate: [ preUpload, preUpload1 ]
-      postPersist: [ upload, upload1 ]
-      postUpdate: [ upload, upload1 ]
-      postRemove: [ removeUpload, removeUpload1 ]
+      prePersist: [ preUpload, preUpload2 ]
+      preUpdate: [ preUpload, preUpload2 ]
+      postPersist: [ upload, upload2 ]
+      postUpdate: [ upload, upload2 ]
+      postRemove: [ removeUpload, removeUpload2 ]

@@ -31,7 +31,7 @@ class AccueilController extends Controller
      * Creates a new accueil entity.
      *
      */
-    public function newAction(Request $request)
+    /*public function newAction(Request $request)
     {
         $accueil = new Accueil();
         $form = $this->createForm('HopitalBundle\Form\AccueilType', $accueil);
@@ -49,7 +49,7 @@ class AccueilController extends Controller
             'accueil' => $accueil,
             'form' => $form->createView(),
         ));
-    }
+    }*/
 
 
     /**

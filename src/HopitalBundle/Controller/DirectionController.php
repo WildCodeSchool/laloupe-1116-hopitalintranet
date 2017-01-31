@@ -31,7 +31,7 @@ class DirectionController extends Controller
      * Creates a new direction entity.
      *
      */
-    public function newAction(Request $request)
+   /* public function newAction(Request $request)
     {
         $direction = new Direction();
         $form = $this->createForm('HopitalBundle\Form\DirectionType', $direction);
@@ -49,7 +49,7 @@ class DirectionController extends Controller
             'direction' => $direction,
             'form' => $form->createView(),
         ));
-    }
+    }*/
 
     /**
      * Displays a form to edit an existing direction entity.

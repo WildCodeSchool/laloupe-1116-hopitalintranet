@@ -1,3 +1,20 @@
+communication_new:
+    path:     /new
+    defaults: { _controller: "HopitalBundle:Communication:new" }
+    methods:  [GET, POST]
+
+communication_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HopitalBundle:Communication:edit" }
+    methods:  [GET, POST]
+
+communication_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HopitalBundle:Communication:delete" }
+    methods:  DELETE
+
+
+
 communication_articles_index:
     path:     /articles
     defaults: { _controller: "HopitalBundle:Articles:index" }

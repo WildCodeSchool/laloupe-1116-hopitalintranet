@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Ajout dans communication</h1>
+            <br>
+
+            {{ form_start(form) }}
+
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewonglet">
+                    <h3 class="lienstitrenew">Direction commune</h3>
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_label(form.directionimg, 'Nommez votre direction commune:') }}<br>
+                            {{ form_widget(form.directionimg)}}<br>
+                            {{ form_label(form.file1, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(form.file1)}}<br>
+                            {{ form_label(form.iddirection, 'Id de votre direction commune:') }}<br>
+                            {{ form_widget(form.iddirection)}}<br>
+                            {{ form_label(form.titledirection, 'Titre de votre direction commune:') }}<br>
+                            {{ form_widget(form.titledirection)}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewonglet">
+                    <h3 class="lienstitrenew">GHT</h3>
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_label(form.ghtimg, 'Nommez votre GHT:') }}<br>
+                            {{ form_widget(form.ghtimg)}}<br>
+                            {{ form_label(form.file2, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(form.file2)}}<br>
+                            {{ form_label(form.idght, 'Id de votre GHT:') }}<br>
+                            {{ form_widget(form.idght)}}<br>
+                            {{ form_label(form.titleght, 'Titre de votre GHT:') }}<br>
+                            {{ form_widget(form.titleght)}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewonglet">
+                    <h3 class="lienstitrenew">Lettre d'information</h3>
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_label(form.lettreinfoimg, 'Nommez votre lettre d\'\information:') }}<br>
+                            {{ form_widget(form.lettreinfoimg)}}<br>
+                            {{ form_label(form.file3, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(form.file3)}}<br>
+                            {{ form_label(form.idlettreinfo, 'Id de votre lettre d\'\information:') }}<br>
+                            {{ form_widget(form.idlettreinfo)}}<br>
+                            {{ form_label(form.titlelettreinfo, 'Titre de votre lettre d\'\information:') }}<br>
+                            {{ form_widget(form.titlelettreinfo)}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewonglet">
+                    <h3 class="lienstitrenew">Article de presse</h3>
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_label(form.articlesimg, 'Nommez votre article:') }}<br>
+                            {{ form_widget(form.articlesimg)}}<br>
+                            {{ form_label(form.file4, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(form.file4)}}<br>
+                            {{ form_label(form.idarticles, 'Id de votre article:') }}<br>
+                            {{ form_widget(form.idarticles)}}<br>
+                            {{ form_label(form.titlearticles, 'Titre de votre article:') }}<br>
+                            {{ form_widget(form.titlearticles)}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" value="Créer" class="btnnew" />
+                </div>
+            </div>
+            {{ form_end(form) }}
+
+
+        </div>
+    </div>
+{% endblock %}
