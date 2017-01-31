@@ -8,4 +8,50 @@ HopitalBundle\Entity\Accueil:
             id: true
             generator:
                 strategy: AUTO
+    fields:
+        bluemediurl:
+            type: string
+            length: 255
+            nullable: true
+        bluemedititle:
+            type: string
+            length: 255
+            nullable: true
+        viatrajectoirurl:
+            type: string
+            length: 255
+            nullable: true
+        viatrajectoirtitle:
+            type: string
+            length: 255
+            nullable: true
+        vidalurl:
+            type: string
+            length: 255
+            nullable: true
+        vidaltitle:
+            type: string
+            length: 255
+            nullable: true
+        dgsurl:
+            type: string
+            length: 255
+            nullable: true
+        dgstitle:
+            type: string
+            length: 255
+            nullable: true
+        meteourl:
+            type: string
+            length: 255
+            nullable: true
+        actuurl:
+            type: string
+            length: 800
+            nullable: true
+        actuparam:
+            type: string
+            length: 255
+            nullable: true
+
     lifecycleCallbacks: {  }
