@@ -16,7 +16,18 @@ HopitalBundle\Entity\Has:
             type: string
             length: 25
             nullable: true
-
+        hasurl:
+            type: string
+            length: 255
+            nullable: true
+        hastitle:
+            type: string
+            length: 255
+            nullable: true
+        hasdescription:
+            type: string
+            length: 255
+            nullable: true
 
 
     lifecycleCallbacks:

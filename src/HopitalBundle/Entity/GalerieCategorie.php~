@@ -9,6 +9,15 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GalerieCategorie
 {
+<<<<<<< HEAD
+=======
+
+    public function __toString()
+    {
+        return $this->categorie;
+    }
+
+>>>>>>> newonglet
     /**
      * @var int
      */
@@ -82,4 +91,38 @@ class GalerieCategorie
     {
         return $this->photos;
     }
+<<<<<<< HEAD
+=======
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->photos = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add photo
+     *
+     * @param \HopitalBundle\Entity\Galerie $photo
+     *
+     * @return GalerieCategorie
+     */
+    public function addPhoto(\HopitalBundle\Entity\Galerie $photo)
+    {
+        $this->photos[] = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Remove photo
+     *
+     * @param \HopitalBundle\Entity\Galerie $photo
+     */
+    public function removePhoto(\HopitalBundle\Entity\Galerie $photo)
+    {
+        $this->photos->removeElement($photo);
+    }
+>>>>>>> newonglet
 }

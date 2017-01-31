@@ -15,8 +15,11 @@ class JournaloffType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('journalofftitle')
+            ->add('journaloffdescription')
             ->add('journaloffimg')
-            ->add('file1', 'file', array('required' => false));
+            ->add('file1', 'file', array('required' => false))
+            ->add('journaloffurl');
     }
 
     /**FIN CODE AJOUTÉ

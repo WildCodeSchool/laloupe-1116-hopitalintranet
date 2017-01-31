@@ -8,13 +8,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class IdeesType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
-        $builder
-            ->add('ideestitle')
-            ->add('txtdef', 'textarea', array('attr' => array('rows' => '15')));
-    }
-
 
 
     /**

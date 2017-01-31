@@ -1,0 +1,62 @@
+HopitalBundle\Entity\Communication:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\CommunicationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+
+    fields:
+        directionimg:
+            type: string
+            length: 25
+            nullable: true
+        titledirection:
+            type: string
+            length: 255
+        iddirection:
+            type: string
+            length: 255
+        ghtimg:
+            type: string
+            length: 25
+            nullable: true
+        titleght:
+            type: string
+            length: 255
+        idght:
+            type: string
+            length: 255
+        lettreinfoimg:
+            type: string
+            length: 25
+            nullable: true
+        titlelettreinfo:
+            type: string
+            length: 255
+        idlettreinfo:
+            type: string
+            length: 255
+        articlesimg:
+            type: string
+            length: 25
+            nullable: true
+        titlearticles:
+            type: string
+            length: 255
+        idarticles:
+            type: string
+            length: 255
+
+
+
+    lifecycleCallbacks:
+      prePersist: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4 ]
+      preUpdate: [ preUpload, preUpload1, preUpload2, preUpload3, preUpload4 ]
+      postPersist: [ upload, upload1, upload2, upload3, upload4 ]
+      postUpdate: [ upload, upload1, upload2, upload3, upload4 ]
+      postRemove: [ removeUpload, removeUpload1, removeUpload2, removeUpload3, removeUpload4 ]

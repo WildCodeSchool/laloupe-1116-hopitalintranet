@@ -1,74 +1,96 @@
 <?php
-
 namespace HopitalBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Lettreinfo
  */
 class Lettreinfo
 {
-    public $file1;
-
+    public $file3;
     protected function getUploadDir()
     {
         return 'uploads';
     }
-
     protected function getUploadRootDir()
     {
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
-
     public function getWebPath()
     {
         return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
-
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
-
-
-    public function preUpload1()
+    public function preUpload3()
     {
-        if (null !== $this->file1) {
+        if (null !== $this->file3) {
             // do whatever you want to generate a unique name
-            $this->lettreinfoimg = uniqid().'.'.$this->file1->guessExtension();
+            $this->lettreinfoimg = uniqid().'.'.$this->file3->guessExtension();
         }
     }
-
-    public function upload1()
+    public function upload3()
     {
-        if (null === $this->file1) {
+        if (null === $this->file3) {
             return;
         }
-
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->lettreinfoimg);
-
-        unset($this->file1);
+        $this->file3->move($this->getUploadRootDir(), $this->lettreinfoimg);
+        unset($this->file3);
     }
-
-    public function removeUpload1()
+    public function removeUpload3()
     {
-        if ($file1 = $this->getAbsolutePath()) {
-            unlink($file1);
+        if ($file3 = $this->getAbsolutePath()) {
+            unlink($file3);
         }
     }
-
-
-
+    /**
+     * Set titlelettreinfo
+     *
+     * @param string $titlelettreinfo
+     * @return Lettreinfo
+     */
+    public function setTitlelettreinfo($titlelettreinfo)
+    {
+        $this->titlelettreinfo = $titlelettreinfo;
+        return $this;
+    }
+    /**
+     * Get titlelettreinfo
+     *
+     * @return string
+     */
+    public function getTitlelettreinfo()
+    {
+        return $this->titlelettreinfo;
+    }
+    /**
+     * Set idlettreinfo
+     *
+     * @param string $idlettreinfo
+     * @return Lettreinfo
+     */
+    public function setIdlettreinfo($idlettreinfo)
+    {
+        $this->idlettreinfo = $idlettreinfo;
+        return $this;
+    }
+    /**
+     * Get idlettreinfo
+     *
+     * @return string
+     */
+    public function getIdlettreinfo()
+    {
+        return $this->idlettreinfo;
+    }
     /**
      * @var int
      */
     private $id;
-
-
     /**
      * Get id
      *
@@ -78,14 +100,18 @@ class Lettreinfo
     {
         return $this->id;
     }
-
-
     /**
      * @var string
      */
     private $image;
-
-
+    /**
+     * @var string
+     */
+    private $titlelettreinfo;
+    /**
+     * @var string
+     */
+    private $idlettreinfo;
     /**
      * Set image
      *
@@ -95,10 +121,8 @@ class Lettreinfo
     public function setImage($image)
     {
         $this->image = $image;
-
         return $this;
     }
-
     /**
      * Get image
      *
@@ -108,16 +132,10 @@ class Lettreinfo
     {
         return $this->image;
     }
-
-
     /**
      * @var string
      */
     private $lettreinfoimg;
-
-
-
-
     /**
      * Set lettreinfoimg
      *
@@ -127,10 +145,8 @@ class Lettreinfo
     public function setLettreinfoimg($lettreinfoimg)
     {
         $this->lettreinfoimg = $lettreinfoimg;
-
         return $this;
     }
-
     /**
      * Get lettreinfoimg
      *
@@ -140,8 +156,6 @@ class Lettreinfo
     {
         return $this->lettreinfoimg;
     }
-
-
     /**
      * @ORM\PrePersist
      */
@@ -149,7 +163,6 @@ class Lettreinfo
     {
         // Add your code here
     }
-
     /**
      * @ORM\PostPersist
      */
@@ -157,7 +170,6 @@ class Lettreinfo
     {
         // Add your code here
     }
-
     /**
      * @ORM\PostRemove
      */
@@ -165,8 +177,4 @@ class Lettreinfo
     {
         // Add your code here
     }
-
-
-
-
 }

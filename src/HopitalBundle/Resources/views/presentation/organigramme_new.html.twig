@@ -1,16 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Organigramme creation</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création Organigramme</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(form) }}
+                    {{ form_label(form.organigrammeimg, 'Nommez votre image:', {'organigrammeimg': {'class': 'organigrammeimg'}}) }}
+                    {{ form_widget(form.organigrammeimg)}}
+                    {{ form_label(form.file7, 'Insérez votre image:', {'file7': {'class': 'file7'}}) }}
+                    {{ form_widget(form.file7)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(form) }}
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('presentation_organigramme_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}

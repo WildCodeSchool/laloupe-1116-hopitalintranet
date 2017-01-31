@@ -1,34 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Création de Journaux internes</h1>
+            <h1 class="lienstitrenew">Création d'un journal interne</h1>
             <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{ form_start(form) }}
-                    {{ form_label(form.journauximg, 'Nommez votre journal:', {'journauximg': {'class': 'journauximg'}}) }}
-                    {{ form_widget(form.journauximg)}}
-                    {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(form.file1)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_start(form) }}
+                            {{ form_label(form.journauximg, 'Nommez votre journal:') }}<br>
+                            {{ form_widget(form.journauximg)}}<br>
+                            {{ form_label(form.file1, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(form.file1)}}<br>
+                            {{ form_label(form.idjournaux, 'Id de votre journal:') }}<br>
+                            {{ form_widget(form.idjournaux)}}<br>
+                            {{ form_label(form.titlejournaux, 'Titre de votre journal:') }}<br>
+                            {{ form_widget(form.titlejournaux)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Create" class="btnnew" />
+                        </div>
+                    </div>
                     {{ form_end(form) }}
                 </div>
             </div>
-
         </div>
     </div>
-
-
-
-
-
-
 {% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Création d'une astreintes administratif</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-11 imgnewid">
+                            {{ form_start(formAdministratif) }}
+                            {{ form_label(formAdministratif.administratifimg, 'Nommez votre astreinte administratif:') }}<br>
+                            {{ form_widget(formAdministratif.administratifimg)}}<br>
+                            {{ form_label(formAdministratif.file1, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(formAdministratif.file1)}}<br>
+                            {{ form_label(formAdministratif.idadministratif, 'Id de votre astreinte administratif:') }}<br>
+                            {{ form_widget(formAdministratif.idadministratif)}}<br>
+                            {{ form_label(formAdministratif.titleadministratif, 'Titre de votre astreinte administratif:') }}<br>
+                            {{ form_widget(formAdministratif.titleadministratif)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Créer" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(formAdministratif) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

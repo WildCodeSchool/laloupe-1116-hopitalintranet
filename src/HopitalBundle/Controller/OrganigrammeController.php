@@ -43,7 +43,7 @@ class OrganigrammeController extends Controller
             $em->persist($organigramme);
             $em->flush($organigramme);
 
-            return $this->redirectToRoute('presentation_organigramme_show', array('id' => $organigramme->getId()));
+            return $this->redirectToRoute('presentation_organigramme_index', array('id' => $organigramme->getId()));
         }
 
         return $this->render('HopitalBundle:presentation:organigramme_new.html.twig', array(
@@ -52,19 +52,6 @@ class OrganigrammeController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Organigramme $organigramme)
-    {
-        $organigramme_deleteForm = $this->createDeleteForm($organigramme);
-
-        return $this->render('HopitalBundle:presentation:organigramme_show.html.twig', array(
-            'organigramme' => $organigramme,
-            'organigramme_delete_form' => $organigramme_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing organigramme entity.

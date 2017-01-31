@@ -1,37 +1,28 @@
 <?php
-
 namespace HopitalBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Noteservice
  */
 class Noteservice
 {
     public $file1;
-
     protected function getUploadDir()
     {
         return 'uploads';
     }
-
     protected function getUploadRootDir()
     {
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
-
     public function getWebPath()
     {
         return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
-
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
-
-
     public function preUpload1()
     {
         if (null !== $this->file1) {
@@ -39,36 +30,67 @@ class Noteservice
             $this->noteserviceimg = uniqid().'.'.$this->file1->guessExtension();
         }
     }
-
     public function upload1()
     {
         if (null === $this->file1) {
             return;
         }
-
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
         $this->file1->move($this->getUploadRootDir(), $this->noteserviceimg);
-
         unset($this->file1);
     }
-
     public function removeUpload1()
     {
         if ($file1 = $this->getAbsolutePath()) {
             unlink($file1);
         }
     }
-
-
-
+    /**
+     * Set titlenoteservice
+     *
+     * @param string $titlenoteservice
+     * @return Noteservice
+     */
+    public function setTitlenoteservice($titlenoteservice)
+    {
+        $this->titlenoteservice = $titlenoteservice;
+        return $this;
+    }
+    /**
+     * Get titlenoteservice
+     *
+     * @return string
+     */
+    public function getTitlenoteservice()
+    {
+        return $this->titlenoteservice;
+    }
+    /**
+     * Set idnoteservice
+     *
+     * @param string $idnoteservice
+     * @return Noteservice
+     */
+    public function setIdnoteservice($idnoteservice)
+    {
+        $this->idnoteservice = $idnoteservice;
+        return $this;
+    }
+    /**
+     * Get idnoteservice
+     *
+     * @return string
+     */
+    public function getIdnoteservice()
+    {
+        return $this->idnoteservice;
+    }
     /**
      * @var int
      */
     private $id;
-
-
     /**
      * Get id
      *
@@ -78,14 +100,18 @@ class Noteservice
     {
         return $this->id;
     }
-
-
     /**
      * @var string
      */
     private $image;
-
-
+    /**
+     * @var string
+     */
+    private $titlenoteservice;
+    /**
+     * @var string
+     */
+    private $idnoteservice;
     /**
      * Set image
      *
@@ -95,10 +121,8 @@ class Noteservice
     public function setImage($image)
     {
         $this->image = $image;
-
         return $this;
     }
-
     /**
      * Get image
      *
@@ -108,16 +132,10 @@ class Noteservice
     {
         return $this->image;
     }
-
-
     /**
      * @var string
      */
     private $noteserviceimg;
-
-
-
-
     /**
      * Set noteserviceimg
      *
@@ -127,10 +145,8 @@ class Noteservice
     public function setNoteserviceimg($noteserviceimg)
     {
         $this->noteserviceimg = $noteserviceimg;
-
         return $this;
     }
-
     /**
      * Get noteserviceimg
      *
@@ -140,8 +156,6 @@ class Noteservice
     {
         return $this->noteserviceimg;
     }
-
-
     /**
      * @ORM\PrePersist
      */
@@ -149,7 +163,6 @@ class Noteservice
     {
         // Add your code here
     }
-
     /**
      * @ORM\PostPersist
      */
@@ -157,7 +170,6 @@ class Noteservice
     {
         // Add your code here
     }
-
     /**
      * @ORM\PostRemove
      */
@@ -165,8 +177,4 @@ class Noteservice
     {
         // Add your code here
     }
-
-
-
-
 }

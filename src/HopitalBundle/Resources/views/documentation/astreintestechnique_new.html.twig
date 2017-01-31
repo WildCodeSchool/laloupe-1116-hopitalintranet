@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Création d'une astreinte technique</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_start(formTechnique) }}
+                            {{ form_label(formTechnique.techniqueimg, 'Nommez votre astreinte technique:') }}<br>
+                            {{ form_widget(formTechnique.techniqueimg)}}<br>
+                            {{ form_label(formTechnique.file4, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(formTechnique.file4)}}<br>
+                            {{ form_label(formTechnique.idtechnique, 'Id de votre astreinte technique:') }}<br>
+                            {{ form_widget(formTechnique.idtechnique)}}<br>
+                            {{ form_label(formTechnique.titletechnique, 'Titre de votre astreinte technique:') }}<br>
+                            {{ form_widget(formTechnique.titletechnique)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Créer" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(formTechnique) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

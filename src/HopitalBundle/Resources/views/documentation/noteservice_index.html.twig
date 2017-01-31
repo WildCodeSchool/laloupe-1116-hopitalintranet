@@ -2,48 +2,94 @@
 
 {% block body %}
 
-
     <div class="row">
-        <div class="col-md-offset-2  col-md-8 fondblanc">
-            <div class="noteboutons">
-                <a class="btn btn-default notebtn" href="" role="button">Note d'information</a>
-                <a class="btn btn-default notebtn" href="" role="button">Note de service</a>
+    <div class="col-md-offset-2 col-md-8 fondblanc2">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="lienstitre">Notes de services</h1>
             </div>
-            <object data="{{ asset('bundles/hopital/img/notes/NoteDeService2016.01.pdf') }}" type="application/pdf" class="noteservice">
-            </object>
         </div>
+
+
+        <div class="row">
+
+            <!--Début archives noteservice-->
+
+            <div class="col-md-2">
+                <div class="dropdown">
+                    <button class="btn journauxbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Archives
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        {% set maxId = 0 %}
+                        {% for noteservice in noteservices %}
+                            {% set maxId = max(noteservice.id, maxId) %}
+                        {% endfor %}
+                        {% for noteservice in noteservices %}
+                            {% if noteservice.id != maxId %}
+                                {% if noteservice.titlenoteservice != NULL %}
+                                    <p data-toggle="modal" data-target="{{ '#' ~ noteservice.idnoteservice }}" class="archivestitres"> {{ noteservice.titlenoteservice }} </p>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!--Fin archives noteservice-->
+
+
+            <!--Début nouvelles notes de service-->
+
+
+            <div class="col-md-10">
+                {% set maxId = 0 %}
+                {% for noteservice in noteservices %}
+                    {% set maxId = max(noteservice.id, maxId) %}
+                {% endfor %}
+                {% for noteservice in noteservices %}
+                    {% if noteservice.id == maxId %}
+                        <p>{{ noteservice.titlenoteservice }}</p>
+                    {% endif %}
+                    {% if noteservice.id == maxId %}
+                        <object data="{{ app.request.basepath }}/uploads/{{ noteservice.noteserviceimg }}" type="application/pdf" class="notedinformation">
+                        </object>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!--Fin nouvelles noteservice-->
+
+
+
+
+        <!--Début modal noteservice-->
+
+        {% for noteservice in noteservices %}
+            <div id="{{ noteservice.idnoteservice }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content" style="height: 700px">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if noteservice.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ noteservice.noteserviceimg }}" type="application/pdf" class="modalarchivespdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!--Fin modal noteservice-->
+
+
+
     </div>
 
 
-    {#<table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for documentation in documentations %}
-            <tr>
-                <td><a href="{{ path('documentation_show', { 'id': documentation.id }) }}">{{ documentation.id }}</a></td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('documentation_show', { 'id': documentation.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('documentation_edit', { 'id': documentation.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('documentation_new') }}">Create a new documentation</a>
-        </li>
-    </ul>#}
 {% endblock %}

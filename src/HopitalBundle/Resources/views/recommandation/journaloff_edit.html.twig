@@ -1,50 +1,51 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
+
 
 {% block body %}
-    <h1>Journal Officiel edit</h1>
 
-    {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Modifier un Journal officiel</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_note">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            {{ form_label(edit_form.journalofftitle, 'Titre de votre lien:', {'journalofftitle': {'class': 'journalofftitle'}}) }}
+                            {{ form_widget(edit_form.journalofftitle) }}<br><br>
+                            {{ form_errors(edit_form.journalofftitle) }}
+                            {{ form_label(edit_form.journaloffimg, 'Description de votre lien:', {'journaloffdescription': {'class': 'journaloffdescription'}}) }}
+                            {{ form_widget(edit_form.journaloffdescription) }}<br><br>
+                            {{ form_errors(edit_form.journaloffdescription) }}
 
+                            {{ form_label(edit_form.journaloffimg, 'Renommez votre image:', {'journaloffimg': {'class': 'journaloffimg'}}) }}
 
+                            {{ edit_form.children.file1.vars.label }}
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ journaloff.journaloffimg }}"/>
-        {{edit_form.children.file1.vars.label}}
-        {{ form_widget(edit_form.file1) }}
-        {{ form_errors(edit_form.file1) }}
-        {{ form_widget(edit_form.journaloffimg) }}
-        {{ form_errors(edit_form.journaloffimg) }}
+                            {{ form_widget(edit_form.journaloffimg) }}<br><br>
+                            {{ form_errors(edit_form.journaloffimg) }}
+                            {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file1) }}<br><br>
+                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.journaloffurl, 'Url de votre lien:', {'journaloffurl': {'class': 'journaloffurl'}}) }}
+                            {{ form_widget(edit_form.journaloffurl) }}
+                            {{ form_errors(edit_form.journaloffurl) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_end(edit_form) }}
+                            {{ form_start(journaloff_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(journaloff_delete_form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    {{ form_widget(edit_form) }}
-
-    <input type="submit" value="Edit"/>
-
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('recommandation_journaloff_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(journaloff_delete_form) }}
-            <input type="submit" value="Delete">
-            {{ form_end(journaloff_delete_form) }}
-        </li>
-    </ul>
-
-
-
-
-    {{ form_end(edit_form) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}
+

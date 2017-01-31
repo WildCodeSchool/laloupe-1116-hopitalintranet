@@ -7,7 +7,7 @@ function addPage(page, book) {
 	var id, pages = book.turn('pages');
 
 	// Create a new element for this page
-	var element = $('<div />', {});
+	var element = $('<img />', {});
 
 	// Add the page to the flipbook
 	if (book.turn('addPage', element, page)) {
@@ -48,7 +48,7 @@ function loadPage(page, pageElement) {
 
 	// Load the page
 
-	img.attr('src', 'pages/' +  page + '.jpg');
+	img.attr('src', 'pages/' +  page + '.jpg', '.pdf');
 
 }
 
@@ -81,7 +81,7 @@ function loadSmallPage(page, pageElement) {
 	img.unbind('load');
 	// Loadnew page
 
-	img.attr('src', 'pages/' +  page + '.jpg');
+	img.attr('src', 'pages/' +  page + '.jpg', '.pdf');
 }
 
 

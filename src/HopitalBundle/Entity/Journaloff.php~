@@ -141,8 +141,96 @@ class Journaloff
         return $this->journaloffimg;
     }
 
+<<<<<<< HEAD
 
     /**
+=======
+    /**
+     * @var string
+     */
+    private $journalofftitle;
+
+    /**
+     * Set journalofftitle
+     *
+     * @param string $journalofftitle
+     * @return Journaloff
+     */
+    public function setJournalofftitle($journalofftitle)
+    {
+        $this->journalofftitle = $journalofftitle;
+
+        return $this;
+    }
+    /**
+     * Get journalofftitle
+     *
+     * @return string
+     */
+    public function getJournalofftitle()
+    {
+        return $this->journalofftitle;
+    }
+
+
+    /**
+     * @var string
+     */
+    private $journaloffdescription;
+
+    /**
+     * Set journaloffdescription
+     *
+     * @param string $journaloffdescription
+     * @return Journaloff
+     */
+    public function setJournaloffdescription($journaloffdescription)
+    {
+        $this->journaloffdescription = $journaloffdescription;
+
+        return $this;
+    }
+    /**
+     * Get journaloffdescription
+     *
+     * @return string
+     */
+    public function getJournaloffdescription()
+    {
+        return $this->journaloffdescription;
+    }
+    /**
+     * @var string
+     */
+    private $journaloffurl;
+
+
+
+
+    /**
+     * Set journaloffurl
+     *
+     * @param string $journaloffurl
+     * @return Journaloff
+     */
+    public function setJournaloffurl($journaloffurl)
+    {
+        $this->journaloffurl = $journaloffurl;
+
+        return $this;
+    }
+
+    /**
+     * Get journaloffurl
+     *
+     * @return string
+     */
+    public function getJournaloffurl()
+    {
+        return $this->journaloffurl;
+    }
+    /**
+>>>>>>> newonglet
      * @ORM\PrePersist
      */
     public function preUpload()

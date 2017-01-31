@@ -72,6 +72,8 @@ class Amicale
             unlink($file);
         }
     }
+    
+    
     // GENERATED CODE
 
     /**
@@ -103,6 +105,36 @@ class Amicale
      * @var int
      */
     private $prix;
+
+    /**
+     * @var int
+     */
+    private $nom;
+
+
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return Amicale
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
 
 
     /**
@@ -228,5 +260,34 @@ class Amicale
     public function getPrix()
     {
         return $this->prix;
+    }
+    /**
+     * @var \IuchBundle\Entity\Service
+     */
+    private $service;
+
+
+    /**
+     * Set service
+     *
+     * @param \IuchBundle\Entity\Service $service
+     *
+     * @return Amicale
+     */
+    public function setService(\IuchBundle\Entity\Service $service = null)
+    {
+        $this->service = $service;
+
+        return $this;
+    }
+
+    /**
+     * Get service
+     *
+     * @return \IuchBundle\Entity\Service
+     */
+    public function getService()
+    {
+        return $this->service;
     }
 }

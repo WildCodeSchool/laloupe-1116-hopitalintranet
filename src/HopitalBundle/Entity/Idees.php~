@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Idees
 {
 
+<<<<<<< HEAD
     /**
      * Set ideestitle
      *
@@ -36,8 +37,10 @@ class Idees
 
 
 
+=======
+>>>>>>> newonglet
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -55,11 +58,15 @@ class Idees
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> newonglet
 }

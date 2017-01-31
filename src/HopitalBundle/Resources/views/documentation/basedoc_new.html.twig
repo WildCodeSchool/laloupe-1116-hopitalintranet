@@ -1,17 +1,34 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Basedoc creation</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Création d'une base documentaire</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_start(form) }}
+                            {{ form_label(form.basedocimg, 'Nommez votre base documentaire:') }}<br>
+                            {{ form_widget(form.basedocimg)}}<br><br>
+                            {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(form.file1)}}<br>
+                            {{ form_label(form.titlebasedoc, 'Titre de la base documentaire:', {'file1': {'class': 'file1'}}) }}<br>
+                            {{ form_widget(form.titlebasedoc)}}<br>
+                            {{ form_label(form.idbasedoc, 'Id de la base documentaire:', {'file1': {'class': 'file1'}}) }}<br>
+                            {{ form_widget(form.idbasedoc)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Créer" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('documentation_basedoc_index') }}">Back to the list</a>
-        </li>
-    </ul>
 {% endblock %}

@@ -3,24 +3,20 @@
 {% block body %}
 
 
-    <tbody>
-    {% for has in hass %}
-
-        <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
-                <h1 class="lienstitre">HAS</h1>
-                <h4 class="lienssoustitre">Haute autorité de santé</h4>
-
-                <a href="{{ asset('http://www.has-sante.fr/portail/') }}">
-                    <object data="{{ app.request.basepath }}/uploads/{{ has.hasimg }}" type="application/pdf" alt="has" class="lienimg"">
-                    </object>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc2">
+            {% for has in hass %}
+                <h1 class="lienstitre">{{ has.hastitle }}</h1>
+                <h4 class="lienssoustitre">{{ has.hasdescription }}</h4>
+                <a href="{{ has.hasurl }}" target="_blank">
+                    <img src="{{ app.request.basepath }}/uploads/{{ has.hasimg }}" alt="has" type="application/img" class="lienimg">
+                    </img>
                 </a>
-
-            </div>
+            {% endfor %}
         </div>
+    </div>
 
-    {% endfor %}
-    </tbody>
 
 
 {% endblock %}
+

@@ -4,34 +4,33 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-
-            <h1 class="lienstitre">Modifiaction d'organigramme</h1>
-
+            <h1 class="lienstitrenew">Modification de l'organigramme</h1>
             <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{ form_start(edit_form) }}
-                    {{ form_label(edit_form.organigrammeimg, 'Nommez votre organigramme:', {'organigrammeimg': {'class': ''}}) }}
-                    {{ form_widget(edit_form.organigrammeimg)}}
-                    {{ form_label(edit_form.file7, 'Insérez votre Pdf:', {'file7': {'class': 'file7'}}) }}
-                    {{ form_widget(edit_form.file7)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier" />
-                    {{ form_end(edit_form) }}
-
-
-                        {{ form_start(organigramme_delete_form) }}
-                        <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                        {{ form_end(organigramme_delete_form) }}
-
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            {{ form_label(edit_form.organigrammeimg, 'Nommez votre organigramme:', {'organigrammeimg': {'class': 'organigrammeimg'}}) }}<br>
+                            {{ form_widget(edit_form.organigrammeimg)}}<br><br>
+                            {{ form_label(edit_form.file7, 'Insérez votre Pdf:', {'file7': {'class': 'file7'}}) }}
+                            {{ form_widget(edit_form.file7)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_end(edit_form) }}
+                            {{ form_start(organigramme_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(organigramme_delete_form) }}
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
+
+
 
 {% endblock %}

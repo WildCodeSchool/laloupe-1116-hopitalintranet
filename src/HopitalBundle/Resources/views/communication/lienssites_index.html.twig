@@ -3,7 +3,6 @@
 {% block body %}
 
     <tbody>
-    {% for lienssites in lienssitess %}
 
 
 
@@ -11,6 +10,8 @@
         <div class="col-md-offset-2  col-md-8 fondblanc">
 
             <h1 class="lienstitre">Liens des sites internet des établissements</h1>
+            {% for lienssites in lienssitess %}
+
             <br>
             <br>
             <div class="col-md-5">
@@ -18,25 +19,25 @@
                 <a  href="{{ asset('http://www.ch-chartres.fr') }}"><button type="button" class="btn btn-primary">Site de Chartres</button></a>
                 <br>
                 <br>
-                <a href="{{ asset('http://www.ch-dreux.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitechartres }}" alt="Dreux" class="lienimgchartres"/></a>
+                <a href="{{ asset('http://www.ch-dreux.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitedreux }}" alt="Dreux" class="lienimgchartres"/></a>
                 <a  href="{{ asset('http://www.ch-dreux.fr') }}"><button type="button" class="btn btn-primary">Site de Dreux</button></a><br><br>
 
-                <a href="{{ asset('http://www.ch-chateaudun.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitechartres }}" alt="Chateaudun" class="lienimgchartres"/></a>
+                <a href="{{ asset('http://www.ch-chateaudun.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitechateaudun }}" alt="Chateaudun" class="lienimgchartres"/></a>
                 <a  href="{{ asset('http://www.ch-chateaudun.fr') }}"><button type="button" class="btn btn-primary">Site de Chateaudun</button></a><br><br>
             </div>
             <div class="col-md-5 col-md-offset-1">
-                <a href="{{ asset('http://www.ch-nogent-le-rotrou.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitechartres }}" alt="Nogent" class="lienimgchartres"/></a>
+                <a href="{{ asset('http://www.ch-nogent-le-rotrou.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitenogent }}" alt="Nogent" class="lienimgchartres"/></a>
                 <a  href="{{ asset('http://www.ch-nogent-le-rotrou.fr') }}"><button type="button" class="btn btn-primary">Site de Nogent</button></a><br><br>
 
-                <a href="{{ asset('http://www.ch-henriey.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitechartres }}" alt="Bonneval" class="lienimgchartres"/></a>
+                <a href="{{ asset('http://www.ch-henriey.fr') }}"><img src="{{ app.request.basepath }}/uploads/{{ lienssites.sitebonneval }}" alt="Bonneval" class="lienimgchartres"/></a>
                 <a  href="{{ asset('http://www.ch-henriey.fr') }}"><button type="button" class="btn btn-primary">Site de Bonneval</button></a><br><br>
 
             </div>
+            {% endfor %}
         </div>
     </div>
 
 
-    {% endfor %}
     </tbody>
 
 

@@ -1,16 +1,34 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>ANESM creation</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitre">Création ANESM</h1>
+            <br>
+            <div class="row journaux">
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    {{ form_start(form) }}
+                    {{ form_label(form. anesmtitle, 'Nommez votre lien:', {'anesmtitle': {'class': 'anesmtitle'}}) }}
+                    {{ form_widget(form.anesmtitle)}}
+                    {{ form_label(form. anesmdescription, 'Décrivez votre lien:', {'anesmdescription': {'class': 'anesmdescription'}}) }}
+                    {{ form_widget(form.anesmdescription)}}
+                    {{ form_label(form. anesmimg, 'Nommez votre image:', {'anesmimg': {'class': 'anesmimg'}}) }}
+                    {{ form_widget(form.anesmimg)}}
+                    {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                    {{ form_widget(form.file1)}}
+                    {{ form_label(form. anesmurl, 'Indiquez le lien:', {'anesmurl': {'class': 'anesmurl'}}) }}
+                    {{ form_widget(form.anesmurl)}}
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(form) }}
+                </div>
+            </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('recommandation_anesm_index') }}">Back to the list</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 {% endblock %}

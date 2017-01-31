@@ -8,4 +8,11 @@ HopitalBundle\Entity\Groupe:
             id: true
             generator:
                 strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+
+
     lifecycleCallbacks: {  }
+

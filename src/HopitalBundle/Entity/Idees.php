@@ -11,55 +11,18 @@ class Idees
 {
 
     /**
-     * Set ideestitle
-     *
-     * @param string $ideestitle
-     * @return Idees
-     */
-    public function setIdeestitle($ideestitle)
-    {
-        $this->ideestitle = $ideestitle;
-
-        return $this;
-    }
-
-    /**
-     * Get ideestitle
-     *
-     * @return string
-     */
-    public function getIdeestitle()
-    {
-        return $this->ideestitle;
-    }
-
-
-
-
-    /**
-     * @var int
+     * @var integer
      */
     private $id;
 
 
     /**
-     * @var string
-     */
-    private $ideestitle;
-
-
-
-
-
-
-    /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
         return $this->id;
     }
-
 }

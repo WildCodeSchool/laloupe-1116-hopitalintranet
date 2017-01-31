@@ -1,11 +1,8 @@
 <?php
-
 namespace HopitalBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class NoteserviceType extends AbstractType
 {
     /**CODE AJOUTÉ
@@ -15,14 +12,31 @@ class NoteserviceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('noteserviceimg')
-            ->add('file1', 'file', array('required' => false));
+            ->add('noteserviceimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                        'class' => "zonenew"
+                )))
+            ->add('file1', 'file', array('required' => false))
+
+            ->add('titlenoteservice', 'text', array(
+                'label'=>'Titre de la note de service',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Note de service 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idnoteservice', 'text', array(
+                'label'=>'ID note de service',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: NS0001",
+                    'class' => "zonenew"
+                )
+            ));
+
     }
-
     /**FIN CODE AJOUTÉ
-
-
-
     /**
      * {@inheritdoc}
      */
@@ -32,8 +46,6 @@ class NoteserviceType extends AbstractType
             'data_class' => 'HopitalBundle\Entity\Noteservice'
         ));
     }
-
-
     /**
      * {@inheritdoc}
      */
@@ -41,5 +53,4 @@ class NoteserviceType extends AbstractType
     {
         return 'hopital_noteservice';
     }
-
 }

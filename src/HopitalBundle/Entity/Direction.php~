@@ -1,35 +1,46 @@
 <?php
-
 namespace HopitalBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Direction
  */
 class Direction
 {
+<<<<<<< HEAD
     public $file6;
 
+=======
+    public $file1;
+>>>>>>> newonglet
     protected function getUploadDir()
     {
         return 'uploads';
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     protected function getUploadRootDir()
     {
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     public function getWebPath()
     {
         return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
+<<<<<<< HEAD
 
 
     public function preUpload6()
@@ -64,12 +75,76 @@ class Direction
 
 
 
+=======
+    public function preUpload1()
+    {
+        if (null !== $this->file1) {
+            // do whatever you want to generate a unique name
+            $this->directionimg = uniqid().'.'.$this->file1->guessExtension();
+        }
+    }
+    public function upload1()
+    {
+        if (null === $this->file1) {
+            return;
+        }
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file1->move($this->getUploadRootDir(), $this->directionimg);
+        unset($this->file1);
+    }
+    public function removeUpload1()
+    {
+        if ($file1 = $this->getAbsolutePath()) {
+            unlink($file1);
+        }
+    }
+    /**
+     * Set titledirection
+     *
+     * @param string $titledirection
+     * @return Direction
+     */
+    public function setTitledirection($titledirection)
+    {
+        $this->titledirection = $titledirection;
+        return $this;
+    }
+    /**
+     * Get titledirection
+     *
+     * @return string
+     */
+    public function getTitledirection()
+    {
+        return $this->titledirection;
+    }
+    /**
+     * Set iddirection
+     *
+     * @param string $iddirection
+     * @return Direction
+     */
+    public function setIddirection($iddirection)
+    {
+        $this->iddirection = $iddirection;
+        return $this;
+    }
+    /**
+     * Get iddirection
+     *
+     * @return string
+     */
+    public function getIddirection()
+    {
+        return $this->iddirection;
+    }
+>>>>>>> newonglet
     /**
      * @var int
      */
     private $id;
-
-
     /**
      * Get id
      *
@@ -79,14 +154,28 @@ class Direction
     {
         return $this->id;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     /**
      * @var string
      */
     private $image;
+<<<<<<< HEAD
 
 
+=======
+    /**
+     * @var string
+     */
+    private $titledirection;
+    /**
+     * @var string
+     */
+    private $iddirection;
+>>>>>>> newonglet
     /**
      * Set image
      *
@@ -96,10 +185,15 @@ class Direction
     public function setImage($image)
     {
         $this->image = $image;
+<<<<<<< HEAD
 
         return $this;
     }
 
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get image
      *
@@ -113,8 +207,11 @@ class Direction
      * @var string
      */
     private $directionimg;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     /**
      * Set directionimg
      *
@@ -124,10 +221,15 @@ class Direction
     public function setDirectionimg($directionimg)
     {
         $this->directionimg = $directionimg;
+<<<<<<< HEAD
 
         return $this;
     }
 
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get directionimg
      *
@@ -137,9 +239,12 @@ class Direction
     {
         return $this->directionimg;
     }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PrePersist
      */
@@ -147,7 +252,10 @@ class Direction
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostPersist
      */
@@ -155,7 +263,10 @@ class Direction
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostRemove
      */
@@ -163,5 +274,8 @@ class Direction
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
 }

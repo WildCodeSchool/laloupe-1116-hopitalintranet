@@ -2,67 +2,77 @@
 
 {% block body %}
 
-<div class="row">
-    <div class="col-md-offset-2  col-md-8 fondblanc2">
-        <h1 class="lienstitre">Galerie photos</h1>
-        {% for categorie in categories %}
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie" data-toggle="modal" data-target="{{ '#' ~ categorie.categorie }}">
-            {{ categorie.categorie }}
-        </div>
-        <div id="{{ categorie.categorie }}" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h2>{{ categorie.categorie }}</h2>
 
-                    </div>
-                    <div class="modal-body">
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Galerie photos</h1>
+            {% for categorie in categories %}
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie" data-toggle="modal" data-target="{{ '#' ~ categorie.categorie }}">
+                {{ categorie.categorie }}
+            </div>
+            <div id="{{ categorie.categorie }}" class="modal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
 
-                        <div class="c-wrapper">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="c-wrapper">
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-                                <ol class="carousel-indicators">
-                                    {%  set isFirst = true %}
-                                    {% for galerie in galeries if galerie.categorie.id == categorie.id %}
-                                        {% if isFirst == true %}
-                                            <li data-target="#myCarousel" data-slide-to="{{ galerie.id }}" class="active"></li>
-                                        {% else %}
-                                            <li data-target="#myCarousel" data-slide-to="{{ galerie.id }}"></li>
-                                        {% endif %}
-
-                                        {% set isFirst = false %}
-                                    {% endfor %}
-                                </ol>
-                                <div class="carousel-inner" role="listbox">
-                                    {%  set isFirst = true %}
-                                    {% for galerie in galeries if galerie.categorie.id == categorie.id %}
-                                    {% if isFirst == true %}
-                                    <div class="item active">
-                                        {% else %}
-                                        <div class="item">
-
+                                    <ol class="carousel-indicators">
+                                        {%  set isFirst = true %}
+                                        {% for galerie in galeries if galerie.categorie.id == categorie.id %}
+                                            {% if isFirst == true %}
+                                                <li data-target="#myCarousel" data-slide-to="{{ galerie.id }}" class="active"></li>
+                                            {% else %}
+                                                <li data-target="#myCarousel" data-slide-to="{{ galerie.id }}"></li>
                                             {% endif %}
-                                            <img src="{{ app.request.basepath }}/uploads/{{ galerie.galerie1 }}" alt="">
-                                        </div>
-                                        {% set isFirst = false %}
-                                        {% endfor %}
-                                    </div>
-                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
 
+                                            {% set isFirst = false %}
+                                        {% endfor %}
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+                                        {%  set isFirst = true %}
+                                        {% for galerie in galeries if galerie.categorie.id == categorie.id %}
+                                        {% if isFirst == true %}
+                                        <div class="item active">
+                                            {% else %}
+                                            <div class="item">
+
+                                                {% endif %}
+                                                <img src="{{ app.request.basepath }}/uploads/{{ galerie.galerie1 }}" alt="">
+                                            </div>
+                                            {% set isFirst = false %}
+                                            {% endfor %}
+                                        </div>
+                                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {% endfor %}
+                <a href="{{ path('documentation_galeriecategorie_new') }}">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie">
+                        Ajouter une<br> catégorie
+                    </div>
+                </a>
+                <a href="{{ path('documentation_galerie_new') }}">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie">
+                        Ajouter une<br> photo
+                    </div>
+                </a>
             </div>
 
             {% endfor %}

@@ -3,24 +3,17 @@
 {% block body %}
 
 
-    <tbody>
-    {% for journaloff in journaloffs %}
-
-        <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
-                <h1 class="lienstitre">Journal officiel</h1>
-                <h4 class="lienssoustitre">LegiFrance</h4>
-
-                <a href="{{ asset('https://www.legifrance.gouv.fr/initRechJO.do') }}">
-                    <object data="{{ app.request.basepath }}/uploads/{{ journaloff.journaloffimg }}" type="application/pdf" alt="Journaloff" class="lienimg">
-                    </object>
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblanc2">
+            {% for journaloff in journaloffs %}
+                <h1 class="lienstitre">{{ journaloff.journalofftitle }}</h1>
+                <h4 class="lienssoustitre">{{ journaloff.journaloffdescription }}</h4>
+                <a href="{{ journaloff.journaloffurl }}" target="_blank">
+                    <img src="{{ app.request.basepath }}/uploads/{{ journaloff.journaloffimg }}" alt="journaloff" type="application/img" class="lienimg">
+                    </img>
                 </a>
-
-            </div>
+            {% endfor %}
         </div>
-
-    {% endfor %}
-    </tbody>
-
+    </div>
 
 {% endblock %}

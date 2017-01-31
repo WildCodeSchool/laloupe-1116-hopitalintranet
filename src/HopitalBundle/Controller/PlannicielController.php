@@ -42,7 +42,7 @@ class PlannicielController extends Controller
             $em->persist($planniciel);
             $em->flush($planniciel);
 
-            return $this->redirectToRoute('personnel_planniciel_show', array('id' => $planniciel->getId()));
+            return $this->redirectToRoute('personnel_planniciel_index', array('id' => $planniciel->getId()));
         }
 
         return $this->render('@Hopital/personnel/planniciel_new.html.twig', array(
@@ -51,19 +51,6 @@ class PlannicielController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Planniciel $planniciel)
-    {
-        $deleteForm = $this->createDeleteForm($planniciel);
-
-        return $this->render('@Hopital/personnel/planniciel_show.html.twig', array(
-            'planniciel' => $planniciel,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing planniciel entity.
@@ -81,7 +68,7 @@ class PlannicielController extends Controller
             return $this->redirectToRoute('personnel_planniciel_edit', array('id' => $planniciel->getId()));
         }
 
-        return $this->render('@Hopital/personnel/planniciel_show.html.twig', array(
+        return $this->render('@Hopital/personnel/planniciel_edit.html.twig', array(
             'planniciel' => $planniciel,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

@@ -1,11 +1,8 @@
 <?php
-
 namespace HopitalBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class GhtType extends AbstractType
 {
     /**CODE AJOUTÉ
@@ -15,14 +12,29 @@ class GhtType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('ghtimg')
-            ->add('file7', 'file', array('required' => false));
+            ->add('ghtimg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('file2', 'file', array('required' => false))
+            ->add('titleght', 'text', array(
+                'label'=>'Titre GHT',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: GHT 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idght', 'text', array(
+                'label'=>'ID GHT',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: G0001",
+                    'class' => "zonenew"
+                )
+            ));
     }
-
     /**FIN CODE AJOUTÉ
-
-
-
     /**
      * {@inheritdoc}
      */
@@ -32,8 +44,6 @@ class GhtType extends AbstractType
             'data_class' => 'HopitalBundle\Entity\Ght'
         ));
     }
-
-
     /**
      * {@inheritdoc}
      */
@@ -41,5 +51,4 @@ class GhtType extends AbstractType
     {
         return 'hopital_ght';
     }
-
 }

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Ajout d'une catégorie processus</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_label(form.categorie, 'Nommez la catégorie:') }}<br>
+                            {{ form_widget(form.categorie)}}<br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Créer" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

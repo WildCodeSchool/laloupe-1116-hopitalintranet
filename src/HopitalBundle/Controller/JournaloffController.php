@@ -43,7 +43,7 @@ class JournaloffController extends Controller
             $em->persist($journaloff);
             $em->flush($journaloff);
 
-            return $this->redirectToRoute('recommandation_journaloff_show', array('id' => $journaloff->getId()));
+            return $this->redirectToRoute('recommandation_journaloff_index', array('id' => $journaloff->getId()));
         }
 
         return $this->render('HopitalBundle:recommandation:journaloff_new.html.twig', array(
@@ -52,19 +52,6 @@ class JournaloffController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a recommandation entity.
-     *
-     */
-    public function showAction(Journaloff $journaloff)
-    {
-        $journaloff_deleteForm = $this->createDeleteForm($journaloff);
-
-        return $this->render('HopitalBundle:recommandation:journaloff_show.html.twig', array(
-            'journaloff' => $journaloff,
-            'journaloff_delete_form' => $journaloff_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing journaloff entity.

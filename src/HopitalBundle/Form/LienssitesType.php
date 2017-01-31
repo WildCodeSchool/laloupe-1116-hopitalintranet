@@ -16,14 +16,23 @@ class LienssitesType extends AbstractType
     {
         $builder
             ->add('sitechartres')
+
             ->add('file1', 'file', array('required' => false))
-            ->add('sitenogent')
+            ->add('sitenogent', 'text', array(
+                'label'=>'URL du site Nogent'
+            ))
             ->add('file2', 'file', array('required' => false))
-            ->add('sitedreux')
+            ->add('sitedreux', 'text', array(
+                'label'=>'URL du site Dreux'
+            ))
             ->add('file3', 'file', array('required' => false))
-            ->add('sitebonneval')
+            ->add('sitebonneval', 'text', array(
+                'label'=>'URL du site Bonneval'
+            ))
             ->add('file4', 'file', array('required' => false))
-            ->add('sitechateaudun')
+            ->add('sitechateaudun', 'text', array(
+                'label'=>'URL du site Chateaudun'
+            ))
             ->add('file5', 'file', array('required' => false));
     }
 

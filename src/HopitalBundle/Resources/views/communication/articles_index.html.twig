@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="lienstitre">Articles de presse</h1>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <!--Début archives articles-->
+
+            <div class="col-md-2">
+                <div class="dropdown">
+                    <button class="btn journauxbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Archives
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        {% set maxId = 0 %}
+                        {% for articles in articless %}
+                            {% set maxId = max(articles.id, maxId) %}
+                        {% endfor %}
+                        {% for articles in articless %}
+                            {% if articles.id != maxId %}
+                                {% if communication.titlearticles != NULL %}
+                                    <p data-toggle="modal" data-target="{{ '#' ~ communication.idarticles }}" class="archivestitres"> {{ communication.titlearticles }} </p>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!--Fin archives articles-->
+
+
+            <!--Début nouvelles astreintes-->
+
+            <div class="col-md-10">
+                {% set maxId = 0 %}
+                {% for articles in articless %}
+                    {% set maxId = max(articles.id, maxId) %}
+                {% endfor %}
+                {% for articles in articless %}
+                    {% if articles.id == maxId %}
+                        <p>{{ communication.titlearticles }}</p>
+                    {% endif %}
+                    {% if articles.id == maxId %}
+                        <object data="{{ app.request.basepath }}/uploads/{{ communication.articlesimg }}" type="application/pdf" class="journaux">
+                        </object>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!--Fin nouvelles articles-->
+
+
+
+
+        <!--Début modal articles-->
+
+        {% for articles in articless %}
+            <div id="{{ communication.idarticles }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content" style="height: 750px">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <br>
+                        <br>
+                        <br>
+                        {% if articles.id != maxId %}
+                            <object data="{{ app.request.basepath }}/uploads/{{ communication.articlesimg }}" type="application/pdf" class="modalarchivespdf">
+                            </object>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!--Fin modal articles-->
+
+
+
+    </div>
+
+
+{% endblock %}

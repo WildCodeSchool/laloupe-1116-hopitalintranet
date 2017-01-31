@@ -141,6 +141,94 @@ class Has
         return $this->hasimg;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @var string
+     */
+    private $hastitle;
+
+    /**
+     * Set hastitle
+     *
+     * @param string $hastitle
+     * @return Has
+     */
+    public function setHastitle($hastitle)
+    {
+        $this->hastitle = $hastitle;
+
+        return $this;
+    }
+    /**
+     * Get hastitle
+     *
+     * @return string
+     */
+    public function getHastitle()
+    {
+        return $this->hastitle;
+    }
+
+
+    /**
+     * @var string
+     */
+    private $hasdescription;
+
+    /**
+     * Set hasdescription
+     *
+     * @param string $hasdescription
+     * @return Has
+     */
+    public function setHasdescription($hasdescription)
+    {
+        $this->hasdescription = $hasdescription;
+
+        return $this;
+    }
+    /**
+     * Get hasdescription
+     *
+     * @return string
+     */
+    public function getHasdescription()
+    {
+        return $this->hasdescription;
+    }
+    /**
+     * @var string
+     */
+    private $hasurl;
+
+
+
+
+    /**
+     * Set hasurl
+     *
+     * @param string $hasurl
+     * @return Has
+     */
+    public function setHasurl($hasurl)
+    {
+        $this->hasurl = $hasurl;
+
+        return $this;
+    }
+
+    /**
+     * Get hasurl
+     *
+     * @return string
+     */
+    public function getHasurl()
+    {
+        return $this->hasurl;
+    }
+
+>>>>>>> newonglet
 
     /**
      * @ORM\PrePersist

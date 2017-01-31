@@ -10,12 +10,17 @@ HopitalBundle\Entity\Noteservice:
                 strategy: AUTO
 
 
-
     fields:
         noteserviceimg:
             type: string
             length: 25
             nullable: true
+        titlenoteservice:
+            type: string
+            length: 255
+        idnoteservice:
+            type: string
+            length: 255
 
 
 
@@ -25,4 +30,3 @@ HopitalBundle\Entity\Noteservice:
       postPersist: [ upload, upload1 ]
       postUpdate: [ upload, upload1 ]
       postRemove: [ removeUpload, removeUpload1 ]
-

@@ -1,50 +1,52 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
 
 {% block body %}
-    <h1>HAS</h1>
-
-    {{ form_start(edit_form) }}
 
 
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Modifier un HAS</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_note">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            {{ form_label(edit_form.hastitle, 'Titre de votre lien:', {'hastitle': {'class': 'hastitle'}}) }}
+                            {{ form_widget(edit_form.hastitle) }}<br><br>
+                            {{ form_errors(edit_form.hastitle) }}
+                            {{ form_label(edit_form.hasimg, 'Description de votre lien:', {'hasdescription': {'class': 'hasdescription'}}) }}
+                            {{ form_widget(edit_form.hasdescription) }}<br><br>
+                            {{ form_errors(edit_form.hasdescription) }}
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ has.hasimg }}"/>
-        {{edit_form.children.file1.vars.label}}
-        {{ form_widget(edit_form.file1) }}
-        {{ form_errors(edit_form.file1) }}
-        {{ form_widget(edit_form.hasimg) }}
-        {{ form_errors(edit_form.hasimg) }}
+                            {{ form_label(edit_form.hasimg, 'Renommez votre image:', {'hasimg': {'class': 'hasimg'}}) }}
+
+                            {{ edit_form.children.file1.vars.label }}
+
+                            {{ form_widget(edit_form.hasimg) }}<br><br>
+                            {{ form_errors(edit_form.hasimg) }}
+                            {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file1) }}<br><br>
+                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.hasurl, 'Url de votre lien:', {'hasurl': {'class': 'hasurl'}}) }}
+                            {{ form_widget(edit_form.hasurl) }}
+                            {{ form_errors(edit_form.hasurl) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_end(edit_form) }}
+                            {{ form_start(has_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(has_delete_form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
-    {{ form_widget(edit_form) }}
-
-    <input type="submit" value="Edit"/>
-
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('recommandation_has_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(has_delete_form) }}
-            <input type="submit" value="Delete">
-            {{ form_end(has_delete_form) }}
-        </li>
-    </ul>
-
-
-
-
-    {{ form_end(edit_form) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}
+

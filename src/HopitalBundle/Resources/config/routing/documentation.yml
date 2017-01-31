@@ -3,11 +3,6 @@ documentation_noteservice_index:
     defaults: { _controller: "HopitalBundle:Noteservice:index" }
     methods:  GET
 
-documentation_noteservice_show:
-    path:     /noteservice/{id}/show
-    defaults: { _controller: "HopitalBundle:Noteservice:show" }
-    methods:  GET
-
 documentation_noteservice_new:
     path:     /noteservice/new
     defaults: { _controller: "HopitalBundle:Noteservice:new" }
@@ -25,41 +20,160 @@ documentation_noteservice_delete:
 
 
 
-documentation_contacts:
+documentation_contacts_index:
     path:     /contacts
-    defaults: { _controller: "HopitalBundle:Documentation:contacts" }
+    defaults: { _controller: "HopitalBundle:Contacts:index" }
     methods:  GET
 
+documentation_contacts_new:
+    path:     /contacts/new
+    defaults: { _controller: "HopitalBundle:Contacts:new" }
+    methods:  [GET, POST]
+
+documentation_contacts_edit:
+    path:     /contacts/{id}/edit
+    defaults: { _controller: "HopitalBundle:Contacts:edit" }
+    methods:  [GET, POST]
+
+documentation_contacts_delete:
+    path:     /contacts/{id}/delete
+    defaults: { _controller: "HopitalBundle:Contacts:delete" }
+    methods:  DELETE
 
 
-    
-documentation_instances:
+
+
+documentation_instances_index:
     path:     /instances
-    defaults: { _controller: "HopitalBundle:Documentation:instances" }
+    defaults: { _controller: "HopitalBundle:Instances:index" }
     methods:  GET
 
+documentation_instances_new:
+    path:     /instances/new
+    defaults: { _controller: "HopitalBundle:Instances:new" }
+    methods:  [GET, POST]
 
-documentation_astreintes:
+documentation_instances_edit:
+    path:     /instances/{id}/edit
+    defaults: { _controller: "HopitalBundle:Instances:edit" }
+    methods:  [GET, POST]
+
+documentation_instances_delete:
+    path:     instances/{id}/delete
+    defaults: { _controller: "HopitalBundle:Instances:delete" }
+    methods:  DELETE
+
+documentation_instancesrubrique_new:
+    path:     /rubrique/new
+    defaults: { _controller: "HopitalBundle:Instances:newRubrique" }
+    methods:  [GET, POST]
+
+
+
+
+documentation_astreintes_index:
     path:     /astreintes
-    defaults: { _controller: "HopitalBundle:Documentation:astreintes" }
+    defaults: { _controller: "HopitalBundle:Astreintes:index" }
     methods:  GET
 
+documentation_astreintesadministratif_new:
+    path:     /astreintesadministratif/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newAdministratif" }
+    methods:  [GET, POST]
 
-documentation_groupe:
+documentation_astreintesmedical_new:
+    path:     /astreintesmedical/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newMedical" }
+    methods:  [GET, POST]
+
+documentation_astreintescommune_new:
+    path:     /astreintescommune/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newCommune" }
+    methods:  [GET, POST]
+
+documentation_astreintestechnique_new:
+    path:     /astreintestechnique/new
+    defaults: { _controller: "HopitalBundle:Astreintes:newTechnique" }
+    methods:  [GET, POST]
+
+documentation_astreintesadministratif_edit:
+    path:     /astreintesadministratif/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editAdministratif" }
+    methods:  [GET, POST]
+
+documentation_astreintesmedical_edit:
+    path:     /astreintesmedical/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editMedical" }
+    methods:  [GET, POST]
+
+documentation_astreintescommune_edit:
+    path:     /astreintescommune/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editCommune" }
+    methods:  [GET, POST]
+
+documentation_astreintestechnique_edit:
+    path:     /astreintestechnique/{id}/edit
+    defaults: { _controller: "HopitalBundle:Astreintes:editTechnique" }
+    methods:  [GET, POST]
+
+documentation_astreintesadministratif_delete:
+    path:     /astreintes/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteAdministratif" }
+    methods:  DELETE
+
+documentation_astreintesmedical_delete:
+    path:     /astreintesmedical/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteMedical" }
+    methods:  DELETE
+
+documentation_astreintescommune_delete:
+    path:     /astreintescommune/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteCommune" }
+    methods:  DELETE
+
+documentation_astreintestechnique_delete:
+    path:     /astreintestechnique/{id}/delete
+    defaults: { _controller: "HopitalBundle:Astreintes:deleteTechnique" }
+    methods:  DELETE
+
+
+
+
+
+documentation_groupe_index:
     path:     /groupe
-    defaults: { _controller: "HopitalBundle:Documentation:groupe" }
+    defaults: { _controller: "HopitalBundle:Groupe:index" }
     methods:  GET
+documentation_groupe_show:
+    path:     /groupe/{id}/show
+    defaults: { _controller: "HopitalBundle:Groupe:show" }
+    methods:  [GET, POST]
+
+documentation_groupe_new:
+    path:     /groupe/new
+    defaults: { _controller: "HopitalBundle:Groupe:new" }
+    methods:  [GET, POST]
+
+documentation_groupe_edit:
+    path:     /groupe/{id}/edit
+    defaults: { _controller: "HopitalBundle:Groupe:edit" }
+    methods:  [GET, POST]
+
+documentation_groupe_delete:
+    path:     /groupe/{id}/delete
+    defaults: { _controller: "HopitalBundle:Groupe:delete" }
+    methods:  GET
+
+documentation_groupemessage_delete:
+    path:     /groupemessage/{id}/delete
+    defaults: { _controller: "HopitalBundle:Groupe:deleteGroupeMessage" }
+    methods:  DELETE
 
 
 
 documentation_journaux_index:
     path:     /journaux
     defaults: { _controller: "HopitalBundle:Journaux:index" }
-    methods:  GET
-
-documentation_journaux_show:
-    path:     /journaux/{id}/show
-    defaults: { _controller: "HopitalBundle:Journaux:show" }
     methods:  GET
 
 documentation_journaux_new:
@@ -80,42 +194,9 @@ documentation_journaux_delete:
 
 
 
-documentation_astreintes_index:
-    path:     /astreintes
-    defaults: { _controller: "HopitalBundle:Astreintes:index" }
-    methods:  GET
-
-documentation_astreintes_show:
-    path:     /astreintes/{id}/show
-    defaults: { _controller: "HopitalBundle:Astreintes:show" }
-    methods:  GET
-
-documentation_astreintes_new:
-    path:     /astreintes/new
-    defaults: { _controller: "HopitalBundle:Astreintes:new" }
-    methods:  [GET, POST]
-
-documentation_astreintes_edit:
-    path:     /astreintes/{id}/edit
-    defaults: { _controller: "HopitalBundle:Astreintes:edit" }
-    methods:  [GET, POST]
-
-documentation_astreintes_delete:
-    path:     /astreintes/{id}/delete
-    defaults: { _controller: "HopitalBundle:Astreintes:delete" }
-    methods:  DELETE
-
-
-
-
 documentation_galerie_index:
     path:     /galerie
     defaults: { _controller: "HopitalBundle:Galerie:index" }
-    methods:  GET
-
-documentation_galerie_show:
-    path:     /galerie/{id}/show
-    defaults: { _controller: "HopitalBundle:Galerie:show" }
     methods:  GET
 
 documentation_galerie_new:
@@ -129,7 +210,7 @@ documentation_galerie_edit:
     methods:  [GET, POST]
 
 documentation_galerie_delete:
-    path:     galerie/{id}/delete
+    path:     /galerie/{id}/delete
     defaults: { _controller: "HopitalBundle:Galerie:delete" }
     methods:  DELETE
 
@@ -143,11 +224,6 @@ documentation_galeriecategorie_new:
 documentation_basedoc_index:
     path:     /basedoc
     defaults: { _controller: "HopitalBundle:Basedoc:index" }
-    methods:  GET
-
-documentation_basedoc_show:
-    path:     /basedoc/{id}/show
-    defaults: { _controller: "HopitalBundle:Basedoc:show" }
     methods:  GET
 
 documentation_basedoc_new:
@@ -170,11 +246,6 @@ documentation_basedoc_delete:
 documentation_fournisseur_index:
     path:     /fournisseur
     defaults: { _controller: "HopitalBundle:Fournisseur:index" }
-    methods:  GET
-
-documentation_fournisseur_show:
-    path:     /fournisseur/{id}/show
-    defaults: { _controller: "HopitalBundle:Fournisseur:show" }
     methods:  GET
 
 documentation_fournisseur_new:

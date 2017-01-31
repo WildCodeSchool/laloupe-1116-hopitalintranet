@@ -15,13 +15,18 @@ HopitalBundle\Entity\Lettreinfo:
             type: string
             length: 25
             nullable: true
+        titlelettreinfo:
+            type: string
+            length: 255
+        idlettreinfo:
+            type: string
+            length: 255
 
 
 
     lifecycleCallbacks:
-      prePersist: [ preUpload, preUpload1 ]
-      preUpdate: [ preUpload, preUpload1 ]
-      postPersist: [ upload, upload1 ]
-      postUpdate: [ upload, upload1 ]
-      postRemove: [ removeUpload, removeUpload1 ]
-
+      prePersist: [ preUpload, preUpload3 ]
+      preUpdate: [ preUpload, preUpload3 ]
+      postPersist: [ upload, upload3 ]
+      postUpdate: [ upload, upload3 ]
+      postRemove: [ removeUpload, removeUpload3 ]

@@ -1,16 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>GHT creation</h1>
-
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('communication_ght_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Ajout d'une GHT</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_start(form) }}
+                            {{ form_label(form.ghtimg, 'Nommez votre GHT:') }}<br>
+                            {{ form_widget(form.ghtimg)}}<br>
+                            {{ form_label(form.file2, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(form.file2)}}<br>
+                            {{ form_label(form.idght, 'Id de votre GHT:') }}<br>
+                            {{ form_widget(form.idght)}}<br>
+                            {{ form_label(form.titleght, 'Titre de votre GHT:') }}<br>
+                            {{ form_widget(form.titleght)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Créer" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

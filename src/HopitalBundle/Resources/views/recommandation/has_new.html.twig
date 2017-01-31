@@ -1,16 +1,34 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>HAS creation</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <h1 class="lienstitre">Création HAS</h1>
+        <br>
+        <div class="row journaux">
+            <div class="col-md-4">
+                <br>
+                <br>
+                <br>
+                <br>
+                {{ form_start(form) }}
+                {{ form_label(form. hastitle, 'Nommez votre lien:', {'hastitle': {'class': 'hastitle'}}) }}
+                {{ form_widget(form.hastitle)}}
+                {{ form_label(form. hasdescription, 'Décrivez votre lien:', {'hasescription': {'class': 'hasdescription'}}) }}
+                {{ form_widget(form.hasdescription)}}
+                {{ form_label(form. hasimg, 'Nommez votre image:', {'hasimg': {'class': 'hasimg'}}) }}
+                {{ form_widget(form.hasimg)}}
+                {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                {{ form_widget(form.file1)}}
+                {{ form_label(form. hasurl, 'Indiquez le lien:', {'hasurl': {'class': 'hasurl'}}) }}
+                {{ form_widget(form.hasurl)}}
+                <br>
+                <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                {{ form_end(form) }}
+            </div>
+        </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('recommandation_has_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    </div>
+</div>
 {% endblock %}

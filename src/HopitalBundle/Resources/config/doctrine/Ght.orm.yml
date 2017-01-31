@@ -10,18 +10,23 @@ HopitalBundle\Entity\Ght:
                 strategy: AUTO
 
 
-
     fields:
         ghtimg:
             type: string
             length: 25
             nullable: true
+        titleght:
+            type: string
+            length: 255
+        idght:
+            type: string
+            length: 255
 
 
 
     lifecycleCallbacks:
-      prePersist: [ preUpload, preUpload7 ]
-      preUpdate: [ preUpload, preUpload7 ]
-      postPersist: [ upload, upload7 ]
-      postUpdate: [ upload, upload7 ]
-      postRemove: [ removeUpload, removeUpload7 ]
+      prePersist: [ preUpload, preUpload2 ]
+      preUpdate: [ preUpload, preUpload2 ]
+      postPersist: [ upload, upload2 ]
+      postUpdate: [ upload, upload2 ]
+      postRemove: [ removeUpload, removeUpload2 ]

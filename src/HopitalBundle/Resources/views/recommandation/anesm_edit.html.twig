@@ -1,50 +1,51 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
 
 {% block body %}
-    <h1>ANESM edit</h1>
 
-    {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Modifier un ANESM</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_note">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            {{ form_label(edit_form.anesmtitle, 'Titre de votre lien:', {'anesmtitle': {'class': 'anesmtitle'}}) }}
+                            {{ form_widget(edit_form.anesmtitle) }}<br><br>
+                            {{ form_errors(edit_form.anesmtitle) }}
+                            {{ form_label(edit_form.anesmimg, 'Description de votre lien:', {'anesmdescription': {'class': 'anesmdescription'}}) }}
+                            {{ form_widget(edit_form.anesmdescription) }}<br><br>
+                            {{ form_errors(edit_form.anesmdescription) }}
 
+                            {{ form_label(edit_form.anesmimg, 'Renommez votre image:', {'anesmimg': {'class': 'anesmimg'}}) }}
 
+                            {{ edit_form.children.file1.vars.label }}
 
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ anesm.anesmimg }}"/>
-        {{edit_form.children.file1.vars.label}}
-        {{ form_widget(edit_form.file1) }}
-        {{ form_errors(edit_form.file1) }}
-        {{ form_widget(edit_form.anesmimg) }}
-        {{ form_errors(edit_form.anesmimg) }}
+                            {{ form_widget(edit_form.anesmimg) }}<br><br>
+                            {{ form_errors(edit_form.anesmimg) }}
+                            {{ form_label(edit_form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file1) }}<br><br>
+                            {{ form_errors(edit_form.file1) }}
+                            {{ form_label(edit_form.anesmurl, 'Url de votre lien:', {'anesmurl': {'class': 'anesmurl'}}) }}
+                            {{ form_widget(edit_form.anesmurl) }}
+                            {{ form_errors(edit_form.anesmurl) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2 btneditcommun">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_end(edit_form) }}
+                            {{ form_start(anesm_delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(anesm_delete_form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    {{ form_widget(edit_form) }}
-
-    <input type="submit" value="Edit"/>
-
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('recommandation_anesm_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(anesm_delete_form) }}
-            <input type="submit" value="Delete">
-            {{ form_end(anesm_delete_form) }}
-        </li>
-    </ul>
-
-
-
-
-    {{ form_end(edit_form) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}
+
+

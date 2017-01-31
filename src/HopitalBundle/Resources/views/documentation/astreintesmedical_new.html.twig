@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Création d'une astreintes medical</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_start(formMedical) }}
+                            {{ form_label(formMedical.medicalimg, 'Nommez votre astreinte médicale:') }}<br>
+                            {{ form_widget(formMedical.medicalimg)}}<br>
+                            {{ form_label(formMedical.file2, 'Insérez votre Pdf:') }}<br>
+                            {{ form_widget(formMedical.file2)}}<br>
+                            {{ form_label(formMedical.idmedical, 'Id de votre astreinte médicale:') }}<br>
+                            {{ form_widget(formMedical.idmedical)}}<br>
+                            {{ form_label(formMedical.titlemedical, 'Titre de votre astreinte médicale:') }}<br>
+                            {{ form_widget(formMedical.titlemedical)}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Créer" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(formMedical) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

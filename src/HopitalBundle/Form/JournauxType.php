@@ -1,14 +1,10 @@
 <?php
-
 namespace HopitalBundle\Form;
-
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class JournauxType extends AbstractType
 {
-
     /**CODE AJOUTÉ
     /**
      * {@inheritdoc}
@@ -16,13 +12,29 @@ class JournauxType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('journauximg')
-            ->add('file1', 'file', array('required' => false));
-
+            ->add('journauximg', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('file1', 'file', array('required' => false))
+            ->add('titlejournaux', 'text', array(
+                'label'=>'Titre du journal',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: Journal interne 2017-01",
+                    'class' => "zonenew"
+                )))
+            ->add('idjournaux', 'text', array(
+                'label'=>'ID journaux',
+                'required' => false,
+                'attr' => array(
+                    'placeholder' => "ex: J0001",
+                    'class' => "zonenew"
+                )
+            ));
     }
-
     /**FIN CODE AJOUTÉ
-
     /**
      * {@inheritdoc}
      */
@@ -32,14 +44,11 @@ class JournauxType extends AbstractType
             'data_class' => 'HopitalBundle\Entity\Journaux'
         ));
     }
-
     /**
      * {@inheritdoc}
      */
     public function getBlockPrefix()
     {
-        return 'hopitalbundle_journaux';
+        return 'hopital_journaux';
     }
-
-
 }

@@ -48,7 +48,7 @@ class GalerieController extends Controller
             $em->persist($galerie);
             $em->flush($galerie);
 
-            return $this->redirectToRoute('documentation_galerie_show', array('id' => $galerie->getId()));
+            return $this->redirectToRoute('documentation_galerie_index', array('id' => $galerie->getId()));
         }
 
         return $this->render('HopitalBundle:documentation:galerie_new.html.twig', array(
@@ -57,8 +57,10 @@ class GalerieController extends Controller
         ));
     }
 
+
+
     /**
-     * Creates a new galerie entity.
+     * Finds and displays a presentation entity.
      *
      */
     public function newCategorieAction(Request $request)
@@ -75,26 +77,12 @@ class GalerieController extends Controller
             return $this->redirectToRoute('documentation_galerie_index');
         }
 
-        return $this->render('HopitalBundle:documentation:galerie_new.html.twig', array(
+        return $this->render('HopitalBundle:documentation:galeriecategorie_new.html.twig', array(
             'categorie' => $categorie,
             'form' => $form->createView(),
         ));
     }
 
-
-    /**
-     * Finds and displays a presentation entity.
-     *
-     */
-    public function showAction(Galerie $galerie)
-    {
-        $deleteForm = $this->createDeleteForm($galerie);
-
-        return $this->render('HopitalBundle:documentation:galerie_show.html.twig', array(
-            'galerie' => $galerie,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing galerie entity.

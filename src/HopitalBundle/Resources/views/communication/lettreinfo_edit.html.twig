@@ -4,32 +4,36 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifiaction de lettre d'information</h1>
+            <h1 class="lienstitrenew">Modifier la lettre d'information</h1>
             <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{ form_start(edit_form) }}
-                    {{ form_label(edit_form.lettreinfoimg, 'Nommez votre lettre d\'information:', {'lettreinfoimg': {'class': ''}}) }}
-                    {{ form_widget(edit_form.lettreinfoimg)}}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(edit_form.file1)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier" />
-                    {{ form_end(edit_form) }}
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_note">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            {{ form_start(edit_form) }}
+                            {{edit_form.children.file3.vars.label}}
+                            {{ form_label(edit_form.lettreinfoimg, 'Nommez votre lettre d\'information:', {'lettreinfoimg': {'class': 'lettreinfoimg'}}) }}
+                            {{ form_widget(edit_form.lettreinfoimg)}}
+                            {{ form_errors(edit_form.lettreinfoimg) }}
+                            {{ form_label(edit_form.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file3)}}
+                            {{ form_errors(edit_form.file3) }}
+                        </div>
+                    </div>
+                    <div class="col-md-0 imgnew">
+                        <input type="submit" class="btnnote" value="Modifier"/>
+                        {{ form_end(edit_form) }}
+                        {{ form_start(lettreinfo_delete_form) }}
+                        <input type="submit" class="btnnote" value="Supprimer">
+                        {{ form_end(lettreinfo_delete_form) }}
 
-
-                    {{ form_start(lettreinfo_delete_form) }}
-                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(lettreinfo_delete_form) }}
-
+                    </div>
                 </div>
             </div>
-
         </div>
+    </div>
+    </div>
     </div>
 
 {% endblock %}
+

@@ -1,35 +1,46 @@
 <?php
-
 namespace HopitalBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Ght
  */
 class Ght
 {
+<<<<<<< HEAD
     public $file7;
 
+=======
+    public $file2;
+>>>>>>> newonglet
     protected function getUploadDir()
     {
         return 'uploads';
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     protected function getUploadRootDir()
     {
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     public function getWebPath()
     {
         return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
+<<<<<<< HEAD
 
 
     public function preUpload7()
@@ -64,12 +75,76 @@ class Ght
 
 
 
+=======
+    public function preUpload2()
+    {
+        if (null !== $this->file2) {
+            // do whatever you want to generate a unique name
+            $this->ghtimg = uniqid().'.'.$this->file2->guessExtension();
+        }
+    }
+    public function upload2()
+    {
+        if (null === $this->file2) {
+            return;
+        }
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file2->move($this->getUploadRootDir(), $this->ghtimg);
+        unset($this->file2);
+    }
+    public function removeUpload2()
+    {
+        if ($file2 = $this->getAbsolutePath()) {
+            unlink($file2);
+        }
+    }
+    /**
+     * Set titleght
+     *
+     * @param string $titleght
+     * @return Ght
+     */
+    public function setTitleght($titleght)
+    {
+        $this->titleght = $titleght;
+        return $this;
+    }
+    /**
+     * Get titleght
+     *
+     * @return string
+     */
+    public function getTitleght()
+    {
+        return $this->titleght;
+    }
+    /**
+     * Set idght
+     *
+     * @param string $idght
+     * @return Ght
+     */
+    public function setIdght($idght)
+    {
+        $this->idght = $idght;
+        return $this;
+    }
+    /**
+     * Get idght
+     *
+     * @return string
+     */
+    public function getIdght()
+    {
+        return $this->idght;
+    }
+>>>>>>> newonglet
     /**
      * @var int
      */
     private $id;
-
-
     /**
      * Get id
      *
@@ -79,14 +154,28 @@ class Ght
     {
         return $this->id;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     /**
      * @var string
      */
     private $image;
+<<<<<<< HEAD
 
 
+=======
+    /**
+     * @var string
+     */
+    private $titleght;
+    /**
+     * @var string
+     */
+    private $idght;
+>>>>>>> newonglet
     /**
      * Set image
      *
@@ -96,10 +185,15 @@ class Ght
     public function setImage($image)
     {
         $this->image = $image;
+<<<<<<< HEAD
 
         return $this;
     }
 
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get image
      *
@@ -113,8 +207,11 @@ class Ght
      * @var string
      */
     private $ghtimg;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     /**
      * Set ghtimg
      *
@@ -124,10 +221,15 @@ class Ght
     public function setGhtimg($ghtimg)
     {
         $this->ghtimg = $ghtimg;
+<<<<<<< HEAD
 
         return $this;
     }
 
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get ghtimg
      *
@@ -137,9 +239,12 @@ class Ght
     {
         return $this->ghtimg;
     }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PrePersist
      */
@@ -147,7 +252,10 @@ class Ght
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostPersist
      */
@@ -155,7 +263,10 @@ class Ght
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostRemove
      */
@@ -163,8 +274,11 @@ class Ght
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> newonglet
 }

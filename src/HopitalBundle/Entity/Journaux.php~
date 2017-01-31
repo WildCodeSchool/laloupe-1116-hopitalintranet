@@ -1,37 +1,49 @@
 <?php
-
 namespace HopitalBundle\Entity;
-
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * Journaux
  */
 class Journaux
 {
     public $file1;
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     protected function getUploadDir()
     {
         return 'uploads';
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     protected function getUploadRootDir()
     {
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     public function getWebPath()
     {
         return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     public function preUpload1()
     {
         if (null !== $this->file1) {
@@ -39,36 +51,88 @@ class Journaux
             $this->journauximg = uniqid().'.'.$this->file1->guessExtension();
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     public function upload1()
     {
         if (null === $this->file1) {
             return;
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
         $this->file1->move($this->getUploadRootDir(), $this->journauximg);
+<<<<<<< HEAD
 
         unset($this->file1);
     }
 
+=======
+        unset($this->file1);
+    }
+>>>>>>> newonglet
     public function removeUpload1()
     {
         if ($file1 = $this->getAbsolutePath()) {
             unlink($file1);
         }
     }
+<<<<<<< HEAD
 
 
 
+=======
+    /**
+     * Set titlejournaux
+     *
+     * @param string $titlejournaux
+     * @return Journaux
+     */
+    public function setTitlejournaux($titlejournaux)
+    {
+        $this->titlejournaux = $titlejournaux;
+        return $this;
+    }
+    /**
+     * Get titlejournaux
+     *
+     * @return string
+     */
+    public function getTitlejournaux()
+    {
+        return $this->titlejournaux;
+    }
+    /**
+     * Set idjournaux
+     *
+     * @param string $idjournaux
+     * @return Journaux
+     */
+    public function setIdjournaux($idjournaux)
+    {
+        $this->idjournaux = $idjournaux;
+        return $this;
+    }
+    /**
+     * Get idjournaux
+     *
+     * @return string
+     */
+    public function getIdjournaux()
+    {
+        return $this->idjournaux;
+    }
+>>>>>>> newonglet
     /**
      * @var int
      */
     private $id;
-
-
     /**
      * Get id
      *
@@ -78,14 +142,28 @@ class Journaux
     {
         return $this->id;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     /**
      * @var string
      */
     private $image;
+<<<<<<< HEAD
 
 
+=======
+    /**
+     * @var string
+     */
+    private $titlejournaux;
+    /**
+     * @var string
+     */
+    private $idjournaux;
+>>>>>>> newonglet
     /**
      * Set image
      *
@@ -95,10 +173,15 @@ class Journaux
     public function setImage($image)
     {
         $this->image = $image;
+<<<<<<< HEAD
 
         return $this;
     }
 
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get image
      *
@@ -108,16 +191,22 @@ class Journaux
     {
         return $this->image;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     /**
      * @var string
      */
     private $journauximg;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> newonglet
     /**
      * Set journauximg
      *
@@ -127,10 +216,15 @@ class Journaux
     public function setJournauximg($journauximg)
     {
         $this->journauximg = $journauximg;
+<<<<<<< HEAD
 
         return $this;
     }
 
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get journauximg
      *
@@ -140,8 +234,11 @@ class Journaux
     {
         return $this->journauximg;
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PrePersist
      */
@@ -149,7 +246,10 @@ class Journaux
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostPersist
      */
@@ -157,7 +257,10 @@ class Journaux
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostRemove
      */
@@ -165,8 +268,11 @@ class Journaux
     {
         // Add your code here
     }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> newonglet
 }

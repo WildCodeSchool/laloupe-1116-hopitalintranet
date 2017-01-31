@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <h1 class="lienstitrenew">Création d'une instance</h1>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6 carrenewid">
+                <div class="row">
+                    <div class="col-md-12 imgnewid">
+                        {{ form_start(form) }}
+                        {{ form_label(form.instances1, 'Nommez votre instance:') }}<br>
+                        {{ form_widget(form.instances1)}}<br><br>
+                        {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}<br>
+                        {{ form_widget(form.file1)}}<br>
+                        {{ form_label(form.rubrique, 'Choississez la rubrique:', {'file1': {'class': 'file1'}}) }}<br>
+                        {{ form_widget(form.rubrique)}}<br>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-offset-5 col-md-2">
+                                <input type="submit" value="Créer" class="btnnew" />
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

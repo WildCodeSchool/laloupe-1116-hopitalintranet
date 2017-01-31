@@ -44,7 +44,7 @@ class PostvacantController extends Controller
             $em->persist($postvacant);
             $em->flush($postvacant);
 
-            return $this->redirectToRoute('personnel_postvacant_show', array('id' => $postvacant->getId()));
+            return $this->redirectToRoute('personnel_postvacant_index', array('id' => $postvacant->getId()));
         }
 
         return $this->render('HopitalBundle:personnel:postvacant_new.html.twig', array(
@@ -54,19 +54,6 @@ class PostvacantController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a postvacant entity.
-     *
-     */
-    public function showAction(postvacant $postvacant)
-    {
-        $postvacant_deleteForm = $this->createDeleteForm($postvacant);
-
-        return $this->render('HopitalBundle:personnel:postvacant_show.html.twig', array(
-            'postvacant' => $postvacant,
-            'postvacant_delete_form' => $postvacant_deleteForm->createView(),
-        ));
-    }
 
     /**
      * Displays a form to edit an existing postvacant entity.
