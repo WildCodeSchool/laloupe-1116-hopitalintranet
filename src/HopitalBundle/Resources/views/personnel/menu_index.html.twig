@@ -3,14 +3,14 @@
 
 {% block body %}
 
-<div class="row">
+    <div class="row">
     <div class="col-md-offset-2 col-md-8 fondblanc">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="lienstitre">Menus</h1>
-            </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="lienstitre">Menus</h1>
         </div>
-        {% for menu in menus %}
+    </div>
+    {% for menu in menus %}
         <div class="row">
             <div class="col-md-offset-2 col-md-5">
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">
@@ -134,8 +134,8 @@
             <br>
             <br>
         </div>
-    </div>
-            </div>
+        </div>
+        </div>
 
     {% endfor %}
-    {% endblock %}
+{% endblock %}

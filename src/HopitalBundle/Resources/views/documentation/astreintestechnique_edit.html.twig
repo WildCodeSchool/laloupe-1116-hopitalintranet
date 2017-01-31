@@ -1,45 +1,49 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Astreintes Technique edit</h1>
-    {{ form_start(edit_form_technique) }}
 
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Modification de l'astreinte technique</h1>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 astreinte_carre">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            <div class="text-center">
+                                <a href="{{ path('documentation_astreintestechnique_new') }}">Ajouter une astreinte</a>
+                            </div>
+                            <br>
+                            <img src="{{ app.request.basepath }}/uploads/{{ technique.techniqueimg }}" type="application/pdf" class="directioncommune"/><br>
+                            {{edit_form_technique.children.file4.vars.label}}<br>
+                            <div id="hopital_astreintes">
+                            {{ form_widget(edit_form_technique.file4) }}
+                            {{ form_errors(edit_form_technique.file4) }}
 
-    <li>
-        <a href="{{ path('documentation_astreintestechnique_new') }}">Ajouter une astreinte</a>
-    </li>
+                            {{ form_widget(edit_form_technique.techniqueimg) }}<br><br><br>
+                            {{ form_errors(edit_form_technique.techniqueimg) }}
 
+                            {{ form_end(edit_form_technique) }}<br><br>
+                            {{ form_widget(edit_form_technique) }}
+                            </div>
+                            <div class="btneditcommun">
+                                <input type="submit" class="btnedit" value="Modifier" />
+                                {{ form_start(edit_form_technique) }}
+                                {{ form_start(astreintes_delete_form_technique) }}
+                                <input type="submit" class="btnedit" value="Supprimer">
+                                {{ form_end(astreintes_delete_form_technique) }}
+                                {{ form_end(edit_form_technique) }}<br>
 
-    <h2 class="titre">{{ technique.titletechnique }}</h2>
-    <div>
-        <img src="{{ app.request.basepath }}/uploads/{{ technique.techniqueimg }}" type="application/pdf" class="directioncommune"/>
-        {{edit_form_technique.children.file4.vars.label}}
-        {{ form_widget(edit_form_technique.file4) }}
-        {{ form_errors(edit_form_technique.file4) }}
-        {{ form_widget(edit_form_technique.techniqueimg) }}
-        {{ form_errors(edit_form_technique.techniqueimg) }}
-        {{ form_end(edit_form_technique) }}
+                                <div class="col-md-4">
+                                    <a href="{{ path('documentation_astreintes_index') }}">Retour à l'index</a>
+                                </div>
 
-        {{ form_widget(edit_form_technique) }}
-        <input type="submit" value="Edit"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    <ul>
-        <li>
-            <a href="{{ path('documentation_astreintes_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(edit_form_technique) }}
-            {{ form_start(astreintes_delete_form_technique) }}
-            <input type="submit" value="Delete">
-            {{ form_end(astreintes_delete_form_technique) }}
-            {{ form_end(edit_form_technique) }}
-        </li>
-    </ul>
-    {{ form_end(edit_form_technique) }}
-
-
-    <br/>
-    <br/>
 {% endblock %}
+

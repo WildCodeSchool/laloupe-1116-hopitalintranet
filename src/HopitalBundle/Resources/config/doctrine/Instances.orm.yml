@@ -18,6 +18,9 @@ HopitalBundle\Entity\Instances:
         rubrique:
             targetEntity: HopitalBundle\Entity\InstancesRubrique
             inversedBy: photos
+            joinColumn:
+                onDelete: CASCADE
+
 
     lifecycleCallbacks:
         prePersist: [ preUpload, preUpload1 ]

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 fondblancshow">
+                 <h1 class="lienstitre">{{ rubrique.rubrique }}</h1>
+                {% for instances in instancess if instances.rubrique.id == rubrique.id %}
+                    <div class="col-xs-6 instancesimg" >
+                        <object class="img-thumbnail" width="100%" height="auto" data="{{ app.request.basepath }}/uploads/{{ instances.instances1 }}"></object>
+                        <a id="instanceslink" data-toggle="modal" data-target="{{ '#' ~ instances.id }}">Agrandir</a>
+                        <div id="{{ instances.id }}" class="modal" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-xs-12 instancesimg2">
+                                            <object class="img-responsive" width="100%" height="auto" data="{{ app.request.basepath }}/uploads/{{ instances.instances1 }}"></object>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+
+
+
+{% endblock %}

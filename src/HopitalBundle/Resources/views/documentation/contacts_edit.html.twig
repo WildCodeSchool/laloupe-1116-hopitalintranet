@@ -3,51 +3,53 @@
 {% block body %}
 
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Modifier les contacts </h1>
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Modifier une note de service</h1>
             <br>
-            {{ form_start(edit_form) }}
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{edit_form.children.file1.vars.label}}
-                    {{ form_label(edit_form.contactsimg1, 'Nommez vos contacts:', {'contactsimg1': {'class': 'contactsimg1'}}) }}
-                    {{ form_widget(edit_form.contactsimg1)}}
-                    {{ form_errors(edit_form.contactsimg1) }}
-                    {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(edit_form.file1)}}
-                    {{ form_errors(edit_form.file1) }}
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreplanniciel">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
 
-                    {{edit_form.children.file2.vars.label}}
-                    {{ form_label(edit_form.contactsimg2, 'Nommez vos contacts:', {'contactsimg2': {'class': 'contactsimg2'}}) }}
-                    {{ form_widget(edit_form.contactsimg2)}}
-                    {{ form_errors(edit_form.contactsimg2) }}
-                    {{ form_label(edit_form.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}
-                    {{ form_widget(edit_form.file2)}}
-                    {{ form_errors(edit_form.file2) }}
+                            {{ form_start(edit_form) }}
+                            {{edit_form.children.file1.vars.label}}
+                            {{ form_label(edit_form.contactsimg1, 'Nommez vos contacts:', {'contactsimg1': {'class': 'contactsimg1'}}) }}
+                            {{ form_widget(edit_form.contactsimg1)}}
+                            {{ form_errors(edit_form.contactsimg1) }}<br><br>
+                            {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(edit_form.file1)}}<br><br>
+                            {{ form_errors(edit_form.file1) }}
 
-                    {{edit_form.children.file3.vars.label}}
-                    {{ form_label(edit_form.contactsimg3, 'Nommez vos contacts:', {'contactsimg3': {'class': 'contactsimg3'}}) }}
-                    {{ form_widget(edit_form.contactsimg3)}}
-                    {{ form_errors(edit_form.contactsimg3) }}
-                    {{ form_label(edit_form.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file3'}}) }}
-                    {{ form_widget(edit_form.file3)}}
-                    {{ form_errors(edit_form.file3) }}
+                            {{edit_form.children.file2.vars.label}}
+                            {{ form_label(edit_form.contactsimg2, 'Nommez vos contacts:', {'contactsimg2': {'class': 'contactsimg2'}}) }}
+                            {{ form_widget(edit_form.contactsimg2)}}
+                            {{ form_errors(edit_form.contactsimg2) }}<br><br>
+                            {{ form_label(edit_form.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}
+                            {{ form_widget(edit_form.file2)}}<br><br>
+                            {{ form_errors(edit_form.file2) }}
 
-                    <input type="submit" class="btn btn-primary btn-lg" value="Modifier"/>
+                            {{edit_form.children.file3.vars.label}}
+                            {{ form_label(edit_form.contactsimg3, 'Nommez vos contacts:', {'contactsimg3': {'class': 'contactsimg3'}}) }}
+                            {{ form_widget(edit_form.contactsimg3)}}
+                            {{ form_errors(edit_form.contactsimg3) }}<br><br>
+                            {{ form_label(edit_form.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file3'}}) }}
+                            {{ form_widget(edit_form.file3)}}<br><br>
+                            {{ form_errors(edit_form.file3) }}
 
-                    {{ form_end(edit_form) }}
-
-
-                    {{ form_start(contacts_delete_form) }}
-                    <input type="submit" class="btn btn-primary btn-lg" value="Supprimer">
-                    {{ form_end(contacts_delete_form) }}
+                        </div>
+                    </div>
+                    <div class="col-md-0 imgnew">
+                        <input type="submit" class="btnnote" value="Modifier"/>
+                        {{ form_end(edit_form) }}
+                        {{ form_start(contacts_delete_form) }}
+                        <input type="submit" class="btnnote" value="Supprimer">
+                        {{ form_end(contacts_delete_form) }}
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
 {% endblock %}
