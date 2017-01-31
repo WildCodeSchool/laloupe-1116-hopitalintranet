@@ -177,7 +177,7 @@ documentation_groupe_delete:
 documentation_groupemessage_delete:
     path:     /groupemessage/{id}/delete
     defaults: { _controller: "HopitalBundle:Groupe:deleteGroupeMessage" }
-    methods:  DELETE
+    methods:  GET
 
 
 

@@ -7,10 +7,10 @@
         <div class="row">
             <div class="col-md-6" id="nouveautes">
                 <ul id="news">
-                    <li>Consulter la nouvelle <a href="">lettre d'information</a> de Chartres.</li>
-                    <li>Reservez vos places à <a href="">DisneyLand Paris</a>.</li>
-                    <li>Osrganisez votre <a href="">groupe de travail</a>.</li>
-                    <li>Consultez les <a href="">postes vacants</a> pour de nouvelles opportunités.</li>
+                    <li>Consulter la nouvelle <a href="{{ path('communication_lettreinfo_index') }}">lettre d'information</a> de Chartres.</li>
+                    <li>Consulter les dernières<a href="{{ path('documentation_instances_index') }}">Instances</a>.</li>
+                    <li>Organisez votre <a href="{{ path('documentation_groupe_index') }}">groupe de travail</a>.</li>
+                    <li>Consultez les <a href="{{ path('personnel_postvacant_index') }}">postes vacants</a> pour de nouvelles opportunités.</li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -42,7 +42,7 @@
                 <div class="jumbotron">
                     <div class="container utiles">
                         <h3>LIENS UTILES</h3>
-                        <a href="{{ path('moncompte_agenda') }}">- Calendrier des réservations</a><br>
+                        <a href="{{ path('fos_user_security_login') }}">- Calendrier des réservations</a><br>
                         <a href="{{ accueil.dgsurl}}" target="_blank">{{ accueil.dgstitle }}</a><br>
                         <a href="{{ accueil.bluemediurl}}" target="_blank">{{ accueil.bluemedititle }}</a><br>
                         <a href="{{ accueil.viatrajectoirurl}}" target="_blank">{{ accueil.viatrajectoirtitle }}</a><br>
