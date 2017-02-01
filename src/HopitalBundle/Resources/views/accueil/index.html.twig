@@ -4,15 +4,20 @@
     <body>
 <main>
     {% for accueil in accueils %}
-        <div class="row">
+       <div class="row">
             <div class="col-md-6" id="nouveautes">
                 <ul id="news">
-                    <li>Consulter la nouvelle <a href="{{ path('communication_lettreinfo_index') }}">lettre d'information</a> de Chartres.</li>
-                    <li>Consulter les dernières<a href="{{ path('documentation_instances_index') }}">Instances</a>.</li>
+                    <li>Consultez la nouvelle <a href="{{ path('communication_lettreinfo_index') }}">lettre d'information</a> de Chartres.</li>
+                    <li>Consultez les dernières <a href="{{ path('documentation_instances_index') }}">Instances</a>.</li>
                     <li>Organisez votre <a href="{{ path('documentation_groupe_index') }}">groupe de travail</a>.</li>
                     <li>Consultez les <a href="{{ path('personnel_postvacant_index') }}">postes vacants</a> pour de nouvelles opportunités.</li>
+                    <li>Consultez le dernier <a href="{{ path('documentation_journaux_index') }}">Journal interne</a>.</li>
+                    <li>Consulter les derniers <a href="{{ path('communication_articles_index') }}">Articles de presse</a>.</li>
                 </ul>
             </div>
+
+
+
             <div class="col-md-4">
                 <div class="container" id="search">
                     <div class="input-group" id="adv-search">
