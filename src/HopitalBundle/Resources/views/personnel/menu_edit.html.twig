@@ -2,24 +2,24 @@
 
 {% block body %}
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
             <h1 class="lienstitrenew">Modifier les menus</h1>
-            <br>
             <div class="row">
                 <div class="col-md-offset-3 col-md-6 carreeditid_plans">
                     <div class="row">
                         <div class="col-md-6 ">
-                            <img src="{{ app.request.basepath }}/uploads/{{ menu.menu1img }}"/>
+                            <img class="img-thumbnail" src="{{ app.request.basepath }}/uploads/{{ menu.menu1img }}"/>
                             {{ form_start(edit_form) }}
                             {{edit_form.children.file1.vars.label}}
                             {{ form_widget(edit_form.file1) }}
                             {{ form_errors(edit_form.file1) }}<br><br>
                             {{ form_widget(edit_form.menu1img) }}
                             {{ form_errors(edit_form.menu1img) }}
+
                         </div>
 
                         <div class="col-md-6 ">
-                            <img src="{{ app.request.basepath }}/uploads/{{ menu.menu2img }}"/>
+                            <img class="img-thumbnail" src="{{ app.request.basepath }}/uploads/{{ menu.menu2img }}"/>
                             {{edit_form.children.file1.vars.label}}
                             {{ form_widget(edit_form.file2) }}
                             {{ form_errors(edit_form.file2) }}<br><br>
@@ -31,7 +31,7 @@
 
                     <div class="row">
                         <div class="col-md-6 ">
-                            <img src="{{ app.request.basepath }}/uploads/{{ menu.menu3img }}"/>
+                            <img class="img-thumbnail" src="{{ app.request.basepath }}/uploads/{{ menu.menu3img }}"/>
                             {{edit_form.children.file1.vars.label}}
                             {{ form_widget(edit_form.file3) }}
                             {{ form_errors(edit_form.file3) }}<br><br>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <img src="{{ app.request.basepath }}/uploads/{{ menu.menu4img }}"/>
+                            <img class="img-thumbnail" src="{{ app.request.basepath }}/uploads/{{ menu.menu4img }}"/>
                             {{edit_form.children.file1.vars.label}}
                             {{ form_widget(edit_form.file4) }}
                             {{ form_errors(edit_form.file4) }}<br><br>
@@ -51,7 +51,7 @@
 
                     <div class="row">
                         <div class="col-md-6 ">
-                            <img src="{{ app.request.basepath }}/uploads/{{ menu.menuimgrempl }}"/>
+                            <img class="img-thumbnail" src="{{ app.request.basepath }}/uploads/{{ menu.menuimgrempl }}"/>
                             {{edit_form.children.file5.vars.label}}
                             {{ form_widget(edit_form.file5) }}
                             {{ form_errors(edit_form.file5) }}<br><br>
@@ -62,13 +62,13 @@
 
                         <div class="col-md-6 ">
                             {{ form_widget(edit_form) }}
+
                         </div>
                     </div>
 
                     <div class="row" >
-                        <div class="center-block col-md-offset-0">
+                        <div class="center-block col-md-3">
                             <div class="btneditcommun">
-                                {{ form_end(edit_form) }}
                                 <input type="submit" class="btnedit" value="Modifier"/>
                                 {{ form_start(menu_delete_form) }}
                                 <input type="submit" class="btnedit" value="Supprimer">

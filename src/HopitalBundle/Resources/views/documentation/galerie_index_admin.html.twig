@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+    <div class="col-md-offset-2  col-md-8 fondblanc">
+    <h1 class="lienstitre">Galerie photos</h1>
+        <a href="{{ path('documentation_galeriecategorie_new') }}">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie">
+                Ajouter une<br> catégorie
+            </div>
+        </a>
+        <a href="{{ path('documentation_galerie_new') }}">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie">
+                Ajouter une<br> photo
+            </div>
+        </a>
+        <div class="col-md-12">
+            <a href="{{ path('documentation_galerie_index') }}">Retour à la page</a>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <table>
+                    <tr>
+                        <th>Nom de la Categorie</th>
+                        <th>Modifer/Supprimer</th>
+                    </tr>
+                    {% for categorie in categories %}
+
+                        <tr>
+
+                            <td><p>{{ categorie.categorie }}</p></td>
+                            <td><a href="{{ path('documentation_galeriecategorie_edit',  {'id': categorie.id }) }}">Modifier/Supprimer cette rubrique</a></td>
+
+                        </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table>
+                    <tr>
+                        <th>Nom de la Photo</th>
+                        <th>Modifer/Supprimer</th>
+                    </tr>
+                    {% for galerie in galeries %}
+
+                        <tr>
+
+                            <td><p>{{ galerie.galerie1 }}</p></td>
+                            <td><a href="{{ path('documentation_galerie_edit',  {'id': galerie.id }) }}">Modifier/Supprimer cette rubrique</a></td>
+                        </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

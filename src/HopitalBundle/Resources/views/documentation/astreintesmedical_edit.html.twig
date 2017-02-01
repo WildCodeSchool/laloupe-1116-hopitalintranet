@@ -1,51 +1,45 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/hopital/css/style.css') }}">
-{% endblock %}
+
 
 {% block body %}
 
-<div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
-        <h1 class="lienstitrenew">Modification de l'astreite administratif</h1>
-        <div class="row">
-            <div class="col-md-offset-3 col-md-6 astreinte_carre">
-                <div class="row">
-                    <div class="col-md-12 imgnew">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Modification de l'astreite medical</h1>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 astreinte_carre">
+                    <div class="row">
+                        <div class="col-md-12 imgnew">
+                            <div class="text-center">
+                                <a href="{{ path('documentation_astreintesmedical_new') }}">Ajouter une astreinte</a>
+                            </div>
+                            <br>
+                            <img src="{{ app.request.basepath }}/uploads/{{ medical.medicalimg }}"type="application/pdf" class="directioncommune"/><br>
 
-
-                        <div>
-                            <img src="{{ app.request.basepath }}/uploads/{{ medical.medicalimg }}"type="application/pdf" class="directioncommune"/>
-                            {{edit_form_medical.children.file2.vars.label}}
+                            {{edit_form_medical.children.file2.vars.label}}<br>
                             {{ form_widget(edit_form_medical.file2) }}
                             {{ form_errors(edit_form_medical.file2) }}
-                            {{ form_widget(edit_form_medical.medicalimg) }}
+
+                            {{ form_widget(edit_form_medical.medicalimg) }}<br><br><br>
                             {{ form_errors(edit_form_medical.medicalimg) }}
-                            {{ form_end(edit_form_medical) }}
-                            {{ form_widget(edit_form_medical) }}
-                            <h2 class="titre">{{ medical.titlemedical }}</h2>
-                            <h2 class="titre">{{ medical.idmedical }}</h2>
 
-                            <li>
-                                <a href="{{ path('documentation_astreintesmedical_new') }}">Ajouter une astreinte</a>
-                            </li>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-offset-5 col-md-2 btneditcommun">
-                            <input type="submit" class="btnedit" value="Modifier" />
-                            {{ form_start(edit_form_medical) }}
-                            {{ form_start(astreintes_delete_form_medical) }}
-                            <input type="submit" class="btnedit" value="Supprimer">
-                            {{ form_end(astreintes_delete_form_medical) }}
+                            {{ form_widget(edit_form_medical) }}<br><br>
                             {{ form_end(edit_form_medical) }}
 
-                            <li>
-                                <a href="{{ path('documentation_astreintes_index') }}">Retour à l'index</a>
-                            </li>
 
+                            <div class="btneditcommun">
+                                <input type="submit" class="btnedit" value="Modifier" />
+                                {{ form_start(edit_form_medical) }}
+                                {{ form_start(astreintes_delete_form_medical) }}
+                                <input type="submit" class="btnedit" value="Supprimer">
+                                {{ form_end(astreintes_delete_form_medical) }}
+                                {{ form_end(edit_form_medical) }}<br>
+
+                                <div class="col-md-4">
+                                    <a href="{{ path('documentation_astreintes_index') }}">Retour à l'index</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -19,12 +19,14 @@ class TechniqueType extends AbstractType
                 )))
             ->add('file4', 'file', array('required' => false))
             ->add('titletechnique', 'text', array(
+                'label'=>'Titre de l\'astreinte technique',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Technique 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idtechnique', 'text', array(
+                'label'=>'ID de l\'astreinte technique',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: T0001",
