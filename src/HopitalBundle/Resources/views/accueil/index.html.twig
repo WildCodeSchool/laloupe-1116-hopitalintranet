@@ -6,10 +6,9 @@
         <div class="row">
             <div class="col-md-6" id="nouveautes">
                 <ul id="news">
-                    <li>Consulter la nouvelle <a href="">lettre d'information</a> de Chartres.</li>
-                    <li>Reservez vos places à <a href="">DisneyLand Paris</a>.</li>
-                    <li>Organisez votre <a href="">groupe de travail</a>.</li>
-                    <li>Consultez les <a href="">postes vacants</a> pour de nouvelles opportunités.</li>
+                    {% for message in messagesToDisplay %}
+                        <li><a href="{{ path(message.route) }}">{{ message.text }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-md-4">
