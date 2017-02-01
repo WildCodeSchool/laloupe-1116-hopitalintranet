@@ -19,12 +19,14 @@ class AdministratifType extends AbstractType
                 )))
             ->add('file1', 'file', array('required' => false))
             ->add('titleadministratif', 'text', array(
+                'label'=>'Titre astreinte administratif',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Administratif 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idadministratif', 'text', array(
+                'label'=>'ID de astreinte administratif',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: A0001",

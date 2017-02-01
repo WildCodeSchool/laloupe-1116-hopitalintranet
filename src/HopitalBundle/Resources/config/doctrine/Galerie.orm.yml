@@ -19,6 +19,8 @@ HopitalBundle\Entity\Galerie:
         categorie:
             targetEntity: HopitalBundle\Entity\GalerieCategorie
             inversedBy: photos
+            joinColumn:
+                onDelete: CASCADE
 
     lifecycleCallbacks:
         prePersist: [ preUpload, preUpload1 ]

@@ -16,6 +16,7 @@ HopitalBundle\Entity\GalerieCategorie:
         photos:
             targetEntity: HopitalBundle\Entity\Galerie
             mappedBy: categorie
+            joinColumn:
+                onDelete: CASCADE
 
     lifecycleCallbacks: { }
-

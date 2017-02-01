@@ -3,6 +3,7 @@
 namespace HopitalBundle\Controller;
 
 use HopitalBundle\Entity\Groupe;
+use HopitalBundle\Entity\Groupemessage;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use HopitalBundle\Form\GroupeType;
@@ -102,7 +103,7 @@ class GroupeController extends Controller
     public function deleteAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $groupe = $em->getRepository('HopitalBundle:Groupe')->findOneById($id);
+        $groupe = $em->getRepository('HopitalBundle:Groupe')->findOneBy(array('id' => $id));
         $em->remove($groupe);
         $em->flush();
         return $this->redirectToRoute('documentation_groupe_index');
@@ -115,7 +116,7 @@ class GroupeController extends Controller
     public function deleteGroupeMessageAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $groupemessage = $em->getRepository('HopitalBundle:Groupemessage')->findOneById($id);
+        $groupemessage = $em->getRepository('HopitalBundle:Groupemessage')->findOneBy(array('id' => $id));
         $em->remove($groupemessage);
         $em->flush();
         return $this->redirectToRoute('documentation_groupe_index');

@@ -582,7 +582,7 @@ div.c-wrapper{
 
 
 .directioncommune{
-    height: 530px;
+    height: 200px;
     width: 70%;
     margin-left: 15%;
     border: 5px solid #E7E7E7;
@@ -668,10 +668,91 @@ div.c-wrapper{
     width: 860px;
     margin-left: 20px;
 }
+.astreinteimg {
+    height: 300px;
+    width: 600px;
+    margin-left: 2%;
+    border: 5px solid #E7E7E7;
+}
 
+.astreinte_carre {
+    background-color: #E7E7E7;
+    height: 810px;
+    width: 700px;
+    margin-left: 16.5%;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+#hopital_astreintes input {
+    width:100%;
+}
 
 
 /**************************** FIN ASTREINTES **********************/
+
+/**************************** DEBUT INSTANCES *************************/
+
+table, tr, th, td {
+    padding: 5px;
+    margin: 8px;
+    border: 1.5px black solid;
+}
+
+.modal-body {
+    display: inline-block;
+    width: 100%;
+}
+
+.instancesimg {
+    margin-bottom: 10px;
+}
+.instancesimg object {
+    min-height: 400px;
+
+}
+.instancesimg2 object {
+    min-height: 600px;
+
+}
+#instanceslink {
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding:10px 20px 10px 20px;
+    width: 120px;
+    cursor: pointer;
+}
+#instanceslink:hover {
+    background-color: #0089D0;
+    color: #FFFFFF;
+    border-radius: 0;
+    border:0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding:10px 20px 10px 20px;
+    width: 120px;
+}
+
+
+
+
+
+
+
+/**************************** FIN INSTANCES *************************/
+
 
 
 /**************************** DEBUT GALERIE ****************************/
@@ -696,7 +777,7 @@ div.c-wrapper{
 /**************************** FIN GALERIE ****************************/
 
 /**************************** DEBUT ANNONCES *************************/
-
+/**************************** DEBUT INSTANCES *************************/
 
 .imgannonce{
     max-width: 270px;
@@ -1028,6 +1109,14 @@ hr{
     margin-top: 30px;
     padding: 30px;
 }
+
+.carreplanniciel{
+    background-color: #E7E7E7;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+
 
 /**************************** fin EDIT ****************************/
 

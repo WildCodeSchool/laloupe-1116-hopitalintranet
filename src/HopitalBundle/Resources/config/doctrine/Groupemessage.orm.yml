@@ -17,10 +17,12 @@ HopitalBundle\Entity\Groupemessage:
         image:
             type: string
             length: 255
+            nullable: true
 
     manyToOne:
         groupes:
             targetEntity: HopitalBundle\Entity\Groupe
+            inversedBy: groupemessage
             joinColumn:
                 onDelete: CASCADE
 

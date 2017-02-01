@@ -40,18 +40,27 @@ documentation_contacts_delete:
     defaults: { _controller: "HopitalBundle:Contacts:delete" }
     methods:  DELETE
 
-
-
-
 documentation_instances_index:
     path:     /instances
     defaults: { _controller: "HopitalBundle:Instances:index" }
     methods:  GET
 
+documentation_instances_index_admin:
+    path:     /instances_admin
+    defaults: { _controller: "HopitalBundle:Instances:index_admin" }
+    methods:  GET
+
+documentation_instances_index_show:
+    path:     /{id}/instances_show
+    defaults: { _controller: "HopitalBundle:Instances:index_show" }
+    methods:  [GET, POST]
+
+
 documentation_instances_new:
     path:     /instances/new
     defaults: { _controller: "HopitalBundle:Instances:new" }
     methods:  [GET, POST]
+
 
 documentation_instances_edit:
     path:     /instances/{id}/edit
@@ -59,7 +68,7 @@ documentation_instances_edit:
     methods:  [GET, POST]
 
 documentation_instances_delete:
-    path:     instances/{id}/delete
+    path:     /instances/{id}/delete
     defaults: { _controller: "HopitalBundle:Instances:delete" }
     methods:  DELETE
 
@@ -67,6 +76,16 @@ documentation_instancesrubrique_new:
     path:     /rubrique/new
     defaults: { _controller: "HopitalBundle:Instances:newRubrique" }
     methods:  [GET, POST]
+
+documentation_instancesrubrique_edit:
+    path:     /rubrique/{id}/edit
+    defaults: { _controller: "HopitalBundle:Instances:editRubrique" }
+    methods:  [GET, POST]
+
+documentation_instancesrubrique_delete:
+    path:     rubrique/{id}/delete
+    defaults: { _controller: "HopitalBundle:Instances:deleteRubrique" }
+    methods:  DELETE
 
 
 
@@ -167,7 +186,7 @@ documentation_groupe_delete:
 documentation_groupemessage_delete:
     path:     /groupemessage/{id}/delete
     defaults: { _controller: "HopitalBundle:Groupe:deleteGroupeMessage" }
-    methods:  DELETE
+    methods:  GET
 
 
 
@@ -199,6 +218,11 @@ documentation_galerie_index:
     defaults: { _controller: "HopitalBundle:Galerie:index" }
     methods:  GET
 
+documentation_galerie_index_admin:
+    path:     /galerie_admin
+    defaults: { _controller: "HopitalBundle:Galerie:index_admin" }
+    methods:  GET
+
 documentation_galerie_new:
     path:     /galerie/new
     defaults: { _controller: "HopitalBundle:Galerie:new" }
@@ -218,6 +242,16 @@ documentation_galeriecategorie_new:
     path:     /categorie/new
     defaults: { _controller: "HopitalBundle:Galerie:newCategorie" }
     methods:  [GET, POST]
+
+documentation_galeriecategorie_edit:
+    path:     /categorie/{id}/edit
+    defaults: { _controller: "HopitalBundle:Galerie:editCategorie" }
+    methods:  [GET, POST]
+
+documentation_galeriecategorie_delete:
+    path:     categorie/{id}/delete
+    defaults: { _controller: "HopitalBundle:Galerie:deleteCategorie" }
+    methods:  DELETE
 
 
 

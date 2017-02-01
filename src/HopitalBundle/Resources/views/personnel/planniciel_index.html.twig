@@ -2,24 +2,19 @@
 
 {% block body %}
 
+    <div class="row">
+        <div class="col-md-offset-2  col-md-8 fondblancshow ">
 
-    {% for planniciel in planniciels %}
-
-
-        <div class="row">
-            <div class="col-md-offset-2  col-md-8 fondblanc">
-
-                <h1 class="lienstitre">Planniciel</h1>
+            <h1 class="lienstitre">Planniciel</h1>
+            {% for planniciel in planniciels %}
 
                 {{ planniciel.titre }}
 
                 <br/>
-                <img src="{{ app.request.basepath }}/uploads/{{ planniciel.planniciel1 }}"/>
-            </div>
+                <img class="img-responsive" src="{{ app.request.basepath }}/uploads/{{ planniciel.planniciel1 }}"/>
+            {% endfor %}
+
         </div>
-
-
-    {% endfor %}
-
+    </div>
 
 {% endblock %}

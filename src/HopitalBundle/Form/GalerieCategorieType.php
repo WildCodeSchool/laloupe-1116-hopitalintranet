@@ -15,7 +15,7 @@ class GalerieCategorieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('categorie', 'text', array(
+            ->add('categorie1', 'text', array(
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Anniversaire de Mme Bebert",
