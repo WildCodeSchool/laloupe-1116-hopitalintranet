@@ -3,7 +3,7 @@
 {% block body %}
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblancshow">
-            <h1 class="lienstitrenew">Modifier la petite annonce {{ annonce.titre }}</h1>
+            <h1 class="lienstitrenew">Modifier l'annonce {{ annonce.titre }}</h1>
             <br>
             <div class="row">
                 <div class="col-md-offset-2 col-md-8 carreshowannonce">
@@ -41,14 +41,20 @@
                         <input class="btnmodifannonce" type="submit" value="Modifier l'annonce"/>
                     </div>
                     {{ form_end(edit_form) }}
+                    <div>
+                        {{ form_start(delete) }}
+                        <input type="submit" class="btnnote" value="Supprimer">
+                        {{ form_end(delete_form) }}
+                    </div>
+                </div>
+                <div class="add_button center-align">
+                    <a class="waves-effect waves-light btn contactbtn" href="{{ path('annonce_index') }}">Retour à la liste
+                        des annonces</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="add_button center-align">
-        <a class="waves-effect waves-light btn" href="{{ path('annonce_index') }}">Retour à la liste
-            des annonces</a>
-    </div>
+
 
 
 {% endblock %}

@@ -1,9 +1,9 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
 {% block body %}
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblancshow">
-            <h1 class="lienstitrenew">Modifier la petite annonce {{ cgos.titre }}</h1>
+            <h1 class="lienstitrenew">Modifier l'annonce {{ cgos.titre }}</h1>
             <br>
             <div class="row">
                 <div class="col-md-offset-2 col-md-8 carreshowannonce">
@@ -42,13 +42,15 @@
                     </div>
                     {{ form_end(edit_form) }}
                 </div>
+                <br/>
+                <div class="add_button center-align">
+                    <a class="waves-effect waves-light btn contactbtn" href="{{ path('annonce_indexCgos') }}">Retour à la liste
+                        des annonces</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="add_button center-align">
-        <a class="waves-effect waves-light btn" href="{{ path('annonce_indexCgos') }}">Retour à la liste
-            des annonces</a>
-    </div>
+
 
 
 {% endblock %}
