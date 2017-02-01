@@ -14,7 +14,7 @@ class AbstractRepository extends EntityRepository
         $qb = $this->_em->createQueryBuilder()
             ->select('e')
             ->from($this->_entityName, 'e')
-            ->orderBy('e.id', 'ASC')
+            ->orderBy('e.id', 'DESC')
             ->setMaxResults(1);
         ;
 
