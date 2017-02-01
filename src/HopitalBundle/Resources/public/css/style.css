@@ -673,11 +673,7 @@ div.c-wrapper{
 
 /**************************** FIN ASTREINTES **********************/
 
-<<<<<<< HEAD
-=======
-
 /**************************** DEBUT GALERIE ****************************/
->>>>>>> newonglet
 .bloc-categorie {
     width: 200px;
     background-color: #0089D0;
@@ -690,8 +686,6 @@ div.c-wrapper{
     text-align: center;
     margin: 5px;
     padding-top: 20px;
-<<<<<<< HEAD
-=======
 }
 
 
@@ -1137,5 +1131,44 @@ hr{
     padding: 30px;
     padding-top: 10px;
     margin-bottom: 50px;
->>>>>>> newonglet
 }
+
+
+/************************ GROUPE *******************/
+
+
+.carregroupew{
+    background-color: #E7E7E7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.pictogroupeW{
+    margin-top: 12px;
+    height: 20px;
+}
+
+.pictoSgroupew{
+    padding-left: 400px;
+}
+
+.nomgroupew {
+    background-color: #CCCCCC;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.4em;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+.btngroupew{;
+    margin-left: 70%;
+}
+
+.btnshowgroupew{
+    margin-left: 58%;
+
+}
+
+

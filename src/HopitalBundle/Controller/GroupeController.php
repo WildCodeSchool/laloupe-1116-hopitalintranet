@@ -3,6 +3,7 @@
 namespace HopitalBundle\Controller;
 
 use HopitalBundle\Entity\Groupe;
+use HopitalBundle\Entity\Groupemessage;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use HopitalBundle\Form\GroupeType;

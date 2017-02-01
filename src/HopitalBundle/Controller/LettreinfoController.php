@@ -31,7 +31,7 @@ class LettreinfoController extends Controller
      * Creates a new lettreinfo entity.
      *
      */
-    /*public function newAction(Request $request)
+    public function newAction(Request $request)
     {
         $lettreinfo = new Lettreinfo();
         $form = $this->createForm('HopitalBundle\Form\LettreinfoType', $lettreinfo);
@@ -49,7 +49,7 @@ class LettreinfoController extends Controller
             'lettreinfo' => $lettreinfo,
             'form' => $form->createView(),
         ));
-    }*/
+    }
 
 
     /**

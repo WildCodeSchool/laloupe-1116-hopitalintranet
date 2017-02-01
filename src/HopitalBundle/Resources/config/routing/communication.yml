@@ -1,8 +1,3 @@
-communication_new:
-    path:     /new
-    defaults: { _controller: "HopitalBundle:Communication:new" }
-    methods:  [GET, POST]
-
 communication_edit:
     path:     /{id}/edit
     defaults: { _controller: "HopitalBundle:Communication:edit" }

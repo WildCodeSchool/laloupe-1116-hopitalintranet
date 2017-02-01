@@ -31,7 +31,7 @@ class GhtController extends Controller
      * Creates a new ght entity.
      *
      */
-    /*public function newAction(Request $request)
+    public function newAction(Request $request)
     {
         $ght = new Ght();
         $form = $this->createForm('HopitalBundle\Form\GhtType', $ght);
@@ -49,7 +49,7 @@ class GhtController extends Controller
             'ght' => $ght,
             'form' => $form->createView(),
         ));
-    }*/
+    }
 
     /**
      * Displays a form to edit an existing ght entity.

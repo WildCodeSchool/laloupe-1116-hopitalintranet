@@ -3,8 +3,13 @@
 namespace HopitalBundle\Controller;
 
 use HopitalBundle\Entity\Communication;
+use HopitalBundle\Form\ArticlesType;
+use HopitalBundle\Form\DirectionType;
+use HopitalBundle\Form\GhtType;
+use HopitalBundle\Form\LettreinfoType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use HopitalBundle\Form\CommunicationType;
 
 /**
  * Communication controller.
@@ -89,22 +94,28 @@ class CommunicationController extends Controller
     public function newAction(Request $request)
     {
         $communication = new Communication();
-        $form = $this->createForm('HopitalBundle\Form\CommunicationType', $communication);
+        $formData = array();
+        $form = $this->createForm(new CommunicationType(), $formData);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($communication);
             $em->flush($communication);
-
             return $this->redirectToRoute('communication_direction_index', array('id' => $communication->getId()));
         }
-
         return $this->render('HopitalBundle:communication:new.html.twig', array(
             'communication' => $communication,
             'form' => $form->createView(),
         ));
+
     }
+
+
+
+
+
+
 
 
     //EDIT
