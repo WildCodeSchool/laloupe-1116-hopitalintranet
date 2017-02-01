@@ -2,7 +2,9 @@
 
 namespace HopitalBundle\Controller;
 
+use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use HopitalBundle\Entity\Accueil;
+use HopitalBundle\Repository\AbstractRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -19,6 +21,15 @@ class AccueilController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $meta = $em->getMetadataFactory()->getAllMetadata();
+
+        $entities = array();
+        /** @var ClassMetadata $m */
+        foreach ($meta as $m) {
+            if (strpos($m->getName(), 'HopitalBundle') !== false) {
+                $entities[$m->getName()] = $em->getRepository($m->getName())->findLast();
+            }
+        }
 
         $accueils = $em->getRepository('HopitalBundle:Accueil')->findAll();
 
@@ -106,6 +117,6 @@ class AccueilController extends Controller
             ->setAction($this->generateUrl('accueil_delete', array('id' => $accueil->getId())))
             ->setMethod('DELETE')
             ->getForm()
-        ;
+            ;
     }
 }
