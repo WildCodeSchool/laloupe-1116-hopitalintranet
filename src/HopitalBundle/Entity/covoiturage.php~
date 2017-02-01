@@ -143,6 +143,94 @@ class Covoiturage
 
 
     /**
+<<<<<<< HEAD
+=======
+     * @var string
+     */
+    private $covoituragetitle;
+
+    /**
+     * Set covoituragetitle
+     *
+     * @param string $covoituragetitle
+     * @return Covoiturage
+     */
+    public function setCovoituragetitle($covoituragetitle)
+    {
+        $this->covoituragetitle = $covoituragetitle;
+
+        return $this;
+    }
+    /**
+     * Get covoituragetitle
+     *
+     * @return string
+     */
+    public function getCovoituragetitle()
+    {
+        return $this->covoituragetitle;
+    }
+
+
+    /**
+     * @var string
+     */
+    private $covoituragedescription;
+
+    /**
+     * Set covoituragedescription
+     *
+     * @param string $covoituragedescription
+     * @return Covoiturage
+     */
+    public function setCovoituragedescription($covoituragedescription)
+    {
+        $this->covoituragedescription = $covoituragedescription;
+
+        return $this;
+    }
+    /**
+     * Get covoituragedescription
+     *
+     * @return string
+     */
+    public function getCovoituragedescription()
+    {
+        return $this->covoituragedescription;
+    }
+    /**
+     * @var string
+     */
+    private $covoiturageurl;
+
+
+
+
+    /**
+     * Set covoiturageurl
+     *
+     * @param string $covoiturageurl
+     * @return Covoiturage
+     */
+    public function setCovoiturageurl($covoiturageurl)
+    {
+        $this->covoiturageurl = $covoiturageurl;
+
+        return $this;
+    }
+
+    /**
+     * Get covoiturageurl
+     *
+     * @return string
+     */
+    public function getCovoiturageurl()
+    {
+        return $this->covoiturageurl;
+    }
+
+    /**
+>>>>>>> newonglet
      * @ORM\PrePersist
      */
     public function preUpload()
