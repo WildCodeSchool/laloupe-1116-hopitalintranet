@@ -255,7 +255,6 @@ documentation_galeriecategorie_delete:
 
 
 
-
 documentation_basedoc_index:
     path:     /basedoc
     defaults: { _controller: "HopitalBundle:Basedoc:index" }

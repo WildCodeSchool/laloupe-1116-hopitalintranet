@@ -6,23 +6,43 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Lettreinfo
 {
+<<<<<<< HEAD
     public $file1;
+
+=======
+    public $file3;
+>>>>>>> newonglet
     protected function getUploadDir()
     {
         return 'uploads';
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> newonglet
     protected function getUploadRootDir()
     {
         return __DIR__.'/../../../web/'.$this->getUploadDir();
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> newonglet
     public function getWebPath()
     {
         return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> newonglet
     public function getAbsolutePath()
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
+<<<<<<< HEAD
+
+
     public function preUpload1()
     {
         if (null !== $this->file1) {
@@ -30,21 +50,53 @@ class Lettreinfo
             $this->lettreinfoimg = uniqid().'.'.$this->file1->guessExtension();
         }
     }
+
     public function upload1()
     {
         if (null === $this->file1) {
             return;
         }
+
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
         $this->file1->move($this->getUploadRootDir(), $this->lettreinfoimg);
+
         unset($this->file1);
     }
+
     public function removeUpload1()
     {
         if ($file1 = $this->getAbsolutePath()) {
             unlink($file1);
+        }
+    }
+
+
+
+=======
+    public function preUpload3()
+    {
+        if (null !== $this->file3) {
+            // do whatever you want to generate a unique name
+            $this->lettreinfoimg = uniqid().'.'.$this->file3->guessExtension();
+        }
+    }
+    public function upload3()
+    {
+        if (null === $this->file3) {
+            return;
+        }
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file3->move($this->getUploadRootDir(), $this->lettreinfoimg);
+        unset($this->file3);
+    }
+    public function removeUpload3()
+    {
+        if ($file3 = $this->getAbsolutePath()) {
+            unlink($file3);
         }
     }
     /**
@@ -87,6 +139,7 @@ class Lettreinfo
     {
         return $this->idlettreinfo;
     }
+>>>>>>> newonglet
     /**
      * @var int
      */
@@ -100,10 +153,19 @@ class Lettreinfo
     {
         return $this->id;
     }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> newonglet
     /**
      * @var string
      */
     private $image;
+<<<<<<< HEAD
+
+
+=======
     /**
      * @var string
      */
@@ -112,6 +174,7 @@ class Lettreinfo
      * @var string
      */
     private $idlettreinfo;
+>>>>>>> newonglet
     /**
      * Set image
      *
@@ -121,8 +184,15 @@ class Lettreinfo
     public function setImage($image)
     {
         $this->image = $image;
+<<<<<<< HEAD
+
         return $this;
     }
+
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get image
      *
@@ -132,10 +202,22 @@ class Lettreinfo
     {
         return $this->image;
     }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> newonglet
     /**
      * @var string
      */
     private $lettreinfoimg;
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> newonglet
     /**
      * Set lettreinfoimg
      *
@@ -145,8 +227,15 @@ class Lettreinfo
     public function setLettreinfoimg($lettreinfoimg)
     {
         $this->lettreinfoimg = $lettreinfoimg;
+<<<<<<< HEAD
+
         return $this;
     }
+
+=======
+        return $this;
+    }
+>>>>>>> newonglet
     /**
      * Get lettreinfoimg
      *
@@ -156,6 +245,11 @@ class Lettreinfo
     {
         return $this->lettreinfoimg;
     }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PrePersist
      */
@@ -163,6 +257,10 @@ class Lettreinfo
     {
         // Add your code here
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostPersist
      */
@@ -170,6 +268,10 @@ class Lettreinfo
     {
         // Add your code here
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> newonglet
     /**
      * @ORM\PostRemove
      */
@@ -177,4 +279,11 @@ class Lettreinfo
     {
         // Add your code here
     }
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> newonglet
 }

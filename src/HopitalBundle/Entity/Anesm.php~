@@ -143,6 +143,8 @@ class Anesm
 
 
     /**
+<<<<<<< HEAD
+=======
      * @var string
      */
     private $anesmtitle;
@@ -228,6 +230,7 @@ class Anesm
     }
 
     /**
+>>>>>>> newonglet
      * @ORM\PrePersist
      */
     public function preUpload()

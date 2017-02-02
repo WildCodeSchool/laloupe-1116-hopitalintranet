@@ -143,6 +143,11 @@ class Covoiturage
 
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d720eeff9741d506446cfcb05e36f927055c2c5a
      * @var string
      */
     private $covoituragetitle;
@@ -228,6 +233,10 @@ class Covoiturage
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> newonglet
+>>>>>>> d720eeff9741d506446cfcb05e36f927055c2c5a
      * @ORM\PrePersist
      */
     public function preUpload()

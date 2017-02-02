@@ -753,7 +753,6 @@ table, tr, th, td {
 /**************************** FIN INSTANCES *************************/
 
 
-
 /**************************** DEBUT GALERIE ****************************/
 .bloc-categorie {
     width: 200px;
@@ -1210,4 +1209,54 @@ hr{
     margin-bottom: 10px;
 }
 
-/************************ FIN IDEES *******************/
+/************************ NEWS ONGLETS *******************/
+
+
+.carrenewonglet{
+    background-color: #E7E7E7;
+    height: 430px;
+    margin-top: 0px;
+    padding: 30px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+/************************ GROUPE *******************/
+
+
+.carregroupew{
+    background-color: #E7E7E7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.pictogroupeW{
+    margin-top: 12px;
+    height: 20px;
+}
+
+.pictoSgroupew{
+    padding-left: 400px;
+}
+
+.nomgroupew {
+    background-color: #CCCCCC;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.4em;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+.btngroupew{;
+    margin-left: 70%;
+}
+
+.btnshowgroupew{
+    margin-left: 58%;
+
+}
+
+

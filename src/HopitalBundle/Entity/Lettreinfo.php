@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Lettreinfo
 {
-    public $file1;
+    public $file3;
     protected function getUploadDir()
     {
         return 'uploads';
@@ -23,28 +23,28 @@ class Lettreinfo
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
-    public function preUpload1()
+    public function preUpload3()
     {
-        if (null !== $this->file1) {
+        if (null !== $this->file3) {
             // do whatever you want to generate a unique name
-            $this->lettreinfoimg = uniqid().'.'.$this->file1->guessExtension();
+            $this->lettreinfoimg = uniqid().'.'.$this->file3->guessExtension();
         }
     }
-    public function upload1()
+    public function upload3()
     {
-        if (null === $this->file1) {
+        if (null === $this->file3) {
             return;
         }
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->lettreinfoimg);
-        unset($this->file1);
+        $this->file3->move($this->getUploadRootDir(), $this->lettreinfoimg);
+        unset($this->file3);
     }
-    public function removeUpload1()
+    public function removeUpload3()
     {
-        if ($file1 = $this->getAbsolutePath()) {
-            unlink($file1);
+        if ($file3 = $this->getAbsolutePath()) {
+            unlink($file3);
         }
     }
     /**

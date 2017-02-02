@@ -64,6 +64,7 @@ class AnnonceController extends Controller
         $annonce = new Annonce();
         $form = $this->createForm('Vl\AnnonceBundle\Form\AnnonceType', $annonce);
         $form->handleRequest($request);
+        $date = DateTime::createFromFormat('d/m',$maDate);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
