@@ -15,11 +15,23 @@ class ContactsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('contactsimg1')
+            ->add('contactsimg1', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('contactsimg2')
+            ->add('contactsimg2', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file2', 'file', array('required' => false))
-            ->add('contactsimg3')
+            ->add('contactsimg3', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file3', 'file', array('required' => false));
     }
 

@@ -15,17 +15,41 @@ class PlansType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('plansglobal')
+            ->add('plansglobal', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('plansbatarc')
+            ->add('plansbatarc', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file2', 'file', array('required' => false))
-            ->add('plansbatae')
+            ->add('plansbatae', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file3', 'file', array('required' => false))
-            ->add('plansbatbrj')
+            ->add('plansbatbrj', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file4', 'file', array('required' => false))
-            ->add('plansbatbrc')
+            ->add('plansbatbrc', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file5', 'file', array('required' => false))
-            ->add('plansbatbe')
+            ->add('plansbatbe', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file6', 'file', array('required' => false));
     }
 

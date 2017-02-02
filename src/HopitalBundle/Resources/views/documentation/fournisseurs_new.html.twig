@@ -1,27 +1,29 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
-        <h1 class="lienstitre">Création de Founisseurs</h1>
-        <br>
-        <div class="row journaux">
-            <div class="col-md-4">
-                <br>
-                <br>
-                <br>
-                <br>
-                {{ form_start(form) }}
-                {{ form_label(form.fournisseur1, 'Nommez votre liste de fournisseurs:', {'fournisseur1': {'class': 'fournisseur1'}}) }}
-                {{ form_widget(form.fournisseur1)}}
-                {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                {{ form_widget(form.file1)}}
-                <br>
-                <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
-                {{ form_end(form) }}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Création d'un document fournisseurs</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_label(form.fournisseur1, 'Nommez votre liste de fournisseurs:') }}<br>
+                            {{ form_widget(form.fournisseur1)}}<br><br>
+                            {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(form.file1)}}<br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Create" class="btnnew" />
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
             </div>
         </div>
-
     </div>
-</div>
+
 {% endblock %}

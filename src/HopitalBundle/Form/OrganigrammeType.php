@@ -15,7 +15,11 @@ class OrganigrammeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('organigrammeimg')
+            ->add('organigrammeimg','text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file7', 'file', array('required' => false));
     }
 

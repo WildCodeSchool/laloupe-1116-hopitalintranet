@@ -207,7 +207,7 @@ main {
 
 .form-control{
     border-radius: 0px;
-    border: 1px solid rgb(0,0,0,0);
+    border: 1px solid rgb(0,0,0);
 }
 
 .input-group-btn .btn{
@@ -914,6 +914,27 @@ hr{
     padding: 30px;
 }
 
+.carrenewlienssites{
+    background-color: #E7E7E7;
+    margin-top: 0px;
+    padding: 30px;
+}
+
+.carrenewplans{
+    background-color: #E7E7E7;
+    height: 1050px;
+    margin-top: 0px;
+    padding: 30px;
+}
+
+.carrenewcontacts{
+    background-color: #E7E7E7;
+    height: 573px;
+    margin-top: 0px;
+    padding: 30px;
+}
+
+
 .lienstitrenew{
     text-align: center;
     color: #0089D0;
@@ -964,7 +985,11 @@ hr{
 }
 
 
-
+.fondblanccontacts{
+    background-color: #FFFFFF;
+    height: 650px;
+    padding: 10px 20px 20px 20px;
+}
 
 /**************************** Fin NEW ****************************/
 
