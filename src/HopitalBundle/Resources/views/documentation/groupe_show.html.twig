@@ -4,64 +4,6 @@
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblancshow">
             <br>
-<<<<<<< HEAD
-            <div class="container">
-                <h1 class="lienstitre">Groupe {{ groupe.titre }}</h1>
-
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-10 carrenewid">
-                        {{ form_start(form) }}
-                        <div class="imgnewid">
-                            {{ form_label(form.utilisateur) }}
-                            {{ form_widget(form.utilisateur) }}
-                            {{ form_errors(form.utilisateur) }}
-                        </div>
-                        <div class="imgnewid">
-                            {{ form_label(form.message) }}
-                            {{ form_widget(form.message) }}
-                            {{ form_errors(form.message) }}
-                        </div>
-                        <div class="add_button center-align">
-                            <input class="btn" type="submit" value="Ajouter un message" />
-                        </div>
-                        {{ form_end(form) }}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-10 carreshowcomm">
-                        {% if groupemessage != null %}
-                            <div class="row commentaireancien">
-                                <h4 class="center-align">Liste des messages</h4>
-                                {% for message in groupemessage %}
-                                    <div class="row">
-                                        <div class="col s12">
-                                            <div class="card blue-grey darken-1">
-                                                <div class="card-content white-text">
-                                                    <span class="card-title">Auteur: {{ message.utilisateur }}</span>
-                                                    <p>{{ message.message }}</p>
-                                                    {{ form_start(form) }}
-                                                    {{ form_widget(form.file) }}
-                                                    {{ form_end(form) }}
-                                                </div>
-                                                <div class="card-action">
-                                                    <a href="{{ path('documentation_groupe_delete', {'id': message.id, 'id_groupe': groupe.id }) }}">Supprimer le message</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <h4 class="center-align">Pas de messages</h4>
-                        {% endif %}
-                    </div>
-                </div>
-
-                <div>
-                    <a href="{{ path('documentation_groupe_index') }}" class="btn btnshowgroupew">Retour à la liste des groupes de travail</a>
-                </div>
-=======
             <h1 class="lienstitre">Groupe {{ groupe.titre }}</h1>
 
             <div class="row">
@@ -121,20 +63,18 @@
 
             <div>
                 <a href="{{ path('documentation_groupe_index') }}" class="btn btnshowgroupew">Retour à la liste des groupes de travail</a>
->>>>>>> dev2
             </div>
         </div>
     </div>
 
 {% endblock %}
-        {% block javascripts %}
-            {{ parent() }}
-            {# Call jQuery #}
-            <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-            <!-- Compiled and minified JavaScript -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-<<<<<<< HEAD
-        {% endblock %}
-=======
-        {% endblock %}
->>>>>>> dev2
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {# Call jQuery #}
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+{% endblock %}
+

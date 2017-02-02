@@ -436,29 +436,6 @@ div.c-wrapper{
 
 
 
-
-
-
-
-
-
-
-
-
-/**************************** NOTES DE SERVICES **********************/
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**************************** DIRECTION COMMUNE **********************/
 
 
@@ -574,6 +551,7 @@ li {
 
 /**************************** INSTANCES *************************/
 
+
 table, tr, th, td {
     padding: 5px;
     margin: 8px;
@@ -623,19 +601,8 @@ table, tr, th, td {
 }
 
 
-
-
-
-
-<<<<<<< HEAD
 /**************************** DEBUT GALERIE ****************************/
-=======
 
-
-
-
-/**************************** GALERIE ****************************/
->>>>>>> dev2
 .bloc-categorie {
     width: 200px;
     background-color: #0089D0;
@@ -1089,7 +1056,6 @@ hr{
     margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
 /************************ NEWS ONGLETS *******************/
 
 
@@ -1102,12 +1068,6 @@ hr{
     margin-bottom: 50px;
 }
 
-
-/************************ GROUPE *******************/
-
-
-.carregroupew{
-=======
 /************************ GROUPE *******************/
 
 
@@ -1120,7 +1080,6 @@ hr{
 }
 
 .carregroupewshow{
->>>>>>> dev2
     background-color: #E7E7E7;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1133,13 +1092,10 @@ hr{
 }
 
 .pictoSgroupew{
-<<<<<<< HEAD
-=======
     padding-left: 200px;
 }
 
 .pictoSgroupewshow{
->>>>>>> dev2
     padding-left: 400px;
 }
 
@@ -1152,12 +1108,8 @@ hr{
     margin-right: -10px;
 }
 
-.btngroupew{;
-<<<<<<< HEAD
-    margin-left: 70%;
-=======
+.btngroupew{
     margin-left: 60%;
->>>>>>> dev2
 }
 
 .btnshowgroupew{
@@ -1165,10 +1117,7 @@ hr{
 
 }
 
-<<<<<<< HEAD
 
-=======
 .showgroupew{
     padding-left: 160px;
 }
->>>>>>> dev2

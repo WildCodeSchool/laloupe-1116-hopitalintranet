@@ -12,6 +12,27 @@ class Idees
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+=======
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
+<<<<<<< HEAD
     /**
      * Set ideestitle
      *
@@ -70,6 +91,7 @@ class Idees
 =======
 
 >>>>>>> newonglet
+<<<<<<< HEAD
 =======
     /**
      * @var integer
@@ -89,4 +111,7 @@ class Idees
 
 
 >>>>>>> dev2
+=======
+>>>>>>> d720eeff9741d506446cfcb05e36f927055c2c5a
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
 }

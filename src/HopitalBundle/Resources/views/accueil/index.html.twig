@@ -7,50 +7,47 @@
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
-
             <div class="row">
-                <div class="col-md-12" id="nouveautes">
+                <div class="col-md-6" id="nouveautes">
                     <ul id="news">
-                        <li>Consultez la nouvelle <a href="{{ path('communication_lettreinfo_index') }}">lettre d'information</a> de Chartres.</li>
-                        <li>Consultez les dernières <a href="{{ path('documentation_instances_index') }}">Instances</a>.</li>
-                        <li>Organisez votre <a href="{{ path('documentation_groupe_index') }}">groupe de travail</a>.</li>
-                        <li>Consultez les <a href="{{ path('personnel_postvacant_index') }}">postes vacants</a> pour de nouvelles opportunités.</li>
-                        <li>Consultez le dernier <a href="{{ path('documentation_journaux_index') }}">Journal interne</a>.</li>
-                        <li>Consulter les derniers <a href="{{ path('communication_articles_index') }}">Articles de presse</a>.</li>
+                        {% for message in messagesToDisplay %}
+                            <li><a href="{{ path(message.route) }}">{{ message.text }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
-            </div>
 
 
-            <div class="row">
-                <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
 
-                    <div class="row">
-                        <div class="col-md-6 actu">
-                            <div class="jumbotron">
-                                <h3>ACTUALITÉS</h3>
-                                <p class="actuliens">
-                                    <script type="text/javascript" src="{{ accueil.actuurl }}" data-fw-param="{{ accueil.actuparam }}">
-                                    </script>
-                                </p>
+                        <div class="row">
+                            <div class="col-md-6 actu">
+                                <div class="jumbotron">
+                                    <h3>ACTUALITÉS</h3>
+                                    <p class="actuliens">
+                                        <script type="text/javascript" src="{{ accueil.actuurl }}" data-fw-param="{{ accueil.actuparam }}">
+                                        </script>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-4">
-                            <div class="utiles">
-                                <h3>LIENS UTILES</h3>
-                                <a href="{{ path('fos_user_security_login') }}">- Calendrier des réservations</a><br>
-                                <a href="{{ accueil.dgsurl}}" target="_blank">{{ accueil.dgstitle }}</a><br>
-                                <a href="{{ accueil.bluemediurl}}" target="_blank">{{ accueil.bluemedititle }}</a><br>
-                                <a href="{{ accueil.viatrajectoirurl}}" target="_blank">{{ accueil.viatrajectoirtitle }}</a><br>
-                                <a href="{{ accueil.vidalurl}}" target="_blank">{{ accueil.vidaltitle }}</a><br>
-                            </div>
-                            <div class=" meteo">
-                                <p class="alerte"><iframe src="{{ accueil.meteourl }}"  width="380" height="111" frameborder="0"></iframe></p>
+                            <div class="col-md-4">
+                                <div class="utiles">
+                                    <h3>LIENS UTILES</h3>
+                                    <a href="{{ path('fos_user_security_login') }}">- Calendrier des réservations</a><br>
+                                    <a href="{{ accueil.dgsurl}}" target="_blank">{{ accueil.dgstitle }}</a><br>
+                                    <a href="{{ accueil.bluemediurl}}" target="_blank">{{ accueil.bluemedititle }}</a><br>
+                                    <a href="{{ accueil.viatrajectoirurl}}" target="_blank">{{ accueil.viatrajectoirtitle }}</a><br>
+                                    <a href="{{ accueil.vidalurl}}" target="_blank">{{ accueil.vidaltitle }}</a><br>
+                                </div>
+                                <div class=" meteo">
+                                    <p class="alerte"><iframe src="{{ accueil.meteourl }}"  width="380" height="111" frameborder="0"></iframe></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
         {% endfor %}

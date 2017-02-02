@@ -125,8 +125,11 @@ class GalerieCategorie
         $this->photos->removeElement($photo);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> newonglet
 =======
+=======
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
     /**
      * @var string
      */
@@ -156,5 +159,11 @@ class GalerieCategorie
     {
         return $this->categorie;
     }
+<<<<<<< HEAD
 >>>>>>> dev2
+=======
+=======
+>>>>>>> newonglet
+>>>>>>> d720eeff9741d506446cfcb05e36f927055c2c5a
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
 }
