@@ -141,6 +141,8 @@ class Bulletinoff
         return $this->bulletinoffimg;
     }
 
+<<<<<<< HEAD
+=======
     /**
      * @var string
      */
@@ -227,6 +229,7 @@ class Bulletinoff
     }
 
 
+>>>>>>> newonglet
 
     /**
      * @ORM\PrePersist

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <br>
+            <h1 class="lienstitre">Liste des groupes de travail</h1>
+
+            {% if groupes != null %}
+            {% for groupe in groupes %}
+                <div class="row">
+                    <div class="col-md-12 carregroupewshow">
+                        <div class="row">
+                            <div class="col-md-6 nomgroupew">
+                                <p>{{ groupe.titre }}</p>
+                            </div>
+                            <div class="col-md-6 pictoSgroupewshow">
+                                <a href="{{ path('documentation_groupe_show', { 'id': groupe.id }) }}"><img src="{{ asset('bundles/hopital/img/loupe.png') }}" alt="loupe" class="pictogroupeW"></a>
+                                <a href="{{ path('documentation_groupe_edit', { 'id': groupe.id }) }}"><img src="{{ asset('bundles/hopital/img/crayon.ico') }}" alt="crayon" class="pictogroupeW"></a>
+                                <a href="{{ path('documentation_groupe_delete', { 'id': groupe.id }) }}"><img src="{{ asset('bundles/hopital/img/poubelle.png') }}" alt="poubelle" class="pictogroupeW"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            <br><br>
+            <div class="row">
+                <div class="col-md-12 ">
+                    {% else %}
+                        <h3>Il n'y a pas de groupes de travail</h3>
+                    {% endif %}
+                    <div class="add_button center-align">
+                        <a class="btn btngroupew" href="{{ path('documentation_groupe_new') }}">Ajouter un groupe de travail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+        {% block javascripts %}
+            {{ parent() }}
+            {# Call jQuery #}
+            <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        {% endblock %}

@@ -25,6 +25,4 @@ class Idees
     {
         return $this->id;
     }
-
-
 }

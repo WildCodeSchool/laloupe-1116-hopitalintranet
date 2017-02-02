@@ -189,6 +189,11 @@ documentation_groupemessage_delete:
     defaults: { _controller: "HopitalBundle:Groupe:deleteGroupeMessage" }
     methods:  GET
 
+documentation_groupe_suppr:
+    path:     /groupe/suppr
+    defaults: { _controller: "HopitalBundle:Groupe:Suppr" }
+    methods:  GET
+
 
 
 documentation_journaux_index:
@@ -253,7 +258,6 @@ documentation_galeriecategorie_delete:
     path:     categorie/{id}/delete
     defaults: { _controller: "HopitalBundle:Galerie:deleteCategorie" }
     methods:  DELETE
-
 
 
 

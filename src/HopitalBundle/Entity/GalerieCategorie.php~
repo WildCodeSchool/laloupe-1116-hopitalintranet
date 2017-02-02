@@ -9,8 +9,19 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GalerieCategorie
 {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
   
+=======
+    public function __toString()
+    {
+        return $this->categorie;
+    }
+
+>>>>>>> newonglet
+>>>>>>> 6f4723a0b170a36d2a3d857116432e294f1f3bb5
     /**
      * @var integer
      */
@@ -61,7 +72,20 @@ class GalerieCategorie
     /**
      * Get categorie
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return integer
+     */
+    public function getPhotos()
+    {
+        return $this->photos;
+    }
+<<<<<<< HEAD
+=======
+    /**
+     * Constructor
+>>>>>>> 6f4723a0b170a36d2a3d857116432e294f1f3bb5
      */
     public function getCategorie()
     {
@@ -91,6 +115,34 @@ class GalerieCategorie
     {
         $this->photos->removeElement($photo);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> newonglet
+=======
+=======
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
+    /**
+     * @var string
+     */
+    private $categorie;
+
+
+    /**
+     * Set categorie
+     *
+     * @param string $categorie
+     *
+     * @return GalerieCategorie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+>>>>>>> 6f4723a0b170a36d2a3d857116432e294f1f3bb5
 
     /**
      * Get photos
@@ -101,4 +153,11 @@ class GalerieCategorie
     {
         return $this->photos;
     }
+<<<<<<< HEAD
+>>>>>>> dev2
+=======
+=======
+>>>>>>> newonglet
+>>>>>>> d720eeff9741d506446cfcb05e36f927055c2c5a
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
 }

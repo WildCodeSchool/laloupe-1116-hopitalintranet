@@ -27,6 +27,17 @@ class GroupeController extends Controller
         ));
     }
 
+    public function SupprAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $groupes = $em->getRepository('HopitalBundle:Groupe')->findAll();
+
+        return $this->render('HopitalBundle:documentation:groupe_suppr.html.twig', array(
+            'groupes' => $groupes,
+        ));
+    }
+
     /**
      * Creates a new groupe entity.
      *

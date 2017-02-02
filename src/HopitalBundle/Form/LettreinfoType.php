@@ -17,7 +17,7 @@ class LettreinfoType extends AbstractType
                 'attr' => array(
                     'class' => "zonenew"
                 )))
-            ->add('file1', 'file', array('required' => false))
+            ->add('file3', 'file', array('required' => false))
             ->add('titlelettreinfo', 'text', array(
                 'label'=>'Titre de la lettre d\'information',
                 'required' => false,

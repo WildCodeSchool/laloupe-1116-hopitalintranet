@@ -15,17 +15,18 @@ class LienssitesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('sitechartres')
-
+            ->add('sitechartres', 'text', array(
+                'label'=>'URL du site Dreux'))
             ->add('file1', 'file', array('required' => false))
+
             ->add('sitenogent', 'text', array(
-                'label'=>'URL du site Nogent'
-            ))
+                'label'=>'URL du site Nogent'))
             ->add('file2', 'file', array('required' => false))
+
             ->add('sitedreux', 'text', array(
-                'label'=>'URL du site Dreux'
-            ))
+                'label'=>'URL du site Dreux'))
             ->add('file3', 'file', array('required' => false))
+
             ->add('sitebonneval', 'text', array(
                 'label'=>'URL du site Bonneval'
             ))

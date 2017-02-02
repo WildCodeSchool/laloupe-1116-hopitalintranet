@@ -143,6 +143,8 @@ class Pagesjaunes
 
 
     /**
+<<<<<<< HEAD
+=======
      * @var string
      */
     private $pagesjaunestitle;
@@ -227,6 +229,7 @@ class Pagesjaunes
         return $this->pagesjaunesurl;
     }
     /**
+>>>>>>> newonglet
      * @ORM\PrePersist
      */
     public function preUpload()

@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
 class Idees
 {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     /**
      * @var integer
      */
@@ -27,4 +30,88 @@ class Idees
     }
 
 
+=======
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
+<<<<<<< HEAD
+    /**
+     * Set ideestitle
+     *
+     * @param string $ideestitle
+     * @return Idees
+     */
+    public function setIdeestitle($ideestitle)
+    {
+        $this->ideestitle = $ideestitle;
+
+        return $this;
+    }
+
+    /**
+     * Get ideestitle
+     *
+     * @return string
+     */
+    public function getIdeestitle()
+    {
+        return $this->ideestitle;
+    }
+
+
+
+
+=======
+>>>>>>> newonglet
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * @var string
+     */
+    private $ideestitle;
+
+
+
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> newonglet
+<<<<<<< HEAD
+=======
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+>>>>>>> dev2
+=======
+>>>>>>> d720eeff9741d506446cfcb05e36f927055c2c5a
+>>>>>>> 40973b2f28c30d29f8b022ab3709f7f6b4c9d041
 }

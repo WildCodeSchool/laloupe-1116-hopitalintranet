@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Ght
 {
-    public $file1;
+    public $file2;
     protected function getUploadDir()
     {
         return 'uploads';
@@ -23,28 +23,28 @@ class Ght
     {
         return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
     }
-    public function preUpload1()
+    public function preUpload2()
     {
-        if (null !== $this->file1) {
+        if (null !== $this->file2) {
             // do whatever you want to generate a unique name
-            $this->ghtimg = uniqid().'.'.$this->file1->guessExtension();
+            $this->ghtimg = uniqid().'.'.$this->file2->guessExtension();
         }
     }
-    public function upload1()
+    public function upload2()
     {
-        if (null === $this->file1) {
+        if (null === $this->file2) {
             return;
         }
         // if there is an error when moving the file, an exception will
         // be automatically thrown by move(). This will properly prevent
         // the entity from being persisted to the database on error
-        $this->file1->move($this->getUploadRootDir(), $this->ghtimg);
-        unset($this->file1);
+        $this->file2->move($this->getUploadRootDir(), $this->ghtimg);
+        unset($this->file2);
     }
-    public function removeUpload1()
+    public function removeUpload2()
     {
-        if ($file1 = $this->getAbsolutePath()) {
-            unlink($file1);
+        if ($file2 = $this->getAbsolutePath()) {
+            unlink($file2);
         }
     }
     /**
