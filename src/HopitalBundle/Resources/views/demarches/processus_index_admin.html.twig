@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitre">Modifier les processuss </h1>
+
+
+            <a href="{{ path('demarches_processuscategorie_new') }}">
+                <div class="col-md-12 btn btn-default bloc-categorie">
+                    Ajouter une<br> catégorie
+                </div>
+            </a>
+            <a href="{{ path('demarches_processus_new') }}">
+                <div class="col-md-12 btn btn-default bloc-categorie">
+                    Ajouter une<br> photo
+                </div>
+            </a>
+            <div class="col-md-12">
+                <a href="{{ path('demarches_processus_index') }}">Retour à la page</a>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <th>Nom de la Rubrique</th>
+                            <th>Modifer/Supprimer</th>
+                        </tr>
+                        {% for categorie in categories %}
+
+                            <tr>
+
+                                <td><p>{{ categorie.categorie }}</p></td>
+                                <td><a href="{{ path('demarches_processuscategorie_edit',  {'id': categorie.id }) }}">Modifier/Supprimer cette categorie</a></td>
+
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <th>Nom de la Photo</th>
+                            <th>Modifer/Supprimer</th>
+                        </tr>
+                        {% for processus in processuss %}
+
+                            <tr>
+
+                                <td><p>{{ processus.processus1 }}</p></td>
+                                <td><a href="{{ path('demarches_processus_edit',  {'id': processus.id }) }}">Modifier/Supprimer cette categorie</a></td>
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

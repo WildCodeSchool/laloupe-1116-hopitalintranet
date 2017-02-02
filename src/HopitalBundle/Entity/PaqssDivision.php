@@ -5,14 +5,14 @@ namespace HopitalBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * PaqssRubrique
+ * PaqssDivision
  */
-class PaqssRubrique
+class PaqssDivision
 {
 
     public function __toString()
     {
-        return $this->rubrique;
+        return $this->division;
     }
 
     /**
@@ -33,31 +33,31 @@ class PaqssRubrique
     /**
      * @var string
      */
-    private $rubrique;
+    private $division;
 
 
     /**
-     * Set rubrique
+     * Set division
      *
-     * @param string $rubrique
+     * @param string $division
      *
-     * @return PaqssRubrique
+     * @return PaqssDivision
      */
-    public function setRubrique($rubrique)
+    public function setDivision($division)
     {
-        $this->rubrique = $rubrique;
+        $this->division = $division;
 
         return $this;
     }
 
     /**
-     * Get rubrique
+     * Get division
      *
      * @return string
      */
-    public function getRubrique()
+    public function getDivision()
     {
-        return $this->rubrique;
+        return $this->division;
     }
     /**
      * @var integer
@@ -70,7 +70,7 @@ class PaqssRubrique
      *
      * @param integer $photos
      *
-     * @return PaqssRubrique
+     * @return PaqssDivision
      */
     public function setPhotos($photos)
     {
@@ -101,7 +101,7 @@ class PaqssRubrique
      *
      * @param \HopitalBundle\Entity\Paqss $photo
      *
-     * @return PaqssRubrique
+     * @return PaqssDivision
      */
     public function addPhoto(\HopitalBundle\Entity\Paqss $photo)
     {

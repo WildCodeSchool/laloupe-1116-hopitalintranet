@@ -16,6 +16,8 @@ HopitalBundle\Entity\ProcessusCategorie:
         photos:
             targetEntity: HopitalBundle\Entity\Processus
             mappedBy: categorie
+            joinColumn:
+                onDelete: CASCADE
 
     lifecycleCallbacks: { }
 

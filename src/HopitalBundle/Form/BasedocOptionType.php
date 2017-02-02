@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PaqssType extends AbstractType
+class BasedocOptionType extends AbstractType
 {
     /**CODE AJOUTÉ
     /**
@@ -15,14 +15,12 @@ class PaqssType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('paqss1', 'text', array(
+            ->add('division', 'text', array(
                 'required' => false,
                 'attr' => array(
-                    'placeholder' => "ex: EPP 2017-01",
+                    'placeholder' => "ex: Basedoc 2017",
                     'class' => "zonenew"
-                )))
-            ->add('file1', 'file', array('required' => false))
-            ->add('division');
+                )));
 
     }
 
@@ -35,7 +33,7 @@ class PaqssType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Paqss'
+            'data_class' => 'HopitalBundle\Entity\BasedocOption'
         ));
     }
 
@@ -45,7 +43,7 @@ class PaqssType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'hopitalBundle_paqss';
+        return 'hopitalBundle_basedoc';
     }
 
 }

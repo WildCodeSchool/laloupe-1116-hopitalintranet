@@ -115,10 +115,10 @@ class GalerieController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('documentation_galerie_edit', array('id' => $galerie->getId()));
+            return $this->redirectToRoute('documentation_galerie_index');
         }
 
-        return $this->render('HopitalBundle:documentation:galerie_edit.html.twig', array(
+        return $this->render('@Hopital/documentation/galerie_edit.html.twig', array(
             'galerie' => $galerie,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

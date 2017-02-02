@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitre">Modifier les paqss </h1>
+
+
+            <a href="{{ path('demarches_paqssdivision_new') }}">
+                <div class="col-md-12 btn btn-default bloc-categorie">
+                    Ajouter une<br> catégorie
+                </div>
+            </a>
+            <a href="{{ path('demarches_paqss_new') }}">
+                <div class="col-md-12 btn btn-default bloc-categorie">
+                    Ajouter une<br> photo
+                </div>
+            </a>
+            <div class="col-md-12">
+                <a href="{{ path('demarches_paqss_index') }}">Retour à la page</a>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <th>Nom de la Rubrique</th>
+                            <th>Modifer/Supprimer</th>
+                        </tr>
+                        {% for division in divisions %}
+
+                            <tr>
+
+                                <td><p>{{ division.division }}</p></td>
+                                <td><a href="{{ path('demarches_paqssdivision_edit',  {'id': division.id }) }}">Modifier/Supprimer cette division</a></td>
+
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <th>Nom de la Photo</th>
+                            <th>Modifer/Supprimer</th>
+                        </tr>
+                        {% for instance in paqsss %}
+
+                            <tr>
+
+                                <td><p>{{ instance.paqss1 }}</p></td>
+                                <td><a href="{{ path('demarches_paqss_edit',  {'id': instance.id }) }}">Modifier/Supprimer cette division</a></td>
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

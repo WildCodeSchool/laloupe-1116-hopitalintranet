@@ -40,6 +40,7 @@ documentation_contacts_delete:
     defaults: { _controller: "HopitalBundle:Contacts:delete" }
     methods:  DELETE
 
+
 documentation_instances_index:
     path:     /instances
     defaults: { _controller: "HopitalBundle:Instances:index" }
@@ -261,6 +262,16 @@ documentation_basedoc_index:
     defaults: { _controller: "HopitalBundle:Basedoc:index" }
     methods:  GET
 
+documentation_basedoc_index_admin:
+    path:     /basedoc_admin
+    defaults: { _controller: "HopitalBundle:Basedoc:index_admin" }
+    methods:  GET
+
+documentation_basedoc_index_show:
+    path:     /{id}/basedoc_show
+    defaults: { _controller: "HopitalBundle:Basedoc:index_show" }
+    methods:  [GET, POST]
+
 documentation_basedoc_new:
     path:     /basedoc/new
     defaults: { _controller: "HopitalBundle:Basedoc:new" }
@@ -274,6 +285,21 @@ documentation_basedoc_edit:
 documentation_basedoc_delete:
     path:     /basedoc//{id}/delete
     defaults: { _controller: "HopitalBundle:Basedoc:delete" }
+    methods:  DELETE
+
+documentation_basedocoption_new:
+    path:     /option/new
+    defaults: { _controller: "HopitalBundle:Basedoc:newOption" }
+    methods:  [GET, POST]
+
+documentation_basedocoption_edit:
+    path:     /option/{id}/edit
+    defaults: { _controller: "HopitalBundle:Basedoc:editOption" }
+    methods:  [GET, POST]
+
+documentation_basedocoption_delete:
+    path:     option/{id}/delete
+    defaults: { _controller: "HopitalBundle:Basedoc:deleteOption" }
     methods:  DELETE
 
 

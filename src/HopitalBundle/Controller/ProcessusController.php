@@ -25,11 +25,43 @@ class ProcessusController extends Controller
         $categories = $em->getRepository('HopitalBundle:ProcessusCategorie')->findAll();
 
 
-
-
         return $this->render('HopitalBundle:demarches:processus_index.html.twig', array(
             'processuss' => $processuss,
             'categories' => $categories,
+        ));
+    }
+
+    /**
+     * Lists all processus entities.
+     *
+     */
+    public function index_adminAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $processuss = $em->getRepository('HopitalBundle:Processus')->findAll();
+        $categories = $em->getRepository('HopitalBundle:ProcessusCategorie')->findAll();
+
+
+        return $this->render('HopitalBundle:demarches:processus_index_admin.html.twig', array(
+            'processuss' => $processuss,
+            'categories' => $categories,
+        ));
+    }
+
+    /**
+     * Lists all processus entities.
+     *
+     */
+    public function index_showAction(ProcessusCategorie $processusCategorie)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $processuss = $em->getRepository('HopitalBundle:Processus')->findAll();
+
+
+        return $this->render('HopitalBundle:demarches:processus_index_show.html.twig', array(
+            'processuss' => $processuss,
+            'categorie' => $processusCategorie,
         ));
     }
 
@@ -94,11 +126,34 @@ class ProcessusController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('demarches_processus_edit', array('id' => $processus->getId()));
+            return $this->redirectToRoute('demarches_processus_index', array('id' => $processus->getId()));
         }
 
         return $this->render('HopitalBundle:demarches:processus_edit.html.twig', array(
             'processus' => $processus,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Displays a form to edit an existing processus entity.
+     *
+     */
+    public function editCategorieAction(Request $request, ProcessusCategorie $processusCategorie)
+    {
+        $deleteForm = $this->createDeleteCategorieForm($processusCategorie);
+        $editForm = $this->createForm('HopitalBundle\Form\ProcessusCategorieType', $processusCategorie);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('demarches_processus_index', array('id' => $processusCategorie->getId()));
+        }
+
+        return $this->render('@Hopital/demarches/processuscategorie_edit.html.twig', array(
+            'processus' => $processusCategorie,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
@@ -123,6 +178,24 @@ class ProcessusController extends Controller
     }
 
     /**
+     * Deletes a processus entity.
+     *
+     */
+    public function deleteCategorieAction(Request $request, ProcessusCategorie $processusCategorie)
+    {
+        $form = $this->createDeleteCategorieForm($processusCategorie);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($processusCategorie);
+            $em->flush($processusCategorie);
+        }
+
+        return $this->redirectToRoute('demarches_processus_index');
+    }
+
+    /**
      * Creates a form to delete a processus entity.
      *
      * @param Processus $presentation The processus entity
@@ -137,4 +210,11 @@ class ProcessusController extends Controller
             ->getForm();
     }
 
+    private function createDeleteCategorieForm(ProcessusCategorie $processusCategorie)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('demarches_processuscategorie_delete', array('id' => $processusCategorie->getId())))
+            ->setMethod('DELETE')
+            ->getForm();
+    }
 }

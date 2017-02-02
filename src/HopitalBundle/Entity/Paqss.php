@@ -164,30 +164,30 @@ class Paqss
     /**
      * @var string
      */
-    private $rubrique;
+    private $division;
 
 
     /**
-     * Set rubrique
+     * Set division
      *
-     * @param string $rubrique
+     * @param string $division
      *
      * @return Paqss
      */
-    public function setRubrique($rubrique)
+    public function setDivision($division)
     {
-        $this->rubrique = $rubrique;
+        $this->division = $division;
 
         return $this;
     }
 
     /**
-     * Get rubrique
+     * Get division
      *
      * @return string
      */
-    public function getRubrique()
+    public function getDivision()
     {
-        return $this->rubrique;
+        return $this->division;
     }
 }

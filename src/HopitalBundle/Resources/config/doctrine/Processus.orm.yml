@@ -19,6 +19,8 @@ HopitalBundle\Entity\Processus:
         categorie:
             targetEntity: HopitalBundle\Entity\ProcessusCategorie
             inversedBy: photos
+            joinColumn:
+            onDelete: CASCADE
 
     lifecycleCallbacks:
         prePersist: [ preUpload, preUpload1 ]

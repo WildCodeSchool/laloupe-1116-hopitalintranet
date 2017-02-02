@@ -1,0 +1,20 @@
+HopitalBundle\Entity\PaqssDivision:
+    type: entity
+    table: null
+    repositoryClass: HopitalBundle\Repository\PaqssDivisionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        division:
+            type: string
+            length: 255
+    oneToMany:
+        photos:
+            targetEntity: HopitalBundle\Entity\Paqss
+            mappedBy: division
+
+    lifecycleCallbacks: { }

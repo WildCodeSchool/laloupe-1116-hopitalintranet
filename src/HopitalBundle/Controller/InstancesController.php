@@ -25,8 +25,6 @@ class InstancesController extends Controller
         $rubriques = $em->getRepository('HopitalBundle:InstancesRubrique')->findAll();
 
 
-
-
         return $this->render('HopitalBundle:documentation:instances_index.html.twig', array(
             'instancess' => $instancess,
             'rubriques' => $rubriques,
@@ -43,8 +41,6 @@ class InstancesController extends Controller
 
         $instancess = $em->getRepository('HopitalBundle:Instances')->findAll();
         $rubriques = $em->getRepository('HopitalBundle:InstancesRubrique')->findAll();
-
-
 
 
         return $this->render('HopitalBundle:documentation:instances_index_admin.html.twig', array(
@@ -182,6 +178,7 @@ class InstancesController extends Controller
 
         return $this->redirectToRoute('documentation_instances_index');
     }
+
     /**
      * Deletes a instances entity.
      *

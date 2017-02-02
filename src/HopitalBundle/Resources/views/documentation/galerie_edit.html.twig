@@ -18,10 +18,15 @@
                         {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
                         {{ form_widget(edit_form.file1)}}
                         {{ form_errors(edit_form.file1) }}
+                        {{ form_label(edit_form.categorie, 'Division:', {'categorie': {'class': 'categorie'}}) }}
+                        {{ form_widget(edit_form.categorie)}}
+                        {{ form_errors(edit_form.categorie) }}<br>
                     </div>
                     <div class="row">
                         <div class="col-md-offset-5 col-md-2 btneditcommun">
                             <input type="submit" class="btnedit" value="Modifier"/>
+                            {{ form_end(edit_form) }}
+
                             {{ form_start(delete_form) }}
                             <input type="submit" class="btnedit" value="Supprimer">
                             {{ form_end(delete_form) }}

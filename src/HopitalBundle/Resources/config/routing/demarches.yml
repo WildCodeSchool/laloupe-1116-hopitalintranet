@@ -26,6 +26,26 @@ demarches_epp_index:
     defaults: { _controller: "HopitalBundle:Epp:index" }
     methods:  GET
 
+demarches_epp_index_show:
+    path:     /{id}/epp_show
+    defaults: { _controller: "HopitalBundle:Epp:index_show" }
+    methods:  [GET, POST]
+
+demarches_epp_index_admin:
+    path:     /epp_admin
+    defaults: { _controller: "HopitalBundle:Epp:index_admin" }
+    methods:  GET
+
+demarches_epprubrique_edit:
+    path:     /epprubrique/{id}/edit
+    defaults: { _controller: "HopitalBundle:Epp:editRubrique" }
+    methods:  [GET, POST]
+
+demarches_epprubrique_delete:
+    path:     /epprubrique/{id}/delete
+    defaults: { _controller: "HopitalBundle:Epp:deleteRubrique" }
+    methods:  DELETE
+
 demarches_epp_new:
     path:     /epp/new
     defaults: { _controller: "HopitalBundle:Epp:new" }
@@ -53,6 +73,16 @@ demarches_paqss_index:
     defaults: { _controller: "HopitalBundle:Paqss:index" }
     methods:  GET
 
+demarches_paqss_index_admin:
+    path:     /paqss_admin
+    defaults: { _controller: "HopitalBundle:Paqss:index_admin" }
+    methods:  GET
+
+demarches_paqss_index_show:
+    path:     /paqss/{id}/show
+    defaults: { _controller: "HopitalBundle:Paqss:index_show" }
+    methods:  GET
+
 demarches_paqss_new:
     path:     /paqss/new
     defaults: { _controller: "HopitalBundle:Paqss:new" }
@@ -68,10 +98,21 @@ demarches_paqss_delete:
     defaults: { _controller: "HopitalBundle:Paqss:delete" }
     methods:  DELETE
 
-demarches_paqssrubrique_new:
-    path:     /paqssrubrique/new
-    defaults: { _controller: "HopitalBundle:Paqss:newRubrique" }
+demarches_paqssdivision_new:
+    path:     /paqssdivision/new
+    defaults: { _controller: "HopitalBundle:Paqss:newDivision" }
     methods:  [GET, POST]
+
+
+demarches_paqssdivision_edit:
+    path:     /paqssdivision/{id}/edit
+    defaults: { _controller: "HopitalBundle:Paqss:editDivision" }
+    methods:  [GET, POST]
+
+demarches_paqssdivision_delete:
+    path:     paqssdivision/{id}/delete
+    defaults: { _controller: "HopitalBundle:Paqss:deleteDivision" }
+    methods:  DELETE
 
 
 
@@ -79,6 +120,16 @@ demarches_processus_index:
     path:     /processus
     defaults: { _controller: "HopitalBundle:Processus:index" }
     methods:  GET
+
+demarches_processus_index_admin:
+    path:     /processus_admin
+    defaults: { _controller: "HopitalBundle:Processus:index_admin" }
+    methods:  GET
+
+demarches_processus_index_show:
+    path:     /{id}/processus_show
+    defaults: { _controller: "HopitalBundle:Processus:index_show" }
+    methods:  [GET, POST]
 
 demarches_processus_new:
     path:     /processus/new
@@ -99,5 +150,15 @@ demarches_processuscategorie_new:
     path:     /processuscategorie/new
     defaults: { _controller: "HopitalBundle:Processus:newCategorie" }
     methods:  [GET, POST]
+
+demarches_processuscategorie_edit:
+    path:     /processuscategorie/{id}/edit
+    defaults: { _controller: "HopitalBundle:Processus:editCategorie" }
+    methods:  [GET, POST]
+
+demarches_processuscategorie_delete:
+    path:     processuscategorie/{id}/delete
+    defaults: { _controller: "HopitalBundle:Processus:deleteCategorie" }
+    methods:  DELETE
 
 

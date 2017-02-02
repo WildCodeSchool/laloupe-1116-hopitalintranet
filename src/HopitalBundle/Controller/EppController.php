@@ -81,7 +81,66 @@ class EppController extends Controller
         ));
     }
 
+    public function index_showAction(EppRubrique $eppRubrique)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $epps = $em->getRepository('HopitalBundle:Epp')->findAll();
 
+
+        return $this->render('HopitalBundle:demarches:epp_index_show.html.twig', array(
+            'epps' => $epps,
+            'rubrique' => $eppRubrique,
+        ));
+    }
+    public function index_adminAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $epps = $em->getRepository('HopitalBundle:Epp')->findAll();
+        $rubriques = $em->getRepository('HopitalBundle:EppRubrique')->findAll();
+
+        return $this->render('@Hopital/demarches/epp_index_admin.html.twig', array(
+            'epps' => $epps,
+            'rubriques' => $rubriques,
+        ));
+    }
+    public function editRubriqueAction(Request $request, EppRubrique $eppRubrique)
+    {
+        $deleteForm = $this->createDeleteRubriqueForm($eppRubrique);
+        $editForm = $this->createForm('HopitalBundle\Form\EppRubriqueType', $eppRubrique);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('demarches_epp_index', array('id' => $eppRubrique->getId()));
+        }
+
+        return $this->render('@Hopital/demarches/epprubrique_edit.html.twig', array(
+            'eppRubrique' => $eppRubrique,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+    public function deleteRubriqueAction(Request $request, EppRubrique $eppRubrique)
+    {
+        $form = $this->createDeleteRubriqueForm($eppRubrique);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($eppRubrique);
+            $em->flush($eppRubrique);
+        }
+
+        return $this->redirectToRoute('demarches_epp_index');
+    }
+    private function createDeleteRubriqueForm(EppRubrique $eppRubrique)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('demarches_epprubrique_delete', array('id' => $eppRubrique->getId())))
+            ->setMethod('DELETE')
+            ->getForm();
+    }
     /**
      * Displays a form to edit an existing epp entity.
      *
@@ -95,7 +154,7 @@ class EppController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('demarches_epp_edit', array('id' => $epp->getId()));
+            return $this->redirectToRoute('demarches_epp_index');
         }
 
         return $this->render('HopitalBundle:demarches:epp_edit.html.twig', array(

@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PaqssRubriqueType extends AbstractType
+class PaqssDivisionType extends AbstractType
 {
     /**CODE AJOUTÉ
     /**
@@ -15,14 +15,7 @@ class PaqssRubriqueType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('paqss1', 'text', array(
-                'required' => false,
-                'attr' => array(
-                    'placeholder' => "ex: EPP 2017-01",
-                    'class' => "zonenew"
-                )))
-            ->add('file1', 'file', array('required' => false))
-            ->add('rubrique');
+            ->add('division');
 
     }
 
@@ -35,7 +28,7 @@ class PaqssRubriqueType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\PaqssRubrique'
+            'data_class' => 'HopitalBundle\Entity\PaqssDivision'
         ));
     }
 

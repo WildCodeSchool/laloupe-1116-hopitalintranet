@@ -17,8 +17,8 @@ HopitalBundle\Entity\Paqss:
 
 
     manyToOne:
-        rubrique:
-            targetEntity: HopitalBundle\Entity\PaqssRubrique
+        division:
+            targetEntity: HopitalBundle\Entity\PaqssDivision
             inversedBy: photos
 
     lifecycleCallbacks:

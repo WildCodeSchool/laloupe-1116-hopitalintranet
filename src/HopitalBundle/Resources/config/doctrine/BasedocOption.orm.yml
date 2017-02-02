@@ -1,7 +1,7 @@
-HopitalBundle\Entity\PaqssRubrique:
+HopitalBundle\Entity\BasedocOption:
     type: entity
     table: null
-    repositoryClass: HopitalBundle\Repository\PaqssRubriqueRepository
+    repositoryClass: HopitalBundle\Repository\BasedocOptionRepository
     id:
         id:
             type: integer
@@ -9,12 +9,15 @@ HopitalBundle\Entity\PaqssRubrique:
             generator:
                 strategy: AUTO
     fields:
-        rubrique:
+        division:
             type: string
             length: 255
+
     oneToMany:
         photos:
-            targetEntity: HopitalBundle\Entity\Paqss
-            mappedBy: rubrique
+            targetEntity: HopitalBundle\Entity\Basedoc
+            mappedBy: division
+            joinColumn:
+                onDelete: CASCADE
 
     lifecycleCallbacks: { }

@@ -1,16 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitrenew">Création d'une categorie processus</h1>
+            <h1 class="lienstitrenew">Création d'une rubrique d'instances</h1>
             <div class="row">
                 <div class="col-md-offset-3 col-md-6 carrenew">
                     <div class="row">
                         <div class="col-md-12 imgnewid">
                             {{ form_start(form) }}
-                            {{ form_label(form.categorie, 'Nommez votre categorie:') }}<br>
-                            {{ form_widget(form.categorie)}}<br><br>
+                            {{ form_label(form.division, 'Nommez votre division:') }}<br>
+                            {{ form_widget(form.division)}}<br><br>
                             <div class="row">
                                 <div class="col-md-offset-5 col-md-2">
                                     <input type="submit" value="Créer" class="btnnew" />
@@ -20,8 +21,10 @@
 
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+
 {% endblock %}

@@ -10,13 +10,15 @@
                     <div class="row">
                         <div class="col-md-12 imgnew">
                             {{ form_start(edit_form) }}
-                            {{edit_form.children.file1.vars.label}}
-                            {{ form_label(edit_form.basedocimg, 'Nommez votre base doc:', {'basedocimg': {'class': 'basedocimg'}}) }}
+                            {{ form_label(edit_form.basedocimg, 'Nommez votre paqss:', {'basedocimg': {'class': 'basedocimg'}}) }}
                             {{ form_widget(edit_form.basedocimg)}}
                             {{ form_errors(edit_form.basedocimg) }}
                             {{ form_label(edit_form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
                             {{ form_widget(edit_form.file1)}}
-                            {{ form_errors(edit_form.file1) }}
+                            {{ form_errors(edit_form.file1) }}<br>
+                            {{ form_label(edit_form.division, 'Division:', {'division': {'class': 'division'}}) }}
+                            {{ form_widget(edit_form.division)}}
+                            {{ form_errors(edit_form.division) }}<br>
                         </div>
                     </div>
                     <div class="col-md-0 imgnew">

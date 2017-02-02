@@ -3,93 +3,40 @@
 {% block body %}
 
     <div class="row">
-    <div class="col-md-offset-2 col-md-8 fondblanc">
+        <div class="col-md-offset-2  col-md-8 fondblanc">
+            <h1 class="lienstitre">Basedoc</h1>
+            {% for division in divisions %}
 
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="lienstitre">Base documentaire</h1>
-            </div>
-        </div>
+                <a href="{{ path('documentation_basedoc_index_show', { 'id': division.id }) }}">
+                    <div class="col-xs-12 btn btn-default bloc-categorie" data-target="{{ '#' ~ division.division }}">
+                        {{ division.division }}
 
-
-
-        <div class="row">
-
-            <!--Début archives basedoc-->
-
-            <div class="col-md-2">
-                <div class="dropdown">
-                    <button class="btn basedocbtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Archives
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dLabel">
-                        {% set maxId = 0 %}
-                        {% for basedoc in basedocs %}
-                            {% set maxId = max(basedoc.id, maxId) %}
-                        {% endfor %}
-                        {% for basedoc in basedocs %}
-                            {% if basedoc.id != maxId %}
-                                {% if basedoc.titlebasedoc != NULL %}
-                                    <p data-toggle="modal" data-target="{{ '#' ~ basedoc.idbasedoc }}" class="archivestitres"> {{ basedoc.titlebasedoc }} </p>
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-
-            <!--Fin archives basedoc-->
+                    </div></a>
 
 
-            <!--Début nouvelles astreintes-->
-
-            <div class="col-md-10">
-                {% set maxId = 0 %}
-                {% for basedoc in basedocs %}
-                    {% set maxId = max(basedoc.id, maxId) %}
-                {% endfor %}
-                {% for basedoc in basedocs %}
-                    {% if basedoc.id == maxId %}
-                        <p>{{ basedoc.titlebasedoc }}</p>
-                    {% endif %}
-                    {% if basedoc.id == maxId %}
-                        <object data="{{ app.request.basepath }}/uploads/{{ basedoc.basedocimg }}" type="application/pdf" class="journaux">
-                        </object>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-
-        <!--Fin nouvelles basedoc-->
-
-
-
-
-        <!--Début modal basedoc-->
-
-        {% for basedoc in basedocs %}
-            <div id="{{ basedoc.idbasedoc }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content" style="height: 750px">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <br>
-                        <br>
-                        <br>
-                        {% if basedoc.id != maxId %}
-                            <object data="{{ app.request.basepath }}/uploads/{{ basedoc.basedocimg }}" type="application/pdf" class="modalarchivespdf">
-                            </object>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-
-        <!--Fin modal basedoc-->
-
-
+            {% endfor %}
 
     </div>
 
+    {#<div id="{{ rubrique.rubrique }}" class="modal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>{{ rubrique.rubrique }}</h4>
+
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                {% for instances in instancess if instances.rubrique.id == rubrique.id %}
+                                    <div class="col-xs-12 instancesimg">
+                                        <object class="img-thumbnail" width="100%" height="auto" data="{{ app.request.basepath }}/uploads/{{ instances.instances1 }}"></object>
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>#}
 
 {% endblock %}

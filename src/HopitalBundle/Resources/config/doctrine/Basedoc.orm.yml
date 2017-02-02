@@ -15,12 +15,12 @@ HopitalBundle\Entity\Basedoc:
             type: string
             length: 25
             nullable: true
-        titlebasedoc:
-            type: string
-            length: 255
-        idbasedoc:
-            type: string
-            length: 255
+    manyToOne:
+        division:
+            targetEntity: HopitalBundle\Entity\BasedocOption
+            inversedBy: photos
+            joinColumn:
+                onDelete: CASCADE
 
 
 

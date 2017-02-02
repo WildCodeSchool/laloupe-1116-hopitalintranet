@@ -177,4 +177,63 @@ class Basedoc
     {
         // Add your code here
     }
+
+    /**
+     * @var string
+     */
+    private $option;
+
+
+    /**
+     * Set option
+     *
+     * @param string $option
+     *
+     * @return Instances
+     */
+    public function setOption($option)
+    {
+        $this->option = $option;
+
+        return $this;
+    }
+
+    /**
+     * Get option
+     *
+     * @return string
+     */
+    public function getOption()
+    {
+        return $this->option;
+    }
+    /**
+     * @var \HopitalBundle\Entity\BasedocOption
+     */
+    private $division;
+
+
+    /**
+     * Set division
+     *
+     * @param \HopitalBundle\Entity\BasedocOption $division
+     *
+     * @return Basedoc
+     */
+    public function setDivision(\HopitalBundle\Entity\BasedocOption $division = null)
+    {
+        $this->division = $division;
+
+        return $this;
+    }
+
+    /**
+     * Get division
+     *
+     * @return \HopitalBundle\Entity\BasedocOption
+     */
+    public function getDivision()
+    {
+        return $this->division;
+    }
 }

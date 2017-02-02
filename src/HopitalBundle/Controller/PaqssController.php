@@ -3,7 +3,7 @@
 namespace HopitalBundle\Controller;
 
 use HopitalBundle\Entity\Paqss;
-use HopitalBundle\Entity\PaqssRubrique;
+use HopitalBundle\Entity\PaqssDivision;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -22,16 +22,51 @@ class PaqssController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $paqsss = $em->getRepository('HopitalBundle:Paqss')->findAll();
-        $rubriques = $em->getRepository('HopitalBundle:PaqssRubrique')->findAll();
+        $divisions = $em->getRepository('HopitalBundle:PaqssDivision')->findAll();
 
 
 
 
         return $this->render('HopitalBundle:demarches:paqss_index.html.twig', array(
             'paqsss' => $paqsss,
-            'rubriques' => $rubriques,
+            'divisions' => $divisions,
         ));
     }
+
+    /**
+     * Lists all instances entities.
+     *
+     */
+    public function index_adminAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $paqsss = $em->getRepository('HopitalBundle:Paqss')->findAll();
+        $divisions = $em->getRepository('HopitalBundle:PaqssDivision')->findAll();
+
+
+        return $this->render('HopitalBundle:demarches:paqss_index_admin.html.twig', array(
+            'paqsss' => $paqsss,
+            'divisions' => $divisions,
+        ));
+    }
+
+    /**
+     * Lists all instances entities.
+     *
+     */
+    public function index_showAction(PaqssDivision $paqssDivision)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $paqsss = $em->getRepository('HopitalBundle:Paqss')->findAll();
+
+
+        return $this->render('@Hopital/demarches/paqss_index_show.hrml.twig', array(
+            'paqsss' => $paqsss,
+            'division' => $paqssDivision,
+        ));
+    }
+
 
     /**
      * Creates a new paqss entity.
@@ -61,22 +96,22 @@ class PaqssController extends Controller
      * Creates a new paqss entity.
      *
      */
-    public function newRubriqueAction(Request $request)
+    public function newDivisionAction(Request $request)
     {
-        $rubrique = new PaqssRubrique();
-        $form = $this->createForm('HopitalBundle\Form\PaqssRubriqueType', $rubrique);
+        $division = new PaqssDivision();
+        $form = $this->createForm('HopitalBundle\Form\PaqssDivisionType', $division);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($rubrique);
-            $em->flush($rubrique);
+            $em->persist($division);
+            $em->flush($division);
 
             return $this->redirectToRoute('demarches_paqss_index');
         }
 
-        return $this->render('HopitalBundle:demarches:paqssrubrique_new.html.twig', array(
-            'rubrique' => $rubrique,
+        return $this->render('HopitalBundle:demarches:paqssdivision_new.html.twig', array(
+            'division' => $division,
             'form' => $form->createView(),
         ));
     }
@@ -95,7 +130,7 @@ class PaqssController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('demarches_paqss_edit', array('id' => $paqss->getId()));
+            return $this->redirectToRoute('demarches_paqss_index');
         }
 
         return $this->render('HopitalBundle:demarches:paqss_edit.html.twig', array(
@@ -103,6 +138,47 @@ class PaqssController extends Controller
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
+    }
+
+    /**
+     * Displays a form to edit an existing instances entity.
+     *
+     */
+    public function editDivisionAction(Request $request, PaqssDivision $paqssDivision)
+    {
+        $deleteForm = $this->createDeleteDivisionForm($paqssDivision);
+        $editForm = $this->createForm('HopitalBundle\Form\PaqssDivisionType', $paqssDivision);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('demarches_paqss_index', array('id' => $paqssDivision->getId()));
+        }
+
+        return $this->render('HopitalBundle:demarches:paqssdivision_edit.html.twig', array(
+            'paqss' => $paqssDivision,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Deletes a instances entity.
+     *
+     */
+    public function deleteDivisionAction(Request $request, PaqssDivision $paqssDivision)
+    {
+        $form = $this->createDeleteDivisionForm($paqssDivision);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($paqssDivision);
+            $em->flush($paqssDivision);
+        }
+
+        return $this->redirectToRoute('demarches_paqss_index');
     }
 
     /**
@@ -134,6 +210,14 @@ class PaqssController extends Controller
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('demarches_paqss_delete', array('id' => $paqss->getId())))
+            ->setMethod('DELETE')
+            ->getForm();
+    }
+
+    private function createDeleteDivisionForm(PaqssDivision $paqssDivision)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('demarches_paqssdivision_delete', array('id' => $paqssDivision->getId())))
             ->setMethod('DELETE')
             ->getForm();
     }

@@ -10,16 +10,33 @@ use Doctrine\ORM\Mapping as ORM;
 class GalerieCategorie
 {
 
-    public function __toString()
-    {
-        return $this->categorie;
-    }
+  public function __toString()
+  {
+    return $this->categorie;
+  }
 
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
+    /**
+     * @var string
+     */
+    private $categorie;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $photos;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->photos = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -30,11 +47,6 @@ class GalerieCategorie
     {
         return $this->id;
     }
-    /**
-     * @var string
-     */
-    private $categorie1;
-
 
     /**
      * Set categorie
@@ -43,9 +55,9 @@ class GalerieCategorie
      *
      * @return GalerieCategorie
      */
-    public function setCategorie1($categorie1)
+    public function setCategorie($categorie)
     {
-        $this->categorie1 = $categorie1;
+        $this->categorie = $categorie;
 
         return $this;
     }
@@ -55,45 +67,9 @@ class GalerieCategorie
      *
      * @return string
      */
-    public function getCategorie1()
+    public function getCategorie()
     {
-        return $this->categorie1;
-    }
-    /**
-     * @var integer
-     */
-    private $photos;
-
-
-    /**
-     * Set photos
-     *
-     * @param integer $photos
-     *
-     * @return GalerieCategorie
-     */
-    public function setPhotos($photos)
-    {
-        $this->photos = $photos;
-
-        return $this;
-    }
-
-    /**
-     * Get photos
-     *
-     * @return integer
-     */
-    public function getPhotos()
-    {
-        return $this->photos;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->photos = new \Doctrine\Common\Collections\ArrayCollection();
+        return $this->categorie;
     }
 
     /**
@@ -119,33 +95,14 @@ class GalerieCategorie
     {
         $this->photos->removeElement($photo);
     }
-    /**
-     * @var string
-     */
-    private $categorie;
-
 
     /**
-     * Set categorie
+     * Get photos
      *
-     * @param string $categorie
-     *
-     * @return GalerieCategorie
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function setCategorie($categorie)
+    public function getPhotos()
     {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
-    /**
-     * Get categorie
-     *
-     * @return string
-     */
-    public function getCategorie()
-    {
-        return $this->categorie;
+        return $this->photos;
     }
 }
