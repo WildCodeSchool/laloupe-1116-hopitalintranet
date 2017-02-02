@@ -14,13 +14,13 @@ créée pour la mise en place du site intranet de l'hôpital de La Loupe.
 
 ##Bundles présents dans le site
 
-SonataBundle ==> http://symfony.com/doc/current/bundles/SonataBundle/index.html
-InfoMailBundle
-IuchBundle
-AppBundle
-HopitalBundle
-Vl/AgendaBundle
-Vl/AnnonceBundle
+SonataBundle ==> http://symfony.com/doc/current/bundles/SonataBundle/index.html  
+InfoMailBundle  
+IuchBundle  
+AppBundle  
+HopitalBundle  
+Vl/AgendaBundle  
+Vl/AnnonceBundle  
 
 
 #####Installer le projet
