@@ -6,7 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class OrganigrammeType extends AbstractType
+
+class CommunicationType extends AbstractType
 {
     /**CODE AJOUTÉ
     /**
@@ -15,26 +16,20 @@ class OrganigrammeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('organigrammeimg','text', array(
-                'required' => false,
-                'attr' => array(
-                    'class' => "zonenew"
-                )))
-            ->add('file7', 'file', array('required' => false));
+            ->add( 'articles', new ArticlesType())
+            ->add ('direction', new DirectionType())
+            ->add ('ght', new GhtType())
+            ->add ('lettreinfo', new LettreinfoType());
     }
 
+
     /**FIN CODE AJOUTÉ
-
-
-
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
-            'data_class' => 'HopitalBundle\Entity\Organigramme'
-        ));
+        
     }
 
 
@@ -43,7 +38,6 @@ class OrganigrammeType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'hopital_organigramme';
+        return 'hopital_direction';
     }
-
 }

@@ -1,40 +1,44 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Liens sites creation</h1>
-
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('communication_lienssites_index') }}">Back to the list</a>
-        </li>
-    </ul>
-{% endblock %}
-
-{% extends 'base.html.twig' %}
-
-{% block body %}
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitrenew">Création des liens vers les établissements</h1>
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Création des liens vers les sites</h1>
             <br>
             <div class="row">
-                <div class="col-md-offset-3 col-md-6 carrenewid">
+                <div class="col-md-offset-3 col-md-6 carrenewlienssites">
                     <div class="row">
                         <div class="col-md-12 imgnewid">
                             {{ form_start(form) }}
-                            {{ form_label(form.noteserviceimg, 'Nommez votre note de service:') }}<br>
-                            {{ form_widget(form.noteserviceimg)}}<br><br>
-                            {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_label(form.sitechartres, 'Mettez l\'URL du site:') }}<br>
+                            {{ form_widget(form.sitechartres)}}<br><br>
+
+                            {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
                             {{ form_widget(form.file1)}}<br>
-                            {{ form_label(form.titlenoteservice, 'Titre de la note de service:', {'file1': {'class': 'file1'}}) }}<br>
-                            {{ form_widget(form.titlenoteservice)}}<br>
-                            {{ form_label(form.idnoteservice, 'Id de la note de service:', {'file1': {'class': 'file1'}}) }}<br>
-                            {{ form_widget(form.idnoteservice)}}
+
+                            {{ form_label(form.sitenogent, 'Mettez l\'URL du site:') }}<br>
+                            {{ form_widget(form.sitenogent)}}<br><br>
+
+                            {{ form_label(form.file2, 'Insérez votre image:', {'file2': {'class': 'file2'}}) }}
+                            {{ form_widget(form.file2)}}<br>
+
+                            {{ form_label(form.sitedreux, 'Mettez l\'URL du site:') }}<br>
+                            {{ form_widget(form.sitedreux)}}<br><br>
+
+                            {{ form_label(form.file3, 'Insérez votre image:', {'file3': {'class': 'file3'}}) }}
+                            {{ form_widget(form.file3)}}<br>
+
+                            {{ form_label(form.sitebonneval, 'Mettez l\'URL du site:') }}<br>
+                            {{ form_widget(form.sitebonneval)}}<br><br>
+
+                            {{ form_label(form.file4, 'Insérez votre image:', {'file4': {'class': 'file4'}}) }}
+                            {{ form_widget(form.file4)}}<br>
+
+                            {{ form_label(form.sitechateaudun, 'Mettez l\'URL du site:') }}<br>
+                            {{ form_widget(form.sitechateaudun)}}<br><br>
+
+                            {{ form_label(form.file5, 'Insérez votre image:', {'file5': {'class': 'file5'}}) }}
+                            {{ form_widget(form.file5)}}<br>
                         </div>
                     </div>
                     <div class="row">

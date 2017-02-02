@@ -143,6 +143,11 @@ class Covoiturage
 
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> frontnew
      * @var string
      */
     private $covoituragetitle;
@@ -228,6 +233,10 @@ class Covoiturage
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> newonglet
+>>>>>>> frontnew
      * @ORM\PrePersist
      */
     public function preUpload()

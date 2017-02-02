@@ -15,7 +15,11 @@ class FournisseurType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('fournisseur1')
+            ->add('fournisseur1', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false));
 
     }

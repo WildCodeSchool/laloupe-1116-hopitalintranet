@@ -141,6 +141,8 @@ class Has
         return $this->hasimg;
     }
 
+<<<<<<< HEAD
+=======
     /**
      * @var string
      */
@@ -226,6 +228,7 @@ class Has
         return $this->hasurl;
     }
 
+>>>>>>> newonglet
 
     /**
      * @ORM\PrePersist

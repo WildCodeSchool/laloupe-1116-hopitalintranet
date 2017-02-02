@@ -9,12 +9,15 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class GalerieCategorie
 {
+<<<<<<< HEAD
+=======
 
     public function __toString()
     {
         return $this->categorie;
     }
 
+>>>>>>> newonglet
     /**
      * @var int
      */
@@ -88,6 +91,8 @@ class GalerieCategorie
     {
         return $this->photos;
     }
+<<<<<<< HEAD
+=======
     /**
      * Constructor
      */
@@ -119,6 +124,7 @@ class GalerieCategorie
     {
         $this->photos->removeElement($photo);
     }
+<<<<<<< HEAD
     /**
      * @var string
      */
@@ -148,4 +154,7 @@ class GalerieCategorie
     {
         return $this->categorie;
     }
+=======
+>>>>>>> newonglet
+>>>>>>> frontnew
 }

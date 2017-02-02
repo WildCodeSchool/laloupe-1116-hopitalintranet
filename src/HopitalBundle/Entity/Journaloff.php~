@@ -141,6 +141,10 @@ class Journaloff
         return $this->journaloffimg;
     }
 
+<<<<<<< HEAD
+
+    /**
+=======
     /**
      * @var string
      */
@@ -226,6 +230,7 @@ class Journaloff
         return $this->journaloffurl;
     }
     /**
+>>>>>>> newonglet
      * @ORM\PrePersist
      */
     public function preUpload()

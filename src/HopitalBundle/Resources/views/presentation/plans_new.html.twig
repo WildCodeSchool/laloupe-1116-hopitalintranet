@@ -1,27 +1,53 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-
-
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Création d'un plan</h1>
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Création d'un plan</h1>
             <br>
-            <div class="row basedoc">
-                <div class="col-md-4">
+            <div class="row">
+                   <div class="col-md-offset-3 col-md-6 carrenewplans">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
                     {{ form_start(form) }}
-                    {{ form_widget(form) }}
-                    <input type="submit" value="Create" />
-                    {{ form_end(form) }}
+                      {{ form_label(form.plansglobal, 'Nommez votre plan:') }}<br>
+                    {{ form_widget(form.plansglobal) }}<br>
+                            {{ form_label(form.file1, 'Insérer votre Pdf:', {'file1': {'class': 'file1'}}) }}<br>
+                            {{ form_widget(form.file1)}}<br>
 
-                    <ul>
-                        <li>
-                            <a href="{{ path('presentation_plans_index') }}">Back to the list</a>
-                        </li>
-                    </ul>
+                            {{ form_label(form.plansbatarc, 'Nommez votre plan:') }}<br>
+                            {{ form_widget(form.plansbatarc) }}<br>
+                            {{ form_label(form.file2, 'Insérer votre Pdf:', {'file2': {'class': 'file2'}}) }}<br>
+                            {{ form_widget(form.file2)}}<br>
 
+                            {{ form_label(form.plansbatae, 'Nommez votre plan:') }}<br>
+                            {{ form_widget(form.plansbatae) }}<br>
+                            {{ form_label(form.file3, 'Insérer votre Pdf:', {'file3': {'class': 'file3'}}) }}<br>
+                            {{ form_widget(form.file3)}}<br>
 
+                            {{ form_label(form.plansbatbrj, 'Nommez votre plan:') }}<br>
+                            {{ form_widget(form.plansbatbrj) }}<br>
+                            {{ form_label(form.file4, 'Insérer votre Pdf:', {'file4': {'class': 'file4'}}) }}<br>
+                            {{ form_widget(form.file4)}}<br>
+
+                            {{ form_label(form.plansbatbrc, 'Nommez votre plan:') }}<br>
+                            {{ form_widget(form.plansbatbrc) }}<br>
+                            {{ form_label(form.file5, 'Insérer votre Pdf:', {'file5': {'class': 'file5'}}) }}<br>
+                            {{ form_widget(form.file5)}}<br>
+
+                            {{ form_label(form.plansbatbe, 'Nommez votre plan:') }}<br>
+                            {{ form_widget(form.plansbatbe) }}<br>
+                            {{ form_label(form.file6, 'Insérer votre Pdf:', {'file6': {'class': 'file6'}}) }}<br>
+                            {{ form_widget(form.file6)}}<br>
+                        </div>
+                    </div>
+                       <div class="row">
+                           <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" value="Create" class="btnnew"/>
+                           </div>
+                       </div>
+
+                            {{ form_end(form) }}
                 </div>
             </div>
         </div>

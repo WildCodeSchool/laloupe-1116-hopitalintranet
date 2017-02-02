@@ -77,8 +77,10 @@ class GalerieController extends Controller
         ));
     }
 
+
+
     /**
-     * Creates a new galerie entity.
+     * Finds and displays a presentation entity.
      *
      */
     public function newCategorieAction(Request $request)

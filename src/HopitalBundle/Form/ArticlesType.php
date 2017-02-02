@@ -17,7 +17,7 @@ class ArticlesType extends AbstractType
                 'attr' => array(
                     'class' => "zonenew"
                 )))
-            ->add('file1', 'file', array('required' => false))
+            ->add('file4', 'file', array('required' => false))
             ->add('titlearticles', 'text', array(
                 'label'=>'Titre de l\'article de presse',
                 'required' => false,

@@ -15,26 +15,66 @@ class MenuType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('menu1img')
+            ->add('menu1img', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('menu2img')
+            ->add('menu2img', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file2', 'file', array('required' => false))
-            ->add('menu3img')
+            ->add('menu3img', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file3', 'file', array('required' => false))
-            ->add('menu4img')
+            ->add('menu4img', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file4', 'file', array('required' => false))
-            ->add('menuimgrempl')
+            ->add('menuimgrempl', 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file5', 'file', array('required' => false))
             ->add('titlemenu1', 'text', array(
-                'label'=>'Titre menu 1',))
+                'label'=>'Titre menu 1',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('titlemenu2', 'text', array(
-                'label'=>'Titre menu 2',))
+                'label'=>'Titre menu 2',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('titlemenu3', 'text', array(
-                'label'=>'Titre menu 3',))
+                'label'=>'Titre menu 3',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('titlemenu4', 'text', array(
-                'label'=>'Titre menu 4',))
+                'label'=>'Titre menu 4',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('titlemenurempl', 'text', array(
-                'label'=>'Titre de menu de remplacement',));
+                'label'=>'Titre de menu de remplacement',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )));
     }
 
     /**FIN CODE AJOUTÉ

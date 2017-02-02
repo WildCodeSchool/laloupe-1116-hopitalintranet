@@ -16,24 +16,42 @@ class LienssitesType extends AbstractType
     {
         $builder
             ->add('sitechartres', 'text', array(
-                'label'=>'URL du site Dreux'))
+                'label'=>'URL du site Chartres',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
 
             ->add('sitenogent', 'text', array(
-                'label'=>'URL du site Nogent'))
+                'label'=>'URL du site Nogent',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file2', 'file', array('required' => false))
 
             ->add('sitedreux', 'text', array(
-                'label'=>'URL du site Dreux'))
+                'label'=>'URL du site Dreux',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file3', 'file', array('required' => false))
 
             ->add('sitebonneval', 'text', array(
-                'label'=>'URL du site Bonneval'
-            ))
+                'label'=>'URL du site Bonneval',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file4', 'file', array('required' => false))
             ->add('sitechateaudun', 'text', array(
-                'label'=>'URL du site Chateaudun'
-            ))
+                'label'=>'URL du site Chateaudun',
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file5', 'file', array('required' => false));
     }
 

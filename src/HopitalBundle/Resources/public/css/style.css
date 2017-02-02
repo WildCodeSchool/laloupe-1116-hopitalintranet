@@ -153,6 +153,82 @@ main {
 
 }
 
+.jumbotron {
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: #ffffff;
+}
+
+/**************************** FIN ACCUEIL ****************************/
+
+
+
+/**************************** DEBUT BARRE DE RECHERCHE ****************************/
+
+.dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+}
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-group .form-control:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-control{
+    border-radius: 0px;
+    border: 1px solid rgb(0,0,0);
+}
+
+.input-group-btn .btn{
+    height:43px;
+    margin-top: 1px;
+    border:0;
+}
+
+#search {
+    padding-left: 0;
+}
+.form-control {
+    height:45px;
+}
+.input-group-btn {
+    height: 20px;
+}
+
+#adv-search {
+    width: 410px;
+    padding-bottom: 20px;
+}
+.dropdown.dropdown-lg {
+    position: static !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    min-width: 410px;
+}
+
+.container{
+    width: auto;
+}
+
 
 /**************************** NOUVEAUTES DU SITE ****************************/
 
@@ -625,13 +701,8 @@ table, tr, th, td {
 
 
 
-
-
-
-
-
-
 /**************************** GALERIE ****************************/
+
 .bloc-categorie {
     width: 200px;
     background-color: #0089D0;
@@ -870,6 +941,27 @@ hr{
     padding: 30px;
 }
 
+.carrenewlienssites{
+    background-color: #E7E7E7;
+    margin-top: 0px;
+    padding: 30px;
+}
+
+.carrenewplans{
+    background-color: #E7E7E7;
+    height: 1050px;
+    margin-top: 0px;
+    padding: 30px;
+}
+
+.carrenewcontacts{
+    background-color: #E7E7E7;
+    height: 573px;
+    margin-top: 0px;
+    padding: 30px;
+}
+
+
 .lienstitrenew{
     text-align: center;
     color: #0089D0;
@@ -920,7 +1012,11 @@ hr{
 }
 
 
-
+.fondblanccontacts{
+    background-color: #FFFFFF;
+    height: 650px;
+    padding: 10px 20px 20px 20px;
+}
 
 /**************************** Fin NEW ****************************/
 
@@ -1096,7 +1192,24 @@ hr{
     margin-top: 20px;
 }
 
-.carregroupewshow{
+/************************ NEWS ONGLETS *******************/
+
+
+.carrenewonglet{
+    background-color: #E7E7E7;
+    height: 430px;
+    margin-top: 0px;
+    padding: 30px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+/************************ GROUPE *******************/
+
+
+.carregroupew{
+>>>>>>> frontnew
     background-color: #E7E7E7;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1125,8 +1238,8 @@ hr{
     margin-right: -10px;
 }
 
-.btngroupew{;
-    margin-left: 60%;
+.btngroupew{
+    margin-left: 70%;
 }
 
 .btnshowgroupew{
