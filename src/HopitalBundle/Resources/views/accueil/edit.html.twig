@@ -1,21 +1,71 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Accueil edit</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Modification de la page d'accueil</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_plans">
+                    <div class="row">
+                        <div class="col-md-6">
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+                            {{ form_start(edit_form) }}
+                            {{ form_label(edit_form. bluemedititle, 'Nommez votre lien Blue Medi:')}}<br>
+                            {{ form_widget(edit_form.bluemedititle)}}<br>
+                            {{ form_label(edit_form. bluemediurl, 'Indiquez le lien:')}}<br>
+                            {{ form_widget(edit_form.bluemediurl)}}<br>
+                            <br>
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_label(edit_form. viatrajectoirtitle, 'Nommez Via Trajectoire:') }}<br>
+                            {{ form_widget(edit_form.viatrajectoirtitle)}}<br>
+                            {{ form_label(edit_form. viatrajectoirurl, 'Indiquez le lien:') }}<br>
+                            {{ form_widget(edit_form.viatrajectoirurl)}}<br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form_label(edit_form. vidaltitle, 'Nommez votre lien vidal:') }}<br>
+                            {{ form_widget(edit_form.vidaltitle)}}<br>
+                            {{ form_label(edit_form. vidalurl, 'Indiquez le lien:') }}<br>
+                            {{ form_widget(edit_form.vidalurl)}}<br>
+                            <br>
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_label(edit_form. dgstitle, 'Nommez votre lien DGS:') }}<br>
+                            {{ form_widget(edit_form.dgstitle)}}<br>
+                            {{ form_label(edit_form. dgsurl, 'Indiquez le lien:') }}<br>
+                            {{ form_widget(edit_form.dgsurl)}}<br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form_label(edit_form. meteourl, 'Indiquez le lien meteo:') }}<br>
+                            {{ form_widget(edit_form.meteourl)}}<br>
+                            <br>
+                        </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('accueil_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="submit" class="btnedit" value="Modifier" />
+                            {{ form_end(edit_form) }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_start(delete_form) }}
+                            <input type="submit" class="btnedit" value="Supprimer">
+                            {{ form_end(delete_form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
 {% endblock %}

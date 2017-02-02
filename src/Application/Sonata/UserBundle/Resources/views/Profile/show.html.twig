@@ -1,12 +1,8 @@
 {#
-
 This file is part of the Sonata package.
-
 (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
-
 For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
-
 #}
 
 {% extends "ApplicationSonataUserBundle:Profile:action.html.twig" %}
@@ -111,6 +107,7 @@ file that was distributed with this source code.
             </div>
         </div>
 
+<<<<<<< HEAD
         <div class="col-md-5">
             <h3>ADMINISTRATION DES PAGES</h3>
             </br>
@@ -197,5 +194,144 @@ file that was distributed with this source code.
 
 
 
+=======
+
+
+        <div class="col-md-5">
+
+            <h3>ADMINISTRATION DES PAGES</h3>
+            </br>
+
+
+            {# Dans le "user.username", mettre le matricule de la personne qui peut modifier/ajouter dans la page #}
+
+
+            {# Mettre ensuite la liste des pages que cette personne peut modifier
+                Si une page peut être modifier par plusieurs personnes, il faut la remettre pour chaque matricule #}
+
+            {# ATTENTION : ne pas oublier { 'id' : nomentity.id|default('1') } pour les pages à modifier.
+            Mettre le nom de l'entité de la page à la place de nomentity. #}
+
+            {% if ( user.username == '0052') %}
+                <a class="btn btn-primary" href="{{ path('presentation_livret_new') }}">Livret d'accueil</a></br></br>
+                <a class="btn btn-primary" href="{{ path('presentation_organigramme_edit', { 'id' : organigramme.id|default('1') }) }}">Organigramme</a></br></br>
+                <a class="btn btn-primary" href="{{ path('annonce_editAmicale', { 'id' : amicale.id|default('1') }) }}">Amicale</a></br></br>
+
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('presentation_plans_edit', { 'id' : plans.id|default('1') }) }}">Plan des locaux</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_noteservice_new') }}">Note d'information</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_contacts_edit', { 'id' : contact.id|default('1') }) }}">Contact</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_astreintescommune_new') }}">Astreinte commune</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('documentation_astreintesadministratif_new') }}">Astreinte administratif</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_astreintesmedical_new') }}">Astreinte médicale</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_astreintestechnique_new') }}">Astreinte technique</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_journaux_new') }}">Journaux internes</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_basedoc_new') }}">Base documentaire</a></br></br>
+                <a class="btn btn-primary" href="{{ path('documentation_basedoc_new') }}">Base documentaire Cathégorie</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('documentation_instances_new') }}">Instances</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('documentation_fournisseur_edit', { 'id' : fournisseur.id|default('1') }) }}">Liste des fournisseurs</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('documentation_groupe_suppr') }}">Liste des fournisseurs</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('documentation_galerie_new') }}">Galerie photos</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('documentation_galeriecategorie_new') }}">Galerie Cathégorie</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('communication_lienssites_edit', { 'id' : lienssites.id|default('1') }) }}">Liens sites établissements</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('communication_direction_new') }}">Direction commune</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('communication_ght_new') }}">GHT</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('communication_lettreinfo_new') }}">Lettre d'information de Chartres</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('communication_articles_new') }}">Articles de presse</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('recommandation_has_edit', { 'id' : has.id|default('1') }) }}">HAS</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('recommandation_anesm_edit', { 'id' : anesm.id|default('1') }) }}">ANESM</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('recommandation_journaloff_edit', { 'id' : journaloff.id|default('1') }) }}">Journal officiel</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('recommandation_bulletinoff_new') }}">Bulletin officiel</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('recommandation_pagesjaunes_new') }}">Pages jaunes</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('personnel_menu_edit', { 'id' : menu.id|default('1') }) }}">Menu</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('personnel_postvacant_edit', { 'id' : postvacant.id|default('1') }) }}">Annonce post-vacants</a></a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('personnel_covoiturage_edit', { 'id' : covoiturage.id|default('1') }) }}">Covoiturage</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('personnel_planniciel_edit', { 'id' : planniciel.id|default('1') }) }}">Planniciel</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('demarches_certification_edit', { 'id' : certification.id|default('1') }) }}">Certifications</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('demarches_epp_new') }}">EPP</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('demarches_epprubrique_new') }}">EPP cathégories</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('demarches_processus_edit', { 'id' : processus.id|default('1') }) }}">Processus</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('demarches_processuscategorie_new') }}">Processus cathégories</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('demarches_paqss_new') }}">PAQSS</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('demarches_paqssrubrique_new') }}">PAQSS cathégories</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('cgos_suppr') }}">CGOS</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('amicale_suppr') }}">Amicale</a></br></br>
+
+            {% elseif (user.username == '0916') %}
+                <a class="btn btn-primary" href="{{ path('annonce_suppr') }}">Petites annonces</a></br></br>
+
+            {% endif %}
+        </div>
+    </div>
+
+    </br>
+
+
+
+    </br>
+
+
+
+>>>>>>> dev2
 
 {% endblock %}
+

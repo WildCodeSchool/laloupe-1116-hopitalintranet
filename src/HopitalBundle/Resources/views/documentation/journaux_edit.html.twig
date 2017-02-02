@@ -4,9 +4,8 @@
 
 
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
             <h1 class="lienstitrenew">Modifier un journaux internes</h1>
-            <br>
             <div class="row">
                 <div class="col-md-offset-3 col-md-6 carreeditid_note">
                     <div class="row">
@@ -23,8 +22,8 @@
                     </div>
                     <div class="col-md-0 imgnew">
                         <input type="submit" class="btnnote" value="Modifier"/>
-                        {{ form_end(edit_form) }}
                         {{ form_start(journaux_delete_form) }}
+                        {{ form_end(edit_form) }}
                         <input type="submit" class="btnnote" value="Supprimer">
                         {{ form_end(journaux_delete_form) }}
                     </div>

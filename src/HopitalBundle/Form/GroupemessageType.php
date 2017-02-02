@@ -23,7 +23,7 @@ class GroupemessageType extends AbstractType
             ->add('message', 'textarea', array(
                 'attr' => array('class' => 'materialize-textarea')
             ))
-            ->add('file', 'file', array('label' => 'Ducument du message', 'required' => false
+            ->add('file', 'file', array('label' => 'Document du message', 'required' => false
             ))
         ;
     }

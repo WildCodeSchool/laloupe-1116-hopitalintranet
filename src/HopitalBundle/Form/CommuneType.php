@@ -19,12 +19,14 @@ class CommuneType extends AbstractType
                 )))
             ->add('file3', 'file', array('required' => false))
             ->add('titlecommune', 'text', array(
+                'label'=>'Titre de l\'astreinte commune',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: Commune 2017-01",
                     'class' => "zonenew"
                 )))
             ->add('idcommune', 'text', array(
+                'label'=>'ID de l\'astreinte commune',
                 'required' => false,
                 'attr' => array(
                     'placeholder' => "ex: C0001",

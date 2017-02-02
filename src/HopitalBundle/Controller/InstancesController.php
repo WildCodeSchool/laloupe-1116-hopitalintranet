@@ -34,6 +34,42 @@ class InstancesController extends Controller
     }
 
     /**
+     * Lists all instances entities.
+     *
+     */
+    public function index_adminAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $instancess = $em->getRepository('HopitalBundle:Instances')->findAll();
+        $rubriques = $em->getRepository('HopitalBundle:InstancesRubrique')->findAll();
+
+
+
+
+        return $this->render('HopitalBundle:documentation:instances_index_admin.html.twig', array(
+            'instancess' => $instancess,
+            'rubriques' => $rubriques,
+        ));
+    }
+
+    /**
+     * Lists all instances entities.
+     *
+     */
+    public function index_showAction(InstancesRubrique $instancesRubrique)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $instancess = $em->getRepository('HopitalBundle:Instances')->findAll();
+
+
+        return $this->render('HopitalBundle:documentation:instances_index_show.html.twig', array(
+            'instancess' => $instancess,
+            'rubrique' => $instancesRubrique,
+        ));
+    }
+
+    /**
      * Creates a new instances entity.
      *
      */
@@ -95,7 +131,7 @@ class InstancesController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('documentation_instances_edit', array('id' => $instances->getId()));
+            return $this->redirectToRoute('documentation_instances_index', array('id' => $instances->getId()));
         }
 
         return $this->render('HopitalBundle:documentation:instances_edit.html.twig', array(
@@ -105,6 +141,47 @@ class InstancesController extends Controller
         ));
     }
 
+
+    /**
+     * Displays a form to edit an existing instances entity.
+     *
+     */
+    public function editRubriqueAction(Request $request, InstancesRubrique $instancesRubrique)
+    {
+        $deleteForm = $this->createDeleteRubriqueForm($instancesRubrique);
+        $editForm = $this->createForm('HopitalBundle\Form\InstancesRubriqueType', $instancesRubrique);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('documentation_instances_index', array('id' => $instancesRubrique->getId()));
+        }
+
+        return $this->render('HopitalBundle:documentation:instancesrubrique_edit.html.twig', array(
+            'instances' => $instancesRubrique,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Deletes a instances entity.
+     *
+     */
+    public function deleteRubriqueAction(Request $request, InstancesRubrique $instancesRubrique)
+    {
+        $form = $this->createDeleteRubriqueForm($instancesRubrique);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($instancesRubrique);
+            $em->flush($instancesRubrique);
+        }
+
+        return $this->redirectToRoute('documentation_instances_index');
+    }
     /**
      * Deletes a instances entity.
      *
@@ -137,5 +214,11 @@ class InstancesController extends Controller
             ->setMethod('DELETE')
             ->getForm();
     }
-
+    private function createDeleteRubriqueForm(InstancesRubrique $instancesRubrique)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('documentation_instancesrubrique_delete', array('id' => $instancesRubrique->getId())))
+            ->setMethod('DELETE')
+            ->getForm();
+    }
 }

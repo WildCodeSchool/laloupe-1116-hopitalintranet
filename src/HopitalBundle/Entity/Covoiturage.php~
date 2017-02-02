@@ -144,7 +144,10 @@ class Covoiturage
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dev2
      * @var string
      */
     private $covoituragetitle;
@@ -230,7 +233,10 @@ class Covoiturage
     }
 
     /**
+<<<<<<< HEAD
 >>>>>>> newonglet
+=======
+>>>>>>> dev2
      * @ORM\PrePersist
      */
     public function preUpload()

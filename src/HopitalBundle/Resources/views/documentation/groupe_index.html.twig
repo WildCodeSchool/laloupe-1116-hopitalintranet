@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblancshow">
             <br>
+<<<<<<< HEAD
             <div class="container">
                 <h1 class="lienstitre">Liste des groupes de travail</h1>
 
@@ -36,6 +37,35 @@
                         <div class="add_button center-align">
                             <a class="btn btngroupew" href="{{ path('documentation_groupe_new') }}">Ajouter un groupe de travail</a>
                         </div>
+=======
+            <h1 class="lienstitre">Liste des groupes de travail</h1>
+
+            {% if groupes != null %}
+            {% for groupe in groupes %}
+                <div class="row">
+                    <div class="col-md-ofsset-2 col-md-8 carregroupew">
+                        <div class="row">
+                            <div class="col-md-7 nomgroupew">
+                                <p>{{ groupe.titre }}</p>
+                            </div>
+                            <div class="col-md-5 pictoSgroupew">
+                                <a href="{{ path('documentation_groupe_show', { 'id': groupe.id }) }}"><img src="{{ asset('bundles/hopital/img/loupe.png') }}" alt="loupe" class="pictogroupeW"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            <br><br>
+            <div class="row">
+                <div class="col-md-12 ">
+                    {% else %}
+                        <h3>Il n'y a pas de groupes de travail</h3>
+                    {% endif %}
+                    <div class="add_button center-align">
+                        <a class="btn btngroupew" href="{{ path('documentation_groupe_new') }}">Ajouter un groupe de travail</a>
+>>>>>>> dev2
                     </div>
                 </div>
             </div>
@@ -50,5 +80,9 @@
             <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<<<<<<< HEAD
         {% endblock %}
 
+=======
+        {% endblock %}
+>>>>>>> dev2

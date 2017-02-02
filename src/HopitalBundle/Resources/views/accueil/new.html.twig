@@ -1,16 +1,59 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Accueil creation</h1>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 fondblanc">
+            <h1 class="lienstitrenew">Création page d'accueil</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carreeditid_plans">
+                    <div class="row">
+                        <div class="col-md-6">
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('accueil_index') }}">Back to the list</a>
-        </li>
-    </ul>
+                            {{ form_start(form) }}
+                            {{ form_label(form. bluemedititle, 'Nommez votre lien Blue Medi:')}}<br>
+                            {{ form_widget(form.bluemedititle)}}<br>
+                            {{ form_label(form. bluemediurl, 'Indiquez le lien:')}}<br>
+                            {{ form_widget(form.bluemediurl)}}<br>
+                            <br>
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_label(form. viatrajectoirtitle, 'Nommez Via Trajectoire:') }}<br>
+                            {{ form_widget(form.viatrajectoirtitle)}}<br>
+                            {{ form_label(form. viatrajectoirurl, 'Indiquez le lien:') }}<br>
+                            {{ form_widget(form.viatrajectoirurl)}}<br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form_label(form. vidaltitle, 'Nommez votre lien vidal:') }}<br>
+                            {{ form_widget(form.vidaltitle)}}<br>
+                            {{ form_label(form. vidalurl, 'Indiquez le lien:') }}<br>
+                            {{ form_widget(form.vidalurl)}}<br>
+                            <br>
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_label(form. dgstitle, 'Nommez votre lien DGS:') }}<br>
+                            {{ form_widget(form.dgstitle)}}<br>
+                            {{ form_label(form. dgsurl, 'Indiquez le lien:') }}<br>
+                            {{ form_widget(form.dgsurl)}}<br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form_label(form. meteourl, 'Indiquez le lien meteo:') }}<br>
+                            {{ form_widget(form.meteourl)}}<br>
+                            <br>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
 {% endblock %}

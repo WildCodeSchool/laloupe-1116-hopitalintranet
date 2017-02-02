@@ -16,5 +16,7 @@ HopitalBundle\Entity\InstancesRubrique:
         photos:
             targetEntity: HopitalBundle\Entity\Instances
             mappedBy: rubrique
+            joinColumn:
+                onDelete: CASCADE
 
     lifecycleCallbacks: { }

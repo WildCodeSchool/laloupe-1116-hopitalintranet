@@ -11,6 +11,7 @@ class Idees
 {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Set ideestitle
      *
@@ -69,4 +70,23 @@ class Idees
 =======
 
 >>>>>>> newonglet
+=======
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+>>>>>>> dev2
 }

@@ -27,6 +27,8 @@ class AccueilController extends Controller
         ));
     }
 
+
+
     /**
      * Creates a new accueil entity.
      *

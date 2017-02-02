@@ -27,6 +27,17 @@ class GroupeController extends Controller
         ));
     }
 
+    public function SupprAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $groupes = $em->getRepository('HopitalBundle:Groupe')->findAll();
+
+        return $this->render('HopitalBundle:documentation:groupe_suppr.html.twig', array(
+            'groupes' => $groupes,
+        ));
+    }
+
     /**
      * Creates a new groupe entity.
      *
@@ -103,7 +114,7 @@ class GroupeController extends Controller
     public function deleteAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $groupe = $em->getRepository('HopitalBundle:Groupe')->findOneById($id);
+        $groupe = $em->getRepository('HopitalBundle:Groupe')->findOneBy(array('id' => $id));
         $em->remove($groupe);
         $em->flush();
         return $this->redirectToRoute('documentation_groupe_index');
@@ -116,7 +127,7 @@ class GroupeController extends Controller
     public function deleteGroupeMessageAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $groupemessage = $em->getRepository('HopitalBundle:Groupemessage')->findOneById($id);
+        $groupemessage = $em->getRepository('HopitalBundle:Groupemessage')->findOneBy(array('id' => $id));
         $em->remove($groupemessage);
         $em->flush();
         return $this->redirectToRoute('documentation_groupe_index');

@@ -8,7 +8,28 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class AccueilType extends AbstractType
 {
+    /**CODE AJOUTÉ
+    /**
+     * {@inheritdoc}
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('bluemedititle')
+            ->add('bluemediurl')
+            ->add('viatrajectoirtitle')
+            ->add('viatrajectoirurl')
+            ->add('vidaltitle')
+            ->add('vidalurl')
+            ->add('dgstitle')
+            ->add('dgsurl')
+            ->add('dgstitle')
+            ->add('meteourl')
+            ->add('actuurl')
+            ->add('actuparam');
+    }
 
+    /**FIN CODE AJOUTÉ
     /**
      * {@inheritdoc}
      */

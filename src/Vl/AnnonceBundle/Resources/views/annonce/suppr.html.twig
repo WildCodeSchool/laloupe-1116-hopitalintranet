@@ -6,35 +6,36 @@
         <div class="col-md-offset-2 col-md-8 fondblancshow">
             <br>
             <div class="container">
-                <h1 class="lienstitre">Liste des petites annonces du CGOS</h1>
-                {% if cgoss != null %}
+                <h1 class="lienstitre">Supprimer/modifier des petites annonces</h1>
+                {% if annonces != null %}
 
                 <div class="row">
                     <div class="col-md-12 ">
-                        {% for cgos in cgoss %}
+                        {% for annonce in annonces %}
                             <div class="row carrelisteannonce">
                                 <div class="col-md-5">
-                                    <td ><img src="{{ app.request.basepath }}/uploads/{{ cgos.image }}" alt="annonce" class="line_img"></td>
+                                    <td ><img src="{{ app.request.basepath }}/uploads/{{ annonce.image }}" alt="annonce" class="line_img"></td>
                                 </div>
                                 <div class="col-md-7">
                                     <div class="row">
                                         <div class="col-md-9 ">
-                                            <p class="desc">{{ cgos.titre }}</p>
-                                            <td><strong>Auteur : </strong>{{ cgos.auteur }}</td>
+                                            <p class="desc">{{ annonce.titre }}</p>
+                                            <td><strong>Auteur : </strong>{{ annonce.auteur }}</td>
                                         </div>
                                         <div class="col-md-2 prixannonce">
-                                            <td>{{ cgos.prix }} €</td>
+                                            <td>{{ annonce.prix }} €</td>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 descriptionannonce">
-                                            <td>{{ cgos.description }}</td>
+                                            <td>{{ annonce.description }}</td>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-ofsset-4 col-md-8">
                                             <td>
-                                                <a class="btneditannonce" href="{{ path('annonce_showCgos', { 'id': cgos.id }) }}">En savoir plus</a>
+                                                <a class="btneditannonce" href="{{ path('annonce_edit', { 'id': annonce.id }) }}">Modifier</a>
+                                                <a class="btneditannonce" href="{{ path('annonce_delete', { 'id': annonce.id }) }}">Supprimer</a>
                                             </td>
                                         </div>
                                     </div>
@@ -44,12 +45,6 @@
                         {% else %}
                             <h4>Il n'y a pas d'annonces</h4>
                         {% endif %}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-offset-9 col-md-3 btnajout">
-                        <a href="{{ path('annonce_newCgos') }}">Ajouter une annonce</a>
                     </div>
                 </div>
             </div>

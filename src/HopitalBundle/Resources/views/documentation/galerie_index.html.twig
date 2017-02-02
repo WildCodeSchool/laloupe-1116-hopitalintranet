@@ -63,16 +63,10 @@
                 </div>
 
                 {% endfor %}
-                <a href="{{ path('documentation_galeriecategorie_new') }}">
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie">
-                        Ajouter une<br> catégorie
-                    </div>
-                </a>
-                <a href="{{ path('documentation_galerie_new') }}">
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 btn btn-default bloc-categorie">
-                        Ajouter une<br> photo
-                    </div>
-                </a>
+                <div class="col-md-12">
+                    <a href="{{ path('documentation_galerie_index_admin') }}">Allez page new</a>
+                </div>
+
             </div>
 
             {% endfor %}

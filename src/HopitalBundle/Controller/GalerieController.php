@@ -34,6 +34,26 @@ class GalerieController extends Controller
     }
 
     /**
+     * Lists all galerie entities.
+     *
+     */
+    public function index_adminAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $galeries = $em->getRepository('HopitalBundle:Galerie')->findAll();
+        $categories = $em->getRepository('HopitalBundle:GalerieCategorie')->findAll();
+
+
+
+
+        return $this->render('HopitalBundle:documentation:galerie_index_admin.html.twig', array(
+            'galeries' => $galeries,
+            'categories' => $categories,
+        ));
+    }
+
+    /**
      * Creates a new galerie entity.
      *
      */
@@ -108,9 +128,46 @@ class GalerieController extends Controller
     }
 
     /**
+     * Displays a form to edit an existing galerie entity.
+     *
+     */
+    public function editCategorieAction(Request $request, GalerieCategorie $galerieCategorie)
+    {
+        $deleteForm = $this->createDeleteCategorieForm($galerieCategorie);
+        $editForm = $this->createForm('HopitalBundle\Form\GalerieCategorieType', $galerieCategorie);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('documentation_galerie_index', array('id' => $galerieCategorie->getId()));
+        }
+
+        return $this->render('HopitalBundle:documentation:galeriecategorie_edit.html.twig', array(
+            'categorie' => $galerieCategorie,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
      * Deletes a galerie entity.
      *
      */
+    public function deleteCategorieAction(Request $request, GalerieCategorie $galerieCategorie)
+    {
+        $form = $this->createDeleteCategorieForm($galerieCategorie);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($galerieCategorie);
+            $em->flush($galerieCategorie);
+        }
+
+        return $this->redirectToRoute('documentation_galerie_index');
+    }
+
     public function deleteAction(Request $request, Galerie $galerie)
     {
         $form = $this->createDeleteForm($galerie);
@@ -136,6 +193,13 @@ class GalerieController extends Controller
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('documentation_galerie_delete', array('id' => $galerie->getId())))
+            ->setMethod('DELETE')
+            ->getForm();
+    }
+    private function createDeleteCategorieForm(GalerieCategorie $galerieCategorie)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('documentation_galeriecategorie_delete', array('id' => $galerieCategorie->getId())))
             ->setMethod('DELETE')
             ->getForm();
     }

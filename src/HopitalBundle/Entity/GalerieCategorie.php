@@ -33,7 +33,7 @@ class GalerieCategorie
     /**
      * @var string
      */
-    private $categorie;
+    private $categorie1;
 
 
     /**
@@ -43,9 +43,9 @@ class GalerieCategorie
      *
      * @return GalerieCategorie
      */
-    public function setCategorie($categorie)
+    public function setCategorie1($categorie1)
     {
-        $this->categorie = $categorie;
+        $this->categorie1 = $categorie1;
 
         return $this;
     }
@@ -55,9 +55,9 @@ class GalerieCategorie
      *
      * @return string
      */
-    public function getCategorie()
+    public function getCategorie1()
     {
-        return $this->categorie;
+        return $this->categorie1;
     }
     /**
      * @var integer
@@ -118,5 +118,34 @@ class GalerieCategorie
     public function removePhoto(\HopitalBundle\Entity\Galerie $photo)
     {
         $this->photos->removeElement($photo);
+    }
+    /**
+     * @var string
+     */
+    private $categorie;
+
+
+    /**
+     * Set categorie
+     *
+     * @param string $categorie
+     *
+     * @return GalerieCategorie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return string
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
     }
 }

@@ -12,7 +12,12 @@ HopitalBundle\Entity\Groupe:
         titre:
             type: string
             length: 255
-
+    oneToMany:
+        groupemessage:
+            targetEntity: HopitalBundle\Entity\Groupe
+            mappedBy: groupes
+            joinColumn:
+                onDelete: CASCADE
 
     lifecycleCallbacks: {  }
 
