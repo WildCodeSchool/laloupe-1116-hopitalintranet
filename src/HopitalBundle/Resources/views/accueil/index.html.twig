@@ -2,66 +2,42 @@
 
 {% block body %}
     <body>
-<main>
     {% for accueil in accueils %}
+
         <div class="row">
-            <div class="col-md-6" id="nouveautes">
-                <ul id="news">
-                    <li>Consulter la nouvelle <a href="{{ path('communication_lettreinfo_index') }}">lettre d'information</a> de Chartres.</li>
-                    <li>Consulter les dernières<a href="{{ path('documentation_instances_index') }}">Instances</a>.</li>
-                    <li>Organisez votre <a href="{{ path('documentation_groupe_index') }}">groupe de travail</a>.</li>
-                    <li>Consultez les <a href="{{ path('personnel_postvacant_index') }}">postes vacants</a> pour de nouvelles opportunités.</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <div class="container" id="search">
-                    <div class="input-group" id="adv-search">
-                        <input type="text" class="form-control" placeholder="Rechercher" />
-                        <div class="input-group-btn">
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                            </div>
+            <div class="col-md-offset-2 col-md-8">
+                <div class="row">
+                    <div class="col-md-12" id="nouveautes">
+                        <ul id="news">
+                            <li>Consulter la nouvelle <a href="{{ path('communication_lettreinfo_index') }}">lettre d'information</a> de Chartres.</li>
+                            <li>Consulter les dernières <a href="{{ path('documentation_instances_index') }}">Instances</a>.</li>
+                            <li>Organisez votre <a href="{{ path('documentation_groupe_index') }}">groupe de travail</a>.</li>
+                            <li>Consultez les <a href="{{ path('personnel_postvacant_index') }}">postes vacants</a> pour de nouvelles opportunités.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-7 actu">
+                        <h3>ACTUALITÉS</h3>
+                        <p class="actuliens"><script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="?widget_parameter=%7B%22sources%22%3A%5B%7B%22source%22%3A%22http%3A%2F%2Fwww.le-perche.fr%2Ffeed%2F%22%2C%22type%22%3A%22RSS%22%7D%5D%2C%22name%22%3A%22%22%2C%22width%22%3A0%2C%22height%22%3A%22240%22%2C%22height_by_article%22%3A0%2C%22target%22%3A%22_blank%22%2C%22font%22%3A%22Arial%2C%20Helvetica%2C%20sans-serif%22%2C%22title_font_size%22%3A%2216%22%2C%22item_title_font_size%22%3A%2216%22%2C%22item_description_font_size%22%3A%2212%22%2C%22border%22%3A%22on%22%2C%22css_url%22%3A%22%22%2C%22responsive%22%3A%22on%22%2C%22text_direction%22%3A%22left%22%2C%22text_alignment%22%3A%22left%22%2C%22corner%22%3A%22rounded%22%2C%22scroll%22%3A%22on%22%2C%22auto_scroll%22%3A%22on%22%2C%22auto_scroll_direction%22%3A%22up%22%2C%22auto_scroll_step_speed%22%3A%222%22%2C%22auto_scroll_mc_speed%22%3A%2220%22%2C%22sort%22%3A%22new%22%2C%22title%22%3A%22on%22%2C%22title_sentence%22%3A%22%22%2C%22title_link%22%3A%22%22%2C%22title_bgcolor%22%3A%22%23ffffff%22%2C%22title_color%22%3A%22%23505659%22%2C%22title_bgimage%22%3A%22%22%2C%22item_bgcolor%22%3A%22%23ffffff%22%2C%22item_bgimage%22%3A%22%22%2C%22item_title_length%22%3A%2255%22%2C%22item_title_color%22%3A%22%232e7ec8%22%2C%22item_border_bottom%22%3A%22on%22%2C%22item_description%22%3A%22both%22%2C%22item_link%22%3A%22off%22%2C%22item_description_length%22%3A%22100%22%2C%22item_description_color%22%3A%22%23505659%22%2C%22item_date%22%3A%22on%22%2C%22item_date_format%22%3A%22%25b%20%25e%2C%20%25Y%20%25k%3A%25M%22%2C%22item_date_timezone%22%3A%22%22%2C%22item_description_style%22%3A%22thumbnail%22%2C%22item_thumbnail%22%3A%22crop%22%2C%22item_thumbnail_selection%22%3A%22auto%22%2C%22article_num%22%3A%2215%22%2C%22item_player%22%3A%22youtube%22%2C%22keyword_inc%22%3A%22%22%2C%22keyword_exc%22%3A%22%22%7D"></script></p>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="liensUtiles">
+                            <h3>LIENS UTILES</h3>
+                            <a href="{{ path('fos_user_security_login') }}">- Calendrier des réservations</a><br>
+                            <a href="{{ accueil.dgsurl}}" target="_blank">{{ accueil.dgstitle }}</a><br>
+                            <a href="{{ accueil.bluemediurl}}" target="_blank">{{ accueil.bluemedititle }}</a><br>
+                            <a href="{{ accueil.viatrajectoirurl}}" target="_blank">{{ accueil.viatrajectoirtitle }}</a><br>
+                            <a href="{{ accueil.vidalurl}}" target="_blank">{{ accueil.vidaltitle }}</a><br>
+                        </div>
+                        <div class="alerte">
+                            <p><iframe src="{{ accueil.meteourl }}"  width="400" height="111" frameborder="0"></iframe></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 actu">
-                <div class="jumbotron">
-                    <div class="container">
-                        <h3>ACTUALITÉS</h3>
-                        <p class="actuliens">
-                            <script type="text/javascript" src="{{ accueil.actuurl }}" data-fw-param="{{ accueil.actuparam }}">
-
-                            </script>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 liensUtiles">
-                <div class="jumbotron">
-                    <div class="container utiles">
-                        <h3>LIENS UTILES</h3>
-                        <a href="{{ path('fos_user_security_login') }}">- Calendrier des réservations</a><br>
-                        <a href="{{ accueil.dgsurl}}" target="_blank">{{ accueil.dgstitle }}</a><br>
-                        <a href="{{ accueil.bluemediurl}}" target="_blank">{{ accueil.bluemedititle }}</a><br>
-                        <a href="{{ accueil.viatrajectoirurl}}" target="_blank">{{ accueil.viatrajectoirtitle }}</a><br>
-                        <a href="{{ accueil.vidalurl}}" target="_blank">{{ accueil.vidaltitle }}</a><br>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 meteo">
-                <div class="jumbotron">
-                    <div class="container">
-                        <p class="alerte"><iframe src="{{ accueil.meteourl }}"  width="380" height="111" frameborder="0">
-                            </iframe></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </main>
-
-        </body>
     {% endfor %}
+    </body>
 {% endblock %}

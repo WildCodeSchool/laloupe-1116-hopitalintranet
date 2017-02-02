@@ -7,7 +7,7 @@ body{
 
 
 
-/**************************** DEBUT NAVBAR ****************************/
+/**************************** NAVBAR ****************************/
 
 .navbar{
     background-color: #FFFFFF;
@@ -15,7 +15,7 @@ body{
     width: 100%;
     padding-top: 10px;
     padding-left: 10%;
-    border: 0px;
+    border: 0;
     text-align: center;
     font-size: 1.2em;
 }
@@ -44,10 +44,7 @@ body{
 
 
 
-/**************************** FIN NAVBAR ****************************/
-
-
-/**************************** DEBUT FOOTER ****************************/
+/**************************** FOOTER ****************************/
 
 footer{
     background-color: #FFFFFF;
@@ -148,186 +145,56 @@ footer{
 
 
 
-/**************************** FIN FOOTER ****************************/
 
 
 
+/**************************** NOUVEAUTES DU SITE ****************************/
 
-
-
-
-/**************************** DEBUT ACCUEIL ****************************/
-
-main {
-    margin-top: 2%;
-    margin-left: 15%;
-    margin-right: auto;
-
-}
-
-.jumbotron {
-    padding-bottom: 0;
-    padding-top: 0;
-    background-color: #ffffff;
-}
-
-/**************************** FIN ACCUEIL ****************************/
-
-
-
-/**************************** DEBUT BARRE DE RECHERCHE ****************************/
-
-.dropdown.dropdown-lg .dropdown-menu {
-    margin-top: -1px;
-    padding: 6px 20px;
-}
-.input-group-btn .btn-group {
-    display: flex !important;
-}
-.btn-group .btn {
-    border-radius: 0;
-    margin-left: -1px;
-}
-.btn-group .btn:last-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.btn-group .form-horizontal .btn[type="submit"] {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-.form-horizontal .form-group {
-    margin-left: 0;
-    margin-right: 0;
-}
-.form-group .form-control:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.form-control{
-    border-radius: 0px;
-    border: 1px solid rgb(0,0,0,0);
-}
-
-.input-group-btn .btn{
-    height:43px;
-    margin-top: 1px;
-    border:0;
-}
-
-#search {
-    padding-left: 0;
-}
-.form-control {
-    height:45px;
-}
-.input-group-btn {
-    height: 20px;
-}
-
-#adv-search {
-    width: 410px;
-    padding-bottom: 20px;
-}
-.dropdown.dropdown-lg {
-    position: static !important;
-}
-.dropdown.dropdown-lg .dropdown-menu {
-    min-width: 410px;
-}
-
-.container{
-    width: auto;
-}
-
-/**************************** FIN BARRE DE RECHERCHE ********************/
-
-
-
-/**************************** DEBUT NOUVEAUTES DU SITE ****************************/
-
-.newsticker {
-    list-style-type: none;
-    background: #ffffff;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 0;
-    padding-right: 0;
-
-}
 
 #nouveautes {
     background-color: #FFFFFF;
-    margin-top:1px;
-    height:42px;
+    margin-top:20px;
+    height:100px;
     padding:10px;
-    padding-top: 0px;
-    border:1px solid #FFFFFF;
+    padding-top:30px;
+    font-size: 1.6em;
 }
 
-#nouveautes ul li {
-    padding-left:18px;
-}
-
-/**************************** FIN NOUVEAUTES DU SITE ****************************/
 
 
-/**************************** DEBUT ACTUALITES ****************************/
+/**************************** ACTUALITES ****************************/
 .actu {
     background-color: #FFFFFF;
-    padding: 10px;
+    margin-top: 20px;
     padding-bottom: 30px;
+    height: 400px;
 }
 
 
-
-/**************************** FIN ACTUALIES ****************************/
-
-
-/**************************** DEBUT LIENS UTILES ****************************/
-
-.utiles{
-    padding:6px 20px 20px 20px;
-}
-
-.utiles h3{
-    margin-bottom: 5px;
-}
+/**************************** LIENS UTILES ****************************/
 
 .liensUtiles {
-    margin-bottom: -4px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px 30px 30px 30px;
+    height: 250px;
 }
 
 
-/**************************** FIN LIENS UTILES ****************************/
+/**************************** METEO ****************************/
 
-
-/**************************** DEBUT METEO ****************************/
-
-
-.meteo{
-    margin-top: -12px;
-}
 
 .alerte{
-    margin-bottom: 0px;
+    background-color: #FFFFFF;
     padding-top:10px;
-}
-
-.temps{
-    padding-left: 85px;
-    padding-bottom: 10px;
-    margin-top: -10px;
+    height: 130px;
 }
 
 
 
-/**************************** FIN METEO ****************************/
 
-
-
-/**************************** DEBUT BOOK ****************************/
+/**************************** BOOK ****************************/
 
 .bouton_dl  {
     padding: 5px;
@@ -353,10 +220,9 @@ main {
 
 
 
-/**************************** FIN BOOK ****************************/
 
 
-/**************************** DEBUT LIENS ****************************/
+/**************************** LIENS ****************************/
 
 
 .lienstitre{
@@ -416,9 +282,8 @@ main {
 
 
 
-/**************************** FIN LIENS ****************************/
 
-/**************************** DEBUT GALERIE IMAGES ****************/
+/**************************** GALERIE IMAGES ****************/
 
 .fondblanc2{
     background-color: #FFFFFF;
@@ -446,9 +311,8 @@ div.c-wrapper{
     min-width: 100%;
     height: 550px;
 }
-/************************** FIN GALERIE IMAGES **********************/
 
-/**************************** DEBUT CONTACTS ***********************/
+/**************************** CONTACTS ***********************/
 
 /*.doc-pdf {
     border: 4px solid #E7E7E7;
@@ -483,10 +347,9 @@ div.c-wrapper{
 
 
 
-/************************** FIN CONTACTS **********************/
 
 
-/**************************** DEBUT PLANS ***********************/
+/**************************** PLANS ***********************/
 
 .planglobal{
     width: 700px;
@@ -499,10 +362,9 @@ div.c-wrapper{
 }
 
 
-/************************** FIN PLANS **********************/
 
 
-/**************************** DEBUT NOTES DE SERVICES ***********************/
+/**************************** NOTES DE SERVICES ***********************/
 
 .noteservice{
     height: 500px;
@@ -534,7 +396,7 @@ div.c-wrapper{
     margin-left: 28%;
 }
 
-/**************************** FIN NOTES DE SERVICES **********************/
+/**************************** Organigramme **********************/
 
 
 .organigramme{
@@ -543,7 +405,7 @@ div.c-wrapper{
     margin-left: 5%;
 }
 
-/**************************** DEBUT JOURNAL ***********************/
+/**************************** JOURNAL ***********************/
 
 
 .journaux{
@@ -560,12 +422,9 @@ div.c-wrapper{
 
 
 
-/**************************** FIN JOURNAL ***********************/
 
 
-/**************************** DEBUT NOTES DE SERVICES **********************/
-
-
+/**************************** NOTES DE SERVICES **********************/
 
 
 
@@ -575,10 +434,11 @@ div.c-wrapper{
 
 
 
-/**************************** FIN NOTES DE SERVICES **********************/
 
 
-/**************************** DEBUT DIRECTION COMMUNE **********************/
+
+
+/**************************** DIRECTION COMMUNE **********************/
 
 
 .directioncommune{
@@ -588,10 +448,9 @@ div.c-wrapper{
     border: 5px solid #E7E7E7;
 }
 
-/**************************** FIN DIRECTION COMMUNE **********************/
 
 
-/**************************** DEBUT MENU **********************/
+/**************************** MENU **********************/
 .menus {
     border: 5px solid #e7e7e7;
 }
@@ -616,10 +475,9 @@ div.c-wrapper{
     margin: 0px 20px 20px 20px;
 }
 
-/**************************** FIN MENU **********************/
 
 
-/**************************** DEBUT BOÎTE À IDÉES **********************/
+/**************************** BOÎTE À IDÉES **********************/
 
 .objet{
     width: 70%;
@@ -635,10 +493,9 @@ div.c-wrapper{
     margin-left: 800px;
 }
 
-/**************************** FIN BOÎTE À IDÉES **********************/
 
 
-/**************************** DEBUT ASTREINTES **********************/
+/**************************** ASTREINTES **********************/
 
 .astreintesbtn{
     background-color: #0089D0;
@@ -693,9 +550,8 @@ li {
 }
 
 
-/**************************** FIN ASTREINTES **********************/
 
-/**************************** DEBUT INSTANCES *************************/
+/**************************** INSTANCES *************************/
 
 table, tr, th, td {
     padding: 5px;
@@ -751,11 +607,10 @@ table, tr, th, td {
 
 
 
-/**************************** FIN INSTANCES *************************/
 
 
 
-/**************************** DEBUT GALERIE ****************************/
+/**************************** GALERIE ****************************/
 .bloc-categorie {
     width: 200px;
     background-color: #0089D0;
@@ -774,10 +629,8 @@ table, tr, th, td {
 
 
 
-/**************************** FIN GALERIE ****************************/
 
-/**************************** DEBUT ANNONCES *************************/
-/**************************** DEBUT INSTANCES *************************/
+/**************************** ANNONCES *************************/
 
 .imgannonce{
     max-width: 270px;
@@ -829,26 +682,27 @@ table, tr, th, td {
 .btnmodifannonce{
     background-color: #0089D0;
     color: #FFFFFF;
+    width: 200px;
     border-radius: 0;
     border:0;
     font-size: 1.3em;
     text-align: center;
     margin-left:430px;
-    margin-top: 30px;
+    margin-top: 10px;
     padding:5px 10px 5px 10px;
 }
 
-
-.annoncenewbtn{
+.btnannonceretours{
     background-color: #0089D0;
     color: #FFFFFF;
     border-radius: 0;
     border:0;
     font-size: 1.3em;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 155px;
     padding:5px 10px 5px 10px;
 }
+
 
 
 .annoncenewbtn1{
@@ -858,7 +712,7 @@ table, tr, th, td {
     border:0;
     font-size: 1.3em;
     text-align: center;
-    margin-left: 25px;
+    margin-left: 220px;
     padding:5px 10px 5px 10px;
 }
 
@@ -884,7 +738,7 @@ a:focus, a:hover {
 }
 
 .btneditannonce{
-    background-color: #CCCCCC;
+    background-color: #BBBBBB;
     color: #FFFFFF;
     border-radius: 0;
     border:0;
@@ -978,9 +832,8 @@ hr{
     font-size: 1.6em;
     font-weight: bold;
 }
-/**************************** FIN ANNONCES *************************/
 
-/**************************** DEBUT NEW ****************************/
+/**************************** NEW ****************************/
 
 .carrenew{
     background-color: #E7E7E7;
@@ -1051,7 +904,7 @@ hr{
 /**************************** Fin NEW ****************************/
 
 
-/**************************** DEBUT EDIT ****************************/
+/**************************** EDIT ****************************/
 
 
 .btnedit{
@@ -1193,7 +1046,7 @@ hr{
 }
 
 
-/************************ DEBUT IDEES *******************/
+/************************ IDEES *******************/
 
 .mail{
     text-align: center;
@@ -1211,4 +1064,55 @@ hr{
     margin-bottom: 10px;
 }
 
-/************************ FIN IDEES *******************/
+/************************ GROUPE *******************/
+
+
+.carregroupew{
+    background-color: #E7E7E7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 155px;
+    margin-top: 20px;
+}
+
+.carregroupewshow{
+    background-color: #E7E7E7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.pictogroupeW{
+    margin-top: 12px;
+    height: 20px;
+}
+
+.pictoSgroupew{
+    padding-left: 200px;
+}
+
+.pictoSgroupewshow{
+    padding-left: 400px;
+}
+
+.nomgroupew {
+    background-color: #CCCCCC;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.4em;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+.btngroupew{;
+    margin-left: 60%;
+}
+
+.btnshowgroupew{
+    margin-left: 58%;
+
+}
+
+.showgroupew{
+    padding-left: 160px;
+}

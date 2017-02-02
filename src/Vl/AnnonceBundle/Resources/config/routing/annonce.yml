@@ -88,3 +88,19 @@ commentaire_deleteCgos:
     path:     /{id}/{id_cgos}/commentaire/delete
     defaults: { _controller: "VlAnnonceBundle:Annonce:deleteCommentaireCgos" }
     methods:  [GET, POST]
+
+
+annonce_suppr:
+    path:     /suppr
+    defaults: { _controller: "VlAnnonceBundle:Annonce:suppr" }
+    methods:  GET
+
+amicale_suppr:
+    path:     /Amicale/suppr
+    defaults: { _controller: "VlAnnonceBundle:Annonce:supprAmicale" }
+    methods:  GET
+
+cgos_suppr:
+    path:     /Cgos/suppr
+    defaults: { _controller: "VlAnnonceBundle:Annonce:supprCgos" }
+    methods:  GET

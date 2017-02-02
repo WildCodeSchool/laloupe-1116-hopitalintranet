@@ -31,6 +31,8 @@ class AnnonceController extends Controller
             'annonces' => $annonces,
         ));
     }
+
+
     public function indexCgosAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -52,6 +54,39 @@ class AnnonceController extends Controller
         return $this->render('VlAnnonceBundle:annonce:indexAmicale.html.twig', array(
             'amicales' => $amicales,
             'services' => $services
+        ));
+    }
+
+    public function SupprAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $annonces = $em->getRepository('VlAnnonceBundle:Annonce')->findAll();
+
+        return $this->render('VlAnnonceBundle:annonce:suppr.html.twig', array(
+            'annonces' => $annonces,
+        ));
+    }
+
+    public function SupprAmicaleAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $amicales = $em->getRepository('VlAnnonceBundle:Amicale')->findAll();
+
+        return $this->render('VlAnnonceBundle:annonce:supprAmicale.html.twig', array(
+            'amicales' => $amicales,
+        ));
+    }
+
+    public function SupprCgosAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $cgoss = $em->getRepository('VlAnnonceBundle:Cgos')->findAll();
+
+        return $this->render('VlAnnonceBundle:annonce:supprCgos.html.twig', array(
+            'cgoss' => $cgoss,
         ));
     }
 
@@ -265,6 +300,8 @@ class AnnonceController extends Controller
 
         ));
     }
+
+
     /**
      * Delete an advert
      *
@@ -277,8 +314,10 @@ class AnnonceController extends Controller
         $em->remove($advert);
         $em->flush();
 
+
         return $this->redirectToRoute('annonce_index');
     }
+
 
 
     /**
@@ -297,6 +336,7 @@ class AnnonceController extends Controller
     }
 
 
+
     /**
      * Delete an amicale
      *
@@ -311,6 +351,15 @@ class AnnonceController extends Controller
 
         return $this->redirectToRoute('annonce_indexAmicale');
     }
+
+
+
+
+
+
+
+
+
 
     /**
      * Delete Commentaire
