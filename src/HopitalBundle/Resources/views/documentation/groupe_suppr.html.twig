@@ -10,13 +10,15 @@
             {% if groupes != null %}
             {% for groupe in groupes %}
                 <div class="row">
-                    <div class="col-md-ofsset-2 col-md-8 carregroupew">
+                    <div class="col-md-12 carregroupewshow">
                         <div class="row">
-                            <div class="col-md-7 nomgroupew">
+                            <div class="col-md-6 nomgroupew">
                                 <p>{{ groupe.titre }}</p>
                             </div>
-                            <div class="col-md-5 pictoSgroupew">
+                            <div class="col-md-6 pictoSgroupewshow">
                                 <a href="{{ path('documentation_groupe_show', { 'id': groupe.id }) }}"><img src="{{ asset('bundles/hopital/img/loupe.png') }}" alt="loupe" class="pictogroupeW"></a>
+                                <a href="{{ path('documentation_groupe_edit', { 'id': groupe.id }) }}"><img src="{{ asset('bundles/hopital/img/crayon.ico') }}" alt="crayon" class="pictogroupeW"></a>
+                                <a href="{{ path('documentation_groupe_delete', { 'id': groupe.id }) }}"><img src="{{ asset('bundles/hopital/img/poubelle.png') }}" alt="poubelle" class="pictogroupeW"></a>
                             </div>
                         </div>
                     </div>
