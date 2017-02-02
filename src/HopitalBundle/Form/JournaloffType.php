@@ -15,11 +15,27 @@ class JournaloffType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('journalofftitle')
-            ->add('journaloffdescription')
-            ->add('journaloffimg')
+            ->add('journalofftitle' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('journaloffdescription' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('journaloffimg' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('journaloffurl');
+            ->add('journaloffurl' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )));
     }
 
     /**FIN CODE AJOUTÉ

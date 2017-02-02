@@ -906,30 +906,37 @@ hr{
     margin-top: 30px;
     padding: 30px;
 }
-
 .carrenewid{
     background-color: #E7E7E7;
     height: 430px;
     margin-top: 0px;
     padding: 30px;
 }
-
+.carrenewplans{
+    background-color: #E7E7E7;
+    height: 1050px;
+    margin-top: 0px;
+    padding: 30px;
+}
+.carrenewcontacts{
+    background-color: #E7E7E7;
+    height: 573px;
+    margin-top: 0px;
+    padding: 30px;
+}
 .lienstitrenew{
     text-align: center;
     color: #0089D0;
     margin-top: 30px;
 }
-
 .imgnew{
     margin-top: 15px;
     font-size: 1.1em;
 }
-
 .imgnewid{
     margin-top: 5px;
     font-size: 1.1em;
 }
-
 .btnnew{
     background-color: #0089D0;
     color: #FFFFFF;
@@ -943,24 +950,26 @@ hr{
     padding:10px 20px 10px 20px;
 }
 
-/*Dans Type*/
 .zonenew{
     width: 450px;
     margin-bottom: 10px;
 }
-
 .carrenewannonce{
     background-color: #E7E7E7;
     height: 450px;
     margin-top: 30px;
     padding: 30px;
 }
-
 .carreneannonce{
     background-color: #E7E7E7;
     height: 430px;
     margin-top: 0px;
     padding: 20px;
+}
+.fondblanccontacts{
+    background-color: #FFFFFF;
+    height: 650px;
+    padding: 10px 20px 20px 20px;
 }
 
 

@@ -1,34 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
     <div class="row">
         <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Création Pages Jaunes</h1>
+            <h1 class="lienstitrenew">Création d'une nouvelle page jaune</h1>
             <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    {{ form_start(form) }}
-                    {{ form_label(form. pagesjaunestitle, 'Nommez votre lien:', {'pagesjaunestitle': {'class': 'pagesjaunestitle'}}) }}
-                    {{ form_widget(form.pagesjaunestitle)}}
-                    {{ form_label(form. pagesjaunesdescription, 'Décrivez votre lien:', {'pagesjaunesescription': {'class': 'pagesjaunesdescription'}}) }}
-                    {{ form_widget(form.pagesjaunesdescription)}}
-                    {{ form_label(form. pagesjaunesimg, 'Nommez votre image:', {'pagesjaunesimg': {'class': 'pagesjaunesimg'}}) }}
-                    {{ form_widget(form.pagesjaunesimg)}}
-                    {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(form.file1)}}
-                    {{ form_label(form. pagesjaunesurl, 'Indiquez le lien:', {'pagesjaunesurl': {'class': 'pagesjaunesurl'}}) }}
-                    {{ form_widget(form.pagesjaunesurl)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewid">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
+                            {{ form_start(form) }}
+                            {{ form_label(form. pagesjaunestitle, 'Nommez votre lien:', {'pagesjaunestitle': {'class': 'pagesjaunestitle'}}) }}
+                            {{ form_widget(form.pagesjaunestitle) }}
+                            {{ form_label(form. pagesjaunesdescription, 'Décrivez votre lien:', {'pagesjaunesescription': {'class': 'pagesjaunesdescription'}}) }}
+                            {{ form_widget(form.pagesjaunesdescription) }}
+                            {{ form_label(form. pagesjaunesimg, 'Nommez votre image:', {'pagesjaunesimg': {'class': 'pagesjaunesimg'}}) }}
+                            {{ form_widget(form.pagesjaunesimg) }}
+                            {{ form_label(form.file1, 'Insérez votre image:', {'file1': {'class': 'file1'}}) }}
+                            {{ form_widget(form.file1) }}
+                            {{ form_label(form. pagesjaunesurl, 'Indiquez le lien:', {'pagesjaunesurl': {'class': 'pagesjaunesurl'}}) }}
+                            {{ form_widget(form.pagesjaunesurl) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-5 col-md-2">
+                            <input type="submit" value="Create" class="btnnew"/>
+                        </div>
+                    </div>
                     {{ form_end(form) }}
                 </div>
             </div>
-
         </div>
     </div>
 {% endblock %}

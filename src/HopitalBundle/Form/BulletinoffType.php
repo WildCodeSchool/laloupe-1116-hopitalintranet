@@ -15,11 +15,27 @@ class BulletinoffType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('bulletinofftitle')
-            ->add('bulletinoffdescription')
-            ->add('bulletinoffimg')
+            ->add('bulletinofftitle' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('bulletinoffdescription' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('bulletinoffimg' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('bulletinoffurl');
+            ->add('bulletinoffurl' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )));
     }
 
     /**FIN CODE AJOUTÉ

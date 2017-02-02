@@ -1,17 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Création ANESM</h1>
-            <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+    <div class="col-md-offset-2 col-md-8 fondblanc">
+    <h1 class="lienstitrenew">Création d'un ANESM</h1>
+    <br>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6 carrenewid">
+            <div class="row">
+                <div class="col-md-12 imgnewid">
                     {{ form_start(form) }}
                     {{ form_label(form. anesmtitle, 'Nommez votre lien:', {'anesmtitle': {'class': 'anesmtitle'}}) }}
                     {{ form_widget(form.anesmtitle)}}
@@ -23,12 +20,17 @@
                     {{ form_widget(form.file1)}}
                     {{ form_label(form. anesmurl, 'Indiquez le lien:', {'anesmurl': {'class': 'anesmurl'}}) }}
                     {{ form_widget(form.anesmurl)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
-                    {{ form_end(form) }}
+
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" value="Create" class="btnnew" />
+                </div>
+            </div>
+            {{ form_end(form) }}
         </div>
+    </div>
+    </div>
     </div>
 {% endblock %}

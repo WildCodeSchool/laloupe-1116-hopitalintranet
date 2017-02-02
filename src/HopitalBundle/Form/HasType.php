@@ -15,11 +15,27 @@ class HasType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('hastitle')
-            ->add('hasdescription')
-            ->add('hasimg')
+            ->add('hastitle' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('hasdescription' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
+            ->add('hasimg' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )))
             ->add('file1', 'file', array('required' => false))
-            ->add('hasurl');
+            ->add('hasurl' , 'text', array(
+                'required' => false,
+                'attr' => array(
+                    'class' => "zonenew"
+                )));
     }
 
     /**FIN CODE AJOUTÉ
