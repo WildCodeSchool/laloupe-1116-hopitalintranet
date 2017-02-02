@@ -165,11 +165,7 @@ main {
 
 }
 
-.jumbotron {
-    padding-bottom: 0;
-    padding-top: 0;
-    background-color: #ffffff;
-}
+
 
 /**************************** FIN ACCUEIL ****************************/
 
@@ -289,6 +285,8 @@ main {
 
 .utiles{
     padding:6px 20px 20px 20px;
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 .utiles h3{
@@ -308,6 +306,7 @@ main {
 
 .meteo{
     margin-top: -12px;
+    background-color: #FFFFFF;
 }
 
 .alerte{
