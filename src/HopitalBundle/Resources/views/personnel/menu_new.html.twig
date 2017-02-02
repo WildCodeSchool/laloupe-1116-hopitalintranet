@@ -3,55 +3,62 @@
 
 {% block body %}
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 fondblanc">
-            <h1 class="lienstitre">Création des menus</h1>
+        <div class="col-md-offset-2 col-md-8 fondblancshow">
+            <h1 class="lienstitrenew">Création des menus</h1>
             <br>
-            <div class="row journaux">
-                <div class="col-md-4">
-                    <br>
-                    {{ form_start(form) }}
-                    {{ form_label(form.titlemenu1, 'Titre de votre menu semaine 1:', {'titlemenu1': {'class': 'titlemenu1'}}) }}
-                    {{ form_widget(form.titlemenu1)}}
-                    {{ form_label(form.menu1img, 'Nommez votre menu semaine 1:', {'menu1img': {'class': 'menu1img'}}) }}
-                    {{ form_widget(form.menu1img)}}
-                    {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}
-                    {{ form_widget(form.file1)}}
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 carrenewlienssites">
+                    <div class="row">
+                        <div class="col-md-12 imgnewid">
 
-                    {{ form_label(form.titlemenu2, 'Titre de votre menu semaine 2:', {'titlemenu2': {'class': 'titlemenu2'}}) }}
-                    {{ form_widget(form.titlemenu2)}}
-                    {{ form_label(form.menu2img, 'Nommez votre menu semaine 2:', {'menu2img': {'class': 'menu2img'}}) }}
-                    {{ form_widget(form.menu2img)}}
-                    {{ form_label(form.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}
-                    {{ form_widget(form.file2)}}
-                </div>
-                <div class="col-md-4">
-                    {{ form_label(form.titlemenu3, 'Titre de votre menu semaine 3:', {'titlemenu3': {'class': 'titlemenu3'}}) }}
-                    {{ form_widget(form.titlemenu3)}}
-                    {{ form_label(form.menu3img, 'Nommez votre menu semaine 3:', {'menu3img': {'class': 'menu3img'}}) }}
-                    {{ form_widget(form.menu3img)}}
-                    {{ form_label(form.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file3'}}) }}
-                    {{ form_widget(form.file3)}}
+                            {{ form_start(form) }}
+                            {{ form_label(form.titlemenu1, 'Titre de votre menu semaine 1:', {'titlemenu1': {'class': 'titlemenu1'}}) }}
+                            {{ form_widget(form.titlemenu1) }}
+                            {{ form_label(form.menu1img, 'Nommez votre menu semaine 1:', {'menu1img': {'class': 'menu1img'}}) }}
+                            <br>
+                            {{ form_widget(form.menu1img) }}<br>
+                            {{ form_label(form.file1, 'Insérez votre Pdf:', {'file1': {'class': 'file1'}}) }}<br>
+                            {{ form_widget(form.file1) }}<br><br>
 
-                    {{ form_label(form.titlemenu4, 'Titre de votre menu semaine 4:', {'titlemenu4': {'class': 'titlemenu4'}}) }}
-                    {{ form_widget(form.titlemenu4)}}
-                    {{ form_label(form.menu4img, 'Nommez votre menu semaine 4:', {'menu4img': {'class': 'menu4img'}}) }}
-                    {{ form_widget(form.menu4img)}}
-                    {{ form_label(form.file4, 'Insérez votre Pdf:', {'file4': {'class': 'file4'}}) }}
-                    {{ form_widget(form.file4)}}
-                </div>
-                <div class="col-md-4">
-                    {{ form_label(form.titlemenurempl, 'Titre de votre menu de remplacement:', {'titlemenurempl': {'class': 'titlemenurempl'}}) }}
-                    {{ form_widget(form.titlemenurempl)}}
-                    {{ form_label(form.menuimgrempl, 'Nommez votre menu de remplacement:', {'menuimgrempl': {'class': 'menuimgrempl'}}) }}
-                    {{ form_widget(form.menuimgrempl)}}
-                    {{ form_label(form.file5, 'Insérez votre Pdf:', {'file5': {'class': 'file5'}}) }}
-                    {{ form_widget(form.file5)}}
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg" value="Créer" />
-                    {{ form_end(form) }}
+                            {{ form_label(form.titlemenu2, 'Titre de votre menu semaine 2:', {'titlemenu2': {'class': 'titlemenu2'}}) }}
+                            {{ form_widget(form.titlemenu2) }}
+                            {{ form_label(form.menu2img, 'Nommez votre menu semaine 2:', {'menu2img': {'class': 'menu2img'}}) }}
+                            <br>
+                            {{ form_widget(form.menu2img) }}<br>
+                            {{ form_label(form.file2, 'Insérez votre Pdf:', {'file2': {'class': 'file2'}}) }}<br>
+                            {{ form_widget(form.file2) }}<br><br>
+
+                            {{ form_label(form.titlemenu3, 'Titre de votre menu semaine 3:', {'titlemenu3': {'class': 'titlemenu3'}}) }}
+                            {{ form_widget(form.titlemenu3) }}
+                            {{ form_label(form.menu3img, 'Nommez votre menu semaine 3:', {'menu3img': {'class': 'menu3img'}}) }}
+                            <br>
+                            {{ form_widget(form.menu3img) }}<br>
+                            {{ form_label(form.file3, 'Insérez votre Pdf:', {'file3': {'class': 'file3'}}) }}<br>
+                            {{ form_widget(form.file3) }}<br><br>
+
+                            {{ form_label(form.titlemenu4, 'Titre de votre menu semaine 4:', {'titlemenu4': {'class': 'titlemenu4'}}) }}
+                            {{ form_widget(form.titlemenu4) }}
+                            {{ form_label(form.menu4img, 'Nommez votre menu semaine 4:', {'menu4img': {'class': 'menu4img'}}) }}
+                            <br>
+                            {{ form_widget(form.menu4img) }}<br>
+                            {{ form_label(form.file4, 'Insérez votre Pdf:', {'file4': {'class': 'file4'}}) }}<br>
+                            {{ form_widget(form.file4) }}<br><br>
+
+                            {{ form_label(form.titlemenurempl, 'Titre de votre menu de remplacement:', {'titlemenurempl': {'class': 'titlemenurempl'}}) }}
+                            {{ form_widget(form.titlemenurempl) }}
+                            {{ form_label(form.menuimgrempl, 'Nommez votre menu de remplacement:', {'menuimgrempl': {'class': 'menuimgrempl'}}) }}
+                            <br>
+                            {{ form_widget(form.menuimgrempl) }}<br>
+                            {{ form_label(form.file5, 'Insérez votre Pdf:', {'file5': {'class': 'file5'}}) }}<br>
+                            {{ form_widget(form.file5) }}
+                            <br>
+                            <input type="submit" class="btn btn-primary btn-lg" value="Créer"/>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
         </div>
     </div>
 {% endblock %}
