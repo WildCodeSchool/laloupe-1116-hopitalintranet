@@ -1,23 +1,19 @@
 # Learn more about services, parameters and containers at
 # http://symfony.com/doc/current/book/service_container.html
 
-parameters:
-
-#    parameter_name: value
-
 services:
 
     ### Setting up the SonataUser profile's form ###
     sonata.user.profile.form.type:
         class: Application\Sonata\UserBundle\Form\Type\ProfileType
-        arguments: ["Application\Sonata\UserBundle\Entity\User"]
+        arguments: ['Application\Sonata\UserBundle\Entity\User']
         tags:
-            - { name: "form.type", alias: "application_sonata_user_profile"}
+            - { name: "form.type", alias: "application_sonata_user_profile" }
 
     ### Login Listener for after login redirection ###
     redirect.after.login:
         class: IuchBundle\Redirection\AfterLoginRedirection
-        arguments: [@router, @security.context]
+        arguments: ['@router', '@security.context']
 
     ### Disabling SonataUser groups // Cause we dont need.. ###
     sonata.user.admin.group:
@@ -35,6 +31,4 @@ services:
         class: Application\Sonata\UserBundle\EventListener\editProfileListener
         tags:
             - { name: doctrine.event_listener, event: preUpdate }
-        arguments:
-            - @mailer
-            - @service_container
+        arguments: ['@mailer', '@service_container']

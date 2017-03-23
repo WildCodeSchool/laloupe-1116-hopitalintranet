@@ -26,7 +26,7 @@ Vl/AnnonceBundle
 #####Installer le projet
 
    
-    $ git clone https://github.com/laloupe-1116-hopitalintranet.git
+    $ git clone git@github.com:WildCodeSchool/laloupe-1116-hopitalintranet.git
     $ cd laloupe-1116-hopitalintranet
     $ composer install
     $ php app/console doctrine:database:create

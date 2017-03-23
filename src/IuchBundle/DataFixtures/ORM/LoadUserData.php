@@ -32,7 +32,7 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, F
         // Get our userManager, you must implement `ContainerAwareInterface`
         $userManager = $this->container->get('fos_user.user_manager');
 
-        // Create our user and set details
+        // Create our users and set details
         $user1 = $userManager->createUser();
         $user1->setUsername('admin');
         $user1->setPlainPassword('admin');
@@ -41,9 +41,17 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, F
         $user1->setFonction($this->getReference('10'));
         $user1->setService($this->getReference('4'));
         $user1->setcodeCopieur('3');
-
-        // Update the user
         $userManager->updateUser($user1, true);
+
+        $user2 = $userManager->createUser();
+        $user2->setUsername('erwan');
+        $user2->setPlainPassword('erwan');
+        $user2->setRoles(array('ROLE_SUPER_ADMIN'));
+        $user2->setLastLogin(new \DateTime('now'));
+        $user2->setFonction($this->getReference('10'));
+        $user2->setService($this->getReference('4'));
+        $user2->setcodeCopieur('3');
+        $userManager->updateUser($user2, true);
 
         // store reference to admin role for User relation to Role
         $this->addReference('201', $user1);

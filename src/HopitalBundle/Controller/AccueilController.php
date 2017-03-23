@@ -67,7 +67,8 @@ class AccueilController extends Controller
         /** @var ClassMetadata $m */
         foreach ($meta as $m) {
             if (strpos($m->getName(), 'HopitalBundle') !== false) {
-                $entities[$m->getName()] = $em->getRepository($m->getName())->findLast();
+                $rep = $em->getRepository($m->getName());
+                $entities[$m->getName()] = $rep->findLast();
             }
         }
 
